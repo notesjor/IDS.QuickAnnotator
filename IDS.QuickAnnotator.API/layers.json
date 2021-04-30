@@ -1,0 +1,14 @@
+﻿[
+  {
+    "label": "Personenbezeichnung?",
+    "scale": "jnv"
+  },
+  {
+    "label": "Gendern hier nötig?",
+    "scale": "jnv"
+  },
+  {
+    "label": "Co-Ref. zu Eigennamen?",
+    "scale": "jnv"
+  }
+]

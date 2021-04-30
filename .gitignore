@@ -102,3 +102,43 @@ dist
 
 # TernJS port file
 .tern-port
+
+# DEBUG
+/obj
+/bin
+*/obj
+*/bin
+*/*/obj
+*/*/bin
+*/*/*/obj
+*/*/*/bin
+*/*/*/*/obj
+*/*/*/*/bin
+*/*/*/*/*/obj
+*/*/*/*/*/bin
+*/*/*/*/*/*/obj
+*/*/*/*/*/*/bin
+*/*/*/*/*/*/*/obj
+*/*/*/*/*/*/*/bin
+*/*/*/*/*/*/*/*/obj
+*/*/*/*/*/*/*/*/bin
+*/*/*/*/*/*/*/*/*/obj
+*/*/*/*/*/*/*/*/*/bin
+/Release
+/Debug
+*/Release
+*/Debug
+*/*/Release
+*/*/Debug
+*/*/*/Release
+*/*/*/Debug
+*/*/*/*/Release
+*/*/*/*/Debug
+*/*/*/*/*/Release
+*/*/*/*/*/Debug
+*/*/*/*/*/*/Release
+*/*/*/*/*/*/Debug
+*/*/*/*/*/*/*/Release
+*/*/*/*/*/*/*/Debug
+*/*/*/*/*/*/*/*/Release
+*/*/*/*/*/*/*/*/Debug

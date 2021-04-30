@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.API", "IDS.QuickAnnotator.API.csproj", "{46E37D7A-0E14-4BEF-92E5-63CA6D401A08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Processor", "..\IDS.QuickAnnotator.Processor\IDS.QuickAnnotator.Processor.csproj", "{4741A4CB-17C5-4251-8045-AA1FBC6D66C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46E37D7A-0E14-4BEF-92E5-63CA6D401A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E37D7A-0E14-4BEF-92E5-63CA6D401A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E37D7A-0E14-4BEF-92E5-63CA6D401A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E37D7A-0E14-4BEF-92E5-63CA6D401A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4741A4CB-17C5-4251-8045-AA1FBC6D66C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4741A4CB-17C5-4251-8045-AA1FBC6D66C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4741A4CB-17C5-4251-8045-AA1FBC6D66C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4741A4CB-17C5-4251-8045-AA1FBC6D66C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {634AD13F-6E6A-4CB5-8614-A6E4E0E1D7F8}
+	EndGlobalSection
+EndGlobal
