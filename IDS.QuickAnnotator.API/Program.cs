@@ -175,13 +175,30 @@ namespace IDS.QuickAnnotator.API
         if (validLock != HttpStatusCode.OK)
           return arg.Response.Send(validLock);
 
-        xxxxx
+        var dt = DateTime.Now;
+        var dir = Path.Combine(_history, req.Change.DocumentId);
+        if (!Directory.Exists(dir))
+          Directory.CreateDirectory(dir);
+
+        var path = Path.Combine(dir, GetTimestamp(dt));
+        
+        var change = req.Change;
+        change.Timestamp = dt;
+        change.UserName = GetUserName(req.AuthToken);
+        File.WriteAllText(path, JsonConvert.SerializeObject(change));
+
+        return arg.Response.Send(HttpStatusCode.OK);
       }
       catch (Exception ex)
       {
         Log(ex);
         return arg.Response.Send(HttpStatusCode.InternalServerError);
       }
+    }
+
+    private static string GetUserName(Guid authToken)
+    {
+      throw new NotImplementedException(); xxx
     }
 
     private static Task GetLayer(HttpContext arg)
@@ -227,9 +244,9 @@ namespace IDS.QuickAnnotator.API
       return File.Exists(Path.Combine(_users, req.AuthToken.ToString("N") + ".user"));
     }
 
-    private static string GetTimestamp()
+    private static string GetTimestamp(DateTime? dt = null)
     {
-      return DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss.json");
+      return (dt ?? DateTime.Now).ToString("yyyy-MM-dd_hh-mm-ss.json");
     }
 
     private static string EnsureDirectory(string name)

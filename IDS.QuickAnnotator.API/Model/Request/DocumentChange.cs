@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace IDS.QuickAnnotator.API.Model.Request
 {
@@ -9,5 +10,6 @@ namespace IDS.QuickAnnotator.API.Model.Request
     public int SentenceId { get; set; }
     public int TokenId { get; set; }
     public Dictionary<string, object> Annotation { get; set; }
+    public DateTime Timestamp { get; set; }
   }
 }
