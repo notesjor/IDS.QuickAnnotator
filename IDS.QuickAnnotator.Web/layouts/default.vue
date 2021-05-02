@@ -3,6 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       app
+      temporary
     >
       <v-list>
         <v-list-item to="/" v-if="!isSignin">
@@ -79,12 +80,17 @@
 export default {
   data () {
     return {
-      title: 'Vuetify.js'
+      title: 'QuickAnnotator',
+      drawer: false
     }
   },
-  watch: {
+  computed: {
     isSignin: function (){
-      return this.$store.state.auth.isSignin
+      try{
+        return this.$store.state.auth.isSignin;
+      }catch{
+        return false;
+      }
     }
   }
 }

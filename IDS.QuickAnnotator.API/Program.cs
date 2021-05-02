@@ -21,9 +21,7 @@ namespace IDS.QuickAnnotator.API
     private static string _docs;
     private static string _history;
     private static string _users;
-    private static string _admins;
     private static string _layers;
-    private static Dictionary<string, string> _userDict;
 
     static void Main(string[] args)
     {
@@ -32,36 +30,38 @@ namespace IDS.QuickAnnotator.API
       _docs = EnsureDirectory("docs");
       _history = EnsureDirectory("history");
       _users = EnsureDirectory("users");
-      _admins = EnsureDirectory("admins");
-      LoadUserDict();
 
       _layers = File.ReadAllText(Path.Combine(_app, "layers.json"));
 
       Console.Write("Service-Port: 4545...");
       var server = new Server("*", 4545, (arg) => arg.Response.Send(HttpStatusCode.NoContent));
-      server.AddEndpoint(HttpVerb.GET, "/docs", GetDocuments);
-      server.AddEndpoint(HttpVerb.GET, "/layer", GetLayer);
-      server.AddEndpoint(HttpVerb.GET, "/doc", GetDocument);
-      server.AddEndpoint(HttpVerb.VIEW, "/doc", GetDocumentHistory);
-      server.AddEndpoint(HttpVerb.POST, "/doc", SetDocument);
-      server.AddEndpoint(HttpVerb.GET, "/lock", GetLock);
-      server.AddEndpoint(HttpVerb.POST, "/lock", ReleaseLock);
+      server.AddEndpoint(HttpVerb.POST, "/getDocuments", GetDocuments);
+      server.AddEndpoint(HttpVerb.POST, "/getLayer", GetLayer);
+      server.AddEndpoint(HttpVerb.POST, "/getDocument", GetDocument);
+      server.AddEndpoint(HttpVerb.POST, "/getDocumentHistory", GetDocumentHistory);
+      server.AddEndpoint(HttpVerb.POST, "/setDocument", SetDocument);
+      server.AddEndpoint(HttpVerb.POST, "/getLock", GetLock);
+      server.AddEndpoint(HttpVerb.POST, "/releaseLock", ReleaseLock);
+      server.AddEndpoint(HttpVerb.POST, "/signin", Signin);
+      server.AddEndpoint(HttpVerb.POST, "/getProfile", MyProfileInfo);
       Console.WriteLine("ok!");
 
       while (true)
         Thread.Sleep(25000);
     }
 
-    private static void LoadUserDict()
+    private static Task MyProfileInfo(HttpContext arg)
     {
-      _userDict = new Dictionary<string, string>();
-      foreach (var file in Directory.GetFiles(_users, "*.user"))
+      try
       {
-        var guid = Path.GetFileNameWithoutExtension(file);
-        var name = File.ReadAllText(file);
-        _userDict.Add(guid, name);
+        var req = arg.PostData<AbstractAuthRequest>();
+        return !IsAuthUser(req) ? arg.Response.Send(HttpStatusCode.Unauthorized) : arg.Response.Send(GetUser(req.AuthToken));
       }
-      Console.WriteLine($"{_userDict.Count} users loaded!");
+      catch (Exception ex)
+      {
+        Log(ex);
+        return arg.Response.Send(HttpStatusCode.InternalServerError);
+      }
     }
 
     private static Task ReleaseLock(HttpContext arg)
@@ -86,6 +86,13 @@ namespace IDS.QuickAnnotator.API
             return arg.Response.Send(HttpStatusCode.Locked);
 
           File.Delete(fileLock);
+
+          // My-Info
+          var my = GetUser(req.AuthToken);
+          my.DoneDocumentIds.Add(req.DocumentId);
+          my.LastDocumentId = "";
+          SetUser(req.AuthToken, my);
+
           return arg.Response.Send(HttpStatusCode.OK);
 
         }
@@ -103,7 +110,18 @@ namespace IDS.QuickAnnotator.API
         try
         {
           var req = arg.PostData<RequestLock>();
-          return arg.Response.Send(IsAuthUser(req) ? InternalFileLock(req.DocumentId, req.AuthToken) : HttpStatusCode.Unauthorized);
+          if (!IsAuthUser(req))
+            return arg.Response.Send(HttpStatusCode.Unauthorized);
+
+          var res = InternalFileLock(req.DocumentId, req.AuthToken);
+          if (res != HttpStatusCode.OK) 
+            return arg.Response.Send(res);
+
+          var my = GetUser(req.AuthToken);
+          my.LastDocumentId = req.DocumentId;
+          SetUser(req.AuthToken, my);
+
+          return arg.Response.Send(HttpStatusCode.OK);
         }
         catch (Exception ex)
         {
@@ -205,7 +223,7 @@ namespace IDS.QuickAnnotator.API
 
         var change = req.Change;
         change.Timestamp = dt;
-        change.UserName = GetUserName(req.AuthToken);
+        change.UserName = GetUser(req.AuthToken).Name;
         File.WriteAllText(path, JsonConvert.SerializeObject(change));
 
         return arg.Response.Send(HttpStatusCode.OK);
@@ -215,11 +233,6 @@ namespace IDS.QuickAnnotator.API
         Log(ex);
         return arg.Response.Send(HttpStatusCode.InternalServerError);
       }
-    }
-
-    private static string GetUserName(string authToken)
-    {
-      return _userDict.ContainsKey(authToken) ? _userDict[authToken] : string.Empty;
     }
 
     private static Task GetLayer(HttpContext arg)
@@ -248,6 +261,19 @@ namespace IDS.QuickAnnotator.API
       }
     }
 
+    private static Task Signin(HttpContext arg)
+    {
+      try
+      {
+        return arg.Response.Send(IsAuthUser(arg.PostData<AbstractAuthRequest>()));
+      }
+      catch (Exception ex)
+      {
+        Log(ex);
+        return arg.Response.Send(HttpStatusCode.InternalServerError);
+      }
+    }
+
     private static void Log(Exception ex)
     {
       try
@@ -265,11 +291,6 @@ namespace IDS.QuickAnnotator.API
       return File.Exists(Path.Combine(_users, req.AuthToken + ".user"));
     }
 
-    private static bool IsAuthAdmin(AbstractAuthRequest req)
-    {
-      return File.Exists(Path.Combine(_users, req.AuthToken + ".user"));
-    }
-
     private static string GetTimestamp(DateTime? dt = null)
     {
       return (dt ?? DateTime.Now).ToString("yyyy-MM-dd_hh-mm-ss") + ".json";
@@ -281,6 +302,34 @@ namespace IDS.QuickAnnotator.API
       if (!Directory.Exists(res))
         Directory.CreateDirectory(res);
       return res;
+    }
+
+    private static UserProfile GetUser(string authToken)
+    {
+      try
+      {
+        return JsonConvert.DeserializeObject<UserProfile>(File.ReadAllText(Path.Combine(_users, authToken + ".user"), Encoding.UTF8));
+      }
+      catch(Exception ex)
+      {
+        Log(ex);
+        return null;
+      }
+    }
+
+    private static void SetUser(string authToken, UserProfile profile)
+    {
+      try
+      {
+        var path = Path.Combine(_users, authToken + ".user");
+        if (!File.Exists(path))
+          throw new FileNotFoundException(path);
+        File.WriteAllText(path, JsonConvert.SerializeObject(profile), Encoding.UTF8);
+      }
+      catch (Exception ex)
+      {
+        Log(ex);
+      }
     }
   }
 }
