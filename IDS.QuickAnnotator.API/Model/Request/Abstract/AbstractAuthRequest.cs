@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace IDS.QuickAnnotator.API.Model.Request.Abstract
+﻿namespace IDS.QuickAnnotator.API.Model.Request.Abstract
 {
   public abstract class AbstractAuthRequest : AbstractRequest
   {
-    public Guid AuthToken { get; set; }
+    public string AuthToken { get; set; }
   }
 }
