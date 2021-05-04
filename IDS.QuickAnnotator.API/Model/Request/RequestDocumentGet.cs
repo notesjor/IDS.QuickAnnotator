@@ -2,7 +2,7 @@
 
 namespace IDS.QuickAnnotator.API.Model.Request
 {
-  public class RequestLock : AbstractAuthRequest
+  public class RequestDocumentGet : AbstractAuthRequest
   {
     public string DocumentId { get; set; }
   }

@@ -76,12 +76,19 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\IDS.QuickAnnotator.API\Model\Request\DocumentChange.cs">
+      <Link>Model\DocumentChange.cs</Link>
+    </Compile>
+    <Compile Include="..\IDS.QuickAnnotator.API\Model\Request\UserProfile.cs">
+      <Link>Model\UserProfile.cs</Link>
+    </Compile>
     <Compile Include="AbstractForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AbstractForm.Designer.cs">
       <DependentUpon>AbstractForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\AnnotationModel.cs" />
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +149,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\save.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\save1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trash_bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_green_record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_green_pause.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

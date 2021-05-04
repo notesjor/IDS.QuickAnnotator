@@ -6,6 +6,6 @@
              xmlns:local="clr-namespace:IDS.QuickAnnotator.Client"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="white">
-  <WrapPanel Orientation="Horizontal" Grid.Column="0" x:Name="EditorContent" Focusable="True" KeyUp="EditorContent_KeyUp">
+  <WrapPanel Orientation="Horizontal" Grid.Column="0" x:Name="EditorContent" Focusable="True">
   </WrapPanel>
 </UserControl>

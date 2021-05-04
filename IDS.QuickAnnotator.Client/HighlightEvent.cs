@@ -7,7 +7,5 @@ using System.Windows.Input;
 
 namespace IDS.QuickAnnotator.Client
 {
-  public delegate bool HighlightEvent(Token wpf, int sentence, int token);
-
-  public delegate void KeyPressedEvent(Key key);
+  public delegate void HighlightEvent(int index);
 }

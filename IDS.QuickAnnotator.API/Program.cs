@@ -40,14 +40,34 @@ namespace IDS.QuickAnnotator.API
       server.AddEndpoint(HttpVerb.POST, "/getDocument", GetDocument);
       server.AddEndpoint(HttpVerb.POST, "/getDocumentHistory", GetDocumentHistory);
       server.AddEndpoint(HttpVerb.POST, "/setDocument", SetDocument);
-      server.AddEndpoint(HttpVerb.POST, "/getLock", GetLock);
-      server.AddEndpoint(HttpVerb.POST, "/releaseLock", ReleaseLock);
+      server.AddEndpoint(HttpVerb.POST, "/setDocumentCompletion", SetDocumentCompletion);
       server.AddEndpoint(HttpVerb.POST, "/signin", Signin);
       server.AddEndpoint(HttpVerb.POST, "/getProfile", MyProfileInfo);
       Console.WriteLine("ok!");
 
       while (true)
         Thread.Sleep(25000);
+    }
+
+    private static Task SetDocumentCompletion(HttpContext arg)
+    {
+      try
+      {
+        var req = arg.PostData<RequestDocumentGet>();
+        if (!IsAuthUser(req))
+          return arg.Response.Send(HttpStatusCode.Unauthorized);
+
+        var user = GetUser(req.AuthToken);
+        user.DoneDocumentIds.Add(req.DocumentId);
+        SetUser(req.AuthToken, user);
+
+        return arg.Response.Send(HttpStatusCode.OK);
+      }
+      catch (Exception ex)
+      {
+        Log(ex);
+        return arg.Response.Send(HttpStatusCode.InternalServerError);
+      }
     }
 
     private static Task MyProfileInfo(HttpContext arg)
@@ -63,95 +83,12 @@ namespace IDS.QuickAnnotator.API
         return arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
-
-    private static Task ReleaseLock(HttpContext arg)
-    {
-      lock (_getLock)
-        try
-        {
-          var req = arg.PostData<RequestLock>();
-          if (!IsAuthUser(req))
-            return arg.Response.Send(HttpStatusCode.Unauthorized);
-
-          var file = Path.Combine(_docs, req.DocumentId + ".json");
-          if (!File.Exists(file))
-            return arg.Response.Send(HttpStatusCode.NotFound);
-
-          var fileLock = Path.Combine(_docs, req.DocumentId + ".lock");
-          if (!File.Exists(fileLock))
-            return arg.Response.Send(HttpStatusCode.NotFound);
-
-          var txt = File.ReadAllText(fileLock);
-          if (txt != req.AuthToken)
-            return arg.Response.Send(HttpStatusCode.Locked);
-
-          File.Delete(fileLock);
-
-          // My-Info
-          var my = GetUser(req.AuthToken);
-          my.DoneDocumentIds.Add(req.DocumentId);
-          my.LastDocumentId = "";
-          SetUser(req.AuthToken, my);
-
-          return arg.Response.Send(HttpStatusCode.OK);
-
-        }
-        catch (Exception ex)
-        {
-          Log(ex);
-          return arg.Response.Send(HttpStatusCode.InternalServerError);
-        }
-    }
-
-    private static object _getLock = new object();
-    private static Task GetLock(HttpContext arg)
-    {
-      lock (_getLock)
-        try
-        {
-          var req = arg.PostData<RequestLock>();
-          if (!IsAuthUser(req))
-            return arg.Response.Send(HttpStatusCode.Unauthorized);
-
-          var res = InternalFileLock(req.DocumentId, req.AuthToken);
-          if (res != HttpStatusCode.OK) 
-            return arg.Response.Send(res);
-
-          var my = GetUser(req.AuthToken);
-          my.LastDocumentId = req.DocumentId;
-          SetUser(req.AuthToken, my);
-
-          return arg.Response.Send(HttpStatusCode.OK);
-        }
-        catch (Exception ex)
-        {
-          Log(ex);
-          return arg.Response.Send(HttpStatusCode.InternalServerError);
-        }
-    }
-
-    private static HttpStatusCode InternalFileLock(string documentId, string authToken)
-    {
-      var file = Path.Combine(_docs, documentId + ".json");
-      if (!File.Exists(file))
-        return HttpStatusCode.NotFound;
-
-      var fileLock = Path.Combine(_docs, documentId + ".lock");
-      if (File.Exists(fileLock))
-      {
-        var txt = File.ReadAllText(fileLock);
-        return txt == authToken ? HttpStatusCode.OK : HttpStatusCode.Locked;
-      }
-
-      File.WriteAllText(fileLock, authToken);
-      return HttpStatusCode.OK;
-    }
-
+    
     private static Task GetDocument(HttpContext arg)
     {
       try
       {
-        var req = arg.PostData<RequestLock>();
+        var req = arg.PostData<RequestDocumentGet>();
         if (!IsAuthUser(req))
           return arg.Response.Send(HttpStatusCode.Unauthorized);
 
@@ -172,7 +109,7 @@ namespace IDS.QuickAnnotator.API
     {
       try
       {
-        var req = arg.PostData<RequestLock>();
+        var req = arg.PostData<RequestDocumentGet>();
         if (!IsAuthUser(req))
           return arg.Response.Send(HttpStatusCode.Unauthorized);
 
@@ -210,10 +147,6 @@ namespace IDS.QuickAnnotator.API
         if (!IsAuthUser(req))
           return arg.Response.Send(HttpStatusCode.Unauthorized);
 
-        var validLock = InternalFileLock(req.Change.DocumentId, req.AuthToken);
-        if (validLock != HttpStatusCode.OK)
-          return arg.Response.Send(validLock);
-
         var dt = DateTime.Now;
         var dir = Path.Combine(_history, req.Change.DocumentId);
         if (!Directory.Exists(dir))
@@ -223,7 +156,7 @@ namespace IDS.QuickAnnotator.API
 
         var change = req.Change;
         change.Timestamp = dt;
-        change.UserName = GetUser(req.AuthToken).Name;
+        change.UserName = GetUser(req.AuthToken).UserName;
         File.WriteAllText(path, JsonConvert.SerializeObject(change));
 
         return arg.Response.Send(HttpStatusCode.OK);

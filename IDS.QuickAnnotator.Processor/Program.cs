@@ -30,7 +30,7 @@ namespace IDS.QuickAnnotator.Processor
       corpus.Save("corpus.cec6", false);
       foreach (var dsel in corpus.DocumentGuids)
       {
-        var doc = corpus.GetReadableDocument(dsel, "Wort").Select(x => x.ToArray()).ToArray();
+        var doc = corpus.GetReadableDocument(dsel, "Wort").SelectMany(x => x).ToArray();
         File.WriteAllText(Path.Combine("output", Path.GetFileNameWithoutExtension(corpus.GetDocumentMetadata(dsel, "Datei", "")) + ".json"), JsonConvert.SerializeObject(doc), Encoding.UTF8);
       }
     }

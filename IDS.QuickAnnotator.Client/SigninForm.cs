@@ -5,9 +5,10 @@ namespace IDS.QuickAnnotator.Client
 {
   public partial class SigninForm : AbstractForm
   {
-    public SigninForm()
+    public SigninForm(string authToken)
     {
       InitializeComponent();
+      txt_authToken.Text = authToken;
     }
 
     private void btn_signin_Click(object sender, EventArgs e)

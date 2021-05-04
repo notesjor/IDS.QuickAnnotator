@@ -14,7 +14,7 @@ namespace IDS.QuickAnnotator.Client
       InitializeComponent();
     }
 
-    public string Text
+    public string TokenText
     {
       get
       {
@@ -26,8 +26,17 @@ namespace IDS.QuickAnnotator.Client
       }
     }
 
-    public int SentenceId { get; set; }
-    public int TokenId { get; set; }
+    public Color HighlightTop
+    {
+      set => LineColorTop.Fill = new SolidColorBrush(value);
+    }
+
+    public Color HighlightBottom
+    {
+      set => LineColorBottom.Fill = new SolidColorBrush(value);
+    }
+
+    public int TokenIndex { get; set; }
 
     private void RootPanel_MouseEnter(object sender, MouseEventArgs e)
     {
@@ -46,12 +55,12 @@ namespace IDS.QuickAnnotator.Client
 
     private void RootPanel_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
     {
-      RightClick?.Invoke(this, SentenceId, TokenId);
+      RightClick?.Invoke(TokenIndex);
     }
 
     private void RootPanel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
     {
-      LeftClick?.Invoke(this, SentenceId, TokenId);
+      LeftClick?.Invoke(TokenIndex);
     }
   }
 }

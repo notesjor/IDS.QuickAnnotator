@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+﻿using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using IDS.QuickAnnotator.API.Model.Request;
 
 namespace IDS.QuickAnnotator.Client
 {
@@ -25,11 +14,54 @@ namespace IDS.QuickAnnotator.Client
       InitializeComponent();
     }
 
-    public event KeyPressedEvent KeyPressed;
-
-    private void EditorContent_KeyUp(object sender, KeyEventArgs e)
+    public string[] Tokens
     {
-      KeyPressed?.Invoke(e.Key);
+      set
+      {
+        EditorContent.Children.Clear();
+        for (var i = 0; i < value.Length; i++)
+        {
+          var token = new Token { TokenText = value[i], TokenIndex = i };
+          token.LeftClick += LeftClick;
+          token.RightClick += RightClick;
+
+          EditorContent.Children.Add(token);
+        }
+      }
+    }
+
+    public bool[] Annotations
+    {
+      set
+      {
+        for (var i = 0; i < value.Length; i++)
+        {
+          ((Token)EditorContent.Children[i]).HighlightBottom = value[i] ? Colors.Red : Colors.White;
+        }
+      }
+    }
+
+    public event HighlightEvent RightClick;
+    public event HighlightEvent LeftClick;
+
+    public void TemporaryAnnotation(int from = -1, int to = -1)
+    {
+      if (from == -1 && to == -1) // Lösche alles
+      {
+        for (var i = 0; i < EditorContent.Children.Count; i++)
+          ((Token)EditorContent.Children[i]).HighlightTop = Colors.White;
+      }
+      else if (from > -1 && to == -1) // Markiere Start
+      {
+        ((Token)EditorContent.Children[from]).HighlightTop = Colors.Green;
+      }
+      else if (from > -1 && to > -1)
+      {
+        ((Token)EditorContent.Children[from]).HighlightTop = Colors.Green;
+        ((Token)EditorContent.Children[to]).HighlightTop = Colors.Red;
+        for (var i = from + 1; i < to - 1; i++)
+          ((Token)EditorContent.Children[i]).HighlightTop = Colors.Yellow;
+      }
     }
   }
 }

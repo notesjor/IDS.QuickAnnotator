@@ -24,13 +24,19 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public bool Signin()
     {
-      return QuickAnnotatorApi.Signin(_authToken);
+      GlobalConfiguration.AuthToken = _authToken;
+      var res = QuickAnnotatorApi.Signin();
+      return res;
     }
 
     public bool Signin(string authToken, bool saveCredentials)
     {
-      if (QuickAnnotatorApi.Signin(authToken))
+      _authToken = authToken;
+      GlobalConfiguration.AuthToken = _authToken;
+
+      if (QuickAnnotatorApi.Signin())
       {
+        GlobalConfiguration.AuthToken = _authToken;
         if (saveCredentials)
           File.WriteAllText(_authPath, authToken);
 

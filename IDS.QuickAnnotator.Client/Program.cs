@@ -28,7 +28,7 @@ namespace IDS.QuickAnnotator.Client
       }
       else
       {
-        var signin = new SigninForm();
+        var signin = new SigninForm(GlobalConfiguration.AuthToken);
         signin.ShowDialog();
       }
     }
