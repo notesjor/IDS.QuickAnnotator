@@ -60,21 +60,25 @@ namespace IDS.QuickAnnotator.Client
       cmb_text.SelectedIndex = text_index;
     }
 
+    private int _editorIndexTmp = -1;
     private int _editorIndexFrom = -1;
     private int _editorIndexTo = -1;
 
     private void EditorOnRightClick(int index)
     {
       _editor.TemporaryAnnotation();
-      _editorIndexFrom = index;
+      _editorIndexTmp = index;
       _editor.TemporaryAnnotation(index);
     }
 
     private void EditorOnLeftClick(int index)
     {
+      _editorIndexFrom = _editorIndexTmp;
+      _editorIndexTmp = -1;
+
       _editor.TemporaryAnnotation();
       _editorIndexTo = index;
-      _editor.TemporaryAnnotation(_editorIndexFrom, _editorIndexTo);
+      _editor.TemporaryAnnotation(_editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom, _editorIndexTo);
     }
 
     private void commands_KeyPress(object sender, KeyPressEventArgs e)

@@ -36,7 +36,7 @@ namespace IDS.QuickAnnotator.Client
       {
         for (var i = 0; i < value.Length; i++)
         {
-          ((Token)EditorContent.Children[i]).HighlightBottom = value[i] ? Colors.Red : Colors.White;
+          ((Token)EditorContent.Children[i]).HighlightBottom = value[i] ? Colors.Black : Colors.White;
         }
       }
     }
@@ -59,7 +59,7 @@ namespace IDS.QuickAnnotator.Client
       {
         ((Token)EditorContent.Children[from]).HighlightTop = Colors.Green;
         ((Token)EditorContent.Children[to]).HighlightTop = Colors.Red;
-        for (var i = from + 1; i < to - 1; i++)
+        for (var i = from + 1; i < to; i++)
           ((Token)EditorContent.Children[i]).HighlightTop = Colors.Yellow;
       }
     }

@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -33,7 +34,14 @@ namespace IDS.QuickAnnotator.Client
 
     public Color HighlightBottom
     {
-      set => LineColorBottom.Fill = new SolidColorBrush(value);
+      set
+      {
+        LineColorBottom.Fill = new SolidColorBrush(value);
+        if (value != Colors.White)
+        {
+          TokenStr.FontWeight = FontWeights.Bold;
+        }
+      }
     }
 
     public int TokenIndex { get; set; }
