@@ -71,7 +71,7 @@ namespace IDS.QuickAnnotator.Client.Model
       return response.StatusCode == HttpStatusCode.OK;
     }
 
-    public static string[] SetDocumentCompletion(string documentId)
+    public static bool SetDocumentCompletion(string documentId)
     {
       var client = new RestClient($"{GlobalConfiguration.BaseUrl}/setDocumentCompletion");
       client.Timeout = -1;
@@ -79,7 +79,7 @@ namespace IDS.QuickAnnotator.Client.Model
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
       IRestResponse response = client.Execute(request);
-      return JsonConvert.DeserializeObject<string[]>(response.Content);
+      return response.StatusCode == HttpStatusCode.OK;
     }
   }
 }

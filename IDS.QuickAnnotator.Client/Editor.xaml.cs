@@ -18,6 +18,9 @@ namespace IDS.QuickAnnotator.Client
     {
       set
       {
+        if (value == null)
+          return;
+
         EditorContent.Children.Clear();
         for (var i = 0; i < value.Length; i++)
         {
@@ -34,6 +37,9 @@ namespace IDS.QuickAnnotator.Client
     {
       set
       {
+        if (value == null) 
+          return;
+
         for (var i = 0; i < value.Length; i++)
         {
           ((Token)EditorContent.Children[i]).HighlightBottom = value[i] ? Colors.Black : Colors.White;

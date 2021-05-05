@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Input;
+using IDS.QuickAnnotator.API.Model.Request;
 using IDS.QuickAnnotator.Client.Model;
 using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls;
@@ -25,6 +26,7 @@ namespace IDS.QuickAnnotator.Client
     {
       InitializeComponent();
       cmb_text.CommandBarDropDownListElement.TextBox.Margin = new Padding(0, 6, 0, 0);
+      cmb_text.CommandBarDropDownListElement.TextBox.TextBoxItem.ReadOnly = true;
       commandBarStripElement1.OverflowButton.Visibility = ElementVisibility.Collapsed;
 
       // EDITOR
@@ -41,7 +43,9 @@ namespace IDS.QuickAnnotator.Client
 
       cmb_text.Items.Clear();
       var text_index = 0;
-      foreach (var d in QuickAnnotatorApi.GetDocuments())
+
+      var docs = QuickAnnotatorApi.GetDocuments();
+      foreach (var d in docs)
       {
         if (d == _anno.Profile.LastDocumentId)
           text_index = cmb_text.Items.Count;
@@ -132,7 +136,15 @@ namespace IDS.QuickAnnotator.Client
 
     private void btn_save_Click(object sender, EventArgs e)
     {
-      
+      if (QuickAnnotatorApi.SetDocumentCompletion(cmb_text.Items[cmb_text.SelectedIndex].Text))
+      {
+        _anno.LoadProfile();
+        foreach (var item in cmb_text.Items)
+        {
+          item.Image = _anno.Profile.DoneDocumentIds.Contains(item.Text) ? Resources.ok_button : null;
+          item.TextImageRelation = TextImageRelation.ImageBeforeText;
+        }
+      }
     }
 
     private void cmb_text_SelectedIndexChanged(object sender, PositionChangedEventArgs e)
@@ -146,17 +158,42 @@ namespace IDS.QuickAnnotator.Client
 
       _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
-
     }
 
     private void btn_export_Click(object sender, EventArgs e)
     {
-      
+      var form = new ExportForm(cmb_text.Items[cmb_text.SelectedIndex].Text, _anno);
+      form.ShowDialog();
     }
 
     private void btn_submit_Click(object sender, EventArgs e)
     {
+      var p = radio_pb_del_q.IsChecked ? "" : radio_pb_true_w.IsChecked ? "true" : radio_pb_false_e.IsChecked ? "false" : "";
+      var g = radio_gen_del_a.IsChecked ? "" : radio_gen_true_s.IsChecked ? "true" : radio_gen_false_d.IsChecked ? "false" : "";
+      var c = radio_co_del_y.IsChecked ? "" : radio_co_true_x.IsChecked ? "true" : radio_co_false_c.IsChecked ? "false" : "";
 
+      var pS = radio_pb_del_q.IsChecked ? "" : chk_pb_t.IsChecked ? "false" : "true";
+      var gS = radio_gen_del_a.IsChecked ? "" : chk_gen_g.IsChecked ? "false" : "true";
+      var cS = radio_co_del_y.IsChecked ? "" : chk_co_b.IsChecked ? "false" : "true";
+
+      var change = new DocumentChange
+      {
+        From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,
+        To = _editorIndexTo + 1,
+        Annotation = new Dictionary<string, object>
+        {
+          {"Personenbezeichnung?", p},
+          {"Gendern hier nötig?", g},
+          {"Co-Ref. zu Eigennamen?", c},
+          {"Personenbezeichnung? (SICHERHEIT)", pS},
+          {"Gendern hier nötig? (SICHERHEIT)", gS},
+          {"Co-Ref. zu Eigennamen? (SICHERHEIT)", cS},
+        }
+      };
+
+      _anno.Annotate(change);
+      _editor.Tokens = _anno.EditorDocument;
+      _editor.Annotations = _anno.EditorAnnotations;
     }
 
     private void commands_Enter(object sender, EventArgs e)

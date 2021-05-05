@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:IDS.QuickAnnotator.Client"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="white">
-  <WrapPanel Orientation="Horizontal" Grid.Column="0" x:Name="EditorContent" Focusable="True">
-  </WrapPanel>
+  <ScrollViewer x:Name="MyScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Focusable="False">
+    <WrapPanel Orientation="Horizontal" x:Name="EditorContent" Focusable="True" MinWidth="250" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}">
+    </WrapPanel>
+  </ScrollViewer>
 </UserControl>

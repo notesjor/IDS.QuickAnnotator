@@ -105,7 +105,7 @@
       this.commands.Name = "commands";
       this.commands.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
             this.commandBarRowElement1});
-      this.commands.Size = new System.Drawing.Size(985, 48);
+      this.commands.Size = new System.Drawing.Size(985, 73);
       this.commands.TabIndex = 0;
       this.commands.Enter += new System.EventHandler(this.commands_Enter);
       this.commands.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.commands_KeyPress);
@@ -191,7 +191,7 @@
       this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.elementHost1.Location = new System.Drawing.Point(10, 10);
       this.elementHost1.Name = "elementHost1";
-      this.elementHost1.Size = new System.Drawing.Size(603, 589);
+      this.elementHost1.Size = new System.Drawing.Size(603, 564);
       this.elementHost1.TabIndex = 0;
       this.elementHost1.Text = "elementHost1";
       this.elementHost1.Child = null;
@@ -201,13 +201,13 @@
       this.radSplitContainer1.Controls.Add(this.splitPanel1);
       this.radSplitContainer1.Controls.Add(this.splitPanel2);
       this.radSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.radSplitContainer1.Location = new System.Drawing.Point(0, 48);
+      this.radSplitContainer1.Location = new System.Drawing.Point(0, 73);
       this.radSplitContainer1.Name = "radSplitContainer1";
       // 
       // 
       // 
       this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.radSplitContainer1.Size = new System.Drawing.Size(985, 609);
+      this.radSplitContainer1.Size = new System.Drawing.Size(985, 584);
       this.radSplitContainer1.SplitterWidth = 8;
       this.radSplitContainer1.TabIndex = 1;
       this.radSplitContainer1.TabStop = false;
@@ -222,7 +222,7 @@
       // 
       // 
       this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.splitPanel1.Size = new System.Drawing.Size(623, 609);
+      this.splitPanel1.Size = new System.Drawing.Size(623, 584);
       this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.1376663F, 0F);
       this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(113, 0);
       this.splitPanel1.TabIndex = 0;
@@ -238,7 +238,7 @@
       // 
       // 
       this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.splitPanel2.Size = new System.Drawing.Size(354, 609);
+      this.splitPanel2.Size = new System.Drawing.Size(354, 584);
       this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.1376663F, 0F);
       this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-113, 0);
       this.splitPanel2.TabIndex = 1;
@@ -259,7 +259,7 @@
       this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
       this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
       this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-      this.flowLayoutPanel1.Size = new System.Drawing.Size(354, 609);
+      this.flowLayoutPanel1.Size = new System.Drawing.Size(354, 584);
       this.flowLayoutPanel1.TabIndex = 0;
       // 
       // radLabel1
