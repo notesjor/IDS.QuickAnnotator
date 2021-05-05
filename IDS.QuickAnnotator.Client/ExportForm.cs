@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using IDS.QuickAnnotator.API.Model.Request;
@@ -36,26 +30,55 @@ namespace IDS.QuickAnnotator.Client
       File.WriteAllText(sfd.FileName, string.Join(" ", _anno.EditorDocument));
     }
 
-    private void btn_export_anno_my_Click(object sender, EventArgs e)
-    {
-      BuildXml(null);
-    }
+    private void btn_export_anno_my_Click(object sender, EventArgs e) => ExportXml(true);
 
-    private void btn_export_anno_all_Click(object sender, EventArgs e)
-    {
+    private void btn_export_anno_all_Click(object sender, EventArgs e) => ExportXml(false);
 
+    private void ExportXml(bool onlyMyAnnotations)
+    {
+      var sfd = new SaveFileDialog {Filter = "XML-Datei (*.xml)|*.xml"};
+      if (sfd.ShowDialog() != DialogResult.OK)
+        return;
+
+      File.WriteAllText(sfd.FileName, BuildXml(_anno.GetDocumentHistory(onlyMyAnnotations)));
     }
 
     private string BuildXml(DocumentChange[] changes)
     {
       var xml = new XmlDocument();
+      xml.LoadXml("<document></document>");
+      var root = xml.DocumentElement;
       
-      var root = xml.CreateElement("document");
       var annotations = xml.CreateElement("annotations");
       root.AppendChild(annotations);
+      foreach (var c in changes.OrderBy(x=>x.Timestamp))
+      {
+        var change = xml.CreateElement("annotation");
+        change.SetAttribute("from", c.From.ToString());
+        change.SetAttribute("to", c.To.ToString());
+        change.SetAttribute("user", c.UserName);
+        annotations.AppendChild(change);
 
-      var res = xml.OuterXml;
-      return res;
+        foreach (var a in c.Annotation)
+        {
+          var anno = xml.CreateElement("v");
+          anno.SetAttribute("key", a.Key);
+          anno.InnerText = a.Value.ToString();
+          change.AppendChild(anno);
+        }
+      }
+
+      var text = xml.CreateElement("text");
+      root.AppendChild(text);
+      for (var i = 0; i < _anno.EditorDocument.Length; i++)
+      {
+        var token = xml.CreateElement("token");
+        token.InnerText = _anno.EditorDocument[i];
+        token.SetAttribute("id", $"t_{i}");
+        text.AppendChild(token);
+      }
+
+      return xml.OuterXml;
     }
 
     private void btn_export_history_Click(object sender, EventArgs e)
@@ -69,6 +92,20 @@ namespace IDS.QuickAnnotator.Client
 
     private void btn_export_diff_Click(object sender, EventArgs e)
     {
+      ExportAnnotatorDiff(new[] {_documentId});
+    }
+
+    private void btn_export_all_diff_Click(object sender, EventArgs e)
+    {
+      ExportAnnotatorDiff(QuickAnnotatorApi.GetDocuments());
+    }
+
+    private void ExportAnnotatorDiff(string[] documentIds)
+    {
+      var sfd = new SaveFileDialog { Filter = "TSV-Datei (*.tsv)|*.tsv" };
+      if (sfd.ShowDialog() != DialogResult.OK)
+        return;
+
 
     }
   }
