@@ -172,9 +172,9 @@ namespace IDS.QuickAnnotator.Client
       var g = radio_gen_del_a.IsChecked ? "" : radio_gen_true_s.IsChecked ? "true" : radio_gen_false_d.IsChecked ? "false" : "";
       var c = radio_co_del_y.IsChecked ? "" : radio_co_true_x.IsChecked ? "true" : radio_co_false_c.IsChecked ? "false" : "";
 
-      var pS = radio_pb_del_q.IsChecked ? "" : chk_pb_t.IsChecked ? "false" : "true";
-      var gS = radio_gen_del_a.IsChecked ? "" : chk_gen_g.IsChecked ? "false" : "true";
-      var cS = radio_co_del_y.IsChecked ? "" : chk_co_b.IsChecked ? "false" : "true";
+      p += chk_pb_t.IsChecked ? "" : "?";
+      g += chk_gen_g.IsChecked ? "" : "?";
+      c += chk_co_b.IsChecked ? "" : "?";
 
       var change = new DocumentChange
       {
@@ -184,10 +184,7 @@ namespace IDS.QuickAnnotator.Client
         {
           {"Personenbezeichnung?", p},
           {"Gendern hier nötig?", g},
-          {"Co-Ref. zu Eigennamen?", c},
-          {"Personenbezeichnung? (SICHERHEIT)", pS},
-          {"Gendern hier nötig? (SICHERHEIT)", gS},
-          {"Co-Ref. zu Eigennamen? (SICHERHEIT)", cS},
+          {"Co-Ref. zu Eigennamen?", c}
         }
       };
 

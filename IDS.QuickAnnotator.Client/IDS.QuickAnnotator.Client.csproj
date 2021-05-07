@@ -191,5 +191,14 @@
   <ItemGroup>
     <None Include="Resources\button_green_pause.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-non-binary.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
