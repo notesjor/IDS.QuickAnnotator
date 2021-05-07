@@ -128,6 +128,19 @@ namespace IDS.QuickAnnotator.Client
           chk_co_b.IsChecked = !chk_co_b.IsChecked;
           break;
 
+        case 'n':
+          radio_sex_del_n.IsChecked = true;
+          break;
+        case ',':
+          radio_sex_female_komma.IsChecked = true;
+          break;
+        case '.':
+          radio_sex_male_punkt.IsChecked = true;
+          break;
+        case '-':
+          radio_sex_none_strich.IsChecked = !chk_co_b.IsChecked;
+          break;
+
         case '\r':
           btn_submit_Click(this, null);
           break;
@@ -171,6 +184,7 @@ namespace IDS.QuickAnnotator.Client
       var p = radio_pb_del_q.IsChecked ? "" : radio_pb_true_w.IsChecked ? "true" : radio_pb_false_e.IsChecked ? "false" : "";
       var g = radio_gen_del_a.IsChecked ? "" : radio_gen_true_s.IsChecked ? "true" : radio_gen_false_d.IsChecked ? "false" : "";
       var c = radio_co_del_y.IsChecked ? "" : radio_co_true_x.IsChecked ? "true" : radio_co_false_c.IsChecked ? "false" : "";
+      var s = radio_sex_del_n.IsChecked ? "" : radio_sex_female_komma.IsChecked ? "f" : radio_sex_male_punkt.IsChecked ? "m" : radio_sex_none_strich.IsChecked ? "d" : "";
 
       p += chk_pb_t.IsChecked ? "" : "?";
       g += chk_gen_g.IsChecked ? "" : "?";
@@ -182,9 +196,10 @@ namespace IDS.QuickAnnotator.Client
         To = _editorIndexTo + 1,
         Annotation = new Dictionary<string, object>
         {
-          {"Personenbezeichnung?", p},
-          {"Gendern hier nötig?", g},
-          {"Co-Ref. zu Eigennamen?", c}
+          {"Ist Personenbezeichnung?", p},
+          {"Gendern notwendig?", g},
+          {"Bezieht sich auf eine konkrete Person?", c},
+          {"Geschlechtsbezug?", s}
         }
       };
 

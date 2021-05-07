@@ -36,9 +36,12 @@
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
       this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
+      this.btn_save = new Telerik.WinControls.UI.CommandBarButton();
       this.commandBarLabel1 = new Telerik.WinControls.UI.CommandBarLabel();
       this.cmb_text = new Telerik.WinControls.UI.CommandBarDropDownList();
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
+      this.btn_export = new Telerik.WinControls.UI.CommandBarButton();
+      this.btn_focus = new Telerik.WinControls.UI.CommandBarButton();
       this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
       this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
@@ -47,33 +50,30 @@
       this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
       this.panel1 = new System.Windows.Forms.Panel();
       this.chk_pb_t = new Telerik.WinControls.UI.RadCheckBox();
-      this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-      this.panel2 = new System.Windows.Forms.Panel();
-      this.chk_gen_g = new Telerik.WinControls.UI.RadCheckBox();
-      this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-      this.panel3 = new System.Windows.Forms.Panel();
-      this.chk_co_b = new Telerik.WinControls.UI.RadCheckBox();
-      this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-      this.panel5 = new System.Windows.Forms.Panel();
-      this.panel4 = new System.Windows.Forms.Panel();
-      this.btn_submit = new Telerik.WinControls.UI.RadButton();
-      this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
       this.radio_pb_false_e = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_pb_true_w = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_pb_del_q = new Telerik.WinControls.UI.RadRadioButton();
+      this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+      this.panel2 = new System.Windows.Forms.Panel();
+      this.chk_gen_g = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_gen_false_d = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_gen_true_s = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_gen_del_a = new Telerik.WinControls.UI.RadRadioButton();
+      this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+      this.panel3 = new System.Windows.Forms.Panel();
+      this.chk_co_b = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_co_false_c = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_co_true_x = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_co_del_y = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_none = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_male = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_female = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_del = new Telerik.WinControls.UI.RadRadioButton();
-      this.btn_save = new Telerik.WinControls.UI.CommandBarButton();
-      this.btn_export = new Telerik.WinControls.UI.CommandBarButton();
-      this.btn_focus = new Telerik.WinControls.UI.CommandBarButton();
+      this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+      this.panel5 = new System.Windows.Forms.Panel();
+      this.radio_sex_none_strich = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_male_punkt = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_female_komma = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_del_n = new Telerik.WinControls.UI.RadRadioButton();
+      this.panel4 = new System.Windows.Forms.Panel();
+      this.btn_submit = new Telerik.WinControls.UI.RadButton();
+      this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.commands)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
       this.radSplitContainer1.SuspendLayout();
@@ -85,28 +85,28 @@
       ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
       this.panel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_pb_t)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-      this.panel2.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.chk_gen_g)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-      this.panel3.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.chk_co_b)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-      this.panel5.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_pb_false_e)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_pb_true_w)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_pb_del_q)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+      this.panel2.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chk_gen_g)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_false_d)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_true_s)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_del_a)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+      this.panel3.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chk_co_b)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_co_false_c)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_co_true_x)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_co_del_y)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+      this.panel5.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_strich)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_punkt)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female_komma)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
       this.SuspendLayout();
       // 
@@ -147,6 +147,14 @@
       this.commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
       ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
       // 
+      // btn_save
+      // 
+      this.btn_save.DisplayName = "commandBarButton1";
+      this.btn_save.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.save1;
+      this.btn_save.Name = "btn_save";
+      this.btn_save.Text = "Speichern";
+      this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+      // 
       // commandBarLabel1
       // 
       this.commandBarLabel1.DisplayName = "commandBarLabel1";
@@ -174,6 +182,21 @@
       this.commandBarSeparator1.DisplayName = "commandBarSeparator1";
       this.commandBarSeparator1.Name = "commandBarSeparator1";
       this.commandBarSeparator1.VisibleInOverflowMenu = false;
+      // 
+      // btn_export
+      // 
+      this.btn_export.DisplayName = "commandBarButton2";
+      this.btn_export.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.database_export;
+      this.btn_export.Name = "btn_export";
+      this.btn_export.Text = "Exportieren";
+      this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+      // 
+      // btn_focus
+      // 
+      this.btn_focus.DisplayName = "commandBarButton1";
+      this.btn_focus.Image = ((System.Drawing.Image)(resources.GetObject("btn_focus.Image")));
+      this.btn_focus.Name = "btn_focus";
+      this.btn_focus.Text = "Focus";
       // 
       // elementHost1
       // 
@@ -285,6 +308,47 @@
       this.chk_pb_t.Text = "<html> unsicher? <span style=\"font-size: 8.5pt\">T</span></html>";
       this.toolTip1.SetToolTip(this.chk_pb_t, "Unsicherheit markieren");
       // 
+      // radio_pb_false_e
+      // 
+      this.radio_pb_false_e.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_pb_false_e.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_pb_false_e.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
+      this.radio_pb_false_e.Location = new System.Drawing.Point(137, 0);
+      this.radio_pb_false_e.Name = "radio_pb_false_e";
+      this.radio_pb_false_e.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_pb_false_e.Size = new System.Drawing.Size(76, 31);
+      this.radio_pb_false_e.TabIndex = 2;
+      this.radio_pb_false_e.Text = "E";
+      this.radio_pb_false_e.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_pb_false_e, "Ablehnen");
+      // 
+      // radio_pb_true_w
+      // 
+      this.radio_pb_true_w.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_pb_true_w.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_pb_true_w.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
+      this.radio_pb_true_w.Location = new System.Drawing.Point(57, 0);
+      this.radio_pb_true_w.Name = "radio_pb_true_w";
+      this.radio_pb_true_w.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_pb_true_w.Size = new System.Drawing.Size(80, 31);
+      this.radio_pb_true_w.TabIndex = 1;
+      this.radio_pb_true_w.Text = "W";
+      this.radio_pb_true_w.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_pb_true_w, "Zustimmen");
+      // 
+      // radio_pb_del_q
+      // 
+      this.radio_pb_del_q.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_pb_del_q.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_pb_del_q.Image = ((System.Drawing.Image)(resources.GetObject("radio_pb_del_q.Image")));
+      this.radio_pb_del_q.Location = new System.Drawing.Point(0, 0);
+      this.radio_pb_del_q.Name = "radio_pb_del_q";
+      this.radio_pb_del_q.Size = new System.Drawing.Size(57, 31);
+      this.radio_pb_del_q.TabIndex = 0;
+      this.radio_pb_del_q.Text = "Q";
+      this.radio_pb_del_q.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_pb_del_q, "Wert entfernen");
+      // 
       // radLabel2
       // 
       this.radLabel2.AutoSize = false;
@@ -317,6 +381,47 @@
       this.chk_gen_g.TabIndex = 3;
       this.chk_gen_g.Text = "<html> unsicher? <span style=\"font-size: 8.5pt\">G</span></html>";
       this.toolTip1.SetToolTip(this.chk_gen_g, "Unsicherheit markieren");
+      // 
+      // radio_gen_false_d
+      // 
+      this.radio_gen_false_d.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_gen_false_d.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_gen_false_d.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
+      this.radio_gen_false_d.Location = new System.Drawing.Point(133, 0);
+      this.radio_gen_false_d.Name = "radio_gen_false_d";
+      this.radio_gen_false_d.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_gen_false_d.Size = new System.Drawing.Size(77, 31);
+      this.radio_gen_false_d.TabIndex = 2;
+      this.radio_gen_false_d.Text = "D";
+      this.radio_gen_false_d.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_gen_false_d, "Ablehnen");
+      // 
+      // radio_gen_true_s
+      // 
+      this.radio_gen_true_s.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_gen_true_s.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_gen_true_s.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
+      this.radio_gen_true_s.Location = new System.Drawing.Point(57, 0);
+      this.radio_gen_true_s.Name = "radio_gen_true_s";
+      this.radio_gen_true_s.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_gen_true_s.Size = new System.Drawing.Size(76, 31);
+      this.radio_gen_true_s.TabIndex = 1;
+      this.radio_gen_true_s.Text = "S";
+      this.radio_gen_true_s.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_gen_true_s, "Zustimmen");
+      // 
+      // radio_gen_del_a
+      // 
+      this.radio_gen_del_a.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_gen_del_a.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_gen_del_a.Image = ((System.Drawing.Image)(resources.GetObject("radio_gen_del_a.Image")));
+      this.radio_gen_del_a.Location = new System.Drawing.Point(0, 0);
+      this.radio_gen_del_a.Name = "radio_gen_del_a";
+      this.radio_gen_del_a.Size = new System.Drawing.Size(57, 31);
+      this.radio_gen_del_a.TabIndex = 0;
+      this.radio_gen_del_a.Text = "A";
+      this.radio_gen_del_a.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_gen_del_a, "Wert entfernen");
       // 
       // radLabel3
       // 
@@ -351,6 +456,47 @@
       this.chk_co_b.Text = "<html> unsicher? <span style=\"font-size: 8.5pt\">B</span></html>";
       this.toolTip1.SetToolTip(this.chk_co_b, "Unsicherheit markieren");
       // 
+      // radio_co_false_c
+      // 
+      this.radio_co_false_c.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_co_false_c.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_co_false_c.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
+      this.radio_co_false_c.Location = new System.Drawing.Point(133, 0);
+      this.radio_co_false_c.Name = "radio_co_false_c";
+      this.radio_co_false_c.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_co_false_c.Size = new System.Drawing.Size(77, 31);
+      this.radio_co_false_c.TabIndex = 2;
+      this.radio_co_false_c.Text = "C";
+      this.radio_co_false_c.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_co_false_c, "Ablehnen");
+      // 
+      // radio_co_true_x
+      // 
+      this.radio_co_true_x.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_co_true_x.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_co_true_x.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
+      this.radio_co_true_x.Location = new System.Drawing.Point(56, 0);
+      this.radio_co_true_x.Name = "radio_co_true_x";
+      this.radio_co_true_x.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_co_true_x.Size = new System.Drawing.Size(77, 31);
+      this.radio_co_true_x.TabIndex = 1;
+      this.radio_co_true_x.Text = "X";
+      this.radio_co_true_x.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_co_true_x, "Zustimmen");
+      // 
+      // radio_co_del_y
+      // 
+      this.radio_co_del_y.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_co_del_y.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_co_del_y.Image = ((System.Drawing.Image)(resources.GetObject("radio_co_del_y.Image")));
+      this.radio_co_del_y.Location = new System.Drawing.Point(0, 0);
+      this.radio_co_del_y.Name = "radio_co_del_y";
+      this.radio_co_del_y.Size = new System.Drawing.Size(56, 31);
+      this.radio_co_del_y.TabIndex = 0;
+      this.radio_co_del_y.Text = "Y";
+      this.radio_co_del_y.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_co_del_y, "Wert entfernen");
+      // 
       // radLabel4
       // 
       this.radLabel4.AutoSize = false;
@@ -363,15 +509,70 @@
       // 
       // panel5
       // 
-      this.panel5.Controls.Add(this.radio_sex_none);
-      this.panel5.Controls.Add(this.radio_sex_male);
-      this.panel5.Controls.Add(this.radio_sex_female);
-      this.panel5.Controls.Add(this.radio_sex_del);
+      this.panel5.Controls.Add(this.radio_sex_none_strich);
+      this.panel5.Controls.Add(this.radio_sex_male_punkt);
+      this.panel5.Controls.Add(this.radio_sex_female_komma);
+      this.panel5.Controls.Add(this.radio_sex_del_n);
       this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panel5.Location = new System.Drawing.Point(3, 270);
       this.panel5.Name = "panel5";
       this.panel5.Size = new System.Drawing.Size(347, 31);
       this.panel5.TabIndex = 9;
+      // 
+      // radio_sex_none_strich
+      // 
+      this.radio_sex_none_strich.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_none_strich.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.radio_sex_none_strich.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_non_binary;
+      this.radio_sex_none_strich.Location = new System.Drawing.Point(207, 0);
+      this.radio_sex_none_strich.Name = "radio_sex_none_strich";
+      this.radio_sex_none_strich.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_sex_none_strich.Size = new System.Drawing.Size(75, 31);
+      this.radio_sex_none_strich.TabIndex = 3;
+      this.radio_sex_none_strich.Text = "-";
+      this.radio_sex_none_strich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_none_strich, "Ablehnen");
+      // 
+      // radio_sex_male_punkt
+      // 
+      this.radio_sex_male_punkt.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_male_punkt.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.radio_sex_male_punkt.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_male;
+      this.radio_sex_male_punkt.Location = new System.Drawing.Point(132, 0);
+      this.radio_sex_male_punkt.Name = "radio_sex_male_punkt";
+      this.radio_sex_male_punkt.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_sex_male_punkt.Size = new System.Drawing.Size(75, 31);
+      this.radio_sex_male_punkt.TabIndex = 2;
+      this.radio_sex_male_punkt.Text = ".";
+      this.radio_sex_male_punkt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_male_punkt, "Ablehnen");
+      // 
+      // radio_sex_female_komma
+      // 
+      this.radio_sex_female_komma.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_female_komma.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.radio_sex_female_komma.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_female;
+      this.radio_sex_female_komma.Location = new System.Drawing.Point(58, 0);
+      this.radio_sex_female_komma.Name = "radio_sex_female_komma";
+      this.radio_sex_female_komma.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+      this.radio_sex_female_komma.Size = new System.Drawing.Size(74, 31);
+      this.radio_sex_female_komma.TabIndex = 1;
+      this.radio_sex_female_komma.Text = ",";
+      this.radio_sex_female_komma.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_female_komma, "Zustimmen");
+      // 
+      // radio_sex_del_n
+      // 
+      this.radio_sex_del_n.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_del_n.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_sex_del_n.Image = ((System.Drawing.Image)(resources.GetObject("radio_sex_del_n.Image")));
+      this.radio_sex_del_n.Location = new System.Drawing.Point(0, 0);
+      this.radio_sex_del_n.Name = "radio_sex_del_n";
+      this.radio_sex_del_n.Size = new System.Drawing.Size(58, 31);
+      this.radio_sex_del_n.TabIndex = 0;
+      this.radio_sex_del_n.Text = "N";
+      this.radio_sex_del_n.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_del_n, "Wert entfernen");
       // 
       // panel4
       // 
@@ -390,207 +591,6 @@
       this.btn_submit.Text = "Annotieren (ENTER)";
       this.toolTip1.SetToolTip(this.btn_submit, "Annotation anwenden");
       this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
-      // 
-      // radio_pb_false_e
-      // 
-      this.radio_pb_false_e.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_pb_false_e.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_pb_false_e.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
-      this.radio_pb_false_e.Location = new System.Drawing.Point(137, 0);
-      this.radio_pb_false_e.Name = "radio_pb_false_e";
-      this.radio_pb_false_e.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_pb_false_e.Size = new System.Drawing.Size(76, 24);
-      this.radio_pb_false_e.TabIndex = 2;
-      this.radio_pb_false_e.Text = "E";
-      this.radio_pb_false_e.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_pb_false_e, "Ablehnen");
-      // 
-      // radio_pb_true_w
-      // 
-      this.radio_pb_true_w.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_pb_true_w.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_pb_true_w.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
-      this.radio_pb_true_w.Location = new System.Drawing.Point(57, 0);
-      this.radio_pb_true_w.Name = "radio_pb_true_w";
-      this.radio_pb_true_w.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_pb_true_w.Size = new System.Drawing.Size(80, 24);
-      this.radio_pb_true_w.TabIndex = 1;
-      this.radio_pb_true_w.Text = "W";
-      this.radio_pb_true_w.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_pb_true_w, "Zustimmen");
-      // 
-      // radio_pb_del_q
-      // 
-      this.radio_pb_del_q.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_pb_del_q.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_pb_del_q.Image = ((System.Drawing.Image)(resources.GetObject("radio_pb_del_q.Image")));
-      this.radio_pb_del_q.Location = new System.Drawing.Point(0, 0);
-      this.radio_pb_del_q.Name = "radio_pb_del_q";
-      this.radio_pb_del_q.Size = new System.Drawing.Size(57, 26);
-      this.radio_pb_del_q.TabIndex = 0;
-      this.radio_pb_del_q.Text = "Q";
-      this.radio_pb_del_q.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_pb_del_q, "Wert entfernen");
-      // 
-      // radio_gen_false_d
-      // 
-      this.radio_gen_false_d.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_gen_false_d.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_gen_false_d.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
-      this.radio_gen_false_d.Location = new System.Drawing.Point(133, 0);
-      this.radio_gen_false_d.Name = "radio_gen_false_d";
-      this.radio_gen_false_d.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_gen_false_d.Size = new System.Drawing.Size(77, 24);
-      this.radio_gen_false_d.TabIndex = 2;
-      this.radio_gen_false_d.Text = "D";
-      this.radio_gen_false_d.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_gen_false_d, "Ablehnen");
-      // 
-      // radio_gen_true_s
-      // 
-      this.radio_gen_true_s.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_gen_true_s.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_gen_true_s.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
-      this.radio_gen_true_s.Location = new System.Drawing.Point(57, 0);
-      this.radio_gen_true_s.Name = "radio_gen_true_s";
-      this.radio_gen_true_s.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_gen_true_s.Size = new System.Drawing.Size(76, 24);
-      this.radio_gen_true_s.TabIndex = 1;
-      this.radio_gen_true_s.Text = "S";
-      this.radio_gen_true_s.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_gen_true_s, "Zustimmen");
-      // 
-      // radio_gen_del_a
-      // 
-      this.radio_gen_del_a.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_gen_del_a.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_gen_del_a.Image = ((System.Drawing.Image)(resources.GetObject("radio_gen_del_a.Image")));
-      this.radio_gen_del_a.Location = new System.Drawing.Point(0, 0);
-      this.radio_gen_del_a.Name = "radio_gen_del_a";
-      this.radio_gen_del_a.Size = new System.Drawing.Size(57, 26);
-      this.radio_gen_del_a.TabIndex = 0;
-      this.radio_gen_del_a.Text = "A";
-      this.radio_gen_del_a.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_gen_del_a, "Wert entfernen");
-      // 
-      // radio_co_false_c
-      // 
-      this.radio_co_false_c.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_co_false_c.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_co_false_c.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
-      this.radio_co_false_c.Location = new System.Drawing.Point(133, 0);
-      this.radio_co_false_c.Name = "radio_co_false_c";
-      this.radio_co_false_c.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_co_false_c.Size = new System.Drawing.Size(77, 24);
-      this.radio_co_false_c.TabIndex = 2;
-      this.radio_co_false_c.Text = "C";
-      this.radio_co_false_c.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_co_false_c, "Ablehnen");
-      // 
-      // radio_co_true_x
-      // 
-      this.radio_co_true_x.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_co_true_x.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_co_true_x.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
-      this.radio_co_true_x.Location = new System.Drawing.Point(56, 0);
-      this.radio_co_true_x.Name = "radio_co_true_x";
-      this.radio_co_true_x.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_co_true_x.Size = new System.Drawing.Size(77, 24);
-      this.radio_co_true_x.TabIndex = 1;
-      this.radio_co_true_x.Text = "X";
-      this.radio_co_true_x.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_co_true_x, "Zustimmen");
-      // 
-      // radio_co_del_y
-      // 
-      this.radio_co_del_y.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_co_del_y.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_co_del_y.Image = ((System.Drawing.Image)(resources.GetObject("radio_co_del_y.Image")));
-      this.radio_co_del_y.Location = new System.Drawing.Point(0, 0);
-      this.radio_co_del_y.Name = "radio_co_del_y";
-      this.radio_co_del_y.Size = new System.Drawing.Size(56, 26);
-      this.radio_co_del_y.TabIndex = 0;
-      this.radio_co_del_y.Text = "Y";
-      this.radio_co_del_y.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_co_del_y, "Wert entfernen");
-      // 
-      // radio_sex_none
-      // 
-      this.radio_sex_none.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_none.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.radio_sex_none.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_non_binary;
-      this.radio_sex_none.Location = new System.Drawing.Point(207, 0);
-      this.radio_sex_none.Name = "radio_sex_none";
-      this.radio_sex_none.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_sex_none.Size = new System.Drawing.Size(75, 24);
-      this.radio_sex_none.TabIndex = 3;
-      this.radio_sex_none.Text = "-";
-      this.radio_sex_none.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_none, "Ablehnen");
-      // 
-      // radio_sex_male
-      // 
-      this.radio_sex_male.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_male.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.radio_sex_male.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_male;
-      this.radio_sex_male.Location = new System.Drawing.Point(132, 0);
-      this.radio_sex_male.Name = "radio_sex_male";
-      this.radio_sex_male.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_sex_male.Size = new System.Drawing.Size(75, 24);
-      this.radio_sex_male.TabIndex = 2;
-      this.radio_sex_male.Text = ".";
-      this.radio_sex_male.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_male, "Ablehnen");
-      // 
-      // radio_sex_female
-      // 
-      this.radio_sex_female.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_female.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.radio_sex_female.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_female;
-      this.radio_sex_female.Location = new System.Drawing.Point(58, 0);
-      this.radio_sex_female.Name = "radio_sex_female";
-      this.radio_sex_female.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-      this.radio_sex_female.Size = new System.Drawing.Size(74, 24);
-      this.radio_sex_female.TabIndex = 1;
-      this.radio_sex_female.Text = ",";
-      this.radio_sex_female.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_female, "Zustimmen");
-      // 
-      // radio_sex_del
-      // 
-      this.radio_sex_del.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_del.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_sex_del.Image = ((System.Drawing.Image)(resources.GetObject("radio_sex_del.Image")));
-      this.radio_sex_del.Location = new System.Drawing.Point(0, 0);
-      this.radio_sex_del.Name = "radio_sex_del";
-      this.radio_sex_del.Size = new System.Drawing.Size(58, 26);
-      this.radio_sex_del.TabIndex = 0;
-      this.radio_sex_del.Text = "N";
-      this.radio_sex_del.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_del, "Wert entfernen");
-      // 
-      // btn_save
-      // 
-      this.btn_save.DisplayName = "commandBarButton1";
-      this.btn_save.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.save1;
-      this.btn_save.Name = "btn_save";
-      this.btn_save.Text = "Speichern";
-      this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-      // 
-      // btn_export
-      // 
-      this.btn_export.DisplayName = "commandBarButton2";
-      this.btn_export.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.database_export;
-      this.btn_export.Name = "btn_export";
-      this.btn_export.Text = "Exportieren";
-      this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
-      // 
-      // btn_focus
-      // 
-      this.btn_focus.DisplayName = "commandBarButton1";
-      this.btn_focus.Image = ((System.Drawing.Image)(resources.GetObject("btn_focus.Image")));
-      this.btn_focus.Name = "btn_focus";
-      this.btn_focus.Text = "Focus";
       // 
       // DashboardForm
       // 
@@ -618,31 +618,31 @@
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_pb_t)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_pb_false_e)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_pb_true_w)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_pb_del_q)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
       this.panel2.ResumeLayout(false);
       this.panel2.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_gen_g)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_gen_false_d)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_gen_true_s)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_gen_del_a)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
       this.panel3.ResumeLayout(false);
       this.panel3.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_co_b)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-      this.panel5.ResumeLayout(false);
-      this.panel5.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_pb_false_e)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_pb_true_w)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_pb_del_q)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_gen_false_d)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_gen_true_s)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_gen_del_a)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_co_false_c)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_co_true_x)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_co_del_y)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+      this.panel5.ResumeLayout(false);
+      this.panel5.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_strich)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_punkt)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female_komma)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -688,9 +688,9 @@
     private Telerik.WinControls.UI.CommandBarButton btn_focus;
     private Telerik.WinControls.UI.RadLabel radLabel4;
     private System.Windows.Forms.Panel panel5;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_none;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_male;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_female;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_del;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_none_strich;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_male_punkt;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_female_komma;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_del_n;
   }
 }
