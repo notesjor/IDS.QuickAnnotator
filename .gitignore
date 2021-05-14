@@ -145,3 +145,5 @@ dist
 publish-raspberry
 publish
 packages
+lib
+*.htm

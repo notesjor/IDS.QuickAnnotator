@@ -12,7 +12,6 @@ using IDS.QuickAnnotator.Client.Model;
 using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
-using Telerik.WinControls.UI.Data;
 
 namespace IDS.QuickAnnotator.Client
 {
@@ -89,57 +88,110 @@ namespace IDS.QuickAnnotator.Client
     {
       switch (e.KeyChar)
       {
+        case '5':
+          radio_lk_del_5.IsChecked = true;
+          break;
+        case '1':
+          radio_lk_1.IsChecked = true;
+          break;
+        case '2':
+          radio_lk_2.IsChecked = true;
+          break;
+        case '3':
+          radio_lk_3.IsChecked = true;
+          break;
+        case '4':
+          radio_lk_4.IsChecked = true;
+          break;
+        case '6':
+          chk_lk_6.IsChecked = !chk_lk_6.IsChecked;
+          break;
+
         case 'q':
-          radio_pb_del_q.IsChecked = true;
+          radio_gen_del_q.IsChecked = true;
           break;
         case 'w':
-          radio_pb_true_w.IsChecked = true;
+          radio_gen_true_w.IsChecked = true;
           break;
         case 'e':
-          radio_pb_false_e.IsChecked = true;
+          radio_gen_false_e.IsChecked = true;
           break;
         case 't':
-          chk_pb_t.IsChecked = !chk_pb_t.IsChecked;
+          chk_gen_t.IsChecked = !chk_gen_t.IsChecked;
           break;
 
         case 'a':
-          radio_gen_del_a.IsChecked = true;
+          radio_abstr_del_a.IsChecked = true;
           break;
         case 's':
-          radio_gen_true_s.IsChecked = true;
+          radio_abstr_true_s.IsChecked = true;
           break;
         case 'd':
-          radio_gen_false_d.IsChecked = true;
+          radio_abstr_false_d.IsChecked = true;
           break;
         case 'g':
-          chk_gen_g.IsChecked = !chk_gen_g.IsChecked;
+          chk_abstr_g.IsChecked = !chk_abstr_g.IsChecked;
           break;
 
         case 'y':
-          radio_co_del_y.IsChecked = true;
+          radio_ref_del_y.IsChecked = true;
           break;
         case 'x':
-          radio_co_true_x.IsChecked = true;
+          radio_ref_true_x.IsChecked = true;
           break;
         case 'c':
-          radio_co_false_c.IsChecked = true;
+          radio_ref_false_c.IsChecked = true;
           break;
         case 'b':
-          chk_co_b.IsChecked = !chk_co_b.IsChecked;
+          chk_ref_b.IsChecked = !chk_ref_b.IsChecked;
           break;
 
-        case 'n':
-          radio_sex_del_n.IsChecked = true;
+        case 'ß':
+          radio_mask_del_ß.IsChecked = true;
           break;
-        case ',':
-          radio_sex_female_komma.IsChecked = true;
+        case '0':
+          radio_mask_true_0.IsChecked = true;
           break;
-        case '.':
-          radio_sex_male_punkt.IsChecked = true;
+        case '9':
+          radio_mask_false_9.IsChecked = true;
           break;
-        case '-':
-          radio_sex_none_strich.IsChecked = !chk_co_b.IsChecked;
+        case '7':
+          chk_mask_7.IsChecked = !chk_mask_7.IsChecked;
           break;
+
+
+        case '+':
+          radio_kont_del_üü.IsChecked = true;
+          break;
+        case 'ü':
+          radio_kont_true_ü.IsChecked = true;
+          break;
+        case 'p':
+          radio_kont_false_p.IsChecked = true;
+          break;
+        case 'i':
+          chk_kont_i.IsChecked = !chk_kont_i.IsChecked;
+          break;
+
+        case '#':
+          radio_sex_del_ää.IsChecked = true;
+          break;
+        case 'ä':
+          radio_sex_male_ä.IsChecked = true;
+          break;
+        case 'ö':
+          radio_sex_female_ö.IsChecked = true;
+          break;
+        case 'l':
+          radio_sex_none_l.IsChecked = true;
+          break;
+        case 'k':
+          radio_sex_group_k.IsChecked = true;
+          break;
+        case 'h':
+          chk_sex_h.IsChecked = !chk_sex_h.IsChecked;
+          break;
+
 
         case '\r':
           btn_submit_Click(this, null);
@@ -160,7 +212,7 @@ namespace IDS.QuickAnnotator.Client
       }
     }
 
-    private void cmb_text_SelectedIndexChanged(object sender, PositionChangedEventArgs e)
+    private void Cmb_textOnSelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
     {
       if (_init)
         return;
@@ -181,14 +233,13 @@ namespace IDS.QuickAnnotator.Client
 
     private void btn_submit_Click(object sender, EventArgs e)
     {
-      var p = radio_pb_del_q.IsChecked ? "" : radio_pb_true_w.IsChecked ? "true" : radio_pb_false_e.IsChecked ? "false" : "";
-      var g = radio_gen_del_a.IsChecked ? "" : radio_gen_true_s.IsChecked ? "true" : radio_gen_false_d.IsChecked ? "false" : "";
-      var c = radio_co_del_y.IsChecked ? "" : radio_co_true_x.IsChecked ? "true" : radio_co_false_c.IsChecked ? "false" : "";
-      var s = radio_sex_del_n.IsChecked ? "" : radio_sex_female_komma.IsChecked ? "f" : radio_sex_male_punkt.IsChecked ? "m" : radio_sex_none_strich.IsChecked ? "d" : "";
-
-      p += chk_pb_t.IsChecked ? "" : "?";
-      g += chk_gen_g.IsChecked ? "" : "?";
-      c += chk_co_b.IsChecked ? "" : "?";
+      var lk = radio_lk_del_5.IsChecked ? "" : (chk_lk_6.IsChecked ? "?" : "") + (radio_lk_1.IsChecked ? "1" : radio_lk_2.IsChecked ? "2" : radio_lk_3.IsChecked ? "3" : radio_lk_4.IsChecked ? "4" : "");
+      var ge = radio_gen_del_q.IsChecked ? "" : (chk_gen_t.IsChecked ? "?" : "") + (radio_gen_true_w.IsChecked ? "true" : radio_gen_false_e.IsChecked ? "false" : "");
+      var ab = radio_abstr_del_a.IsChecked ? "" : (chk_abstr_g.IsChecked ? "?" : "") + (radio_abstr_true_s.IsChecked ? "true" : radio_abstr_false_d.IsChecked ? "false" : "");
+      var re = radio_ref_del_y.IsChecked ? "" : (chk_ref_b.IsChecked ? "?" : "") + (radio_ref_true_x.IsChecked ? "true" : radio_ref_false_c.IsChecked ? "false" : "");
+      var ma = radio_mask_del_ß.IsChecked ? "" : (chk_mask_7.IsChecked ? "?" : "") + (radio_mask_true_0.IsChecked ? "true" : radio_mask_false_9.IsChecked ? "false" : "");
+      var ko = radio_kont_del_üü.IsChecked ? "" : (chk_kont_i.IsChecked ? "?" : "") + (radio_kont_true_ü.IsChecked ? "true" : radio_kont_false_p.IsChecked ? "false" : "");
+      var se = radio_sex_del_ää.IsChecked ? "" : (chk_sex_h.IsChecked ? "?" : "") + (radio_sex_male_ä.IsChecked ? "male" : radio_sex_female_ö.IsChecked ? "female" : radio_sex_none_l.IsChecked ? "none" : radio_sex_group_k.IsChecked ? "group" : "");
 
       var change = new DocumentChange
       {
@@ -196,14 +247,34 @@ namespace IDS.QuickAnnotator.Client
         To = _editorIndexTo + 1,
         Annotation = new Dictionary<string, object>
         {
-          {"Ist Personenbezeichnung?", p},
-          {"Gendern notwendig?", g},
-          {"Bezieht sich auf eine konkrete Person?", c},
-          {"Geschlechtsbezug?", s}
+          {"Linguistische Klasse",lk},
+          {"Notwendigkeit zu Gendern?",ge},
+          {"Geschlechtsabstrahierendes Substantiv",ab},
+          {"Referenz/Bezug auf konkrete Person / Personengruppe?",re},
+          {"Generisches Maskulinum",ma},
+          {"Geschlecht aus Kontext erkennbar?",ko},
+          {" Welches Geschlecht ist aus Kontext erkennbar?",se}
         }
       };
 
-      _anno.Annotate(change);
+      foreach (var control in annotation_editor.Controls)
+      {
+        if (!(control is Panel panel))
+          continue;
+
+        foreach (Control option in panel.Controls)
+          switch (option)
+          {
+            case RadCheckBox chk:
+              chk.IsChecked = false;
+              break;
+            case RadRadioButton radio:
+              radio.IsChecked = false;
+              break;
+          }
+      }
+
+      // _anno.Annotate(change);
       _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
     }
