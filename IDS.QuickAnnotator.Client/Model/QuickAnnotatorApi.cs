@@ -15,7 +15,7 @@ namespace IDS.QuickAnnotator.Client.Model
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
       IRestResponse response = client.Execute(request);
-      return response.Content == "true";
+      return response.StatusCode == HttpStatusCode.OK;
     }
 
     public static UserProfile GetProfile()

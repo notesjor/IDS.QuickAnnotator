@@ -6,24 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\Utils\DocumentProcessing\Tokenizer\Abstract\AbstractTokenizer.cs" Link="CE\AbstractTokenizer.cs" />
+    <Compile Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\Utils\DocumentProcessing\Tokenizer\HighSpeedSpaceTokenizer.cs" Link="CE\HighSpeedSpaceTokenizer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="input\" />
+    <Folder Include="CE\" />
     <Folder Include="output\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="BitCutStudios.CorpusExplorer">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\BitCutStudios.CorpusExplorer.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk.Diagnostic">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\CorpusExplorer.Sdk.Diagnostic.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

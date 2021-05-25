@@ -19,7 +19,16 @@ namespace IDS.QuickAnnotator.Client.Model
       LoadProfile();
     }
 
-    public UserProfile Profile => _profile;
+    public UserProfile Profile
+    {
+      get
+      {
+        if (_profile != null)
+          return _profile;
+        LoadProfile();
+        return _profile;
+      }
+    }
     public string[] EditorDocument { get; set; }
     public bool[] EditorAnnotations { get; set; }
 

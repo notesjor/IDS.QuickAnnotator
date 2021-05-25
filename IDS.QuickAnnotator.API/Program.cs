@@ -96,6 +96,10 @@ namespace IDS.QuickAnnotator.API
         if (!File.Exists(filePath))
           return arg.Response.Send(HttpStatusCode.NotFound);
 
+        var user = GetUser(req.AuthToken);
+        user.LastDocumentId = req.DocumentId;
+        SetUser(req.AuthToken, user);
+
         return arg.Response.Send(File.ReadAllText(filePath, Encoding.UTF8));
       }
       catch (Exception ex)
