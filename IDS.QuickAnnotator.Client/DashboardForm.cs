@@ -81,7 +81,118 @@ namespace IDS.QuickAnnotator.Client
 
       _editor.TemporaryAnnotation();
       _editorIndexTo = index;
+
+      DisplayExsistingAnnotation(index);
       _editor.TemporaryAnnotation(_editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom, _editorIndexTo);
+    }
+
+    private void DisplayExsistingAnnotation(int index)
+    {
+      // RESET
+      foreach (var control in annotation_editor.Controls)
+      {
+        if (!(control is Panel panel))
+          continue;
+
+        foreach (Control option in panel.Controls)
+          switch (option)
+          {
+            case RadCheckBox chk:
+              chk.BackColor = Color.Transparent;
+              break;
+            case RadRadioButton radio:
+              radio.BackColor = Color.Transparent;
+              break;
+          }
+      }
+
+      // SET
+      var last = _anno.GetLastAnnotationState(index);
+      if (last == null)
+        return;
+
+      foreach (var anno in last.Annotation)
+      {
+        if (string.IsNullOrWhiteSpace(anno.Value?.ToString()))
+          continue;
+
+        var val = anno.Value.ToString().Replace("?", "");
+
+        switch (anno.Key)
+        {
+          case "Linguistische Klasse":
+            chk_lk_6.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            switch (val)
+            {
+              case "1":
+                radio_lk_1.BackColor = Color.Yellow;
+                break;
+              case "2":
+                radio_lk_2.BackColor = Color.Yellow;
+                break;
+              case "3":
+                radio_lk_3.BackColor = Color.Yellow;
+                break;
+              case "4":
+                radio_lk_4.BackColor = Color.Yellow;
+                break;
+            }
+            break;
+          case "Notwendigkeit zu Gendern?":
+            chk_gen_t.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            if (val == "true")
+              radio_gen_true_w.BackColor = Color.Yellow;
+            else
+              radio_gen_false_e.BackColor = Color.Yellow;
+            break;
+          case "Geschlechtsabstrahierendes Substantiv":
+            chk_abstr_g.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            if (val == "true")
+              radio_abstr_true_s.BackColor = Color.Yellow;
+            else
+              radio_abstr_false_d.BackColor = Color.Yellow;
+            break;
+          case "Referenz/Bezug auf konkrete Person / Personengruppe?":
+            chk_ref_b.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            if (val == "true")
+              radio_ref_true_x.BackColor = Color.Yellow;
+            else
+              radio_ref_false_c.BackColor = Color.Yellow;
+            break;
+          case "Generisches Maskulinum":
+            chk_mask_7.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            if (val == "true")
+              radio_mask_true_0.BackColor = Color.Yellow;
+            else
+              radio_mask_false_9.BackColor = Color.Yellow;
+            break;
+          case "Geschlecht aus Kontext erkennbar?":
+            chk_kont_i.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            if (val == "true")
+              radio_kont_true_ü.BackColor = Color.Yellow;
+            else
+              radio_kont_false_p.BackColor = Color.Yellow;
+            break;
+          case "Welches Geschlecht ist aus Kontext erkennbar?":
+            chk_sex_h.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            switch (val)
+            {
+              case "male":
+                radio_sex_male_ä.BackColor = Color.Yellow;
+                break;
+              case "female":
+                radio_sex_female_ö.BackColor = Color.Yellow;
+                break;
+              case "none":
+                radio_sex_none_l.BackColor = Color.Yellow;
+                break;
+              case "group":
+                radio_sex_group_k.BackColor = Color.Yellow;
+                break;
+            }
+            break;
+        }
+      }
     }
 
     private void commands_KeyPress(object sender, KeyPressEventArgs e)
@@ -241,21 +352,23 @@ namespace IDS.QuickAnnotator.Client
       var ko = radio_kont_del_üü.IsChecked ? "" : (chk_kont_i.IsChecked ? "?" : "") + (radio_kont_true_ü.IsChecked ? "true" : radio_kont_false_p.IsChecked ? "false" : "");
       var se = radio_sex_del_ää.IsChecked ? "" : (chk_sex_h.IsChecked ? "?" : "") + (radio_sex_male_ä.IsChecked ? "male" : radio_sex_female_ö.IsChecked ? "female" : radio_sex_none_l.IsChecked ? "none" : radio_sex_group_k.IsChecked ? "group" : "");
 
-      var change = new DocumentChange
+      var del = (lk + ge + ab + re + ma + ko + se).Length > 0;
+
+      _anno.Annotate(new DocumentChange
       {
         From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,
         To = _editorIndexTo + 1,
         Annotation = new Dictionary<string, object>
         {
-          {"Linguistische Klasse",lk},
-          {"Notwendigkeit zu Gendern?",ge},
-          {"Geschlechtsabstrahierendes Substantiv",ab},
-          {"Referenz/Bezug auf konkrete Person / Personengruppe?",re},
-          {"Generisches Maskulinum",ma},
-          {"Geschlecht aus Kontext erkennbar?",ko},
-          {" Welches Geschlecht ist aus Kontext erkennbar?",se}
+          {"Linguistische Klasse", lk},
+          {"Notwendigkeit zu Gendern?", ge},
+          {"Geschlechtsabstrahierendes Substantiv", ab},
+          {"Referenz/Bezug auf konkrete Person / Personengruppe?", re},
+          {"Generisches Maskulinum", ma},
+          {"Geschlecht aus Kontext erkennbar?", ko},
+          {"Welches Geschlecht ist aus Kontext erkennbar?", se}
         }
-      };
+      });
 
       foreach (var control in annotation_editor.Controls)
       {
@@ -274,8 +387,8 @@ namespace IDS.QuickAnnotator.Client
           }
       }
 
-      // _anno.Annotate(change);
-      _editor.Tokens = _anno.EditorDocument;
+      if (!del)
+        _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
     }
 

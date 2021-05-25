@@ -85,6 +85,11 @@ namespace IDS.QuickAnnotator.Client.Model
       return onlyMyAnnotations ? QuickAnnotatorApi.GetDocumentHistory(_documentId)?.Where(x => x.UserName == Profile.UserName).ToArray() : QuickAnnotatorApi.GetDocumentHistory(_documentId);
     }
 
+    public DocumentChange GetLastAnnotationState(int index)
+    {
+      return QuickAnnotatorApi.GetDocumentHistory(_documentId)?.Where(x => x.UserName == Profile.UserName && x.From <= index && x.To > index).OrderByDescending(x=>x.Timestamp).FirstOrDefault();
+    }
+
     public void Annotate(DocumentChange change)
     {
       change.DocumentId = _documentId;

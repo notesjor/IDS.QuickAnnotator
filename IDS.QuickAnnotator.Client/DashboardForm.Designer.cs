@@ -36,7 +36,6 @@
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
       this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
-      this.btn_save = new Telerik.WinControls.UI.CommandBarButton();
       this.commandBarLabel1 = new Telerik.WinControls.UI.CommandBarLabel();
       this.cmb_text = new Telerik.WinControls.UI.CommandBarDropDownList();
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
@@ -49,13 +48,13 @@
       this.annotation_editor = new System.Windows.Forms.FlowLayoutPanel();
       this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
       this.panel1 = new System.Windows.Forms.Panel();
-      this.label1 = new System.Windows.Forms.Label();
       this.radio_lk_4 = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_lk_3 = new Telerik.WinControls.UI.RadRadioButton();
       this.chk_lk_6 = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_lk_2 = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_lk_1 = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_lk_del_5 = new Telerik.WinControls.UI.RadRadioButton();
+      this.label1 = new System.Windows.Forms.Label();
       this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
       this.panel2 = new System.Windows.Forms.Panel();
       this.chk_gen_t = new Telerik.WinControls.UI.RadCheckBox();
@@ -179,7 +178,6 @@
       // 
       this.commandBarStripElement1.DisplayName = "commandBarStripElement1";
       this.commandBarStripElement1.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
-            this.btn_save,
             this.commandBarLabel1,
             this.cmb_text,
             this.commandBarSeparator1,
@@ -191,14 +189,6 @@
       // 
       this.commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
       ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-      // 
-      // btn_save
-      // 
-      this.btn_save.DisplayName = "commandBarButton1";
-      this.btn_save.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.save1;
-      this.btn_save.Name = "btn_save";
-      this.btn_save.Text = "Speichern";
-      this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
       // 
       // commandBarLabel1
       // 
@@ -220,6 +210,7 @@
       this.cmb_text.MinSize = new System.Drawing.Size(200, 48);
       this.cmb_text.Name = "cmb_text";
       this.cmb_text.Text = "text";
+      this.cmb_text.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Cmb_textOnSelectedIndexChanged);
       // 
       // commandBarSeparator1
       // 
@@ -305,6 +296,7 @@
       // 
       this.annotation_editor.Controls.Add(this.radLabel1);
       this.annotation_editor.Controls.Add(this.panel1);
+      this.annotation_editor.Controls.Add(this.label1);
       this.annotation_editor.Controls.Add(this.radLabel2);
       this.annotation_editor.Controls.Add(this.panel2);
       this.annotation_editor.Controls.Add(this.radLabel3);
@@ -337,7 +329,6 @@
       // 
       // panel1
       // 
-      this.panel1.Controls.Add(this.label1);
       this.panel1.Controls.Add(this.radio_lk_4);
       this.panel1.Controls.Add(this.radio_lk_3);
       this.panel1.Controls.Add(this.chk_lk_6);
@@ -346,20 +337,10 @@
       this.panel1.Controls.Add(this.radio_lk_del_5);
       this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panel1.Location = new System.Drawing.Point(3, 30);
-      this.panel1.MinimumSize = new System.Drawing.Size(410, 55);
+      this.panel1.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel1.Name = "panel1";
-      this.panel1.Size = new System.Drawing.Size(410, 55);
+      this.panel1.Size = new System.Drawing.Size(410, 35);
       this.panel1.TabIndex = 1;
-      // 
-      // label1
-      // 
-      this.label1.AutoSize = true;
-      this.label1.Font = new System.Drawing.Font("Roboto Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label1.Location = new System.Drawing.Point(3, 29);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(408, 17);
-      this.label1.TabIndex = 6;
-      this.label1.Text = "L1=Nominale PB / L2=Pronom+Co-Ref / L3=Kompositum / L4=abhängig";
       // 
       // radio_lk_4
       // 
@@ -368,7 +349,7 @@
       this.radio_lk_4.Location = new System.Drawing.Point(212, 0);
       this.radio_lk_4.Name = "radio_lk_4";
       this.radio_lk_4.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-      this.radio_lk_4.Size = new System.Drawing.Size(52, 55);
+      this.radio_lk_4.Size = new System.Drawing.Size(52, 35);
       this.radio_lk_4.TabIndex = 5;
       this.radio_lk_4.Text = "4";
       this.radio_lk_4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -382,7 +363,7 @@
       this.radio_lk_3.Location = new System.Drawing.Point(160, 0);
       this.radio_lk_3.Name = "radio_lk_3";
       this.radio_lk_3.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-      this.radio_lk_3.Size = new System.Drawing.Size(52, 55);
+      this.radio_lk_3.Size = new System.Drawing.Size(52, 35);
       this.radio_lk_3.TabIndex = 4;
       this.radio_lk_3.Text = "3";
       this.radio_lk_3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -395,7 +376,7 @@
       this.chk_lk_6.Location = new System.Drawing.Point(377, 0);
       this.chk_lk_6.Name = "chk_lk_6";
       this.chk_lk_6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-      this.chk_lk_6.Size = new System.Drawing.Size(33, 55);
+      this.chk_lk_6.Size = new System.Drawing.Size(33, 35);
       this.chk_lk_6.TabIndex = 3;
       this.chk_lk_6.Text = "6";
       this.toolTip1.SetToolTip(this.chk_lk_6, "Unsicherheit markieren");
@@ -407,7 +388,7 @@
       this.radio_lk_2.Location = new System.Drawing.Point(108, 0);
       this.radio_lk_2.Name = "radio_lk_2";
       this.radio_lk_2.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-      this.radio_lk_2.Size = new System.Drawing.Size(52, 55);
+      this.radio_lk_2.Size = new System.Drawing.Size(52, 35);
       this.radio_lk_2.TabIndex = 2;
       this.radio_lk_2.Text = "2";
       this.radio_lk_2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -421,7 +402,7 @@
       this.radio_lk_1.Location = new System.Drawing.Point(56, 0);
       this.radio_lk_1.Name = "radio_lk_1";
       this.radio_lk_1.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-      this.radio_lk_1.Size = new System.Drawing.Size(52, 55);
+      this.radio_lk_1.Size = new System.Drawing.Size(52, 35);
       this.radio_lk_1.TabIndex = 1;
       this.radio_lk_1.Text = "1";
       this.radio_lk_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -430,21 +411,33 @@
       // 
       // radio_lk_del_5
       // 
+      this.radio_lk_del_5.BackColor = System.Drawing.Color.Transparent;
       this.radio_lk_del_5.Dock = System.Windows.Forms.DockStyle.Left;
       this.radio_lk_del_5.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
       this.radio_lk_del_5.Image = ((System.Drawing.Image)(resources.GetObject("radio_lk_del_5.Image")));
       this.radio_lk_del_5.Location = new System.Drawing.Point(0, 0);
       this.radio_lk_del_5.Name = "radio_lk_del_5";
-      this.radio_lk_del_5.Size = new System.Drawing.Size(56, 55);
+      this.radio_lk_del_5.Size = new System.Drawing.Size(56, 35);
       this.radio_lk_del_5.TabIndex = 0;
       this.radio_lk_del_5.Text = "5";
       this.radio_lk_del_5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_del_5, "Wert entfernen");
       // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Font = new System.Drawing.Font("Roboto Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label1.Location = new System.Drawing.Point(3, 68);
+      this.label1.Name = "label1";
+      this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+      this.label1.Size = new System.Drawing.Size(408, 27);
+      this.label1.TabIndex = 6;
+      this.label1.Text = "L1=Nominale PB / L2=Pronom+Co-Ref / L3=Kompositum / L4=abhängig";
+      // 
       // radLabel2
       // 
       this.radLabel2.AutoSize = false;
-      this.radLabel2.Location = new System.Drawing.Point(3, 91);
+      this.radLabel2.Location = new System.Drawing.Point(3, 98);
       this.radLabel2.Name = "radLabel2";
       this.radLabel2.Size = new System.Drawing.Size(347, 21);
       this.radLabel2.TabIndex = 8;
@@ -457,7 +450,7 @@
       this.panel2.Controls.Add(this.radio_gen_true_w);
       this.panel2.Controls.Add(this.radio_gen_del_q);
       this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel2.Location = new System.Drawing.Point(3, 118);
+      this.panel2.Location = new System.Drawing.Point(3, 125);
       this.panel2.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel2.Name = "panel2";
       this.panel2.Size = new System.Drawing.Size(410, 35);
@@ -528,7 +521,7 @@
       // radLabel3
       // 
       this.radLabel3.AutoSize = false;
-      this.radLabel3.Location = new System.Drawing.Point(3, 159);
+      this.radLabel3.Location = new System.Drawing.Point(3, 166);
       this.radLabel3.Name = "radLabel3";
       this.radLabel3.Size = new System.Drawing.Size(347, 21);
       this.radLabel3.TabIndex = 10;
@@ -541,7 +534,7 @@
       this.panel3.Controls.Add(this.radio_abstr_true_s);
       this.panel3.Controls.Add(this.radio_abstr_del_a);
       this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel3.Location = new System.Drawing.Point(3, 186);
+      this.panel3.Location = new System.Drawing.Point(3, 193);
       this.panel3.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel3.Name = "panel3";
       this.panel3.Size = new System.Drawing.Size(410, 35);
@@ -612,7 +605,7 @@
       // radLabel4
       // 
       this.radLabel4.AutoSize = false;
-      this.radLabel4.Location = new System.Drawing.Point(3, 227);
+      this.radLabel4.Location = new System.Drawing.Point(3, 234);
       this.radLabel4.Name = "radLabel4";
       this.radLabel4.Size = new System.Drawing.Size(410, 21);
       this.radLabel4.TabIndex = 12;
@@ -625,7 +618,7 @@
       this.panel5.Controls.Add(this.radio_ref_true_x);
       this.panel5.Controls.Add(this.radio_ref_del_y);
       this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel5.Location = new System.Drawing.Point(3, 254);
+      this.panel5.Location = new System.Drawing.Point(3, 261);
       this.panel5.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel5.Name = "panel5";
       this.panel5.Size = new System.Drawing.Size(410, 35);
@@ -696,7 +689,7 @@
       // radLabel5
       // 
       this.radLabel5.AutoSize = false;
-      this.radLabel5.Location = new System.Drawing.Point(3, 295);
+      this.radLabel5.Location = new System.Drawing.Point(3, 302);
       this.radLabel5.Name = "radLabel5";
       this.radLabel5.Size = new System.Drawing.Size(347, 21);
       this.radLabel5.TabIndex = 14;
@@ -709,7 +702,7 @@
       this.panel6.Controls.Add(this.radio_mask_true_0);
       this.panel6.Controls.Add(this.radio_mask_del_ß);
       this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel6.Location = new System.Drawing.Point(3, 322);
+      this.panel6.Location = new System.Drawing.Point(3, 329);
       this.panel6.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel6.Name = "panel6";
       this.panel6.Size = new System.Drawing.Size(410, 35);
@@ -780,7 +773,7 @@
       // radLabel6
       // 
       this.radLabel6.AutoSize = false;
-      this.radLabel6.Location = new System.Drawing.Point(3, 363);
+      this.radLabel6.Location = new System.Drawing.Point(3, 370);
       this.radLabel6.Name = "radLabel6";
       this.radLabel6.Size = new System.Drawing.Size(347, 21);
       this.radLabel6.TabIndex = 16;
@@ -793,7 +786,7 @@
       this.panel7.Controls.Add(this.radio_kont_true_ü);
       this.panel7.Controls.Add(this.radio_kont_del_üü);
       this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel7.Location = new System.Drawing.Point(3, 390);
+      this.panel7.Location = new System.Drawing.Point(3, 397);
       this.panel7.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel7.Name = "panel7";
       this.panel7.Size = new System.Drawing.Size(410, 35);
@@ -805,7 +798,7 @@
       this.chk_kont_i.Location = new System.Drawing.Point(377, 0);
       this.chk_kont_i.Name = "chk_kont_i";
       this.chk_kont_i.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-      this.chk_kont_i.Size = new System.Drawing.Size(33, 24);
+      this.chk_kont_i.Size = new System.Drawing.Size(33, 35);
       this.chk_kont_i.TabIndex = 3;
       this.chk_kont_i.Text = "I ";
       this.toolTip1.SetToolTip(this.chk_kont_i, "Unsicherheit markieren");
@@ -864,7 +857,7 @@
       // radLabel7
       // 
       this.radLabel7.AutoSize = false;
-      this.radLabel7.Location = new System.Drawing.Point(3, 431);
+      this.radLabel7.Location = new System.Drawing.Point(3, 438);
       this.radLabel7.Name = "radLabel7";
       this.radLabel7.Size = new System.Drawing.Size(347, 21);
       this.radLabel7.TabIndex = 18;
@@ -879,7 +872,7 @@
       this.panel8.Controls.Add(this.radio_sex_male_ä);
       this.panel8.Controls.Add(this.radio_sex_del_ää);
       this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel8.Location = new System.Drawing.Point(3, 458);
+      this.panel8.Location = new System.Drawing.Point(3, 465);
       this.panel8.MinimumSize = new System.Drawing.Size(410, 35);
       this.panel8.Name = "panel8";
       this.panel8.Size = new System.Drawing.Size(410, 35);
@@ -987,7 +980,7 @@
       // 
       // panel4
       // 
-      this.panel4.Location = new System.Drawing.Point(3, 499);
+      this.panel4.Location = new System.Drawing.Point(3, 506);
       this.panel4.Name = "panel4";
       this.panel4.Size = new System.Drawing.Size(307, 29);
       this.panel4.TabIndex = 6;
@@ -995,7 +988,7 @@
       // btn_submit
       // 
       this.btn_submit.Dock = System.Windows.Forms.DockStyle.Left;
-      this.btn_submit.Location = new System.Drawing.Point(3, 534);
+      this.btn_submit.Location = new System.Drawing.Point(3, 541);
       this.btn_submit.Name = "btn_submit";
       this.btn_submit.Size = new System.Drawing.Size(410, 36);
       this.btn_submit.TabIndex = 7;
@@ -1025,6 +1018,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).EndInit();
       this.splitPanel2.ResumeLayout(false);
       this.annotation_editor.ResumeLayout(false);
+      this.annotation_editor.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
@@ -1092,7 +1086,6 @@
     private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement1;
     private Telerik.WinControls.UI.CommandBarLabel commandBarLabel1;
     private Telerik.WinControls.UI.CommandBarDropDownList cmb_text;
-    private Telerik.WinControls.UI.CommandBarButton btn_save;
     private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
     private Telerik.WinControls.UI.CommandBarButton btn_export;
     private System.Windows.Forms.Integration.ElementHost elementHost1;
