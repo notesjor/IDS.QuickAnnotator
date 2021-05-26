@@ -59,6 +59,8 @@ namespace IDS.QuickAnnotator.Client
         cmb_text.Items.Add(item);
       }
 
+      Text = $"QuickAnnotator (Hallo: {_anno.Profile.UserName})";
+
       _init = false;
       cmb_text.SelectedIndex = text_index;
     }
