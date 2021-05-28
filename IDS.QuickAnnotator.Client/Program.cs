@@ -16,20 +16,27 @@ namespace IDS.QuickAnnotator.Client
     [STAThread]
     static void Main()
     {
-      Application.EnableVisualStyles();
-      Application.SetCompatibleTextRenderingDefault(false);
-      SetProcessDpiAwareness(_Process_DPI_Awareness.Process_System_DPI_Aware);
+      try
+      {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        SetProcessDpiAwareness(_Process_DPI_Awareness.Process_System_DPI_Aware);
 
-      var auth = new AuthModel();
-      if (auth.Signin())
-      {
-        var form = new DashboardForm();
-        form.ShowDialog();
+        var auth = new AuthModel();
+        if (auth.Signin())
+        {
+          var form = new DashboardForm();
+          form.ShowDialog();
+        }
+        else
+        {
+          var signin = new SigninForm(GlobalConfiguration.AuthToken);
+          signin.ShowDialog();
+        }
       }
-      else
+      catch (Exception ex)
       {
-        var signin = new SigninForm(GlobalConfiguration.AuthToken);
-        signin.ShowDialog();
+        MessageBox.Show($"{ex.Message}\n\n{ex.StackTrace}", "Anwendungsfehler (Screenshot per E-Mail an: ruediger@ids-mannheim.de)", MessageBoxButtons.OK);
       }
     }
 

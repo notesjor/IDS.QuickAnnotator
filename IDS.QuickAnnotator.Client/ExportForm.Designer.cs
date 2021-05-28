@@ -36,8 +36,8 @@ namespace IDS.QuickAnnotator.Client
       this.btn_export_all_diff = new Telerik.WinControls.UI.RadButton();
       this.btn_export_anno_all = new Telerik.WinControls.UI.RadButton();
       this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-      this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
       this.btn_export_diff = new Telerik.WinControls.UI.RadButton();
+      this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_export_text)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_export_anno_my)).BeginInit();
@@ -46,9 +46,9 @@ namespace IDS.QuickAnnotator.Client
       ((System.ComponentModel.ISupportInitialize)(this.btn_export_anno_all)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
       this.radGroupBox1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.btn_export_diff)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
       this.radGroupBox2.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.btn_export_diff)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
       this.SuspendLayout();
       // 
@@ -120,6 +120,15 @@ namespace IDS.QuickAnnotator.Client
       this.radGroupBox1.TabIndex = 6;
       this.radGroupBox1.Text = "Aktuell gewählter Text";
       // 
+      // btn_export_diff
+      // 
+      this.btn_export_diff.Location = new System.Drawing.Point(16, 203);
+      this.btn_export_diff.Name = "btn_export_diff";
+      this.btn_export_diff.Size = new System.Drawing.Size(378, 36);
+      this.btn_export_diff.TabIndex = 6;
+      this.btn_export_diff.Text = "Annotator-Diff (TSV)";
+      this.btn_export_diff.Click += new System.EventHandler(this.btn_export_diff_Click);
+      // 
       // radGroupBox2
       // 
       this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -131,19 +140,9 @@ namespace IDS.QuickAnnotator.Client
       this.radGroupBox2.TabIndex = 7;
       this.radGroupBox2.Text = "Gesamtes Korpus";
       // 
-      // btn_export_diff
-      // 
-      this.btn_export_diff.Location = new System.Drawing.Point(16, 203);
-      this.btn_export_diff.Name = "btn_export_diff";
-      this.btn_export_diff.Size = new System.Drawing.Size(378, 36);
-      this.btn_export_diff.TabIndex = 6;
-      this.btn_export_diff.Text = "Annotator-Diff (TSV)";
-      this.btn_export_diff.Click += new System.EventHandler(this.btn_export_diff_Click);
-      // 
       // ExportForm
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
       this.ClientSize = new System.Drawing.Size(469, 428);
       this.Controls.Add(this.radGroupBox2);
       this.Controls.Add(this.radGroupBox1);
@@ -163,9 +162,9 @@ namespace IDS.QuickAnnotator.Client
       ((System.ComponentModel.ISupportInitialize)(this.btn_export_anno_all)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
       this.radGroupBox1.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.btn_export_diff)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
       this.radGroupBox2.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.btn_export_diff)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();

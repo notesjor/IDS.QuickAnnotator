@@ -14,7 +14,7 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return EnsureResponse(client, request).StatusCode == HttpStatusCode.OK;
+      return EnsureResponse(client, request).Content == "true";
     }
 
     private static IRestResponse EnsureResponse(RestClient client, RestRequest request)
