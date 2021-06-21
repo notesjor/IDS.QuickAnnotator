@@ -139,7 +139,14 @@
     <Compile Include="ExportForm.Designer.cs">
       <DependentUpon>ExportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\AnnotationModel.cs" />
+    <Compile Include="Export\Abstract\AbstractExporter.cs" />
+    <Compile Include="Export\ExporterDiff.cs" />
+    <Compile Include="Export\ExporterHistory.cs" />
+    <Compile Include="Export\ExporterPlaintext.cs" />
+    <Compile Include="Export\ExporterXml.cs" />
+    <Compile Include="Helper\Diff\Diff.cs" />
+    <Compile Include="Helper\Diff\DiffDelta.cs" />
+    <Compile Include="Model\Annotation\AnnotationModelOnline.cs" />
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,9 +158,12 @@
     </Compile>
     <Compile Include="Helper\DisposingContainer.cs" />
     <Compile Include="HighlightEvent.cs" />
+    <Compile Include="Model\Annotation\AnnotationModelOffline.cs" />
+    <Compile Include="Model\Annotation\Interface\IAnnotationModel.cs" />
     <Compile Include="Model\AuthModel.cs" />
     <Compile Include="Model\GlobalConfiguration.cs" />
     <Compile Include="Model\QuickAnnotatorApi.cs" />
+    <Compile Include="Model\User\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SigninForm.cs">
@@ -262,7 +272,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Helper\Diff\Quellenvermerk.txt" />
     <Content Include="ids.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.Processo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Client", "..\IDS.QuickAnnotator.Client\IDS.QuickAnnotator.Client.csproj", "{F7CFC71C-BF6B-4ACC-9168-0C37453E71CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Tool4.CalcDiff", "..\IDS.QuickAnnotator.Tool4.CalcDiff\IDS.QuickAnnotator.Tool4.CalcDiff.csproj", "{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F7CFC71C-BF6B-4ACC-9168-0C37453E71CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7CFC71C-BF6B-4ACC-9168-0C37453E71CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7CFC71C-BF6B-4ACC-9168-0C37453E71CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

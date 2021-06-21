@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 using IDS.QuickAnnotator.API.Model.Request;
+using IDS.QuickAnnotator.Client.Export;
 using IDS.QuickAnnotator.Client.Model;
+using IDS.QuickAnnotator.Client.Model.Annotation;
 using Newtonsoft.Json;
 
 namespace IDS.QuickAnnotator.Client
@@ -12,9 +15,9 @@ namespace IDS.QuickAnnotator.Client
   public partial class ExportForm : AbstractForm
   {
     private readonly string _documentId;
-    private readonly AnnotationModel _anno;
+    private readonly AnnotationModelOnline _anno;
 
-    public ExportForm(string documentId, AnnotationModel anno)
+    public ExportForm(string documentId, AnnotationModelOnline anno)
     {
       _documentId = documentId;
       _anno = anno;
@@ -23,11 +26,12 @@ namespace IDS.QuickAnnotator.Client
 
     private void btn_export_text_Click(object sender, EventArgs e)
     {
-      var sfd = new SaveFileDialog {Filter = "TXT-Datei (*.txt)|*.txt"};
+      var sfd = new SaveFileDialog { Filter = "TXT-Datei (*.txt)|*.txt" };
       if (sfd.ShowDialog() != DialogResult.OK)
         return;
 
-      File.WriteAllText(sfd.FileName, string.Join(" ", _anno.EditorDocument));
+      var exporter = new ExporterPlaintext();
+      exporter.Export(_anno, sfd.FileName);
     }
 
     private void btn_export_anno_my_Click(object sender, EventArgs e) => ExportXml(true);
@@ -36,49 +40,12 @@ namespace IDS.QuickAnnotator.Client
 
     private void ExportXml(bool onlyMyAnnotations)
     {
-      var sfd = new SaveFileDialog {Filter = "XML-Datei (*.xml)|*.xml"};
+      var sfd = new SaveFileDialog { Filter = "XML-Datei (*.xml)|*.xml" };
       if (sfd.ShowDialog() != DialogResult.OK)
         return;
 
-      File.WriteAllText(sfd.FileName, BuildXml(_anno.GetDocumentHistory(onlyMyAnnotations)));
-    }
-
-    private string BuildXml(DocumentChange[] changes)
-    {
-      var xml = new XmlDocument();
-      xml.LoadXml("<document></document>");
-      var root = xml.DocumentElement;
-      
-      var annotations = xml.CreateElement("annotations");
-      root.AppendChild(annotations);
-      foreach (var c in changes.OrderBy(x=>x.Timestamp))
-      {
-        var change = xml.CreateElement("annotation");
-        change.SetAttribute("from", c.From.ToString());
-        change.SetAttribute("to", c.To.ToString());
-        change.SetAttribute("user", c.UserName);
-        annotations.AppendChild(change);
-
-        foreach (var a in c.Annotation)
-        {
-          var anno = xml.CreateElement("v");
-          anno.SetAttribute("key", a.Key);
-          anno.InnerText = a.Value.ToString();
-          change.AppendChild(anno);
-        }
-      }
-
-      var text = xml.CreateElement("text");
-      root.AppendChild(text);
-      for (var i = 0; i < _anno.EditorDocument.Length; i++)
-      {
-        var token = xml.CreateElement("token");
-        token.InnerText = _anno.EditorDocument[i];
-        token.SetAttribute("id", $"t_{i}");
-        text.AppendChild(token);
-      }
-
-      return xml.OuterXml;
+      var exporter = new ExporterXml { OnlyMyAnnotations = onlyMyAnnotations };
+      exporter.Export(_anno, sfd.FileName);
     }
 
     private void btn_export_history_Click(object sender, EventArgs e)
@@ -87,12 +54,13 @@ namespace IDS.QuickAnnotator.Client
       if (sfd.ShowDialog() != DialogResult.OK)
         return;
 
-      File.WriteAllText(sfd.FileName, JsonConvert.SerializeObject(_anno.GetDocumentHistory(false)));
+      var exporter = new ExporterHistory { OnlyMyAnnotations = false };
+      exporter.Export(_anno, sfd.FileName);
     }
 
     private void btn_export_diff_Click(object sender, EventArgs e)
     {
-      ExportAnnotatorDiff(new[] {_documentId});
+      ExportAnnotatorDiff(new[] { _documentId });
     }
 
     private void btn_export_all_diff_Click(object sender, EventArgs e)
@@ -106,7 +74,8 @@ namespace IDS.QuickAnnotator.Client
       if (sfd.ShowDialog() != DialogResult.OK)
         return;
 
-
+      var exporter = new ExporterDiff { DocumentFilter = new HashSet<string>(documentIds) };
+      exporter.Export(_anno, sfd.FileName);
     }
   }
 }

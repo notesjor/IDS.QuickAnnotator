@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using IDS.QuickAnnotator.API.Model.Request;
 using IDS.QuickAnnotator.Client.Model;
+using IDS.QuickAnnotator.Client.Model.Annotation;
+using IDS.QuickAnnotator.Client.Model.User;
 using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
@@ -18,7 +20,8 @@ namespace IDS.QuickAnnotator.Client
   public partial class DashboardForm : AbstractForm
   {
     private Editor _editor = new Editor();
-    private readonly AnnotationModel _anno;
+    private readonly AnnotationModelOnline _anno;
+    private readonly UserModel _user;
     private bool _init = true;
 
     public DashboardForm()
@@ -38,19 +41,19 @@ namespace IDS.QuickAnnotator.Client
 
       elementHost1.Child = _editor;
 
-      _anno = new AnnotationModel();
+      _user = new UserModel();
+      _anno = new AnnotationModelOnline(_user);
 
       cmb_text.Items.Clear();
       var text_index = 0;
 
-      var docs = QuickAnnotatorApi.GetDocuments();
-      foreach (var d in docs)
+      foreach (var d in _anno.AvailableDocumentIds)
       {
-        if (d == _anno.Profile.LastDocumentId)
+        if (d == _user.Profile.LastDocumentId)
           text_index = cmb_text.Items.Count;
 
         var item = new RadListDataItem(d);
-        if (_anno.Profile.DoneDocumentIds.Contains(d))
+        if (_user.Profile.DoneDocumentIds.Contains(d))
         {
           item.Image = Resources.ok_button;
           item.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -59,7 +62,7 @@ namespace IDS.QuickAnnotator.Client
         cmb_text.Items.Add(item);
       }
 
-      Text = $"QuickAnnotator (Hallo: {_anno.Profile.UserName})";
+      Text = $"QuickAnnotator (Hallo: {_user.Profile.UserName})";
 
       _init = false;
       cmb_text.SelectedIndex = text_index;
@@ -316,10 +319,10 @@ namespace IDS.QuickAnnotator.Client
     {
       if (QuickAnnotatorApi.SetDocumentCompletion(cmb_text.Items[cmb_text.SelectedIndex].Text))
       {
-        _anno.LoadProfile();
+        _user.LoadProfile();
         foreach (var item in cmb_text.Items)
         {
-          item.Image = _anno.Profile.DoneDocumentIds.Contains(item.Text) ? Resources.ok_button : null;
+          item.Image = _user.Profile.DoneDocumentIds.Contains(item.Text) ? Resources.ok_button : null;
           item.TextImageRelation = TextImageRelation.ImageBeforeText;
         }
       }
@@ -332,7 +335,7 @@ namespace IDS.QuickAnnotator.Client
 
       btn_save_Click(null, null);
 
-      _anno.SelectDocument(cmb_text.Items[cmb_text.SelectedIndex].Text);
+      _anno.SelectDocument = cmb_text.Items[cmb_text.SelectedIndex].Text;
 
       _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;

@@ -1,54 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using IDS.QuickAnnotator.API.Model.Request;
-using Telerik.WinControls.FileDialogs;
+using IDS.QuickAnnotator.Client.Model.Annotation.Interface;
+using IDS.QuickAnnotator.Client.Model.User;
 
-namespace IDS.QuickAnnotator.Client.Model
+namespace IDS.QuickAnnotator.Client.Model.Annotation
 {
-  public class AnnotationModel
+  public class AnnotationModelOnline : IAnnotationModel
   {
-    private UserProfile _profile;
+    private readonly UserModel _user;
     private string _documentId;
 
-    public AnnotationModel()
+    public AnnotationModelOnline(UserModel user)
     {
-      LoadProfile();
+      _user = user;
     }
 
-    public UserProfile Profile
-    {
-      get
-      {
-        if (_profile != null)
-          return _profile;
-        LoadProfile();
-        return _profile;
-      }
-    }
     public string[] EditorDocument { get; set; }
     public bool[] EditorAnnotations { get; set; }
 
-    public void LoadProfile()
+    public string SelectDocument
     {
-      _profile = QuickAnnotatorApi.GetProfile();
+      get => _documentId;
+      set
+      {
+        _documentId = value;
+        EditorDocument = QuickAnnotatorApi.GetDocument(value);
+
+        RefreshDocumentHistory();
+      }
     }
 
-    public bool IsDocumentDone(string documentId)
-    {
-      return _profile.DoneDocumentIds.Contains(documentId);
-    }
-
-    public void SelectDocument(string documentId)
-    {
-      _documentId = documentId;
-      EditorDocument = QuickAnnotatorApi.GetDocument(documentId);
-
-      RefreshDocumentHistory();
-    }
+    public IEnumerable<string> AvailableDocumentIds => QuickAnnotatorApi.GetDocuments();
 
     private void RefreshDocumentHistory()
     {
@@ -88,15 +71,15 @@ namespace IDS.QuickAnnotator.Client.Model
 
       EditorAnnotations = history;
     }
+    
+    public DocumentChange GetLastAnnotationState(int index)
+    {
+      return QuickAnnotatorApi.GetDocumentHistory(SelectDocument)?.Where(x => x.UserName == _user.Profile.UserName && x.From <= index && x.To > index).OrderByDescending(x => x.Timestamp).FirstOrDefault();
+    }
 
     public DocumentChange[] GetDocumentHistory(bool onlyMyAnnotations)
     {
-      return onlyMyAnnotations ? QuickAnnotatorApi.GetDocumentHistory(_documentId)?.Where(x => x.UserName == Profile.UserName).ToArray() : QuickAnnotatorApi.GetDocumentHistory(_documentId);
-    }
-
-    public DocumentChange GetLastAnnotationState(int index)
-    {
-      return QuickAnnotatorApi.GetDocumentHistory(_documentId)?.Where(x => x.UserName == Profile.UserName && x.From <= index && x.To > index).OrderByDescending(x=>x.Timestamp).FirstOrDefault();
+      return onlyMyAnnotations ? QuickAnnotatorApi.GetDocumentHistory(SelectDocument)?.Where(x => x.UserName == _user.Profile.UserName).ToArray() : QuickAnnotatorApi.GetDocumentHistory(SelectDocument);
     }
 
     public void Annotate(DocumentChange change)
