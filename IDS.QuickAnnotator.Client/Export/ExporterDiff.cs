@@ -8,73 +8,38 @@ using IDS.QuickAnnotator.Client.Model.Annotation.Interface;
 
 namespace IDS.QuickAnnotator.Client.Export
 {
-  public class ExporterDiff : AbstractExporter
+  public class ExporterDiff : AbstractSimpleExporter
   {
-    public HashSet<string> DocumentFilter { get; set; } = new HashSet<string>();
+    private List<string> _res;
+    private string _path;
 
-    public override void Export(IAnnotationModel model, string path)
+    protected override void PreProcessing(string path)
     {
-      var res = new List<string>();
-      res.Add("DocumentID\tLength\tAnnotator (A)\tAnnotator (B)\tLayer\tLöschen (A)\tEinfügen (B)\tEdit-Distanz");
+      _path = path;
+      _res = new List<string>();
+      _res.Add("DocumentID\tLength\tAnnotator (A)\tAnnotator (B)\tLayer\tLöschen (A)\tEinfügen (B)\tEdit-Distanz");
+    }
 
-      foreach (var documentId in DocumentFilter)
+    protected override void Processing(IAnnotationModel model, Dictionary<string, Dictionary<string, string[]>> aDocs, string[] annotators, string[] layers, string path)
+    {
+      // Berechnen
+      foreach (var l in layers)
       {
-        model.SelectDocument = documentId;
-
-        // Annotatoren und layer identifizieren
-        var annotators = new HashSet<string>();
-        var layers = new HashSet<string>();
-        foreach (var d in model.GetDocumentHistory(false))
+        var a = annotators.OrderBy(x => x).ToArray();
+        for (var i = 0; i < a.Length; i++)
+        for (var j = i + 1; j < a.Length; j++)
         {
-          annotators.Add(d.UserName);
-          foreach (var k in d.Annotation.Keys)
-            layers.Add(k);
-        }
+          var diff = Diff.DiffQuick(aDocs[a[i]][l], aDocs[a[j]][l]);
 
-        if (layers.Count == 0 || annotators.Count == 0)
-          continue;
-
-        // init
-        var aDocs = new Dictionary<string, Dictionary<string, string[]>>();
-        foreach (var a in annotators.OrderBy(x => x))
-        {
-          aDocs.Add(a, new Dictionary<string, string[]>());
-          foreach (var l in layers)
-          {
-            var arr = new string[model.EditorDocument.Length];
-            for (int i = 0; i < arr.Length; i++)
-              arr[i] = "";
-            aDocs[a].Add(l, arr);
-          }
-        }
-
-        // Befüllen
-        foreach (var d in model.GetDocumentHistory(false).OrderBy(x => x.Timestamp))
-          foreach (var x in d.Annotation)
-            for (var i = d.From; i < d.To; i++)
-            {
-              var val = x.Value.ToString();
-              if (val.StartsWith("?"))
-                val = val.Substring(1);
-              aDocs[d.UserName][x.Key][i] = val;
-            }
-
-        // Berechnen
-        foreach (var l in layers)
-        {
-          var a = annotators.OrderBy(x => x).ToArray();
-          for (var i = 0; i < a.Length; i++)
-            for (var j = i + 1; j < a.Length; j++)
-            {
-              var diff = Diff.DiffQuick(aDocs[a[i]][l], aDocs[a[j]][l]);
-
-              res.Add($"{documentId}\t{model.EditorDocument.Length}\t{a[i]}\t{a[j]}\t{l}\t{diff.Sum(x => x.DeletedA)}\t{diff.Sum(x => x.InsertedB)}\t{diff.Sum(x => x.EditDistance)}");
-            }
+          _res.Add($"{model.SelectDocument}\t{model.EditorDocument.Length}\t{a[i]}\t{a[j]}\t{l}\t{diff.Sum(x => x.DeletedA)}\t{diff.Sum(x => x.InsertedB)}\t{diff.Sum(x => x.EditDistance)}");
         }
       }
+    }
 
+    protected override void PostProcessing()
+    {
       // Ausgabe
-      File.WriteAllLines(path, res, Encoding.UTF8);
+      File.WriteAllLines(_path, _res, Encoding.UTF8);
     }
   }
 }

@@ -101,6 +101,33 @@ namespace IDS.QuickAnnotator.Client.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta charset=&quot;utf-8&quot; /&gt;
+        ///    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+        ///    &lt;title&gt;&lt;/title&gt;
+        ///    &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+        ///    &lt;style&gt;
+        ///      html {
+        ///        font-family: Arial, Helvetica, sans-serif;
+        ///        font-size: 16px;
+        ///      }
+        ///      p {
+        ///        display: inline-block;
+        ///      }
+        ///      .a {
+        ///        border: 1px solid rgb(49, 2, 219);
+        ///        border-radius:  [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        internal static string ExporterHtmlTemplate {
+            get {
+                return ResourceManager.GetString("ExporterHtmlTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap gender_female {

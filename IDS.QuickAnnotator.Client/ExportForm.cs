@@ -34,17 +34,13 @@ namespace IDS.QuickAnnotator.Client
       exporter.Export(_anno, sfd.FileName);
     }
 
-    private void btn_export_anno_my_Click(object sender, EventArgs e) => ExportXml(true);
-
-    private void btn_export_anno_all_Click(object sender, EventArgs e) => ExportXml(false);
-
-    private void ExportXml(bool onlyMyAnnotations)
+    private void btn_export_anno_all_Click(object sender, EventArgs e)
     {
       var sfd = new SaveFileDialog { Filter = "XML-Datei (*.xml)|*.xml" };
       if (sfd.ShowDialog() != DialogResult.OK)
         return;
 
-      var exporter = new ExporterXml { OnlyMyAnnotations = onlyMyAnnotations };
+      var exporter = new ExporterXml();
       exporter.Export(_anno, sfd.FileName);
     }
 
@@ -58,23 +54,23 @@ namespace IDS.QuickAnnotator.Client
       exporter.Export(_anno, sfd.FileName);
     }
 
-    private void btn_export_diff_Click(object sender, EventArgs e)
-    {
-      ExportAnnotatorDiff(new[] { _documentId });
-    }
-
     private void btn_export_all_diff_Click(object sender, EventArgs e)
-    {
-      ExportAnnotatorDiff(QuickAnnotatorApi.GetDocuments());
-    }
-
-    private void ExportAnnotatorDiff(string[] documentIds)
     {
       var sfd = new SaveFileDialog { Filter = "TSV-Datei (*.tsv)|*.tsv" };
       if (sfd.ShowDialog() != DialogResult.OK)
         return;
 
-      var exporter = new ExporterDiff { DocumentFilter = new HashSet<string>(documentIds) };
+      var exporter = new ExporterDiff();
+      exporter.Export(_anno, sfd.FileName);
+    }
+
+    private void btn_export_html_Click(object sender, EventArgs e)
+    {
+      var sfd = new SaveFileDialog { Filter = "HTML-Datei (*.html)|*.html" };
+      if (sfd.ShowDialog() != DialogResult.OK)
+        return;
+
+      var exporter = new ExporterHtml();
       exporter.Export(_anno, sfd.FileName);
     }
   }

@@ -6,7 +6,7 @@ using IDS.QuickAnnotator.Client.Model.Annotation.Interface;
 
 namespace IDS.QuickAnnotator.Client.Export
 {
-  public class ExporterXml : AbstractSimpleExporter
+  public class ExporterXmlValidation : AbstractSimpleExporter
   {
     protected override void PreProcessing(string path)
     {
@@ -19,12 +19,9 @@ namespace IDS.QuickAnnotator.Client.Export
                                        string[] annotators, string[] layers,
                                        string path)
     {
-      var doc = model.EditorDocument;
-      var tags = new[] { "a", "b", "c" };
-      var idx = 0;
-
       foreach (var annotator in annotators)
       {
+        var doc = model.EditorDocument;
         var adoc = ReduceHelper.Reduce(annotatorLayerDocuments[annotator]);
         string last = null;
 
@@ -40,14 +37,12 @@ namespace IDS.QuickAnnotator.Client.Export
               doc[i - 1] += "</span>";
             last = val;
             if (last != null)
-              doc[i] = $"<span user=\"{tags[idx]}\" value=\"{val}\">{doc[i]}";
+              doc[i] = $"<span value=\"{val}\">{doc[i]}";
           }
         }
 
-        idx++;
+        File.WriteAllText(Path.Combine(path, $"{model.SelectDocument}_{annotator}.xml"), $"<xml>{string.Join("\r\n", doc)}</xml>");
       }
-
-      File.WriteAllText(Path.Combine(path, $"{model.SelectDocument}.xml"), $"<xml>{string.Join(" ", doc)}</xml>");
     }
 
     protected override void PostProcessing()

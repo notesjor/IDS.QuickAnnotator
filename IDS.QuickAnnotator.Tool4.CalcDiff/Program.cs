@@ -9,8 +9,18 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     static void Main(string[] args)
     {
       var model = new AnnotationModelOffline(args[0]);
-      var exporter = new ExporterDiff { DocumentFilter = new HashSet<string>(model.AvailableDocumentIds) };
-      exporter.Export(model, args[1]);
+      
+      var diff = new ExporterDiff();
+      diff.Export(model, args[1]);
+
+      var html = new ExporterHtml();
+      html.Export(model, args[1].Replace(".tsv", "_html"));
+
+      var xml = new ExporterXml();
+      xml.Export(model, args[1].Replace(".tsv", "_xml"));
+
+      var xmlValid = new ExporterXmlValidation();
+      xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
     }
   }
 }

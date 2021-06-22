@@ -140,12 +140,16 @@
       <DependentUpon>ExportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Export\Abstract\AbstractExporter.cs" />
+    <Compile Include="Export\Abstract\AbstractSimpleExporter.cs" />
     <Compile Include="Export\ExporterDiff.cs" />
     <Compile Include="Export\ExporterHistory.cs" />
+    <Compile Include="Export\ExporterHtml.cs" />
     <Compile Include="Export\ExporterPlaintext.cs" />
+    <Compile Include="Export\ExporterXmlValidation.cs" />
     <Compile Include="Export\ExporterXml.cs" />
     <Compile Include="Helper\Diff\Diff.cs" />
     <Compile Include="Helper\Diff\DiffDelta.cs" />
+    <Compile Include="Helper\ReduceHelper.cs" />
     <Compile Include="Model\Annotation\AnnotationModelOnline.cs" />
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
