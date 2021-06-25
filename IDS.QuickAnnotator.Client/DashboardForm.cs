@@ -392,6 +392,8 @@ namespace IDS.QuickAnnotator.Client
           }
       }
 
+      ResetOptionHighlight(null, null);
+
       if (!del)
         _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
@@ -405,6 +407,66 @@ namespace IDS.QuickAnnotator.Client
     private void commands_Leave(object sender, EventArgs e)
     {
       btn_focus.Image = Resources.button_green_pause;
+    }
+
+    private void ResetOptionHighlight(object sender, EventArgs e)
+    {
+      OptionPanelHighlight(panel2, false);
+      OptionPanelHighlight(panel3, false);
+      OptionPanelHighlight(panel5, false);
+      OptionPanelHighlight(panel6, false);
+      OptionPanelHighlight(panel7, false);
+      OptionPanelHighlight(panel8, false);
+    }
+
+    private void radio_lk_2_CheckStateChanged(object sender, EventArgs e)
+    {
+      ResetOptionHighlight(null, null);
+      OptionPanelHighlight(panel3, true);
+    }
+
+    private void OptionHighlightOnlyGender(object sender, EventArgs e)
+    {
+      ResetOptionHighlight(null, null);
+      OptionPanelHighlight(panel3, true);
+      OptionPanelHighlight(panel5, true);
+      OptionPanelHighlight(panel6, true);
+      OptionPanelHighlight(panel7, true);
+      OptionPanelHighlight(panel8, true);
+    }
+
+    private void OptionPanelHighlight(Panel panel, bool grey)
+    {
+      foreach (Control c in panel.Controls)
+      {
+        if (!(c is RadRadioButton r)) 
+          continue;
+
+        if (r.Name.Contains("_true_"))
+        {
+          r.Image = grey ? Resources.ok_button_grey : Resources.ok_button;
+        }
+        else if (r.Name.Contains("_false_"))
+        {
+          r.Image = grey ? Resources.delete_button_error_grey : Resources.delete_button_error;
+        }
+        else if (r.Name.Contains("_male_"))
+        {
+          r.Image = grey ? Resources.gender_male_grey : Resources.gender_male;
+        }
+        else if (r.Name.Contains("_female_"))
+        {
+          r.Image = grey ? Resources.gender_female_grey : Resources.gender_female;
+        }
+        else if (r.Name.Contains("_none_"))
+        {
+          r.Image = grey ? Resources.gender_non_binary_grey : Resources.gender_non_binary;
+        }
+        else if (r.Name.Contains("_group_"))
+        {
+          r.Image = grey ? Resources.group_1_grey : Resources.group_1;
+        }
+      }
     }
   }
 }

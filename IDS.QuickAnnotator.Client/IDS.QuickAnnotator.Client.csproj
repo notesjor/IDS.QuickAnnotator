@@ -29,7 +29,7 @@
     <SuiteName>Lexik</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -141,6 +141,8 @@
     </Compile>
     <Compile Include="Export\Abstract\AbstractExporter.cs" />
     <Compile Include="Export\Abstract\AbstractSimpleExporter.cs" />
+    <Compile Include="Export\ExporterCalculateCrossResults.cs" />
+    <Compile Include="Export\ExporterCalculateResults.cs" />
     <Compile Include="Export\ExporterDiff.cs" />
     <Compile Include="Export\ExporterHistory.cs" />
     <Compile Include="Export\ExporterHtml.cs" />
@@ -278,6 +280,12 @@
   <ItemGroup>
     <Content Include="Helper\Diff\Quellenvermerk.txt" />
     <Content Include="ids.ico" />
+    <None Include="Resources\gender-female_grey.png" />
+    <None Include="Resources\gender-male_grey.png" />
+    <None Include="Resources\gender-non-binary_grey.png" />
+    <None Include="Resources\group_1_grey.png" />
+    <None Include="Resources\ok_button_grey.png" />
+    <None Include="Resources\delete_button_error_grey.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

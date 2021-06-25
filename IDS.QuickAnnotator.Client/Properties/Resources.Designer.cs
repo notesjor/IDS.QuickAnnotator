@@ -101,6 +101,16 @@ namespace IDS.QuickAnnotator.Client.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_button_error_grey {
+            get {
+                object obj = ResourceManager.GetObject("delete_button_error_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die &lt;!DOCTYPE html&gt;
         ///&lt;html&gt;
         ///  &lt;head&gt;
@@ -140,9 +150,29 @@ namespace IDS.QuickAnnotator.Client.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gender_female_grey {
+            get {
+                object obj = ResourceManager.GetObject("gender_female_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gender_male {
             get {
                 object obj = ResourceManager.GetObject("gender-male", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gender_male_grey {
+            get {
+                object obj = ResourceManager.GetObject("gender_male_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -160,6 +190,16 @@ namespace IDS.QuickAnnotator.Client.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gender_non_binary_grey {
+            get {
+                object obj = ResourceManager.GetObject("gender_non_binary_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap group_1 {
             get {
                 object obj = ResourceManager.GetObject("group_1", resourceCulture);
@@ -170,9 +210,29 @@ namespace IDS.QuickAnnotator.Client.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap group_1_grey {
+            get {
+                object obj = ResourceManager.GetObject("group_1_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok_button {
             get {
                 object obj = ResourceManager.GetObject("ok_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok_button_grey {
+            get {
+                object obj = ResourceManager.GetObject("ok_button_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

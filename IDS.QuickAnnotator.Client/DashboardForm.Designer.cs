@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -200,12 +200,12 @@
       // 
       this.cmb_text.DisplayName = "commandBarDropDownList1";
       this.cmb_text.DropDownAnimationEnabled = true;
-      radListDataItem1.Text = "ListItem 1";
-      radListDataItem2.Text = "ListItem 2";
-      radListDataItem3.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem1);
-      this.cmb_text.Items.Add(radListDataItem2);
-      this.cmb_text.Items.Add(radListDataItem3);
+      radListDataItem4.Text = "ListItem 1";
+      radListDataItem5.Text = "ListItem 2";
+      radListDataItem6.Text = "ListItem 3";
+      this.cmb_text.Items.Add(radListDataItem4);
+      this.cmb_text.Items.Add(radListDataItem5);
+      this.cmb_text.Items.Add(radListDataItem6);
       this.cmb_text.MaxDropDownItems = 0;
       this.cmb_text.MinSize = new System.Drawing.Size(200, 48);
       this.cmb_text.Name = "cmb_text";
@@ -355,6 +355,7 @@
       this.radio_lk_4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_4, "L4\r\nAbhängiges Element (i.d.R. Attribute in der Nominalphrase: Artikel, Adjektive" +
         ") ");
+      this.radio_lk_4.CheckStateChanged += new System.EventHandler(this.OptionHighlightOnlyGender);
       // 
       // radio_lk_3
       // 
@@ -369,6 +370,7 @@
       this.radio_lk_3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_3, "L3\r\nKompositum mit enthaltender Personenbezeichnung\r\nBsp.: BÜRGERsteig, UNTERNEHM" +
         "ERverband");
+      this.radio_lk_3.CheckStateChanged += new System.EventHandler(this.OptionHighlightOnlyGender);
       // 
       // chk_lk_6
       // 
@@ -394,6 +396,7 @@
       this.radio_lk_2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_2, "L2\r\nPronomen mit Koreferenz auf Person/Personengruppe im Text \r\nBsp.: er, jener, " +
         "ihre\r\n");
+      this.radio_lk_2.CheckStateChanged += new System.EventHandler(this.radio_lk_2_CheckStateChanged);
       // 
       // radio_lk_1
       // 
@@ -408,6 +411,7 @@
       this.radio_lk_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_1, "L1\r\nNominale Personenbezeichnung (i.d.R. Kopf einer Nominalphrase)\r\nBsp.: die Leh" +
         "rer, die Pilotin");
+      this.radio_lk_1.CheckStateChanged += new System.EventHandler(this.ResetOptionHighlight);
       // 
       // radio_lk_del_5
       // 
@@ -422,6 +426,7 @@
       this.radio_lk_del_5.Text = "5";
       this.radio_lk_del_5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_del_5, "Wert entfernen");
+      this.radio_lk_del_5.CheckStateChanged += new System.EventHandler(this.ResetOptionHighlight);
       // 
       // label1
       // 
@@ -525,7 +530,7 @@
       this.radLabel3.Name = "radLabel3";
       this.radLabel3.Size = new System.Drawing.Size(347, 21);
       this.radLabel3.TabIndex = 10;
-      this.radLabel3.Text = "Geschlechtsabstrahierendes Substantiv ";
+      this.radLabel3.Text = "Geschlechtsabstrahierende Personenbezeichnung";
       // 
       // panel3
       // 
