@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using IDS.QuickAnnotator.Client.Export;
+using IDS.QuickAnnotator.Client.Model;
 using IDS.QuickAnnotator.Client.Model.Annotation;
 
 namespace IDS.QuickAnnotator.Tool4.CalcDiff
@@ -27,6 +29,12 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
 
       var cross = new ExporterCalculateCrossResults();
       cross.Export(model, args[1].Replace(".tsv", "_calcCross.tsv"));
+
+      var snippets = new ExporterCalculateSnippetsResults();
+      snippets.Export(model, args[1].Replace(".tsv", "_snippets.tsv"));
+
+      var crossSnippets = new ExporterCalculateCrossSnippetsResults();
+      crossSnippets.Export(model, args[1].Replace(".tsv", "_crossSnippets.tsv"));
     }
   }
 }

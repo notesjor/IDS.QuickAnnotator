@@ -140,8 +140,11 @@
       <DependentUpon>ExportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Export\Abstract\AbstractExporter.cs" />
+    <Compile Include="Export\Abstract\AbstractSimpleSnippetExporter.cs" />
     <Compile Include="Export\Abstract\AbstractSimpleExporter.cs" />
     <Compile Include="Export\ExporterCalculateCrossResults.cs" />
+    <Compile Include="Export\ExporterCalculateCrossSnippetsResults.cs" />
+    <Compile Include="Export\ExporterCalculateSnippetsResults.cs" />
     <Compile Include="Export\ExporterCalculateResults.cs" />
     <Compile Include="Export\ExporterDiff.cs" />
     <Compile Include="Export\ExporterHistory.cs" />
@@ -169,6 +172,7 @@
     <Compile Include="Model\AuthModel.cs" />
     <Compile Include="Model\GlobalConfiguration.cs" />
     <Compile Include="Model\QuickAnnotatorApi.cs" />
+    <Compile Include="Model\SnippetExportSequence.cs" />
     <Compile Include="Model\User\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
