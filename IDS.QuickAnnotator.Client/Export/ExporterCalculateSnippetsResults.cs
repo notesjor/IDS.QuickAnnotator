@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using IDS.QuickAnnotator.Client.Export.Abstract;
 using IDS.QuickAnnotator.Client.Model;
@@ -9,64 +10,58 @@ namespace IDS.QuickAnnotator.Client.Export
 {
   public class ExporterCalculateSnippetsResults : AbstractSimpleSnippetExporter
   {
-    private static Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, int>>>>> _res =
-      new Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, int>>>>>();
-    private string _path;
+    private FileStream _fs;
+    private StreamWriter _writer;
 
     protected override void PreProcessing(string path)
     {
-      _path = path;
+      _fs = new FileStream(path, FileMode.Create, FileAccess.Write);
+      _writer = new StreamWriter(_fs, Encoding.UTF8);
+      _writer.WriteLine("documentId\tannotator\tlayer\tvalue\tsnippet\tcount");
     }
 
-    protected override void Processing(IAnnotationModel model, Dictionary<string, Dictionary<string, List<SnippetExportSequence>>> annotatorLayerSnippets, string[] annotators, string[] layers)
+    protected override void Processing(IAnnotationModel model, Dictionary<string, List<SnippetExportSequence>> annotatorLayerSnippets, string[] annotators, string[] layers)
     {
       var dId = model.SelectDocument;
-      _res.Add(dId, new Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, int>>>>());
 
       foreach (var a in annotatorLayerSnippets)
       {
-        if (!_res[dId].ContainsKey(a.Key))
-          _res[dId].Add(a.Key, new Dictionary<string, Dictionary<string, Dictionary<string, int>>>());
+        // LAYER > VALUE > SNIPPET > FREQUENCY
+        var count = new Dictionary<string, Dictionary<string, Dictionary<string, int>>>();
 
-        foreach (var l in a.Value)
+        // FILL
+        foreach (var s in a.Value)
         {
-          if (!_res[dId][a.Key].ContainsKey(l.Key))
-            _res[dId][a.Key].Add(l.Key, new Dictionary<string, Dictionary<string, int>>());
-
-          foreach (var v in l.Value)
+          foreach (var x in s.Annotation)
           {
-            if (_res[dId][a.Key][l.Key].ContainsKey(v.Value))
-            {
-              if (_res[dId][a.Key][l.Key][v.Value].ContainsKey(v.Snippet))
-                _res[dId][a.Key][l.Key][v.Value][v.Snippet]++;
-              else
-                _res[dId][a.Key][l.Key][v.Value].Add(v.Snippet, 1);
-            }
+            if (!count.ContainsKey(x.Key))
+              count.Add(x.Key, new Dictionary<string, Dictionary<string, int>>());
+
+            var key = x.Value.ToString();
+            if (key.StartsWith("?"))
+              key = key.Substring(1);
+            if (!count[x.Key].ContainsKey(key))
+              count[x.Key].Add(key, new Dictionary<string, int>());
+
+            if (count[x.Key][key].ContainsKey(s.Snippet))
+              count[x.Key][key][s.Snippet]++;
             else
-            {
-              _res[dId][a.Key][l.Key].Add(v.Value, new Dictionary<string, int> { { v.Snippet, 1 } });
-            }
+              count[x.Key][key].Add(s.Snippet, 1);
           }
         }
+
+        // STORE
+        foreach (var l in count)
+          foreach (var v in l.Value)
+            foreach (var s in v.Value)
+              _writer.WriteLine($"{dId}\t{a.Key}\t{l.Key}\t{v.Key}\t{s.Key.Replace("\t", " ")}\t{s.Value}");
       }
     }
 
     protected override void PostProcessing()
     {
-      using (var fs = new FileStream(_path, FileMode.Create, FileAccess.Write))
-      using (var writer = new StreamWriter(fs, Encoding.UTF8))
-      {
-        writer.WriteLine("documentId\tannotator\tlayer\tvalue\tsnippet\tcount");
-
-        foreach (var d in _res)
-          foreach (var a in d.Value)
-            foreach (var l in a.Value)
-              foreach (var s in l.Value)
-                foreach (var c in s.Value)
-                {
-                  writer.WriteLine($"{d.Key}\t{a.Key}\t{l.Key}\t{s.Key}\t{c.Key.Replace("\t", " ")}\t{c.Value}");
-                }
-      }
+      _writer.Close();
+      _fs?.Close();
     }
   }
 }

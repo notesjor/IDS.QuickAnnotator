@@ -20,7 +20,7 @@ namespace IDS.QuickAnnotator.Client.Export.Abstract
       PostProcessing();
     }
 
-    private void ConvertModel(IAnnotationModel model, out Dictionary<string, Dictionary<string, List<SnippetExportSequence>>> annotatorLayerDocuments, out string[] annotators, out string[] layers)
+    private void ConvertModel(IAnnotationModel model, out Dictionary<string, List<SnippetExportSequence>> annotatorSnippets, out string[] annotators, out string[] layers)
     {
       // Annotatoren und layer identifizieren
       var annotatorsTmp = new HashSet<string>();
@@ -34,7 +34,7 @@ namespace IDS.QuickAnnotator.Client.Export.Abstract
 
       if (annotatorsTmp.Count == 0 || layersTmp.Count == 0)
       {
-        annotatorLayerDocuments = null;
+        annotatorSnippets = null;
         annotators = null;
         layers = null;
         return;
@@ -45,39 +45,30 @@ namespace IDS.QuickAnnotator.Client.Export.Abstract
       layers = layersTmp.OrderBy(x => x).ToArray();
 
       // init
-      annotatorLayerDocuments = new Dictionary<string, Dictionary<string, List<SnippetExportSequence>>>();
-      foreach (var a in annotators)
-      {
-        annotatorLayerDocuments.Add(a, new Dictionary<string, List<SnippetExportSequence>>());
-        foreach (var l in layers)
-          annotatorLayerDocuments[a].Add(l, new List<SnippetExportSequence>());
-      }
+      annotatorSnippets = annotators.ToDictionary(a => a, a => new List<SnippetExportSequence>());
 
       // Befüllen
       foreach (var d in model.GetDocumentHistory(false).OrderBy(x => x.Timestamp))
       {
-        foreach (var a in d.Annotation)
+        var snippet = new SnippetExportSequence(ref document, d);
+
+        var compare = annotatorSnippets[d.UserName];
+        var matchIndices = new List<int>();
+        for (var i = 0; i < compare.Count; i++)
         {
-          var snippet = new SnippetExportSequence(ref document, d, a.Value.ToString());
-
-          var compare = annotatorLayerDocuments[d.UserName][a.Key];
-          var matchIndices = new List<int>();
-          for (var i = 0; i < compare.Count; i++)
-          {
-            if (compare[i].IsChange(snippet))
-              matchIndices.Add(i);
-          }
-
-          foreach (var i in matchIndices.OrderByDescending(x => x))
-            annotatorLayerDocuments[d.UserName][a.Key].RemoveAt(i);
-          annotatorLayerDocuments[d.UserName][a.Key].Add(snippet);
+          if (compare[i].IsChange(snippet))
+            matchIndices.Add(i);
         }
+
+        foreach (var i in matchIndices.OrderByDescending(x => x))
+          annotatorSnippets[d.UserName].RemoveAt(i);
+        annotatorSnippets[d.UserName].Add(snippet);
       }
     }
 
     protected abstract void PreProcessing(string path);
 
-    protected abstract void Processing(IAnnotationModel model, Dictionary<string, Dictionary<string, List<SnippetExportSequence>>> annotatorLayerSnippets, string[] annotators, string[] layers);
+    protected abstract void Processing(IAnnotationModel model, Dictionary<string, List<SnippetExportSequence>> annotatorSnippets, string[] annotators, string[] layers);
 
     protected abstract void PostProcessing();
   }

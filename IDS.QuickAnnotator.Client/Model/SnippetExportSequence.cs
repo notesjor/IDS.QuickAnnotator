@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Documents;
 using IDS.QuickAnnotator.API.Model.Request;
 
 namespace IDS.QuickAnnotator.Client.Model
 {
   public class SnippetExportSequence
   {
-    public SnippetExportSequence(ref string[] document, DocumentChange dc, string value)
+    public SnippetExportSequence(ref string[] document, DocumentChange dc)
     {
       From = dc.From;
       To = dc.To;
-      Value = value;
+      Annotation = dc.Annotation;
 
       var tmp = new List<string>();
       for (var i = From; i < To; i++)
@@ -19,7 +20,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public int From { get; set; }
     public int To { get; set; }
-    public string Value { get; set; }
+    public Dictionary<string, object> Annotation { get; set; }
     public string Snippet { get; set; }
 
     public bool IsChange(SnippetExportSequence other)
@@ -32,8 +33,5 @@ namespace IDS.QuickAnnotator.Client.Model
         return true;
       return false;
     }
-
-    public bool IsFullMatch(SnippetExportSequence other)
-      => other.From == From && other.To == To;
   }
 }

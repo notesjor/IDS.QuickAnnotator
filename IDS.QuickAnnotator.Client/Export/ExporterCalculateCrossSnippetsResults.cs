@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using IDS.QuickAnnotator.Client.Export.Abstract;
 using IDS.QuickAnnotator.Client.Model;
@@ -9,69 +10,68 @@ namespace IDS.QuickAnnotator.Client.Export
 {
   public class ExporterCalculateCrossSnippetsResults : AbstractSimpleSnippetExporter
   {
-    private static Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, int>>>>> _res =
-      new Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, int>>>>>();
-    private string _path;
+    private FileStream _fs;
+    private StreamWriter _writer;
 
     protected override void PreProcessing(string path)
     {
-      _path = path;
+      _fs = new FileStream(path, FileMode.Create, FileAccess.Write);
+      _writer = new StreamWriter(_fs, Encoding.UTF8);
+      _writer.WriteLine("documentId\tannotator\tlayer1\tvalue1\tlayer2\tvalue2\tsnippet\tcount");
     }
 
-    protected override void Processing(IAnnotationModel model, Dictionary<string, Dictionary<string, List<SnippetExportSequence>>> annotatorLayerSnippets, string[] annotators, string[] layers)
+    protected override void Processing(IAnnotationModel model, Dictionary<string, List<SnippetExportSequence>> annotatorLayerSnippets, string[] annotators, string[] layers)
     {
       var dId = model.SelectDocument;
-      _res.Add(dId, new Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, int>>>>());
 
       foreach (var a in annotatorLayerSnippets)
       {
-        if (!_res[dId].ContainsKey(a.Key))
-          _res[dId].Add(a.Key, new Dictionary<string, Dictionary<string, Dictionary<string, int>>>());
+        // LAYER1/V > LAYER2/V > SNIPPET > FREQUENCY
+        var count = new Dictionary<string, Dictionary<string, Dictionary<string, int>>>();
 
-        foreach (var l in a.Value)
+        foreach (var s in a.Value)
         {
-          if (!_res[dId][a.Key].ContainsKey(l.Key))
-            _res[dId][a.Key].Add(l.Key, new Dictionary<string, Dictionary<string, int>>());
-
-          foreach (var v in l.Value)
+          var snip = s.Snippet;
+          for (var i = 0; i < layers.Length; i++)
           {
-            
-          }
+            var l1 = layers[i];
+            var v1 = s.Annotation[l1].ToString();
+            if (v1.StartsWith("?"))
+              v1 = v1.Substring(1);
+            var k1 = $"{l1}\t{v1}";
+            if(!count.ContainsKey(k1))
+              count.Add(k1, new Dictionary<string, Dictionary<string, int>>());
 
-          foreach (var v in l.Value)
-          {
-            if (_res[dId][a.Key][l.Key].ContainsKey(v.Value))
+            for (var j = i + 1; j < layers.Length; j++)
             {
-              if (_res[dId][a.Key][l.Key][v.Value].ContainsKey(v.Snippet))
-                _res[dId][a.Key][l.Key][v.Value][v.Snippet]++;
+              var l2 = layers[j];
+              var v2 = s.Annotation[l2].ToString();
+              if (v2.StartsWith("?"))
+                v2 = v2.Substring(1);
+              var k2 = $"{l2}\t{v2}";
+              if(!count[k1].ContainsKey(k2))
+                count[k1].Add(k2, new Dictionary<string, int>());
+
+              if (count[k1][k2].ContainsKey(snip))
+                count[k1][k2][snip]++;
               else
-                _res[dId][a.Key][l.Key][v.Value].Add(v.Snippet, 1);
-            }
-            else
-            {
-              _res[dId][a.Key][l.Key].Add(v.Value, new Dictionary<string, int> { { v.Snippet, 1 } });
+                count[k1][k2].Add(snip, 1);
             }
           }
         }
+
+        // STORE
+        foreach (var l1 in count)
+          foreach (var l2 in l1.Value)
+            foreach (var s in l2.Value)
+              _writer.WriteLine($"{dId}\t{a.Key}\t{l1.Key}\t{l2.Key}\t{s.Key.Replace("\t", " ")}\t{s.Value}");
       }
     }
 
     protected override void PostProcessing()
     {
-      using (var fs = new FileStream(_path, FileMode.Create, FileAccess.Write))
-      using (var writer = new StreamWriter(fs, Encoding.UTF8))
-      {
-        writer.WriteLine("documentId\tannotator\tsnippet\tlayer1\tvalue1\tlayer2\tvalue2\tcount");
-
-        foreach (var d in _res)
-          foreach (var a in d.Value)
-            foreach (var l in a.Value)
-              foreach (var s in l.Value)
-                foreach (var c in s.Value)
-                {
-                  writer.WriteLine($"{d.Key}\t{a.Key}\t{l.Key}\t{s.Key}\t{c.Key.Replace("\t", " ")}\t{c.Value}");
-                }
-      }
+      _writer.Close();
+      _fs?.Close();
     }
   }
 }
