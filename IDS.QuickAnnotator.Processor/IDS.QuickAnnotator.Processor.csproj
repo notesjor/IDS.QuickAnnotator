@@ -20,4 +20,10 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CorpusExplorer.Sdk">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
