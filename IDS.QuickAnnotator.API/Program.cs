@@ -28,6 +28,7 @@ namespace IDS.QuickAnnotator.API
       _app = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
       _log = EnsureDirectory("error");
       _docs = EnsureDirectory("docs");
+      EnsureDirectory("docs/all");
       _history = EnsureDirectory("history");
       _users = EnsureDirectory("users");
 
@@ -83,7 +84,7 @@ namespace IDS.QuickAnnotator.API
         return arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
-    
+
     private static Task GetDocument(HttpContext arg)
     {
       try
@@ -92,10 +93,11 @@ namespace IDS.QuickAnnotator.API
         if (!IsAuthUser(req))
           return arg.Response.Send(HttpStatusCode.Unauthorized);
 
-        var filePath = Path.Combine(_docs, req.DocumentId + ".json");
-        if (!File.Exists(filePath))
+        var docs = Directory.GetFiles(_docs, req.DocumentId + ".json", SearchOption.AllDirectories);
+        if (docs.Length != 1)
           return arg.Response.Send(HttpStatusCode.NotFound);
 
+        var filePath = docs[0];
         var user = GetUser(req.AuthToken);
         user.LastDocumentId = req.DocumentId;
         SetUser(req.AuthToken, user);
@@ -189,7 +191,14 @@ namespace IDS.QuickAnnotator.API
     {
       try
       {
-        return arg.Response.Send(Directory.GetFiles(_docs, "*.json").Select(x => Path.GetFileNameWithoutExtension(x)).ToArray());
+        var req = arg.PostData<AbstractAuthRequest>();
+
+        var res = new List<string>();
+        res.AddRange(Directory.GetFiles(Path.Combine(_docs, "all"), "*.json").Select(Path.GetFileNameWithoutExtension));
+        res.AddRange(Directory.GetFiles(Path.Combine(_docs, req.AuthToken), "*.json").Select(Path.GetFileNameWithoutExtension));
+        res.Sort();
+
+        return arg.Response.Send(res.ToArray());
       }
       catch (Exception ex)
       {
@@ -247,7 +256,7 @@ namespace IDS.QuickAnnotator.API
       {
         return JsonConvert.DeserializeObject<UserProfile>(File.ReadAllText(Path.Combine(_users, authToken + ".user"), Encoding.UTF8));
       }
-      catch(Exception ex)
+      catch (Exception ex)
       {
         Log(ex);
         return null;
