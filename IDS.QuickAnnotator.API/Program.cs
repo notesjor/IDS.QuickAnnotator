@@ -195,7 +195,14 @@ namespace IDS.QuickAnnotator.API
 
         var res = new List<string>();
         res.AddRange(Directory.GetFiles(Path.Combine(_docs, "all"), "*.json").Select(Path.GetFileNameWithoutExtension));
-        res.AddRange(Directory.GetFiles(Path.Combine(_docs, req.AuthToken), "*.json").Select(Path.GetFileNameWithoutExtension));
+        try
+        {
+          res.AddRange(Directory.GetFiles(Path.Combine(_docs, req.AuthToken), "*.json").Select(Path.GetFileNameWithoutExtension));
+        }
+        catch
+        {
+          // ignore
+        }
         res.Sort();
 
         return arg.Response.Send(res.ToArray());
