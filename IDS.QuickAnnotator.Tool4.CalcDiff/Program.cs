@@ -11,7 +11,7 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     static void Main(string[] args)
     {
       var model = new AnnotationModelOffline(args[0]);
-      
+
       var diff = new ExporterDiff();
       diff.Export(model, args[1]);
 

@@ -20,27 +20,34 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
 
     public string[] EditorDocument
     {
-      get => JsonConvert.DeserializeObject<string[]>(File.ReadAllText(Path.Combine(_basePath, $"docs/{SelectDocument}.json"), Encoding.UTF8));
+      get => JsonConvert.DeserializeObject<string[]>(File.ReadAllText(Directory.GetFiles(Path.Combine(_basePath, "docs"), $"{SelectDocument}.json", SearchOption.AllDirectories).First(), Encoding.UTF8));
       set{}
     }
     public string SelectDocument { get; set; }
 
-    public IEnumerable<string> AvailableDocumentIds => Directory.GetFiles(Path.Combine(_basePath, "docs"), "*.json")
+    public IEnumerable<string> AvailableDocumentIds => Directory.GetFiles(Path.Combine(_basePath, "docs"), "*.json", SearchOption.AllDirectories)
                                                                 .Select(Path.GetFileNameWithoutExtension);
 
     public DocumentChange[] GetDocumentHistory(bool onlyMyAnnotations)
     {
       var res = new List<DocumentChange>();
-      foreach (var file in Directory.GetFiles(Path.Combine(_basePath, $"history/{SelectDocument}/"), "*.json"))
+      try
       {
-        try
+        foreach (var file in Directory.GetFiles(Path.Combine(_basePath, $"history/{SelectDocument}/"), "*.json"))
         {
-          res.Add(JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(file, Encoding.UTF8)));
+          try
+          {
+            res.Add(JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(file, Encoding.UTF8)));
+          }
+          catch
+          {
+            // ignore
+          }
         }
-        catch
-        {
-          // ignore
-        }
+      }
+      catch(Exception ex)
+      {
+        Console.WriteLine(ex.Message);
       }
 
       return res.ToArray();

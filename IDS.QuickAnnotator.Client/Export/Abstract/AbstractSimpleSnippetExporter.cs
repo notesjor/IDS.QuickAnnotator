@@ -15,6 +15,12 @@ namespace IDS.QuickAnnotator.Client.Export.Abstract
       {
         model.SelectDocument = documentId;
         ConvertModel(model, out var ald, out var a, out var d);
+
+        if (ald == null || ald.Count == 0)
+          continue;
+        if (a == null || a.Length == 0)
+          continue;
+
         Processing(model, ald, a, d);
       }
       PostProcessing();

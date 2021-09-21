@@ -22,7 +22,11 @@ namespace IDS.QuickAnnotator.Client.Export
 
     protected override void Processing(IAnnotationModel model, Dictionary<string, Dictionary<string, string[]>> aDocs, string[] annotators, string[] layers, string path)
     {
+      if (layers == null)
+        return;
+
       // Berechnen
+
       foreach (var l in layers)
       {
         var a = annotators.OrderBy(x => x).ToArray();
