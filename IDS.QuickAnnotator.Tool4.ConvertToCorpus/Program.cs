@@ -18,7 +18,7 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
     {
       CorpusExplorerEcosystem.InitializeMinimal();
 
-      var docs = Directory.GetFiles(Path.Combine(args[0], "docs"), "*.json");
+      var docs = Directory.GetFiles(Path.Combine(args[0], "docs"), "*.json", SearchOption.AllDirectories);
       foreach (var doc in docs)
       {
         var output = Path.Combine(args[0], Path.GetFileName(doc));
@@ -37,26 +37,42 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
 
     private static void JsonConversion(string[] args, string doc, string output)
     {
-      var textToken = JsonConvert.DeserializeObject<string[]>(File.ReadAllText(doc, Encoding.UTF8));
-      var history = Directory.GetFiles(Path.Combine(args[0], "history", Path.GetFileNameWithoutExtension(doc)), "*.json");
-      var qAnnos = history.Select(x => JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(x, Encoding.UTF8)));
-
-      var cAnnos = (from a in qAnnos
-                    from x in a.Annotation
-                    select new Annotation
-                    {
-                      From = a.From,
-                      Layer = $"{x.Key} ({a.UserName})",
-                      LayerValue = x.Value.ToString(),
-                      To = a.To
-                    }).ToArray();
-      var nDoc = new Document
+      try
       {
-        Annotations = cAnnos,
-        TextToken = textToken
-      };
+        var textToken = JsonConvert.DeserializeObject<string[]>(File.ReadAllText(doc, Encoding.UTF8));
+        var history = Directory.GetFiles(Path.Combine(args[0], "history", Path.GetFileNameWithoutExtension(doc)),
+                                         "*.json", SearchOption.AllDirectories);
+        var qAnnos =
+          history.Select(x => JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(x, Encoding.UTF8)));
 
-      File.WriteAllText(output, JsonConvert.SerializeObject(nDoc));
+        var cAnnos = new List<Annotation>();
+        foreach (DocumentChange? a in qAnnos)
+          foreach (var x in a.Annotation)
+          {
+            cAnnos.Add(new Annotation { From = a.From, Layer = $"{x.Key} ({a.UserName})", LayerValue = x.Value.ToString(), To = a.To });
+            cAnnos.Add(new Annotation { From = a.From, Layer = $"{x.Key}", LayerValue = x.Value.ToString(), To = a.To });
+          }
+
+        var authors = new HashSet<string>(qAnnos.Select(a => a.UserName));
+
+        var nDoc = new Document
+        {
+          Annotations = cAnnos.ToArray(),
+          TextToken = textToken,
+          Metadata = new Dictionary<string, object>
+          {
+            {"Annotator*innen", string.Join(", ", authors)},
+            {"Sigle", Path.GetFileNameWithoutExtension(doc)},
+            {"Titel", Path.GetFileNameWithoutExtension(doc)}
+          }
+        };
+
+        File.WriteAllText(output, JsonConvert.SerializeObject(nDoc));
+      }
+      catch (Exception ex)
+      {
+        // ignore
+      }
     }
   }
 }
