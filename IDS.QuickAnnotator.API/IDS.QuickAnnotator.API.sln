@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Client",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Tool4.CalcDiff", "..\IDS.QuickAnnotator.Tool4.CalcDiff\IDS.QuickAnnotator.Tool4.CalcDiff.csproj", "{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Tool4.ConvertToCorpus", "..\IDS.QuickAnnotator.Tool4.ConvertToCorpus\IDS.QuickAnnotator.Tool4.ConvertToCorpus.csproj", "{8A67C53B-B83D-4C47-91E8-AF234F487A83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.Tool4.ConvertToCorpus", "..\IDS.QuickAnnotator.Tool4.ConvertToCorpus\IDS.QuickAnnotator.Tool4.ConvertToCorpus.csproj", "{8A67C53B-B83D-4C47-91E8-AF234F487A83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.KorAP.Cec6Toolbox.SelectDocumentsBySigle", "..\..\IDS.KorAP.Cec6Toolbox\IDS.KorAP.Cec6Toolbox.SelectDocumentsBySigle\IDS.KorAP.Cec6Toolbox.SelectDocumentsBySigle.csproj", "{ED27591F-C6F8-467D-A1E7-28745348168E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8A67C53B-B83D-4C47-91E8-AF234F487A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A67C53B-B83D-4C47-91E8-AF234F487A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A67C53B-B83D-4C47-91E8-AF234F487A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED27591F-C6F8-467D-A1E7-28745348168E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED27591F-C6F8-467D-A1E7-28745348168E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED27591F-C6F8-467D-A1E7-28745348168E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED27591F-C6F8-467D-A1E7-28745348168E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
