@@ -10,26 +10,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="BitCutStudios.CorpusExplorer">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Json\bin\Debug\BitCutStudios.CorpusExplorer.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Json\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk.Diagnostic">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Json\bin\Debug\CorpusExplorer.Sdk.Diagnostic.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk.Extern.Json">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Json\bin\Debug\CorpusExplorer.Sdk.Extern.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Model\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\IDS.QuickAnnotator.API\IDS.QuickAnnotator.API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CorpusExplorer.Core">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CorpusExplorer.Sdk">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CorpusExplorer.Sdk.Diagnostic">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.Diagnostic.dll</HintPath>
+    </Reference>
+    <Reference Include="CorpusExplorer.Sdk.Extern.Json">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.Extern.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
