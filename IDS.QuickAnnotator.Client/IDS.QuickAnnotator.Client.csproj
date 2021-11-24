@@ -150,6 +150,7 @@
     <Compile Include="Export\ExporterHistory.cs" />
     <Compile Include="Export\ExporterHtml.cs" />
     <Compile Include="Export\ExporterPlaintext.cs" />
+    <Compile Include="Export\ExporterStrictDiff.cs" />
     <Compile Include="Export\ExporterXmlValidation.cs" />
     <Compile Include="Export\ExporterXml.cs" />
     <Compile Include="Helper\Diff\Diff.cs" />

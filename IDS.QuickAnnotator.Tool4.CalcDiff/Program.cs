@@ -15,6 +15,9 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
       var diff = new ExporterDiff();
       diff.Export(model, args[1]);
 
+      var diffS = new ExporterStrictDiff();
+      diffS.Export(model, args[1].Replace(".tsv", "_strict.tsv"));
+
       var html = new ExporterHtml();
       html.Export(model, args[1].Replace(".tsv", "_html"));
 
