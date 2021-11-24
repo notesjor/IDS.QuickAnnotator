@@ -30,12 +30,15 @@ namespace IDS.QuickAnnotator.Client.Export
       {
         var a = annotators.OrderBy(x => x).ToArray();
         for (var i = 0; i < a.Length; i++)
-        for (var j = i + 1; j < a.Length; j++)
-        {
-          DiffQuick(aDocs[a[i]][l], aDocs[a[j]][l], out var length, out var plusA, out var plusB, out var common, out var diff);
-          
-          _res.Add($"{model.SelectDocument}\t{length}\t{a[i]}\t{a[j]}\t{l}\t{plusA}\t{plusB}\t{common}\t{diff}\t{(double)common / length * 100.0}");
-        }
+          for (var j = i + 1; j < a.Length; j++)
+          {
+            DiffQuick(aDocs[a[i]][l], aDocs[a[j]][l], out var length, out var plusA, out var plusB, out var common, out var diff);
+            var percentage = (double)common / length * 100.0;
+            if (double.IsNaN(percentage))
+              percentage = 100.0;
+
+            _res.Add($"{model.SelectDocument}\t{length}\t{a[i]}\t{a[j]}\t{l}\t{plusA}\t{plusB}\t{common}\t{diff}\t{percentage}");
+          }
       }
     }
 
