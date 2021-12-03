@@ -26,8 +26,7 @@ namespace IDS.QuickAnnotator.Client.Helper
                       (from k in keys
                        let val = input[k][i]
                        where !string.IsNullOrWhiteSpace(val)
-                       select $"{k}_{val.Substring(0, val.StartsWith("?") ? 2 : 1)}"))
-                .Replace("?", unsureReplacement);
+                       select $"{k}_{val.Substring(0, val.StartsWith("?") ? 2 : 1)}"));
       }
 
       return res;

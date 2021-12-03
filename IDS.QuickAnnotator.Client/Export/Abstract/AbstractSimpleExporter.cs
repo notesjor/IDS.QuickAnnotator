@@ -66,9 +66,7 @@ namespace IDS.QuickAnnotator.Client.Export.Abstract
       foreach (var x in d.Annotation)
         for (var i = d.From; i < d.To; i++)
         {
-          var val = x.Value.ToString();
-          if (val.StartsWith("?"))
-            val = val.Substring(1);
+          var val = x.Value?.ToString() ?? "";
           annotatorLayerDocuments[d.UserName][x.Key][i] = val;
         }
     }

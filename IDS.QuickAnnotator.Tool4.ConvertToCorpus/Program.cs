@@ -31,7 +31,8 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
     private static void SaveCorpus(string[] args)
     {
       var importer = new SimpleJsonStandoffImporter();
-      var corpus = CorpusMerger.Merge(importer.Execute(Directory.GetFiles(args[0], "*.json", SearchOption.TopDirectoryOnly)));
+      var files = Directory.GetFiles(args[0], "*.json", SearchOption.TopDirectoryOnly);
+      var corpus = CorpusMerger.Merge(importer.Execute(files));
       corpus.Save(Path.Combine(args[0], "corpus.cec6"), false);
     }
 
@@ -46,7 +47,7 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
           history.Select(x => JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(x, Encoding.UTF8)));
 
         var cAnnos = new List<Annotation>();
-        foreach (DocumentChange? a in qAnnos)
+        foreach (DocumentChange? a in qAnnos.OrderBy(x=>x.Timestamp))
           foreach (var x in a.Annotation)
           {
             cAnnos.Add(new Annotation { From = a.From, Layer = $"{x.Key} ({a.UserName})", LayerValue = x.Value.ToString(), To = a.To });

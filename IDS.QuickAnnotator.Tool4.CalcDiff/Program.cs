@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using IDS.QuickAnnotator.Client.Export;
-using IDS.QuickAnnotator.Client.Model;
+﻿using IDS.QuickAnnotator.Client.Export;
 using IDS.QuickAnnotator.Client.Model.Annotation;
 
 namespace IDS.QuickAnnotator.Tool4.CalcDiff
@@ -11,7 +8,7 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     static void Main(string[] args)
     {
       var model = new AnnotationModelOffline(args[0]);
-
+      /*
       var diff = new ExporterDiff();
       diff.Export(model, args[1]);
 
@@ -20,7 +17,11 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
 
       var html = new ExporterHtml();
       html.Export(model, args[1].Replace(".tsv", "_html"));
+      */
+      var htmlDiff = new ExporterHtmlDiff();
+      htmlDiff.Export(model, args[1].Replace(".tsv", "_htmlDiff"));
 
+      /*
       var xml = new ExporterXml();
       xml.Export(model, args[1].Replace(".tsv", "_xml"));
 
@@ -38,6 +39,7 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
 
       var crossSnippets = new ExporterCalculateCrossSnippetsResults();
       crossSnippets.Export(model, args[1].Replace(".tsv", "_crossSnippets.tsv"));
+      */
     }
   }
 }

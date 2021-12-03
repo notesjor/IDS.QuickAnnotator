@@ -148,6 +148,7 @@
     <Compile Include="Export\ExporterCalculateResults.cs" />
     <Compile Include="Export\ExporterDiff.cs" />
     <Compile Include="Export\ExporterHistory.cs" />
+    <Compile Include="Export\ExporterHtmlDiff.cs" />
     <Compile Include="Export\ExporterHtml.cs" />
     <Compile Include="Export\ExporterPlaintext.cs" />
     <Compile Include="Export\ExporterStrictDiff.cs" />
