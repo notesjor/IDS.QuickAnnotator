@@ -6,14 +6,17 @@ namespace IDS.QuickAnnotator.Client.Helper
 {
   public static class ReduceHelper
   {
-    public static string[] Reduce(Dictionary<string, string[]> input, string unsureReplacement = "")
+    public static string[] Reduce(Dictionary<string, string[]> input)
     {
       // rename
-      var oldNames = input.Keys.ToArray();
-      foreach (var n in oldNames)
+      foreach (var oldName in input.Keys.ToArray())
       {
-        input.Add(Replace(n), input[n]);
-        input.Remove(n);
+        var newName = Replace(oldName);
+        if(input.ContainsKey(newName))
+          continue;
+
+        input.Add(Replace(oldName), input[oldName]);
+        input.Remove(oldName);
       }
 
       var res = new string[input.First().Value.Length];
@@ -51,7 +54,7 @@ namespace IDS.QuickAnnotator.Client.Helper
         case "Welches Geschlecht ist aus Kontext erkennbar?":
           return "G";
         default:
-          throw new NotImplementedException();
+          return key;
       }
     }
   }

@@ -17,62 +17,71 @@ namespace IDS.QuickAnnotator.Client.Export
         Directory.CreateDirectory(path);
     }
 
-    protected override void Processing(IAnnotationModel model, 
-                                       Dictionary<string, Dictionary<string, string[]>> annotatorLayerDocuments, 
+    protected override void Processing(IAnnotationModel model,
+                                       Dictionary<string, Dictionary<string, string[]>> annotatorLayerDocuments,
                                        string[] annotators, string[] layers,
                                        string path)
     {
+      var doc = model.EditorDocument;
+      var tags = new[] { "a", "b", "c" };
+      var idx = 0;
+      var names = new List<string>();
+
       if (annotators.Length < 2)
         return;
 
-      var doc = model.EditorDocument;
-      var tags = new []{"a", "b", "c"};
-      var idx = 0;
-      var names = new List<string>();
-      foreach (var a in annotators)
+      for (var aId = 0; aId < annotators.Length; aId++)
       {
-        names.Add($"<li><div class=\"{tags[idx]}\"><strong>{tags[idx]}</strong>: {a}</div></li>");
-        idx++;
-      }
+        var adoc = ReduceHelper.Reduce(annotatorLayerDocuments[annotators[aId]]);
+        string last = null;
+        names.Add($"<li><div class=\"{tags[idx]}\"><strong>{tags[idx]}</strong>: {annotators[aId]}</div></li>");
 
-      var annos = annotators.Select(x => ReduceHelper.Reduce(annotatorLayerDocuments[x])).ToArray();
-
-      for (var i = 0; i < doc.Length; i++)
-      {
-        var votes = annos.Select(a => new HashSet<string>(a[i].Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries))).ToArray();
-        for (var j = 0; j < votes.Length; j++)
+        for (var i = 0; i < adoc.Length; i++)
         {
-          for (var k = 0; k < votes.Length; k++)
+          var val = adoc[i];
+          if (string.IsNullOrWhiteSpace(val))
+            val = null;
+
+          val = HiglightValues(val, ref annotatorLayerDocuments, ref annotators, aId, i);
+          
+          if (val != last)
           {
-            if (j == k)
-              continue;
-
-            var test = votes[k].ToArray();
-
-            foreach (var x in test)
-              if (votes[j].Remove(x))
-                votes[k].Remove(x);
+            if (last != null)
+              doc[i - 1] += "</div></div>";
+            last = val;
+            if (last != null)
+              doc[i] = $"<div class=\"{tags[idx]}\"><div class=\"lbl\">{val}</div><div class=\"txt\">{doc[i]}";
           }
         }
 
-        if (votes.Sum(x => x.Count) == 0)
-          continue;
-
-        for (var id = 0; id < votes.Length; id++)
-        {
-          if (votes[id].Count == 0)
-            continue;
-
-          var allValues = annos[id][i].Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
-          for (var j = 0; j < allValues.Length; j++)
-            allValues[j] = votes[id].Contains(allValues[j]) ? $"<b>{allValues[j]}</b>" : allValues[j];
-
-          doc[i] = $"<div class=\"{tags[id]}\"><div class=\"lbl\">{string.Join(" ", allValues)}</div><div class=\"txt\">{doc[i]}</div></div>";
-        }
+        idx++;
       }
-      
+
       var name = $"<ul>{string.Join("", names)}</ul>";
       File.WriteAllText(Path.Combine(path, $"{model.SelectDocument}.html"), Resources.ExporterHtmlTemplate.Replace("<!--NAME-->", name).Replace("<!--BODY-->", string.Join(" ", doc)));
+    }
+
+    private string HiglightValues(string val, ref Dictionary<string, Dictionary<string, string[]>> annotatorLayerDocuments, 
+                                  ref string[] annotators, int currentA, int i)
+    {
+      if (string.IsNullOrWhiteSpace(val))
+        return val;
+
+      var vals = val.Split(' ');
+
+      for (var aId = 0; aId < annotators.Length; aId++)
+      {
+        if(currentA == aId)
+          continue;
+
+        var compare = new HashSet<string>(ReduceHelper.Reduce(annotatorLayerDocuments[annotators[aId]])[i].Split(' '));
+        for (var j = 0; j < vals.Length; j++)
+          if (!compare.Contains(vals[j]))
+            vals[j] = $"<b>{vals[j]}</b>";
+      }
+
+      return string.Join(" ", vals);
+
     }
 
     protected override void PostProcessing()
