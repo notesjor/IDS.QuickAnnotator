@@ -94,7 +94,7 @@ namespace IDS.QuickAnnotator.API
           return arg.Response.Send(HttpStatusCode.Unauthorized);
 
         var docs = Directory.GetFiles(_docs, req.DocumentId + ".json", SearchOption.AllDirectories);
-        if (docs.Length != 1)
+        if (docs.Length < 1)
           return arg.Response.Send(HttpStatusCode.NotFound);
 
         var filePath = docs[0];
