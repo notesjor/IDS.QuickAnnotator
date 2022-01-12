@@ -5,7 +5,7 @@ using System.Collections;
 
 #endregion
 
-namespace IDS.QuickAnnotator.Client.Helper.Diff
+namespace IDS.QuickAnnotator.Client.Doppelform.Helper.Diff
 {
   // DiffDelta
 

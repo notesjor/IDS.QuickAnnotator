@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace IDS.QuickAnnotator.Client.Helper.Diff
+namespace IDS.QuickAnnotator.Client.Doppelform.Helper.Diff
 {
   /// <summary>details of one difference.</summary>
   [SuppressMessage("Microsoft.Performance", "CA1815:OverrideEqualsAndOperatorEqualsOnValueTypes")]

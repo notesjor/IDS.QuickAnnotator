@@ -2,8 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.Text;
+using IDS.QuickAnnotator.Client.Doppelform.Helper.Diff;
 using IDS.QuickAnnotator.Client.Export.Abstract;
-using IDS.QuickAnnotator.Client.Helper.Diff;
 using IDS.QuickAnnotator.Client.Model.Annotation.Interface;
 
 namespace IDS.QuickAnnotator.Client.Export
