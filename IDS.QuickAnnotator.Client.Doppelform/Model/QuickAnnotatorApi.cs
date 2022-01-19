@@ -13,17 +13,23 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return EnsureResponse(client, request).Content == "true";
+      return EnsureResponse(client, request, true).Content == "true";
     }
 
-    private static IRestResponse EnsureResponse(RestClient client, RestRequest request)
+    private static IRestResponse EnsureResponse(RestClient client, RestRequest request, bool hasContent)
     {
       IRestResponse response = null;
       for (var i = 0; i < 5; i++)
       {
         response = client.Execute(request);
-        if (response != null && response.StatusCode > 0 && !string.IsNullOrWhiteSpace(response.Content))
-          break;
+        if (response != null && response.StatusCode > 0)
+          if (hasContent)
+          {
+            if (!string.IsNullOrWhiteSpace(response.Content))
+              break;
+          }
+          else
+            break;
       }
 
       return response;
@@ -35,7 +41,7 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<UserProfile>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<UserProfile>(EnsureResponse(client, request, true).Content);
     }
 
     public static string[] GetDocuments()
@@ -44,7 +50,7 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(client, request, true).Content);
     }
 
     public static string[] GetDocument(string documentId)
@@ -53,7 +59,7 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(client, request, true).Content);
     }
 
     public static DocumentChange[] GetDocumentHistory(string documentId)
@@ -62,7 +68,7 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<DocumentChange[]>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<DocumentChange[]>(EnsureResponse(client, request, true).Content);
     }
 
     public static bool SetDocument(string documentId, DocumentChange change)
@@ -71,7 +77,7 @@ namespace IDS.QuickAnnotator.Client.Model
       var request = new RestRequest(Method.POST);
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\", \"Change\": {JsonConvert.SerializeObject(change)}}}", ParameterType.RequestBody);
-      return EnsureResponse(client, request).StatusCode == HttpStatusCode.OK;
+      return EnsureResponse(client, request, false).StatusCode == HttpStatusCode.OK;
     }
 
     public static bool SetDocumentCompletion(string documentId)
@@ -81,7 +87,7 @@ namespace IDS.QuickAnnotator.Client.Model
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
       IRestResponse response = client.Execute(request);
-      return EnsureResponse(client, request).StatusCode == HttpStatusCode.OK;
+      return EnsureResponse(client, request, false).StatusCode == HttpStatusCode.OK;
     }
   }
 }

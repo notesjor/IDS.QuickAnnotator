@@ -464,6 +464,8 @@ namespace IDS.QuickAnnotator.Client
           {"Doppelform", "true"}
         }
       });
+
+      _editor.Annotations = _anno.EditorAnnotations;
     }
   }
 }
