@@ -53,6 +53,8 @@ namespace IDS.QuickAnnotator.Client.Helper
           return "GK";
         case "Welches Geschlecht ist aus Kontext erkennbar?":
           return "G";
+        case "Doppelform":
+          return "DF";
         default:
           return key;
       }

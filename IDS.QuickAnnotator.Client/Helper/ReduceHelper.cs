@@ -29,7 +29,7 @@ namespace IDS.QuickAnnotator.Client.Helper
                       (from k in keys
                        let val = input[k][i]
                        where !string.IsNullOrWhiteSpace(val)
-                       select $"{k}_{val.Substring(0, val.StartsWith("?") ? 2 : 1)}"));
+                       select $"{k}_{(val == "?" ? "?": val.Substring(0, val.StartsWith("?") ? 2 : 1))}"));
       }
 
       return res;
@@ -53,6 +53,8 @@ namespace IDS.QuickAnnotator.Client.Helper
           return "GK";
         case "Welches Geschlecht ist aus Kontext erkennbar?":
           return "G";
+        case "Doppelform":
+          return "DF";
         default:
           return key;
       }

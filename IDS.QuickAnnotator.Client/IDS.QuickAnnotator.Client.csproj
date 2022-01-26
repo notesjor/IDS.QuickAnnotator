@@ -144,6 +144,7 @@
     <Compile Include="Export\Abstract\AbstractSimpleExporter.cs" />
     <Compile Include="Export\ExporterCalculateCrossResults.cs" />
     <Compile Include="Export\ExporterCalculateCrossSnippetsResults.cs" />
+    <Compile Include="Export\ExporterCalculateMergedAgreedBothResults.cs" />
     <Compile Include="Export\ExporterCalculateSnippetsResults.cs" />
     <Compile Include="Export\ExporterCalculateResults.cs" />
     <Compile Include="Export\ExporterDiff.cs" />

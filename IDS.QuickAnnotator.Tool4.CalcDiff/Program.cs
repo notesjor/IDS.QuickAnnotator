@@ -9,15 +9,22 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     {
       var model = new AnnotationModelOffline(args[0]);
 
+      var calc = new ExporterCalculateMergedAgreedBothResults();
+      calc.Export(model, args[1].Replace(".tsv", "_calc_merged_agreed.tsv"));
+
       var diffS = new ExporterStrictDiff();
       diffS.Export(model, args[1].Replace(".tsv", "_strict.tsv"));
       
       var htmlDiff = new ExporterHtmlDiff();
       htmlDiff.Export(model, args[1].Replace(".tsv", "_htmlDiff"));
 
+
       /*
       var diff = new ExporterDiff();
       diff.Export(model, args[1]);      
+          
+      var calc = new ExporterCalculateResults();
+      calc.Export(model, args[1].Replace(".tsv", "_calc.tsv"));
 
       var html = new ExporterHtml();
       html.Export(model, args[1].Replace(".tsv", "_html"));
@@ -28,10 +35,7 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
       var xmlValid = new ExporterXmlValidation();
       xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
 
-      var calc = new ExporterCalculateResults();
-      calc.Export(model, args[1].Replace(".tsv", "_calc.tsv"));
-
-      var cross = new ExporterCalculateCrossResults();
+            var cross = new ExporterCalculateCrossResults();
       cross.Export(model, args[1].Replace(".tsv", "_calcCross.tsv"));
 
       var snippets = new ExporterCalculateSnippetsResults();
