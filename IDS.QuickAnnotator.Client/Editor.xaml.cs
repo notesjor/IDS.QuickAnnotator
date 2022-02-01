@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Collections.Generic;
+using System.Windows.Controls;
 using System.Windows.Media;
 using IDS.QuickAnnotator.API.Model.Request;
 
@@ -14,6 +15,25 @@ namespace IDS.QuickAnnotator.Client
       InitializeComponent();
     }
 
+    public HashSet<string> Highlight { get; set; } = new HashSet<string>
+    {
+      "Erzieher",
+      "Erziehers",
+      "Erziehern",
+      "Erzieherin",
+      "Erzieherinnen",
+      "Bürger",
+      "Bürgers",
+      "Bürgern",
+      "Bürgerin",
+      "Bürgerinnen",
+      "Manager",
+      "Managers",
+      "Managern",
+      "Managerin",
+      "Managerinnen"
+    };
+
     public string[] Tokens
     {
       set
@@ -27,6 +47,7 @@ namespace IDS.QuickAnnotator.Client
           var token = new Token { TokenText = value[i], TokenIndex = i };
           token.LeftClick += LeftClick;
           token.RightClick += RightClick;
+          token.HighlightToken = Highlight.Contains(value[i]);
 
           EditorContent.Children.Add(token);
         }
@@ -37,7 +58,7 @@ namespace IDS.QuickAnnotator.Client
     {
       set
       {
-        if (value == null) 
+        if (value == null)
           return;
 
         for (var i = 0; i < value.Length; i++)

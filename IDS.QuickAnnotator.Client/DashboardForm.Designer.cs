@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem13 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem14 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem15 = new Telerik.WinControls.UI.RadListDataItem();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -96,6 +96,8 @@
       this.panel4 = new System.Windows.Forms.Panel();
       this.btn_submit = new Telerik.WinControls.UI.RadButton();
       this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+      this.panel9 = new System.Windows.Forms.Panel();
+      this.btn_submit_doppelform = new Telerik.WinControls.UI.RadButton();
       ((System.ComponentModel.ISupportInitialize)(this.commands)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
       this.radSplitContainer1.SuspendLayout();
@@ -151,6 +153,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_ä)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_ää)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
       this.SuspendLayout();
       // 
@@ -200,12 +203,12 @@
       // 
       this.cmb_text.DisplayName = "commandBarDropDownList1";
       this.cmb_text.DropDownAnimationEnabled = true;
-      radListDataItem4.Text = "ListItem 1";
-      radListDataItem5.Text = "ListItem 2";
-      radListDataItem6.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem4);
-      this.cmb_text.Items.Add(radListDataItem5);
-      this.cmb_text.Items.Add(radListDataItem6);
+      radListDataItem13.Text = "ListItem 1";
+      radListDataItem14.Text = "ListItem 2";
+      radListDataItem15.Text = "ListItem 3";
+      this.cmb_text.Items.Add(radListDataItem13);
+      this.cmb_text.Items.Add(radListDataItem14);
+      this.cmb_text.Items.Add(radListDataItem15);
       this.cmb_text.MaxDropDownItems = 0;
       this.cmb_text.MinSize = new System.Drawing.Size(200, 48);
       this.cmb_text.Name = "cmb_text";
@@ -311,6 +314,8 @@
       this.annotation_editor.Controls.Add(this.panel8);
       this.annotation_editor.Controls.Add(this.panel4);
       this.annotation_editor.Controls.Add(this.btn_submit);
+      this.annotation_editor.Controls.Add(this.panel9);
+      this.annotation_editor.Controls.Add(this.btn_submit_doppelform);
       this.annotation_editor.Dock = System.Windows.Forms.DockStyle.Fill;
       this.annotation_editor.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
       this.annotation_editor.Location = new System.Drawing.Point(0, 0);
@@ -1001,6 +1006,24 @@
       this.toolTip1.SetToolTip(this.btn_submit, "Annotation anwenden");
       this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
       // 
+      // panel9
+      // 
+      this.panel9.Location = new System.Drawing.Point(3, 583);
+      this.panel9.Name = "panel9";
+      this.panel9.Size = new System.Drawing.Size(307, 29);
+      this.panel9.TabIndex = 22;
+      // 
+      // btn_submit_doppelform
+      // 
+      this.btn_submit_doppelform.Dock = System.Windows.Forms.DockStyle.Left;
+      this.btn_submit_doppelform.Location = new System.Drawing.Point(3, 618);
+      this.btn_submit_doppelform.Name = "btn_submit_doppelform";
+      this.btn_submit_doppelform.Size = new System.Drawing.Size(410, 36);
+      this.btn_submit_doppelform.TabIndex = 23;
+      this.btn_submit_doppelform.Text = "Doppelform (:)";
+      this.toolTip1.SetToolTip(this.btn_submit_doppelform, "Annotation anwenden");
+      this.btn_submit_doppelform.Click += new System.EventHandler(this.btn_submit_doppelform_Click);
+      // 
       // DashboardForm
       // 
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1077,6 +1100,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_ä)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_ää)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -1148,5 +1172,7 @@
     private Telerik.WinControls.UI.RadRadioButton radio_sex_del_ää;
     private Telerik.WinControls.UI.RadRadioButton radio_sex_group_k;
     private Telerik.WinControls.UI.RadRadioButton radio_sex_none_l;
+    private System.Windows.Forms.Panel panel9;
+    private Telerik.WinControls.UI.RadButton btn_submit_doppelform;
   }
 }

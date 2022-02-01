@@ -44,6 +44,19 @@ namespace IDS.QuickAnnotator.Client
       }
     }
 
+    public bool HighlightToken
+    {
+      set
+      {
+        TokenStr.Background =
+          value ? new SolidColorBrush(Color.FromRgb(200, 200, 200)) : new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        TokenStr.Foreground =
+          value ? new SolidColorBrush(Color.FromRgb(255, 0, 0)) : new SolidColorBrush(Color.FromRgb(0, 0, 0));
+        TokenStr.FontWeight =
+          value ? FontWeight.FromOpenTypeWeight(700) : FontWeight.FromOpenTypeWeight(400);
+      }
+    }
+
     public int TokenIndex { get; set; }
 
     private void RootPanel_MouseEnter(object sender, MouseEventArgs e)

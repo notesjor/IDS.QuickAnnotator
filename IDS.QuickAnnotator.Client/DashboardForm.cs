@@ -308,6 +308,9 @@ namespace IDS.QuickAnnotator.Client
           chk_sex_h.IsChecked = !chk_sex_h.IsChecked;
           break;
 
+        case ':':
+          btn_submit_doppelform_Click(this, null);
+          break;
 
         case '\r':
           btn_submit_Click(this, null);
@@ -467,6 +470,29 @@ namespace IDS.QuickAnnotator.Client
           r.Image = grey ? Resources.group_1_grey : Resources.group_1;
         }
       }
+    }
+
+    private void btn_submit_doppelform_Click(object sender, EventArgs e)
+    {
+      var from = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom;
+      var to = _editorIndexTo + 1;
+      if (to - from < 2)
+      {
+        MessageBox.Show("Doppelformen müssen mehrere Token umfassen. Zuerst Rechtsklick auf erstes Token, dann Linksklick auf letztes Token.");
+        return;
+      }
+
+      _anno.Annotate(new DocumentChange
+      {
+        From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,
+        To = _editorIndexTo + 1,
+        Annotation = new Dictionary<string, object>
+        {
+          {"Doppelform", "true"}
+        }
+      });
+
+      _editor.Annotations = _anno.EditorAnnotations;
     }
   }
 }
