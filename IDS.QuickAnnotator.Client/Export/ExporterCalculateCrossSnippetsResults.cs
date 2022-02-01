@@ -35,6 +35,9 @@ namespace IDS.QuickAnnotator.Client.Export
           for (var i = 0; i < layers.Length; i++)
           {
             var l1 = layers[i];
+            if(!s.Annotation.ContainsKey(l1))
+              continue;
+
             var v1 = s.Annotation[l1].ToString();
             if (v1.StartsWith("?"))
               v1 = v1.Substring(1);

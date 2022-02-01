@@ -2,7 +2,7 @@
   "profiles": {
     "IDS.QuickAnnotator.Tool4.ConvertToCorpus": {
       "commandName": "Project",
-      "commandLineArgs": "W:\\DPA\\VERSION\\04"
+      "commandLineArgs": "W:\\DPA\\VERSION\\05"
     }
   }
 }

@@ -1,4 +1,5 @@
-﻿using IDS.QuickAnnotator.Client.Export;
+﻿using System;
+using IDS.QuickAnnotator.Client.Export;
 using IDS.QuickAnnotator.Client.Model.Annotation;
 
 namespace IDS.QuickAnnotator.Tool4.CalcDiff
@@ -9,8 +10,8 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     {
       var model = new AnnotationModelOffline(args[0]);
 
-      var calc = new ExporterCalculateMergedAgreedBothResults();
-      calc.Export(model, args[1].Replace(".tsv", "_calc_merged_agreed.tsv"));
+      var agreed = new ExporterCalculateMergedAgreedBothResults();
+      agreed.Export(model, args[1].Replace(".tsv", "_calc_merged_agreed.tsv"));
 
       var diffS = new ExporterStrictDiff();
       diffS.Export(model, args[1].Replace(".tsv", "_strict.tsv"));
@@ -18,8 +19,6 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
       var htmlDiff = new ExporterHtmlDiff();
       htmlDiff.Export(model, args[1].Replace(".tsv", "_htmlDiff"));
 
-
-      /*
       var diff = new ExporterDiff();
       diff.Export(model, args[1]);      
           
@@ -35,7 +34,7 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
       var xmlValid = new ExporterXmlValidation();
       xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
 
-            var cross = new ExporterCalculateCrossResults();
+      var cross = new ExporterCalculateCrossResults();
       cross.Export(model, args[1].Replace(".tsv", "_calcCross.tsv"));
 
       var snippets = new ExporterCalculateSnippetsResults();
@@ -43,7 +42,9 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
 
       var crossSnippets = new ExporterCalculateCrossSnippetsResults();
       crossSnippets.Export(model, args[1].Replace(".tsv", "_crossSnippets.tsv"));
-      */
+
+      Console.WriteLine("!END!");
+      Console.ReadLine();
     }
   }
 }

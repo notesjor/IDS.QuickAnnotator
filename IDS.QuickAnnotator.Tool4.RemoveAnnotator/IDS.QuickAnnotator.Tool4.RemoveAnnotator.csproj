@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8FB9E895-673E-4CB6-8AE7-0161D6BAF611}</ProjectGuid>
+    <ProjectGuid>{A3B658B5-645B-4354-BD3B-FEFF0EB3B88B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IDS.QuickAnnotator.Tool4.CalcDiff</RootNamespace>
-    <AssemblyName>IDS.QuickAnnotator.Tool4.CalcDiff</AssemblyName>
+    <RootNamespace>IDS.QuickAnnotator.Tool4.RemoveAnnotator</RootNamespace>
+    <AssemblyName>IDS.QuickAnnotator.Tool4.RemoveAnnotator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

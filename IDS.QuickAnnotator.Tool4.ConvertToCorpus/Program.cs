@@ -30,7 +30,7 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
 
     private static void SaveCorpus(string[] args)
     {
-      var importer = new SimpleJsonStandoffImporter();
+      var importer = new ImporterSimpleJsonStandoff();
       var files = Directory.GetFiles(args[0], "*.json", SearchOption.TopDirectoryOnly);
       var corpus = CorpusMerger.Merge(importer.Execute(files));
       corpus.Save(Path.Combine(args[0], "corpus.cec6"), false);
