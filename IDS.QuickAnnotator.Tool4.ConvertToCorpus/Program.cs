@@ -47,7 +47,7 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
           history.Select(x => JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(x, Encoding.UTF8)));
 
         var cAnnos = new List<Annotation>();
-        foreach (DocumentChange? a in qAnnos.OrderBy(x=>x.Timestamp))
+        foreach (DocumentChange? a in qAnnos.OrderBy(x => x.Timestamp))
           foreach (var x in a.Annotation)
           {
             cAnnos.Add(new Annotation { From = a.From, Layer = $"{x.Key} ({a.UserName})", LayerValue = x.Value.ToString(), To = a.To });
@@ -64,7 +64,8 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
           {
             {"Annotator*innen", string.Join(", ", authors)},
             {"Sigle", Path.GetFileNameWithoutExtension(doc)},
-            {"Titel", Path.GetFileNameWithoutExtension(doc)}
+            {"Titel", Path.GetFileNameWithoutExtension(doc)},
+            {"GUID", Guid.Parse(Path.GetFileNameWithoutExtension(doc))}
           }
         };
 
