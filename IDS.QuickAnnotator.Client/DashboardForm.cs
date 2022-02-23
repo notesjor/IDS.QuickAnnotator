@@ -275,40 +275,52 @@ namespace IDS.QuickAnnotator.Client
           chk_mask_7.IsChecked = !chk_mask_7.IsChecked;
           break;
 
-
         case '+':
-          radio_kont_del_ää.IsChecked = true;
+          radio_gfem_del_üü.IsChecked = true;
           break;
         case 'ü':
-          radio_kont_true_ü.IsChecked = true;
+          radio_gfem_true_ü.IsChecked = true;
           break;
         case 'p':
-          radio_kont_false_p.IsChecked = true;
+          radio_gfem_false_p.IsChecked = true;
           break;
         case 'i':
-          chk_kont_i.IsChecked = !chk_kont_i.IsChecked;
+          chk_gfem_i.IsChecked = !chk_kont_i.IsChecked;
           break;
 
         case '#':
-          radio_sex_del_ää.IsChecked = true;
+          radio_kont_del_ää.IsChecked = true;
           break;
         case 'ä':
-          radio_sex_male_ä.IsChecked = true;
+          radio_kont_true_ü.IsChecked = true;
           break;
         case 'ö':
-          radio_sex_female_ö.IsChecked = true;
-          break;
-        case 'l':
-          radio_sex_none_l.IsChecked = true;
+          radio_kont_false_p.IsChecked = true;
           break;
         case 'k':
+          chk_kont_i.IsChecked = !chk_kont_i.IsChecked;
+          break;
+
+        case '-':
+          radio_sex_del_ää.IsChecked = true;
+          break;
+        case '.':
+          radio_sex_male_ä.IsChecked = true;
+          break;
+        case ',':
+          radio_sex_female_ö.IsChecked = true;
+          break;
+        case 'm':
+          radio_sex_none_l.IsChecked = true;
+          break;
+        case 'n':
           radio_sex_group_k.IsChecked = true;
           break;
         case 'h':
           chk_sex_h.IsChecked = !chk_sex_h.IsChecked;
           break;
 
-        case ':':
+        case '8':
           btn_submit_doppelform_Click(this, null);
           break;
 
@@ -357,10 +369,11 @@ namespace IDS.QuickAnnotator.Client
       var ab = radio_abstr_del_a.IsChecked ? "" : (chk_abstr_g.IsChecked ? "?" : "") + (radio_abstr_true_s.IsChecked ? "true" : radio_abstr_false_d.IsChecked ? "false" : "");
       var re = radio_ref_del_y.IsChecked ? "" : (chk_ref_b.IsChecked ? "?" : "") + (radio_ref_true_x.IsChecked ? "true" : radio_ref_false_c.IsChecked ? "false" : "");
       var ma = radio_mask_del_ß.IsChecked ? "" : (chk_mask_7.IsChecked ? "?" : "") + (radio_mask_true_0.IsChecked ? "true" : radio_mask_false_9.IsChecked ? "false" : "");
+      var gf = radio_gfem_del_üü.IsChecked ? "" : (chk_gfem_i.IsChecked ? "?" : "") + (radio_gfem_true_ü.IsChecked ? "true" : radio_gfem_false_p.IsChecked ? "false" : "");
       var ko = radio_kont_del_ää.IsChecked ? "" : (chk_kont_i.IsChecked ? "?" : "") + (radio_kont_true_ü.IsChecked ? "true" : radio_kont_false_p.IsChecked ? "false" : "");
       var se = radio_sex_del_ää.IsChecked ? "" : (chk_sex_h.IsChecked ? "?" : "") + (radio_sex_male_ä.IsChecked ? "male" : radio_sex_female_ö.IsChecked ? "female" : radio_sex_none_l.IsChecked ? "none" : radio_sex_group_k.IsChecked ? "group" : "");
 
-      var del = (lk + ge + ab + re + ma + ko + se).Length > 0;
+      var del = (lk + ge + ab + re + ma + gf + ko + se).Length > 0;
 
       _anno.Annotate(new DocumentChange
       {
@@ -373,6 +386,7 @@ namespace IDS.QuickAnnotator.Client
           {"Geschlechtsabstrahierendes Substantiv", ab},
           {"Referenz/Bezug auf konkrete Person / Personengruppe?", re},
           {"Generisches Maskulinum", ma},
+          {"Generisches Femininum", gf},
           {"Geschlecht aus Kontext erkennbar?", ko},
           {"Welches Geschlecht ist aus Kontext erkennbar?", se}
         }
@@ -442,7 +456,7 @@ namespace IDS.QuickAnnotator.Client
     {
       foreach (Control c in panel.Controls)
       {
-        if (!(c is RadRadioButton r)) 
+        if (!(c is RadRadioButton r))
           continue;
 
         if (r.Name.Contains("_true_"))
