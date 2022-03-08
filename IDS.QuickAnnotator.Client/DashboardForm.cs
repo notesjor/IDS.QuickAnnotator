@@ -171,6 +171,13 @@ namespace IDS.QuickAnnotator.Client
             else
               radio_mask_false_9.BackColor = Color.Yellow;
             break;
+          case "Generisches Femininum":
+            chk_gfem_i.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
+            if (val == "true")
+              radio_gfem_true_ü.BackColor = Color.Yellow;
+            else
+              radio_gfem_false_p.BackColor = Color.Yellow;
+            break;
           case "Geschlecht aus Kontext erkennbar?":
             chk_kont_i.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
             if (val == "true")
@@ -183,16 +190,16 @@ namespace IDS.QuickAnnotator.Client
             switch (val)
             {
               case "male":
-                radio_sex_male_ä.BackColor = Color.Yellow;
+                radio_sex_male_m.BackColor = Color.Yellow;
                 break;
               case "female":
-                radio_sex_female_ö.BackColor = Color.Yellow;
+                radio_sex_female_mm.BackColor = Color.Yellow;
                 break;
               case "none":
-                radio_sex_none_l.BackColor = Color.Yellow;
+                radio_sex_none_mmm.BackColor = Color.Yellow;
                 break;
               case "group":
-                radio_sex_group_k.BackColor = Color.Yellow;
+                radio_sex_group_mmmm.BackColor = Color.Yellow;
                 break;
             }
             break;
@@ -301,20 +308,20 @@ namespace IDS.QuickAnnotator.Client
           chk_kont_i.IsChecked = !chk_kont_i.IsChecked;
           break;
 
-        case '-':
-          radio_sex_del_ää.IsChecked = true;
-          break;
-        case '.':
-          radio_sex_male_ä.IsChecked = true;
-          break;
-        case ',':
-          radio_sex_female_ö.IsChecked = true;
+        case 'n':
+          radio_sex_del_n.IsChecked = true;
           break;
         case 'm':
-          radio_sex_none_l.IsChecked = true;
+          radio_sex_male_m.IsChecked = true;
           break;
-        case 'n':
-          radio_sex_group_k.IsChecked = true;
+        case ',':
+          radio_sex_female_mm.IsChecked = true;
+          break;
+        case '.':
+          radio_sex_none_mmm.IsChecked = true;
+          break;
+        case '-':
+          radio_sex_group_mmmm.IsChecked = true;
           break;
         case 'h':
           chk_sex_h.IsChecked = !chk_sex_h.IsChecked;
@@ -371,7 +378,7 @@ namespace IDS.QuickAnnotator.Client
       var ma = radio_mask_del_ß.IsChecked ? "" : (chk_mask_7.IsChecked ? "?" : "") + (radio_mask_true_0.IsChecked ? "true" : radio_mask_false_9.IsChecked ? "false" : "");
       var gf = radio_gfem_del_üü.IsChecked ? "" : (chk_gfem_i.IsChecked ? "?" : "") + (radio_gfem_true_ü.IsChecked ? "true" : radio_gfem_false_p.IsChecked ? "false" : "");
       var ko = radio_kont_del_ää.IsChecked ? "" : (chk_kont_i.IsChecked ? "?" : "") + (radio_kont_true_ü.IsChecked ? "true" : radio_kont_false_p.IsChecked ? "false" : "");
-      var se = radio_sex_del_ää.IsChecked ? "" : (chk_sex_h.IsChecked ? "?" : "") + (radio_sex_male_ä.IsChecked ? "male" : radio_sex_female_ö.IsChecked ? "female" : radio_sex_none_l.IsChecked ? "none" : radio_sex_group_k.IsChecked ? "group" : "");
+      var se = radio_sex_del_n.IsChecked ? "" : (chk_sex_h.IsChecked ? "?" : "") + (radio_sex_male_m.IsChecked ? "male" : radio_sex_female_mm.IsChecked ? "female" : radio_sex_none_mmm.IsChecked ? "none" : radio_sex_group_mmmm.IsChecked ? "group" : "");
 
       var del = (lk + ge + ab + re + ma + gf + ko + se).Length > 0;
 
@@ -434,6 +441,7 @@ namespace IDS.QuickAnnotator.Client
       OptionPanelHighlight(panel6, false);
       OptionPanelHighlight(panel7, false);
       OptionPanelHighlight(panel8, false);
+      OptionPanelHighlight(panel10, false);
     }
 
     private void radio_lk_2_CheckStateChanged(object sender, EventArgs e)
@@ -450,6 +458,7 @@ namespace IDS.QuickAnnotator.Client
       OptionPanelHighlight(panel6, true);
       OptionPanelHighlight(panel7, true);
       OptionPanelHighlight(panel8, true);
+      OptionPanelHighlight(panel10, true);
     }
 
     private void OptionPanelHighlight(Panel panel, bool grey)

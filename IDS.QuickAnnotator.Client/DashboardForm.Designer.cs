@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -93,17 +93,18 @@
       this.radio_kont_del_ää = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
       this.panel8 = new System.Windows.Forms.Panel();
-      this.radio_sex_group_k = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_none_l = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_group_mmmm = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_none_mmm = new Telerik.WinControls.UI.RadRadioButton();
       this.chk_sex_h = new Telerik.WinControls.UI.RadCheckBox();
-      this.radio_sex_female_ö = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_male_ä = new Telerik.WinControls.UI.RadRadioButton();
-      this.radio_sex_del_ää = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_female_mm = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_male_m = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_sex_del_n = new Telerik.WinControls.UI.RadRadioButton();
       this.panel4 = new System.Windows.Forms.Panel();
       this.btn_submit = new Telerik.WinControls.UI.RadButton();
       this.panel9 = new System.Windows.Forms.Panel();
       this.btn_submit_doppelform = new Telerik.WinControls.UI.RadButton();
       this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+      this.radScrollablePanel1 = new Telerik.WinControls.UI.RadScrollablePanel();
       ((System.ComponentModel.ISupportInitialize)(this.commands)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
       this.radSplitContainer1.SuspendLayout();
@@ -158,14 +159,17 @@
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_del_ää)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
       this.panel8.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_k)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_l)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_mmmm)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_mmm)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.chk_sex_h)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female_ö)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_ä)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_ää)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female_mm)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_m)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).BeginInit();
+      this.radScrollablePanel1.PanelContainer.SuspendLayout();
+      this.radScrollablePanel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
       this.SuspendLayout();
       // 
@@ -215,12 +219,12 @@
       // 
       this.cmb_text.DisplayName = "commandBarDropDownList1";
       this.cmb_text.DropDownAnimationEnabled = true;
-      radListDataItem4.Text = "ListItem 1";
-      radListDataItem5.Text = "ListItem 2";
-      radListDataItem6.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem4);
-      this.cmb_text.Items.Add(radListDataItem5);
-      this.cmb_text.Items.Add(radListDataItem6);
+      radListDataItem1.Text = "ListItem 1";
+      radListDataItem2.Text = "ListItem 2";
+      radListDataItem3.Text = "ListItem 3";
+      this.cmb_text.Items.Add(radListDataItem1);
+      this.cmb_text.Items.Add(radListDataItem2);
+      this.cmb_text.Items.Add(radListDataItem3);
       this.cmb_text.MaxDropDownItems = 0;
       this.cmb_text.MinSize = new System.Drawing.Size(200, 48);
       this.cmb_text.Name = "cmb_text";
@@ -253,7 +257,7 @@
       this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.elementHost1.Location = new System.Drawing.Point(10, 10);
       this.elementHost1.Name = "elementHost1";
-      this.elementHost1.Size = new System.Drawing.Size(760, 722);
+      this.elementHost1.Size = new System.Drawing.Size(730, 679);
       this.elementHost1.TabIndex = 0;
       this.elementHost1.Text = "elementHost1";
       this.elementHost1.Child = null;
@@ -269,7 +273,7 @@
       // 
       // 
       this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.radSplitContainer1.Size = new System.Drawing.Size(1209, 742);
+      this.radSplitContainer1.Size = new System.Drawing.Size(1209, 699);
       this.radSplitContainer1.SplitterWidth = 8;
       this.radSplitContainer1.TabIndex = 1;
       this.radSplitContainer1.TabStop = false;
@@ -284,25 +288,25 @@
       // 
       // 
       this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.splitPanel1.Size = new System.Drawing.Size(780, 742);
-      this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.1494588F, 0F);
-      this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(143, 0);
+      this.splitPanel1.Size = new System.Drawing.Size(750, 699);
+      this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.1244796F, 0F);
+      this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(113, 0);
       this.splitPanel1.TabIndex = 0;
       this.splitPanel1.TabStop = false;
       this.splitPanel1.Text = "splitPanel1";
       // 
       // splitPanel2
       // 
-      this.splitPanel2.Controls.Add(this.annotation_editor);
-      this.splitPanel2.Location = new System.Drawing.Point(788, 0);
+      this.splitPanel2.Controls.Add(this.radScrollablePanel1);
+      this.splitPanel2.Location = new System.Drawing.Point(758, 0);
       this.splitPanel2.Name = "splitPanel2";
       // 
       // 
       // 
       this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.splitPanel2.Size = new System.Drawing.Size(421, 742);
-      this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.1494588F, 0F);
-      this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-143, 0);
+      this.splitPanel2.Size = new System.Drawing.Size(451, 699);
+      this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.1244796F, 0F);
+      this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-113, 0);
       this.splitPanel2.TabIndex = 1;
       this.splitPanel2.TabStop = false;
       this.splitPanel2.Text = "splitPanel2";
@@ -330,11 +334,11 @@
       this.annotation_editor.Controls.Add(this.btn_submit);
       this.annotation_editor.Controls.Add(this.panel9);
       this.annotation_editor.Controls.Add(this.btn_submit_doppelform);
-      this.annotation_editor.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.annotation_editor.Dock = System.Windows.Forms.DockStyle.Top;
       this.annotation_editor.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
       this.annotation_editor.Location = new System.Drawing.Point(0, 0);
       this.annotation_editor.Name = "annotation_editor";
-      this.annotation_editor.Size = new System.Drawing.Size(421, 742);
+      this.annotation_editor.Size = new System.Drawing.Size(451, 687);
       this.annotation_editor.TabIndex = 0;
       // 
       // radLabel1
@@ -973,12 +977,12 @@
       // 
       // panel8
       // 
-      this.panel8.Controls.Add(this.radio_sex_group_k);
-      this.panel8.Controls.Add(this.radio_sex_none_l);
+      this.panel8.Controls.Add(this.radio_sex_group_mmmm);
+      this.panel8.Controls.Add(this.radio_sex_none_mmm);
       this.panel8.Controls.Add(this.chk_sex_h);
-      this.panel8.Controls.Add(this.radio_sex_female_ö);
-      this.panel8.Controls.Add(this.radio_sex_male_ä);
-      this.panel8.Controls.Add(this.radio_sex_del_ää);
+      this.panel8.Controls.Add(this.radio_sex_female_mm);
+      this.panel8.Controls.Add(this.radio_sex_male_m);
+      this.panel8.Controls.Add(this.radio_sex_del_n);
       this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panel8.Location = new System.Drawing.Point(3, 533);
       this.panel8.MinimumSize = new System.Drawing.Size(410, 35);
@@ -986,43 +990,43 @@
       this.panel8.Size = new System.Drawing.Size(410, 35);
       this.panel8.TabIndex = 19;
       // 
-      // radio_sex_group_k
+      // radio_sex_group_mmmm
       // 
-      this.radio_sex_group_k.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_group_k.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_sex_group_k.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.group_1;
-      this.radio_sex_group_k.Location = new System.Drawing.Point(266, 0);
-      this.radio_sex_group_k.MaximumSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_group_k.Name = "radio_sex_group_k";
-      this.radio_sex_group_k.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-      // 
-      // 
-      // 
-      this.radio_sex_group_k.RootElement.MaxSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_group_k.Size = new System.Drawing.Size(70, 35);
-      this.radio_sex_group_k.TabIndex = 5;
-      this.radio_sex_group_k.Text = "-";
-      this.radio_sex_group_k.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_group_k, "Gruppe");
-      // 
-      // radio_sex_none_l
-      // 
-      this.radio_sex_none_l.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_none_l.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_sex_none_l.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_non_binary;
-      this.radio_sex_none_l.Location = new System.Drawing.Point(196, 0);
-      this.radio_sex_none_l.MaximumSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_none_l.Name = "radio_sex_none_l";
-      this.radio_sex_none_l.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
+      this.radio_sex_group_mmmm.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_group_mmmm.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_sex_group_mmmm.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.group_1;
+      this.radio_sex_group_mmmm.Location = new System.Drawing.Point(266, 0);
+      this.radio_sex_group_mmmm.MaximumSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_group_mmmm.Name = "radio_sex_group_mmmm";
+      this.radio_sex_group_mmmm.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
       // 
       // 
       // 
-      this.radio_sex_none_l.RootElement.MaxSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_none_l.Size = new System.Drawing.Size(70, 35);
-      this.radio_sex_none_l.TabIndex = 4;
-      this.radio_sex_none_l.Text = ".";
-      this.radio_sex_none_l.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_none_l, "Divers");
+      this.radio_sex_group_mmmm.RootElement.MaxSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_group_mmmm.Size = new System.Drawing.Size(70, 35);
+      this.radio_sex_group_mmmm.TabIndex = 5;
+      this.radio_sex_group_mmmm.Text = "-";
+      this.radio_sex_group_mmmm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_group_mmmm, "Gruppe");
+      // 
+      // radio_sex_none_mmm
+      // 
+      this.radio_sex_none_mmm.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_none_mmm.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_sex_none_mmm.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_non_binary;
+      this.radio_sex_none_mmm.Location = new System.Drawing.Point(196, 0);
+      this.radio_sex_none_mmm.MaximumSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_none_mmm.Name = "radio_sex_none_mmm";
+      this.radio_sex_none_mmm.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
+      // 
+      // 
+      // 
+      this.radio_sex_none_mmm.RootElement.MaxSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_none_mmm.Size = new System.Drawing.Size(70, 35);
+      this.radio_sex_none_mmm.TabIndex = 4;
+      this.radio_sex_none_mmm.Text = ".";
+      this.radio_sex_none_mmm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_none_mmm, "Divers");
       // 
       // chk_sex_h
       // 
@@ -1035,68 +1039,68 @@
       this.chk_sex_h.Text = "H";
       this.toolTip1.SetToolTip(this.chk_sex_h, "Unsicherheit markieren");
       // 
-      // radio_sex_female_ö
+      // radio_sex_female_mm
       // 
-      this.radio_sex_female_ö.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_female_ö.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_sex_female_ö.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_female;
-      this.radio_sex_female_ö.Location = new System.Drawing.Point(126, 0);
-      this.radio_sex_female_ö.MaximumSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_female_ö.Name = "radio_sex_female_ö";
-      this.radio_sex_female_ö.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-      // 
-      // 
-      // 
-      this.radio_sex_female_ö.RootElement.MaxSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_female_ö.Size = new System.Drawing.Size(70, 35);
-      this.radio_sex_female_ö.TabIndex = 2;
-      this.radio_sex_female_ö.Text = ",";
-      this.radio_sex_female_ö.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_female_ö, "Weiblich");
-      // 
-      // radio_sex_male_ä
-      // 
-      this.radio_sex_male_ä.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_male_ä.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_sex_male_ä.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_male;
-      this.radio_sex_male_ä.Location = new System.Drawing.Point(56, 0);
-      this.radio_sex_male_ä.MaximumSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_male_ä.Name = "radio_sex_male_ä";
-      this.radio_sex_male_ä.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
+      this.radio_sex_female_mm.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_female_mm.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_sex_female_mm.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_female;
+      this.radio_sex_female_mm.Location = new System.Drawing.Point(126, 0);
+      this.radio_sex_female_mm.MaximumSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_female_mm.Name = "radio_sex_female_mm";
+      this.radio_sex_female_mm.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
       // 
       // 
       // 
-      this.radio_sex_male_ä.RootElement.MaxSize = new System.Drawing.Size(70, 0);
-      this.radio_sex_male_ä.Size = new System.Drawing.Size(70, 35);
-      this.radio_sex_male_ä.TabIndex = 1;
-      this.radio_sex_male_ä.Text = "m";
-      this.radio_sex_male_ä.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_male_ä, "Männlich");
+      this.radio_sex_female_mm.RootElement.MaxSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_female_mm.Size = new System.Drawing.Size(70, 35);
+      this.radio_sex_female_mm.TabIndex = 2;
+      this.radio_sex_female_mm.Text = ",";
+      this.radio_sex_female_mm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_female_mm, "Weiblich");
       // 
-      // radio_sex_del_ää
+      // radio_sex_male_m
       // 
-      this.radio_sex_del_ää.Dock = System.Windows.Forms.DockStyle.Left;
-      this.radio_sex_del_ää.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
-      this.radio_sex_del_ää.Image = ((System.Drawing.Image)(resources.GetObject("radio_sex_del_ää.Image")));
-      this.radio_sex_del_ää.Location = new System.Drawing.Point(0, 0);
-      this.radio_sex_del_ää.Name = "radio_sex_del_ää";
-      this.radio_sex_del_ää.Size = new System.Drawing.Size(56, 35);
-      this.radio_sex_del_ää.TabIndex = 0;
-      this.radio_sex_del_ää.Text = "n";
-      this.radio_sex_del_ää.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-      this.toolTip1.SetToolTip(this.radio_sex_del_ää, "Wert entfernen");
+      this.radio_sex_male_m.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_male_m.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_sex_male_m.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.gender_male;
+      this.radio_sex_male_m.Location = new System.Drawing.Point(56, 0);
+      this.radio_sex_male_m.MaximumSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_male_m.Name = "radio_sex_male_m";
+      this.radio_sex_male_m.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
+      // 
+      // 
+      // 
+      this.radio_sex_male_m.RootElement.MaxSize = new System.Drawing.Size(70, 0);
+      this.radio_sex_male_m.Size = new System.Drawing.Size(70, 35);
+      this.radio_sex_male_m.TabIndex = 1;
+      this.radio_sex_male_m.Text = "m";
+      this.radio_sex_male_m.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_male_m, "Männlich");
+      // 
+      // radio_sex_del_n
+      // 
+      this.radio_sex_del_n.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_sex_del_n.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_sex_del_n.Image = ((System.Drawing.Image)(resources.GetObject("radio_sex_del_n.Image")));
+      this.radio_sex_del_n.Location = new System.Drawing.Point(0, 0);
+      this.radio_sex_del_n.Name = "radio_sex_del_n";
+      this.radio_sex_del_n.Size = new System.Drawing.Size(56, 35);
+      this.radio_sex_del_n.TabIndex = 0;
+      this.radio_sex_del_n.Text = "n";
+      this.radio_sex_del_n.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_sex_del_n, "Wert entfernen");
       // 
       // panel4
       // 
       this.panel4.Location = new System.Drawing.Point(3, 574);
       this.panel4.Name = "panel4";
-      this.panel4.Size = new System.Drawing.Size(307, 15);
+      this.panel4.Size = new System.Drawing.Size(307, 5);
       this.panel4.TabIndex = 6;
       // 
       // btn_submit
       // 
       this.btn_submit.Dock = System.Windows.Forms.DockStyle.Left;
-      this.btn_submit.Location = new System.Drawing.Point(3, 595);
+      this.btn_submit.Location = new System.Drawing.Point(3, 585);
       this.btn_submit.Name = "btn_submit";
       this.btn_submit.Size = new System.Drawing.Size(410, 36);
       this.btn_submit.TabIndex = 7;
@@ -1106,15 +1110,15 @@
       // 
       // panel9
       // 
-      this.panel9.Location = new System.Drawing.Point(3, 637);
+      this.panel9.Location = new System.Drawing.Point(3, 627);
       this.panel9.Name = "panel9";
-      this.panel9.Size = new System.Drawing.Size(307, 15);
+      this.panel9.Size = new System.Drawing.Size(307, 5);
       this.panel9.TabIndex = 22;
       // 
       // btn_submit_doppelform
       // 
       this.btn_submit_doppelform.Dock = System.Windows.Forms.DockStyle.Left;
-      this.btn_submit_doppelform.Location = new System.Drawing.Point(3, 658);
+      this.btn_submit_doppelform.Location = new System.Drawing.Point(3, 638);
       this.btn_submit_doppelform.Name = "btn_submit_doppelform";
       this.btn_submit_doppelform.Size = new System.Drawing.Size(410, 36);
       this.btn_submit_doppelform.TabIndex = 23;
@@ -1122,10 +1126,25 @@
       this.toolTip1.SetToolTip(this.btn_submit_doppelform, "Annotation anwenden");
       this.btn_submit_doppelform.Click += new System.EventHandler(this.btn_submit_doppelform_Click);
       // 
+      // radScrollablePanel1
+      // 
+      this.radScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.radScrollablePanel1.Location = new System.Drawing.Point(0, 0);
+      this.radScrollablePanel1.Name = "radScrollablePanel1";
+      this.radScrollablePanel1.Padding = new System.Windows.Forms.Padding(0);
+      // 
+      // radScrollablePanel1.PanelContainer
+      // 
+      this.radScrollablePanel1.PanelContainer.Controls.Add(this.annotation_editor);
+      this.radScrollablePanel1.PanelContainer.Location = new System.Drawing.Point(0, 0);
+      this.radScrollablePanel1.PanelContainer.Size = new System.Drawing.Size(451, 699);
+      this.radScrollablePanel1.Size = new System.Drawing.Size(451, 699);
+      this.radScrollablePanel1.TabIndex = 1;
+      // 
       // DashboardForm
       // 
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-      this.ClientSize = new System.Drawing.Size(1209, 790);
+      this.ClientSize = new System.Drawing.Size(1209, 747);
       this.Controls.Add(this.radSplitContainer1);
       this.Controls.Add(this.commands);
       this.Margin = new System.Windows.Forms.Padding(4);
@@ -1198,14 +1217,17 @@
       ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
       this.panel8.ResumeLayout(false);
       this.panel8.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_k)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_l)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_mmmm)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_mmm)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.chk_sex_h)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female_ö)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_ä)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_ää)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_female_mm)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_m)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).EndInit();
+      this.radScrollablePanel1.PanelContainer.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).EndInit();
+      this.radScrollablePanel1.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -1272,11 +1294,11 @@
     private Telerik.WinControls.UI.RadLabel radLabel7;
     private System.Windows.Forms.Panel panel8;
     private Telerik.WinControls.UI.RadCheckBox chk_sex_h;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_female_ö;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_male_ä;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_del_ää;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_group_k;
-    private Telerik.WinControls.UI.RadRadioButton radio_sex_none_l;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_female_mm;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_male_m;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_del_n;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_group_mmmm;
+    private Telerik.WinControls.UI.RadRadioButton radio_sex_none_mmm;
     private System.Windows.Forms.Panel panel9;
     private Telerik.WinControls.UI.RadButton btn_submit_doppelform;
     private Telerik.WinControls.UI.RadLabel radLabel8;
@@ -1285,5 +1307,6 @@
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_false_p;
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_true_ü;
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_del_üü;
+    private Telerik.WinControls.UI.RadScrollablePanel radScrollablePanel1;
   }
 }
