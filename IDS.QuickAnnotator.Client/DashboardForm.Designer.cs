@@ -45,6 +45,7 @@
       this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
       this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
       this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
+      this.radScrollablePanel1 = new Telerik.WinControls.UI.RadScrollablePanel();
       this.annotation_editor = new System.Windows.Forms.FlowLayoutPanel();
       this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
       this.panel1 = new System.Windows.Forms.Panel();
@@ -104,7 +105,6 @@
       this.panel9 = new System.Windows.Forms.Panel();
       this.btn_submit_doppelform = new Telerik.WinControls.UI.RadButton();
       this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-      this.radScrollablePanel1 = new Telerik.WinControls.UI.RadScrollablePanel();
       ((System.ComponentModel.ISupportInitialize)(this.commands)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
       this.radSplitContainer1.SuspendLayout();
@@ -112,6 +112,9 @@
       this.splitPanel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).BeginInit();
       this.splitPanel2.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).BeginInit();
+      this.radScrollablePanel1.PanelContainer.SuspendLayout();
+      this.radScrollablePanel1.SuspendLayout();
       this.annotation_editor.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
       this.panel1.SuspendLayout();
@@ -167,9 +170,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).BeginInit();
-      this.radScrollablePanel1.PanelContainer.SuspendLayout();
-      this.radScrollablePanel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
       this.SuspendLayout();
       // 
@@ -180,7 +180,7 @@
       this.commands.Name = "commands";
       this.commands.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
             this.commandBarRowElement1});
-      this.commands.Size = new System.Drawing.Size(1209, 48);
+      this.commands.Size = new System.Drawing.Size(1209, 73);
       this.commands.TabIndex = 0;
       this.commands.Enter += new System.EventHandler(this.commands_Enter);
       this.commands.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.commands_KeyPress);
@@ -257,7 +257,7 @@
       this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.elementHost1.Location = new System.Drawing.Point(10, 10);
       this.elementHost1.Name = "elementHost1";
-      this.elementHost1.Size = new System.Drawing.Size(730, 679);
+      this.elementHost1.Size = new System.Drawing.Size(730, 654);
       this.elementHost1.TabIndex = 0;
       this.elementHost1.Text = "elementHost1";
       this.elementHost1.Child = null;
@@ -267,13 +267,13 @@
       this.radSplitContainer1.Controls.Add(this.splitPanel1);
       this.radSplitContainer1.Controls.Add(this.splitPanel2);
       this.radSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.radSplitContainer1.Location = new System.Drawing.Point(0, 48);
+      this.radSplitContainer1.Location = new System.Drawing.Point(0, 73);
       this.radSplitContainer1.Name = "radSplitContainer1";
       // 
       // 
       // 
       this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.radSplitContainer1.Size = new System.Drawing.Size(1209, 699);
+      this.radSplitContainer1.Size = new System.Drawing.Size(1209, 674);
       this.radSplitContainer1.SplitterWidth = 8;
       this.radSplitContainer1.TabIndex = 1;
       this.radSplitContainer1.TabStop = false;
@@ -288,7 +288,7 @@
       // 
       // 
       this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.splitPanel1.Size = new System.Drawing.Size(750, 699);
+      this.splitPanel1.Size = new System.Drawing.Size(750, 674);
       this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.1244796F, 0F);
       this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(113, 0);
       this.splitPanel1.TabIndex = 0;
@@ -304,12 +304,27 @@
       // 
       // 
       this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-      this.splitPanel2.Size = new System.Drawing.Size(451, 699);
+      this.splitPanel2.Size = new System.Drawing.Size(451, 674);
       this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.1244796F, 0F);
       this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-113, 0);
       this.splitPanel2.TabIndex = 1;
       this.splitPanel2.TabStop = false;
       this.splitPanel2.Text = "splitPanel2";
+      // 
+      // radScrollablePanel1
+      // 
+      this.radScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.radScrollablePanel1.Location = new System.Drawing.Point(0, 0);
+      this.radScrollablePanel1.Name = "radScrollablePanel1";
+      this.radScrollablePanel1.Padding = new System.Windows.Forms.Padding(0);
+      // 
+      // radScrollablePanel1.PanelContainer
+      // 
+      this.radScrollablePanel1.PanelContainer.Controls.Add(this.annotation_editor);
+      this.radScrollablePanel1.PanelContainer.Location = new System.Drawing.Point(0, 0);
+      this.radScrollablePanel1.PanelContainer.Size = new System.Drawing.Size(434, 674);
+      this.radScrollablePanel1.Size = new System.Drawing.Size(451, 674);
+      this.radScrollablePanel1.TabIndex = 1;
       // 
       // annotation_editor
       // 
@@ -338,7 +353,7 @@
       this.annotation_editor.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
       this.annotation_editor.Location = new System.Drawing.Point(0, 0);
       this.annotation_editor.Name = "annotation_editor";
-      this.annotation_editor.Size = new System.Drawing.Size(451, 687);
+      this.annotation_editor.Size = new System.Drawing.Size(434, 687);
       this.annotation_editor.TabIndex = 0;
       // 
       // radLabel1
@@ -1126,21 +1141,6 @@
       this.toolTip1.SetToolTip(this.btn_submit_doppelform, "Annotation anwenden");
       this.btn_submit_doppelform.Click += new System.EventHandler(this.btn_submit_doppelform_Click);
       // 
-      // radScrollablePanel1
-      // 
-      this.radScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.radScrollablePanel1.Location = new System.Drawing.Point(0, 0);
-      this.radScrollablePanel1.Name = "radScrollablePanel1";
-      this.radScrollablePanel1.Padding = new System.Windows.Forms.Padding(0);
-      // 
-      // radScrollablePanel1.PanelContainer
-      // 
-      this.radScrollablePanel1.PanelContainer.Controls.Add(this.annotation_editor);
-      this.radScrollablePanel1.PanelContainer.Location = new System.Drawing.Point(0, 0);
-      this.radScrollablePanel1.PanelContainer.Size = new System.Drawing.Size(451, 699);
-      this.radScrollablePanel1.Size = new System.Drawing.Size(451, 699);
-      this.radScrollablePanel1.TabIndex = 1;
-      // 
       // DashboardForm
       // 
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1161,6 +1161,9 @@
       this.splitPanel1.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).EndInit();
       this.splitPanel2.ResumeLayout(false);
+      this.radScrollablePanel1.PanelContainer.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).EndInit();
+      this.radScrollablePanel1.ResumeLayout(false);
       this.annotation_editor.ResumeLayout(false);
       this.annotation_editor.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
@@ -1225,9 +1228,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).EndInit();
-      this.radScrollablePanel1.PanelContainer.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).EndInit();
-      this.radScrollablePanel1.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();

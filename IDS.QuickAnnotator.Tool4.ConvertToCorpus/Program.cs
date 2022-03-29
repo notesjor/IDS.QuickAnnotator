@@ -65,7 +65,7 @@ namespace IDS.QuickAnnotator.Tool4.ConvertToCorpus
             {"Annotator*innen", string.Join(", ", authors)},
             {"Sigle", Path.GetFileNameWithoutExtension(doc)},
             {"Titel", Path.GetFileNameWithoutExtension(doc)},
-            {"GUID", Guid.Parse(Path.GetFileNameWithoutExtension(doc))}
+            // {"GUID", Guid.Parse(Path.GetFileNameWithoutExtension(doc))}
           }
         };
 

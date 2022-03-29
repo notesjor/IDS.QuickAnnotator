@@ -63,6 +63,27 @@ namespace IDS.QuickAnnotator.Client
       }
 
       Text = $"QuickAnnotator (Hallo: {_user.Profile.UserName})";
+      if (_user.Profile.UserName.Contains("Carolin"))
+      {
+        _editor.Highlight = new HashSet<string>
+        {
+          "Erzieher",
+          "Erziehers",
+          "Erziehern",
+          "Erzieherin",
+          "Erzieherinnen",
+          "Bürger",
+          "Bürgers",
+          "Bürgern",
+          "Bürgerin",
+          "Bürgerinnen",
+          "Manager",
+          "Managers",
+          "Managern",
+          "Managerin",
+          "Managerinnen"
+        };
+      }
 
       _init = false;
       cmb_text.SelectedIndex = text_index;
