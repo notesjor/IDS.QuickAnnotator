@@ -15,7 +15,8 @@ namespace IDS.QuickAnnotator.Client
       InitializeComponent();
     }
 
-    public HashSet<string> Highlight { get; set; } = new HashSet<string>
+    public HashSet<string> Highlight { get; set; } = new HashSet<string>();
+    /*
     {
       "Autor",
       "Autorin",
@@ -78,6 +79,7 @@ namespace IDS.QuickAnnotator.Client
       "Zuschauer",
       "Zuschauerinnen"
     };
+    */
 
     public string[] Tokens
     {
