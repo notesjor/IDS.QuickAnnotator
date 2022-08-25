@@ -46,6 +46,7 @@
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "AbstractForm";
       this.ThemeName = "Material";
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
 

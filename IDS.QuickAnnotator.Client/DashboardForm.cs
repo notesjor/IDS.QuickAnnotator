@@ -94,7 +94,7 @@ namespace IDS.QuickAnnotator.Client
     private void DisplayExsistingAnnotation(int index)
     {
       // RESET
-      foreach (var control in annotation_editor.Controls)
+      foreach (var control in radScrollablePanel2.PanelContainer.Controls)
       {
         if (!(control is Panel panel))
           continue;
@@ -399,7 +399,7 @@ namespace IDS.QuickAnnotator.Client
         }
       });
 
-      foreach (var control in annotation_editor.Controls)
+      foreach (var control in radScrollablePanel2.PanelContainer.Controls)
       {
         if (!(control is Panel panel))
           continue;
@@ -516,6 +516,18 @@ namespace IDS.QuickAnnotator.Client
       });
 
       _editor.Annotations = _anno.EditorAnnotations;
+    }
+
+    private void commandBarButton1_Click(object sender, EventArgs e)
+    {
+      // RESET
+      foreach (var control in radScrollablePanel2.PanelContainer.Controls)
+      {
+        if (!(control is Panel panel))
+          continue;
+
+        panel.MaximumSize = panel.Controls.Count == 1 ? new Size(0, 80) : new Size(0, 45);
+      }
     }
   }
 }

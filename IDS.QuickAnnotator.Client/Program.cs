@@ -20,7 +20,8 @@ namespace IDS.QuickAnnotator.Client
       {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        SetProcessDpiAwareness(_Process_DPI_Awareness.Process_System_DPI_Aware);
+        SetProcessDpiAwareness(_Process_DPI_Awareness.Process_Per_Monitor_DPI_Aware
+        );
 
         var auth = new AuthModel();
         if (auth.Signin())
