@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -41,14 +41,13 @@
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
       this.btn_export = new Telerik.WinControls.UI.CommandBarButton();
       this.btn_focus = new Telerik.WinControls.UI.CommandBarButton();
+      this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
       this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
       this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
       this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
       this.radScrollablePanel2 = new Telerik.WinControls.UI.RadScrollablePanel();
-      this.panel12 = new System.Windows.Forms.Panel();
       this.btn_submit_doppelform = new Telerik.WinControls.UI.RadButton();
-      this.panel4 = new System.Windows.Forms.Panel();
       this.btn_submit = new Telerik.WinControls.UI.RadButton();
       this.panel8 = new System.Windows.Forms.Panel();
       this.radio_sex_group_mmmm = new Telerik.WinControls.UI.RadRadioButton();
@@ -104,7 +103,6 @@
       this.radio_lk_del_5 = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
       this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-      this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
       ((System.ComponentModel.ISupportInitialize)(this.commands)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
       this.radSplitContainer1.SuspendLayout();
@@ -115,9 +113,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel2)).BeginInit();
       this.radScrollablePanel2.PanelContainer.SuspendLayout();
       this.radScrollablePanel2.SuspendLayout();
-      this.panel12.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).BeginInit();
-      this.panel4.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
       this.panel8.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_mmmm)).BeginInit();
@@ -225,12 +221,12 @@
       this.cmb_text.DisplayName = "commandBarDropDownList1";
       this.cmb_text.DropDownAnimationEnabled = true;
       this.cmb_text.DropDownHeight = 208;
-      radListDataItem4.Text = "ListItem 1";
-      radListDataItem5.Text = "ListItem 2";
-      radListDataItem6.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem4);
-      this.cmb_text.Items.Add(radListDataItem5);
-      this.cmb_text.Items.Add(radListDataItem6);
+      radListDataItem1.Text = "ListItem 1";
+      radListDataItem2.Text = "ListItem 2";
+      radListDataItem3.Text = "ListItem 3";
+      this.cmb_text.Items.Add(radListDataItem1);
+      this.cmb_text.Items.Add(radListDataItem2);
+      this.cmb_text.Items.Add(radListDataItem3);
       this.cmb_text.MaxDropDownItems = 0;
       this.cmb_text.MinSize = new System.Drawing.Size(391, 94);
       this.cmb_text.Name = "cmb_text";
@@ -257,6 +253,15 @@
       this.btn_focus.Image = ((System.Drawing.Image)(resources.GetObject("btn_focus.Image")));
       this.btn_focus.Name = "btn_focus";
       this.btn_focus.Text = "Focus";
+      // 
+      // commandBarButton1
+      // 
+      this.commandBarButton1.DisplayName = "commandBarButton1";
+      this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
+      this.commandBarButton1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.commandBarButton1.Name = "commandBarButton1";
+      this.commandBarButton1.Text = "Zoom-Fix";
+      this.commandBarButton1.Click += new System.EventHandler(this.commandBarButton1_Click);
       // 
       // elementHost1
       // 
@@ -329,8 +334,8 @@
       // 
       // radScrollablePanel2.PanelContainer
       // 
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel12);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel4);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.btn_submit_doppelform);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.btn_submit);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel8);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel7);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel7);
@@ -355,54 +360,33 @@
       this.radScrollablePanel2.TabIndex = 7;
       this.radScrollablePanel2.VerticalScrollBarState = Telerik.WinControls.UI.ScrollState.AlwaysShow;
       // 
-      // panel12
-      // 
-      this.panel12.Controls.Add(this.btn_submit_doppelform);
-      this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel12.Location = new System.Drawing.Point(0, 530);
-      this.panel12.Margin = new System.Windows.Forms.Padding(0);
-      this.panel12.MaximumSize = new System.Drawing.Size(0, 60);
-      this.panel12.Name = "panel12";
-      this.panel12.Padding = new System.Windows.Forms.Padding(19);
-      this.panel12.Size = new System.Drawing.Size(425, 60);
-      this.panel12.TabIndex = 26;
-      // 
       // btn_submit_doppelform
       // 
-      this.btn_submit_doppelform.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.btn_submit_doppelform.Location = new System.Drawing.Point(19, 19);
+      this.btn_submit_doppelform.Dock = System.Windows.Forms.DockStyle.Top;
+      this.btn_submit_doppelform.Location = new System.Drawing.Point(0, 506);
       this.btn_submit_doppelform.Margin = new System.Windows.Forms.Padding(6);
       this.btn_submit_doppelform.Name = "btn_submit_doppelform";
-      this.btn_submit_doppelform.Size = new System.Drawing.Size(387, 22);
+      this.btn_submit_doppelform.Size = new System.Drawing.Size(425, 36);
       this.btn_submit_doppelform.TabIndex = 23;
       this.btn_submit_doppelform.Text = "Doppelform (8)";
       this.toolTip1.SetToolTip(this.btn_submit_doppelform, "Annotation anwenden");
       this.btn_submit_doppelform.Click += new System.EventHandler(this.btn_submit_doppelform_Click);
-      // 
-      // panel4
-      // 
-      this.panel4.Controls.Add(this.btn_submit);
-      this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel4.Location = new System.Drawing.Point(0, 470);
-      this.panel4.Margin = new System.Windows.Forms.Padding(0);
-      this.panel4.MaximumSize = new System.Drawing.Size(0, 60);
-      this.panel4.Name = "panel4";
-      this.panel4.Padding = new System.Windows.Forms.Padding(19);
-      this.panel4.Size = new System.Drawing.Size(425, 60);
-      this.panel4.TabIndex = 6;
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit_doppelform.GetChildAt(0))).Text = "Doppelform (8)";
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit_doppelform.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
       // btn_submit
       // 
-      this.btn_submit.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.btn_submit.Location = new System.Drawing.Point(19, 19);
+      this.btn_submit.Dock = System.Windows.Forms.DockStyle.Top;
+      this.btn_submit.Location = new System.Drawing.Point(0, 470);
       this.btn_submit.Margin = new System.Windows.Forms.Padding(15, 6, 6, 6);
       this.btn_submit.Name = "btn_submit";
-      this.btn_submit.Padding = new System.Windows.Forms.Padding(8);
-      this.btn_submit.Size = new System.Drawing.Size(387, 22);
+      this.btn_submit.Size = new System.Drawing.Size(425, 36);
       this.btn_submit.TabIndex = 7;
       this.btn_submit.Text = "Annotieren (ENTER)";
       this.toolTip1.SetToolTip(this.btn_submit, "Annotation anwenden");
       this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Text = "Annotieren (ENTER)";
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
       // panel8
       // 
@@ -1207,15 +1191,6 @@
       this.radLabel1.TabIndex = 0;
       this.radLabel1.Text = "Linguistische Klasse";
       // 
-      // commandBarButton1
-      // 
-      this.commandBarButton1.DisplayName = "commandBarButton1";
-      this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
-      this.commandBarButton1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.commandBarButton1.Name = "commandBarButton1";
-      this.commandBarButton1.Text = "Zoom-Fix";
-      this.commandBarButton1.Click += new System.EventHandler(this.commandBarButton1_Click);
-      // 
       // DashboardForm
       // 
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1240,9 +1215,7 @@
       this.radScrollablePanel2.PanelContainer.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel2)).EndInit();
       this.radScrollablePanel2.ResumeLayout(false);
-      this.panel12.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).EndInit();
-      this.panel4.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
       this.panel8.ResumeLayout(false);
       this.panel8.PerformLayout();
@@ -1325,7 +1298,6 @@
     private Telerik.WinControls.UI.SplitPanel splitPanel2;
     private Telerik.WinControls.UI.RadLabel radLabel1;
     private System.Windows.Forms.ToolTip toolTip1;
-    private System.Windows.Forms.Panel panel4;
     private Telerik.WinControls.UI.RadButton btn_submit;
     private Telerik.WinControls.UI.CommandBarButton btn_focus;
     private System.Windows.Forms.Panel panel1;
@@ -1382,7 +1354,6 @@
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_true_ü;
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_del_üü;
         private Telerik.WinControls.UI.RadScrollablePanel radScrollablePanel2;
-        private System.Windows.Forms.Panel panel12;
         private Telerik.WinControls.UI.CommandBarButton commandBarButton1;
     }
 }

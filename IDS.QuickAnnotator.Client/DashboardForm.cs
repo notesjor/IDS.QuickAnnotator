@@ -526,7 +526,7 @@ namespace IDS.QuickAnnotator.Client
         if (!(control is Panel panel))
           continue;
 
-        panel.MaximumSize = panel.Controls.Count == 1 ? new Size(0, 80) : new Size(0, 45);
+        panel.MaximumSize = panel.MinimumSize = panel.Size = new Size(0, 45);
       }
     }
   }
