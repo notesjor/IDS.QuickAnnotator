@@ -461,7 +461,7 @@ namespace IDS.QuickAnnotator.Client
       OptionPanelHighlight(panel10, true);
     }
 
-    private void OptionPanelHighlight(Panel panel, bool grey)
+    private void OptionPanelHighlight(RadPanel panel, bool grey)
     {
       foreach (Control c in panel.Controls)
       {
