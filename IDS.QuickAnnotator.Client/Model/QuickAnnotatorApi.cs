@@ -7,21 +7,22 @@ namespace IDS.QuickAnnotator.Client.Model
 {
   public static class QuickAnnotatorApi
   {
+    private static RestClient _client = new RestClient();
+
     public static bool Signin()
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/signin") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/signin", Method.Post) { Timeout = 5000 };
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return EnsureResponse(client, request).Content == "true";
+      return EnsureResponse(request, 2).Content == "true";
     }
 
-    private static IRestResponse EnsureResponse(RestClient client, RestRequest request)
+    private static RestResponse EnsureResponse(RestRequest request, int max = 5)
     {
-      IRestResponse response = null;
-      for (var i = 0; i < 5; i++)
+      RestResponse response = null;
+      for (var i = 0; i < max; i++)
       {
-        response = client.Execute(request);
+        response = _client.Execute(request);
         if (response != null && response.StatusCode > 0 && !string.IsNullOrWhiteSpace(response.Content))
           break;
       }
@@ -31,57 +32,50 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static UserProfile GetProfile()
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/getProfile") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getProfile", Method.Post){Timeout = 10000};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<UserProfile>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<UserProfile>(EnsureResponse(request).Content);
     }
 
     public static string[] GetDocuments()
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/getDocuments") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocuments",Method.Post){Timeout = 30000};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(request).Content);
     }
 
     public static string[] GetDocument(string documentId)
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/getDocument") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocument", Method.Post){Timeout = 30000};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<string[]>(EnsureResponse(request).Content);
     }
 
     public static DocumentChange[] GetDocumentHistory(string documentId)
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/getDocumentHistory") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocumentHistory", Method.Post){Timeout = 30000};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
-      return JsonConvert.DeserializeObject<DocumentChange[]>(EnsureResponse(client, request).Content);
+      return JsonConvert.DeserializeObject<DocumentChange[]>(EnsureResponse(request).Content);
     }
 
     public static bool SetDocument(string documentId, DocumentChange change)
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/setDocument") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/setDocument", Method.Post){Timeout = 10000};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\", \"Change\": {JsonConvert.SerializeObject(change)}}}", ParameterType.RequestBody);
-      return EnsureResponse(client, request).StatusCode == HttpStatusCode.OK;
+      return EnsureResponse(request).StatusCode == HttpStatusCode.OK;
     }
 
     public static bool SetDocumentCompletion(string documentId)
     {
-      var client = new RestClient($"{GlobalConfiguration.BaseUrl}/setDocumentCompletion") { Timeout = -1 };
-      var request = new RestRequest(Method.POST);
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/setDocumentCompletion", Method.Post){Timeout = 10000};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
-      IRestResponse response = client.Execute(request);
-      return EnsureResponse(client, request).StatusCode == HttpStatusCode.OK;
+      return EnsureResponse(request).StatusCode == HttpStatusCode.OK;
     }
   }
 }
