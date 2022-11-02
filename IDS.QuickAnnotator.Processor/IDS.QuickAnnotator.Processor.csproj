@@ -6,13 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\Helper\Splitter.cs" Link="CE\Splitter.cs" />
     <Compile Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\Utils\DocumentProcessing\Tokenizer\Abstract\AbstractTokenizer.cs" Link="CE\AbstractTokenizer.cs" />
     <Compile Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\Utils\DocumentProcessing\Tokenizer\HighSpeedSpaceTokenizer.cs" Link="CE\HighSpeedSpaceTokenizer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="input\" />
-    <Folder Include="CE\" />
     <Folder Include="output\" />
   </ItemGroup>
 
