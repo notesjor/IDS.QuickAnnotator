@@ -97,6 +97,7 @@
       this.radio_del.Size = new System.Drawing.Size(45, 32);
       this.radio_del.TabIndex = 0;
       this.radio_del.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.radio_del.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.StateChanged);
       // 
       // lbl_head
       // 

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using IDS.QuickAnnotator.API.Model.Request;
 using IDS.QuickAnnotator.Client.Model;
 using IDS.QuickAnnotator.Client.Model.Annotation;
+using IDS.QuickAnnotator.Client.Model.Steps;
 using IDS.QuickAnnotator.Client.Model.User;
 using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls;
@@ -26,7 +28,7 @@ namespace IDS.QuickAnnotator.Client
       cmb_text.CommandBarDropDownListElement.TextBox.TextBoxItem.ReadOnly = true;
       commandBarStripElement1.OverflowButton.Visibility = ElementVisibility.Collapsed;
 
-      // EDITOR
+      #region EDITOR
       _editor.Height = elementHost1.Height;
       _editor.Width = elementHost1.Width;
       _editor.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
@@ -56,11 +58,24 @@ namespace IDS.QuickAnnotator.Client
 
         cmb_text.Items.Add(item);
       }
+      #endregion
 
+      #region APP
       Text = $"QuickAnnotator (Hallo: {_user.Profile.UserName})";
 
       _init = false;
       cmb_text.SelectedIndex = text_index;
+      #endregion
+
+      #region STEPS
+      foreach(var step in StepModel.Steps.Reverse())
+      {
+        step.Control.Size = new Size(412, 78);
+        step.Control.Dock = DockStyle.Top;
+        step.StateSet(false);
+        panel_controls.Controls.Add(step.Control);
+      }
+      #endregion
     }
 
     private int _editorIndexTmp = -1;
@@ -89,7 +104,7 @@ namespace IDS.QuickAnnotator.Client
     private void DisplayExsistingAnnotation(int index)
     {
       // RESET
-      foreach (var control in radScrollablePanel2.PanelContainer.Controls)
+      foreach (var control in panel_controls.PanelContainer.Controls)
       {
         if (!(control is Panel panel))
           continue;
@@ -108,230 +123,13 @@ namespace IDS.QuickAnnotator.Client
 
       // SET
       var last = _anno.GetLastAnnotationState(index);
-      if (last == null)
+      StepModel.HighlightReset();
+      if (last?.Annotation == null)
         return;
 
-      foreach (var anno in last.Annotation)
-      {
-        if (string.IsNullOrWhiteSpace(anno.Value?.ToString()))
-          continue;
-
-        var val = anno.Value.ToString().Replace("?", "");
-
-        switch (anno.Key)
-        {
-          case "Linguistische Klasse":
-            chk_lk_6.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            switch (val)
-            {
-              case "1":
-                radio_lk_1.BackColor = Color.Yellow;
-                break;
-              case "2":
-                radio_lk_2.BackColor = Color.Yellow;
-                break;
-              case "3":
-                radio_lk_3.BackColor = Color.Yellow;
-                break;
-              case "4":
-                radio_lk_4.BackColor = Color.Yellow;
-                break;
-            }
-            break;
-          case "Notwendigkeit zu Gendern?":
-            chk_gen_t.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            if (val == "true")
-              radio_gen_true_w.BackColor = Color.Yellow;
-            else
-              radio_gen_false_e.BackColor = Color.Yellow;
-            break;
-          case "Geschlechtsabstrahierendes Substantiv":
-            chk_abstr_g.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            if (val == "true")
-              radio_abstr_true_s.BackColor = Color.Yellow;
-            else
-              radio_abstr_false_d.BackColor = Color.Yellow;
-            break;
-          case "Referenz/Bezug auf konkrete Person / Personengruppe?":
-            chk_ref_b.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            if (val == "true")
-              radio_ref_true_x.BackColor = Color.Yellow;
-            else
-              radio_ref_false_c.BackColor = Color.Yellow;
-            break;
-          case "Generisches Maskulinum":
-            chk_mask_7.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            if (val == "true")
-              radio_mask_true_0.BackColor = Color.Yellow;
-            else
-              radio_mask_false_9.BackColor = Color.Yellow;
-            break;
-          case "Generisches Femininum":
-            chk_gfem_i.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            if (val == "true")
-              radio_gfem_true_ü.BackColor = Color.Yellow;
-            else
-              radio_gfem_false_p.BackColor = Color.Yellow;
-            break;
-          case "Geschlecht aus Kontext erkennbar?":
-            chk_kont_i.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            if (val == "true")
-              radio_kont_true_ü.BackColor = Color.Yellow;
-            else
-              radio_kont_false_p.BackColor = Color.Yellow;
-            break;
-          case "Welches Geschlecht ist aus Kontext erkennbar?":
-            chk_sex_h.BackColor = anno.Value.ToString().StartsWith("?") ? Color.Yellow : Color.Transparent;
-            switch (val)
-            {
-              case "male":
-                radio_sex_male_m.BackColor = Color.Yellow;
-                break;
-              case "female":
-                radio_sex_female_mm.BackColor = Color.Yellow;
-                break;
-              case "none":
-                radio_sex_none_mmm.BackColor = Color.Yellow;
-                break;
-              case "group":
-                radio_sex_group_mmmm.BackColor = Color.Yellow;
-                break;
-            }
-            break;
-        }
-      }
+      StepModel.HighlightSet(last.Annotation);
     }
-
-    private void commands_KeyPress(object sender, KeyPressEventArgs e)
-    {
-      switch (e.KeyChar)
-      {
-        case '5':
-          radio_lk_del_5.IsChecked = true;
-          break;
-        case '1':
-          radio_lk_1.IsChecked = true;
-          break;
-        case '2':
-          radio_lk_2.IsChecked = true;
-          break;
-        case '3':
-          radio_lk_3.IsChecked = true;
-          break;
-        case '4':
-          radio_lk_4.IsChecked = true;
-          break;
-        case '6':
-          chk_lk_6.IsChecked = !chk_lk_6.IsChecked;
-          break;
-
-        case 'q':
-          radio_gen_del_q.IsChecked = true;
-          break;
-        case 'w':
-          radio_gen_true_w.IsChecked = true;
-          break;
-        case 'e':
-          radio_gen_false_e.IsChecked = true;
-          break;
-        case 't':
-          chk_gen_t.IsChecked = !chk_gen_t.IsChecked;
-          break;
-
-        case 'a':
-          radio_abstr_del_a.IsChecked = true;
-          break;
-        case 's':
-          radio_abstr_true_s.IsChecked = true;
-          break;
-        case 'd':
-          radio_abstr_false_d.IsChecked = true;
-          break;
-        case 'g':
-          chk_abstr_g.IsChecked = !chk_abstr_g.IsChecked;
-          break;
-
-        case 'y':
-          radio_ref_del_y.IsChecked = true;
-          break;
-        case 'x':
-          radio_ref_true_x.IsChecked = true;
-          break;
-        case 'c':
-          radio_ref_false_c.IsChecked = true;
-          break;
-        case 'b':
-          chk_ref_b.IsChecked = !chk_ref_b.IsChecked;
-          break;
-
-        case 'ß':
-          radio_mask_del_ß.IsChecked = true;
-          break;
-        case '0':
-          radio_mask_true_0.IsChecked = true;
-          break;
-        case '9':
-          radio_mask_false_9.IsChecked = true;
-          break;
-        case '7':
-          chk_mask_7.IsChecked = !chk_mask_7.IsChecked;
-          break;
-
-        case '+':
-          radio_gfem_del_üü.IsChecked = true;
-          break;
-        case 'ü':
-          radio_gfem_true_ü.IsChecked = true;
-          break;
-        case 'p':
-          radio_gfem_false_p.IsChecked = true;
-          break;
-        case 'i':
-          chk_gfem_i.IsChecked = !chk_kont_i.IsChecked;
-          break;
-
-        case '#':
-          radio_kont_del_ää.IsChecked = true;
-          break;
-        case 'ä':
-          radio_kont_true_ü.IsChecked = true;
-          break;
-        case 'ö':
-          radio_kont_false_p.IsChecked = true;
-          break;
-        case 'k':
-          chk_kont_i.IsChecked = !chk_kont_i.IsChecked;
-          break;
-
-        case 'n':
-          radio_sex_del_n.IsChecked = true;
-          break;
-        case 'm':
-          radio_sex_male_m.IsChecked = true;
-          break;
-        case ',':
-          radio_sex_female_mm.IsChecked = true;
-          break;
-        case '.':
-          radio_sex_none_mmm.IsChecked = true;
-          break;
-        case '-':
-          radio_sex_group_mmmm.IsChecked = true;
-          break;
-        case 'h':
-          chk_sex_h.IsChecked = !chk_sex_h.IsChecked;
-          break;
-
-        case '8':
-          btn_submit_doppelform_Click(this, null);
-          break;
-
-        case '\r':
-          btn_submit_Click(this, null);
-          break;
-      }
-    }
-
+    
     private void btn_save_Click(object sender, EventArgs e)
     {
       if (QuickAnnotatorApi.SetDocumentCompletion(cmb_text.Items[cmb_text.SelectedIndex].Text))
@@ -366,35 +164,14 @@ namespace IDS.QuickAnnotator.Client
 
     private void btn_submit_Click(object sender, EventArgs e)
     {
-      var lk = radio_lk_del_5.IsChecked ? "" : (chk_lk_6.IsChecked ? "?" : "") + (radio_lk_1.IsChecked ? "1" : radio_lk_2.IsChecked ? "2" : radio_lk_3.IsChecked ? "3" : radio_lk_4.IsChecked ? "4" : "");
-      var ge = radio_gen_del_q.IsChecked ? "" : (chk_gen_t.IsChecked ? "?" : "") + (radio_gen_true_w.IsChecked ? "true" : radio_gen_false_e.IsChecked ? "false" : "");
-      var ab = radio_abstr_del_a.IsChecked ? "" : (chk_abstr_g.IsChecked ? "?" : "") + (radio_abstr_true_s.IsChecked ? "true" : radio_abstr_false_d.IsChecked ? "false" : "");
-      var re = radio_ref_del_y.IsChecked ? "" : (chk_ref_b.IsChecked ? "?" : "") + (radio_ref_true_x.IsChecked ? "true" : radio_ref_false_c.IsChecked ? "false" : "");
-      var ma = radio_mask_del_ß.IsChecked ? "" : (chk_mask_7.IsChecked ? "?" : "") + (radio_mask_true_0.IsChecked ? "true" : radio_mask_false_9.IsChecked ? "false" : "");
-      var gf = radio_gfem_del_üü.IsChecked ? "" : (chk_gfem_i.IsChecked ? "?" : "") + (radio_gfem_true_ü.IsChecked ? "true" : radio_gfem_false_p.IsChecked ? "false" : "");
-      var ko = radio_kont_del_ää.IsChecked ? "" : (chk_kont_i.IsChecked ? "?" : "") + (radio_kont_true_ü.IsChecked ? "true" : radio_kont_false_p.IsChecked ? "false" : "");
-      var se = radio_sex_del_n.IsChecked ? "" : (chk_sex_h.IsChecked ? "?" : "") + (radio_sex_male_m.IsChecked ? "male" : radio_sex_female_mm.IsChecked ? "female" : radio_sex_none_mmm.IsChecked ? "none" : radio_sex_group_mmmm.IsChecked ? "group" : "");
-
-      var del = (lk + ge + ab + re + ma + gf + ko + se).Length > 0;
-
       _anno.Annotate(new DocumentChange
       {
         From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,
         To = _editorIndexTo + 1,
-        Annotation = new Dictionary<string, object>
-        {
-          {"Linguistische Klasse", lk},
-          {"Notwendigkeit zu Gendern?", ge},
-          {"Geschlechtsabstrahierendes Substantiv", ab},
-          {"Referenz/Bezug auf konkrete Person / Personengruppe?", re},
-          {"Generisches Maskulinum", ma},
-          {"Generisches Femininum", gf},
-          {"Geschlecht aus Kontext erkennbar?", ko},
-          {"Welches Geschlecht ist aus Kontext erkennbar?", se}
-        }
+        Annotation = StepModel.GetAnnotation()
       });
 
-      foreach (var control in radScrollablePanel2.PanelContainer.Controls)
+      foreach (var control in panel_controls.PanelContainer.Controls)
       {
         if (!(control is Panel panel))
           continue;
@@ -411,86 +188,13 @@ namespace IDS.QuickAnnotator.Client
           }
       }
 
-      ResetOptionHighlight(null, null);
+      StepModel.Reset();
 
-      if (!del)
+      if (StepModel.IsDeleteState())
         _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
     }
-
-    private void commands_Enter(object sender, EventArgs e)
-    {
-      btn_focus.Image = Resources.button_green_record;
-    }
-
-    private void commands_Leave(object sender, EventArgs e)
-    {
-      btn_focus.Image = Resources.button_green_pause;
-    }
-
-    private void ResetOptionHighlight(object sender, EventArgs e)
-    {
-      OptionPanelHighlight(panel_gen, false);
-      OptionPanelHighlight(panel_abstr, false);
-      OptionPanelHighlight(panel_ref, false);
-      OptionPanelHighlight(panel_mask, false);
-      OptionPanelHighlight(panel_kont, false);
-      OptionPanelHighlight(panel_sex, false);
-      OptionPanelHighlight(panel_gfem, false);
-      OptionPanelHighlight(panel_gpron, false);
-    }
-
-    private void radio_lk_2_CheckStateChanged(object sender, EventArgs e)
-    {
-      ResetOptionHighlight(null, null);
-      OptionPanelHighlight(panel_abstr, true);
-    }
-
-    private void OptionHighlightOnlyGender(object sender, EventArgs e)
-    {
-      ResetOptionHighlight(null, null);
-      OptionPanelHighlight(panel_abstr, true);
-      OptionPanelHighlight(panel_ref, true);
-      OptionPanelHighlight(panel_mask, true);
-      OptionPanelHighlight(panel_kont, true);
-      OptionPanelHighlight(panel_sex, true);
-      OptionPanelHighlight(panel_gfem, true);
-    }
-
-    private void OptionPanelHighlight(RadPanel panel, bool grey)
-    {
-      foreach (Control c in panel.Controls)
-      {
-        if (!(c is RadRadioButton r))
-          continue;
-
-        if (r.Name.Contains("_true_"))
-        {
-          r.Image = grey ? Resources.ok_button_grey : Resources.ok_button;
-        }
-        else if (r.Name.Contains("_false_"))
-        {
-          r.Image = grey ? Resources.delete_button_error_grey : Resources.delete_button_error;
-        }
-        else if (r.Name.Contains("_male_"))
-        {
-          r.Image = grey ? Resources.gender_male_grey : Resources.gender_male;
-        }
-        else if (r.Name.Contains("_female_"))
-        {
-          r.Image = grey ? Resources.gender_female_grey : Resources.gender_female;
-        }
-        else if (r.Name.Contains("_none_"))
-        {
-          r.Image = grey ? Resources.gender_non_binary_grey : Resources.gender_non_binary;
-        }
-        else if (r.Name.Contains("_group_"))
-        {
-          r.Image = grey ? Resources.group_1_grey : Resources.group_1;
-        }
-      }
-    }
-
+    
     private void btn_submit_doppelform_Click(object sender, EventArgs e)
     {
       var from = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom;
@@ -517,25 +221,13 @@ namespace IDS.QuickAnnotator.Client
     private void commandBarButton1_Click(object sender, EventArgs e)
     {
       // RESET
-      foreach (var control in radScrollablePanel2.PanelContainer.Controls)
+      foreach (var control in panel_controls.PanelContainer.Controls)
       {
         if (!(control is Panel panel))
           continue;
 
         panel.MaximumSize = panel.MinimumSize = panel.Size = new Size(0, 45);
       }
-    }
-
-    private void radio_lk_sim_CheckStateChanged(object sender, EventArgs e)
-    {
-      OptionPanelHighlight(panel_gen, true);
-      OptionPanelHighlight(panel_abstr, true);
-      OptionPanelHighlight(panel_ref, true);
-      OptionPanelHighlight(panel_mask, true);
-      OptionPanelHighlight(panel_kont, true);
-      OptionPanelHighlight(panel_sex, true);
-      OptionPanelHighlight(panel_gfem, true);
-      OptionPanelHighlight(panel_gpron, false);
     }
   }
 }

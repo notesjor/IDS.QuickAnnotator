@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IDS.QuickAnnotator.Client.Model.Steps;
 
 namespace IDS.QuickAnnotator.Client
 {
@@ -26,6 +27,7 @@ namespace IDS.QuickAnnotator.Client
         var auth = new AuthModel();
         if (auth.Signin())
         {
+          StepModel.Init();
           var form = new DashboardForm();
           form.ShowDialog();
         }

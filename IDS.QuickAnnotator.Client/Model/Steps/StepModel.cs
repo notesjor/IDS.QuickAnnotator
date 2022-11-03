@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
@@ -26,32 +27,32 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       };
       var step_notwendigkeit_gendern = new Step
       {
-        Name = "Notwendigkeit zu gendern?",
+        Name = "Notwendigkeit zu Gendern?",
         PossibleValues = new[] { "true", "false" }
       };
       var step_generisches_mask = new Step
       {
-        Name = "Generisches Maskulinum?",
+        Name = "Generisches Maskulinum",
         PossibleValues = new[] { "true", "false" }
       };
       var step_generisches_fem = new Step
       {
-        Name = "Generisches Femininum?",
+        Name = "Generisches Femininum",
         PossibleValues = new[] { "true", "false" }
       };
       var step_gesab_substantiv = new Step
       {
-        Name = "Geschlechtsabstrahierendes Substantiv?",
+        Name = "Geschlechtsabstrahierendes Substantiv",
         PossibleValues = new[] { "true", "false" }
       };
       var step_ref_persoGroup = new Step
       {
-        Name = "Referenz auf konkrete Person-/Gruppe?",
+        Name = "Referenz/Bezug auf konkrete Person / Personengruppe?",
         PossibleValues = new[] { "true", "false" }
       };
       var step_bereits_moviert = new Step
       {
-        Name = "Bereits gegender/moviert?",
+        Name = "Bereits gegendert/moviert?",
         PossibleValues = new[] { "true", "false" }
       };
       var step_genus_sexus = new Step
@@ -66,7 +67,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       };
       var step_geschlecht = new Step
       {
-        Name = "Welches Geschlecht?",
+        Name = "Welches Geschlecht ist aus Kontext erkennbar?",
         PossibleValues = new[] { "male", "female", "none", "group" }
       };
       
@@ -97,19 +98,18 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
           { Parent = new[] { step_lk }, ValidSimpleValue = "3", Children = new[] { step_notwendigkeit_gendern } },
         new StepRule
         {
-          Parent = new[] { step_lk }, ValidSimpleValue = "1",
-          Children = new[] { step_generisches_mask, step_generisches_fem }
+          Parent = new[] { step_lk }, ValidSimpleValue = "1", Children = new[] { step_generisches_mask, step_generisches_fem }
         },
         new StepRule
         {
           Parent = new[] { step_generisches_mask, step_generisches_fem },
-          ValidComplexRule = p => p.Any(x => x.Value == "true"),
-          Children = new[] { step_generisches_mask, step_generisches_fem }
+          ValidComplexRule = p => p.Any(x => x.ValuePure == "true"),
+          Children = new[] { step_notwendigkeit_gendern }
         },
         new StepRule
         {
           Parent = new[] { step_generisches_mask, step_generisches_fem },
-          ValidComplexRule = p => p.All(x => x.Value == "false"),
+          ValidComplexRule = p => p.Any(x => x.ValuePure == "false"),
           Children = new[] { step_gesab_substantiv, step_ref_persoGroup, step_bereits_moviert, step_genus_sexus }
         },
         new StepRule
@@ -135,9 +135,31 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
 
     public static void Update()
     {
-      foreach(var rule in StepRules) 
-        foreach(var x in rule.Children)
-          x.StateSet(rule.IsValid);
+      foreach (var step in Steps)
+        step.StateSet(false);
+
+      foreach (var rule in StepRules)
+        if (rule.IsValid)
+          foreach (var child in rule.Children)
+            child.StateSet(true);
+    }
+
+    public static Dictionary<string, object> GetAnnotation() 
+      => Steps.ToDictionary<Step, string, object>(step => step.Name, step => step.Value);
+
+    public static bool IsDeleteState() => Steps.All(step => step.Value == "");
+
+    public static void HighlightReset()
+    {
+      foreach (var step in Steps)
+        step.HighlightReset();
+    }
+
+    public static void HighlightSet(Dictionary<string, object> annotation)
+    {
+      foreach (var step in Steps)
+        if (annotation.ContainsKey(step.Name))
+          step.HighlightSet(annotation[step.Name]);
     }
   }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IDS.QuickAnnotator.Client.Model.Steps;
 using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls.UI;
 
@@ -37,7 +38,7 @@ namespace IDS.QuickAnnotator.Client
     {
       set
       {
-        for (var i = 0; i < value.Length; i++)
+        for (var i = value.Length - 1; i > -1; i--)
         {
           var radio = new RadRadioButton();
           radio.Dock = DockStyle.Left;
@@ -50,10 +51,13 @@ namespace IDS.QuickAnnotator.Client
           radio.Text = ValueToText(value[i]);
           radio.Tag = value[i];
           radio.TextImageRelation = TextImageRelation.ImageBeforeText;
+          radio.ToggleStateChanged += StateChanged;
 
           panel_values.Controls.Add(radio);
           _radRadioButtons.Add(radio);
         }
+        panel_values.Controls.Remove(radio_del);
+        panel_values.Controls.Add(radio_del);
       }
     }
 
@@ -88,9 +92,9 @@ namespace IDS.QuickAnnotator.Client
       radio_del.IsChecked = false;
     }
 
-    private Image ValueToImage(string value, bool grey)
+    private Image ValueToImage(string value, bool enable)
     {
-      if (grey)
+      if (!enable)
       {
         switch (value)
         {
@@ -137,8 +141,28 @@ namespace IDS.QuickAnnotator.Client
         var first = _radRadioButtons.FirstOrDefault(x => x.IsChecked);
         if (first == null)
           return "";
-        return first.Tag + (chk_unsure.Checked ? "?" : "");
+        return (chk_unsure.Checked ? "?" : "") + first.Tag;
       }
+    }
+
+    private void StateChanged(object sender, StateChangedEventArgs args)
+    {
+      StepModel.Update();
+    }
+
+    public void HighlightReset()
+    {
+      foreach (var x in _radRadioButtons)
+        x.BackColor = Color.White;
+      chk_unsure.BackColor = Color.White;
+    }
+
+    public void HighlightSet(string value)
+    {
+      var pure = value.Replace("?", "");
+      foreach (var x in _radRadioButtons) 
+        x.BackColor = x.Tag.ToString() == pure ? Color.Yellow : Color.White;
+      chk_unsure.BackColor = value.Contains("?") ? Color.Yellow : Color.White;
     }
   }
 }

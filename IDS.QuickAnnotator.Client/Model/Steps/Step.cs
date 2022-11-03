@@ -19,6 +19,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
     }
 
     public string Value => Control.Value;
+    public string ValuePure => Control.Value.Replace("?", "");
 
     public void StateSet(bool value)
     {
@@ -30,5 +31,11 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
 
     public void StateClear()
       => Control.StateClear();
+
+    public void HighlightReset()
+      => Control.HighlightReset();
+
+    public void HighlightSet(object value)
+      => Control.HighlightSet(value.ToString());
   }
 }

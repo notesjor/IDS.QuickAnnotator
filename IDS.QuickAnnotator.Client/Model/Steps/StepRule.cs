@@ -18,7 +18,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       {
         return ValidSimpleValue == null
           ? ValidComplexRule != null && ValidComplexRule(Parent)
-          : Parent.Any(p => p.Value == ValidSimpleValue);
+          : Parent.Any(p => p.ValuePure == ValidSimpleValue);
       }
     }
   }
