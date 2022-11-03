@@ -1,12 +1,7 @@
-﻿using IDS.QuickAnnotator.Client.Helper;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Windows.Input;
 using IDS.QuickAnnotator.API.Model.Request;
 using IDS.QuickAnnotator.Client.Model;
 using IDS.QuickAnnotator.Client.Model.Annotation;
@@ -63,7 +58,7 @@ namespace IDS.QuickAnnotator.Client
       }
 
       Text = $"QuickAnnotator (Hallo: {_user.Profile.UserName})";
-      
+
       _init = false;
       cmb_text.SelectedIndex = text_index;
     }
@@ -435,30 +430,31 @@ namespace IDS.QuickAnnotator.Client
 
     private void ResetOptionHighlight(object sender, EventArgs e)
     {
-      OptionPanelHighlight(panel2, false);
-      OptionPanelHighlight(panel3, false);
-      OptionPanelHighlight(panel5, false);
-      OptionPanelHighlight(panel6, false);
-      OptionPanelHighlight(panel7, false);
-      OptionPanelHighlight(panel8, false);
-      OptionPanelHighlight(panel10, false);
+      OptionPanelHighlight(panel_gen, false);
+      OptionPanelHighlight(panel_abstr, false);
+      OptionPanelHighlight(panel_ref, false);
+      OptionPanelHighlight(panel_mask, false);
+      OptionPanelHighlight(panel_kont, false);
+      OptionPanelHighlight(panel_sex, false);
+      OptionPanelHighlight(panel_gfem, false);
+      OptionPanelHighlight(panel_gpron, false);
     }
 
     private void radio_lk_2_CheckStateChanged(object sender, EventArgs e)
     {
       ResetOptionHighlight(null, null);
-      OptionPanelHighlight(panel3, true);
+      OptionPanelHighlight(panel_abstr, true);
     }
 
     private void OptionHighlightOnlyGender(object sender, EventArgs e)
     {
       ResetOptionHighlight(null, null);
-      OptionPanelHighlight(panel3, true);
-      OptionPanelHighlight(panel5, true);
-      OptionPanelHighlight(panel6, true);
-      OptionPanelHighlight(panel7, true);
-      OptionPanelHighlight(panel8, true);
-      OptionPanelHighlight(panel10, true);
+      OptionPanelHighlight(panel_abstr, true);
+      OptionPanelHighlight(panel_ref, true);
+      OptionPanelHighlight(panel_mask, true);
+      OptionPanelHighlight(panel_kont, true);
+      OptionPanelHighlight(panel_sex, true);
+      OptionPanelHighlight(panel_gfem, true);
     }
 
     private void OptionPanelHighlight(RadPanel panel, bool grey)
@@ -528,6 +524,18 @@ namespace IDS.QuickAnnotator.Client
 
         panel.MaximumSize = panel.MinimumSize = panel.Size = new Size(0, 45);
       }
+    }
+
+    private void radio_lk_sim_CheckStateChanged(object sender, EventArgs e)
+    {
+      OptionPanelHighlight(panel_gen, true);
+      OptionPanelHighlight(panel_abstr, true);
+      OptionPanelHighlight(panel_ref, true);
+      OptionPanelHighlight(panel_mask, true);
+      OptionPanelHighlight(panel_kont, true);
+      OptionPanelHighlight(panel_sex, true);
+      OptionPanelHighlight(panel_gfem, true);
+      OptionPanelHighlight(panel_gpron, false);
     }
   }
 }

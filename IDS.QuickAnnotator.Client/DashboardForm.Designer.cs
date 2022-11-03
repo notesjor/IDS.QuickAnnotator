@@ -31,9 +31,9 @@ namespace IDS.QuickAnnotator.Client
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -51,7 +51,7 @@ namespace IDS.QuickAnnotator.Client
       this.radScrollablePanel2 = new Telerik.WinControls.UI.RadScrollablePanel();
       this.btn_submit_doppelform = new Telerik.WinControls.UI.RadButton();
       this.btn_submit = new Telerik.WinControls.UI.RadButton();
-      this.panel8 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_sex = new Telerik.WinControls.UI.RadPanel();
       this.radio_sex_group_mmmm = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_sex_none_mmm = new Telerik.WinControls.UI.RadRadioButton();
       this.chk_sex_h = new Telerik.WinControls.UI.RadCheckBox();
@@ -59,44 +59,51 @@ namespace IDS.QuickAnnotator.Client
       this.radio_sex_male_m = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_sex_del_n = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
-      this.panel7 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_kont = new Telerik.WinControls.UI.RadPanel();
       this.chk_kont_i = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_kont_false_p = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_kont_true_ü = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_kont_del_ää = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-      this.panel10 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_gpron = new Telerik.WinControls.UI.RadPanel();
+      this.chk_gpron = new Telerik.WinControls.UI.RadCheckBox();
+      this.gadio_gpron_false = new Telerik.WinControls.UI.RadRadioButton();
+      this.gadio_gpron_true = new Telerik.WinControls.UI.RadRadioButton();
+      this.radio_gpron_del = new Telerik.WinControls.UI.RadRadioButton();
+      this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
+      this.panel_gfem = new Telerik.WinControls.UI.RadPanel();
       this.chk_gfem_i = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_gfem_false_p = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_gfem_true_ü = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_gfem_del_üü = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-      this.panel6 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_mask = new Telerik.WinControls.UI.RadPanel();
       this.chk_mask_7 = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_mask_false_9 = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_mask_true_0 = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_mask_del_ß = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-      this.panel5 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_ref = new Telerik.WinControls.UI.RadPanel();
       this.chk_ref_b = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_ref_false_c = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_ref_true_x = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_ref_del_y = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-      this.panel3 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_abstr = new Telerik.WinControls.UI.RadPanel();
       this.chk_abstr_g = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_abstr_false_d = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_abstr_true_s = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_abstr_del_a = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-      this.panel2 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_gen = new Telerik.WinControls.UI.RadPanel();
       this.chk_gen_t = new Telerik.WinControls.UI.RadCheckBox();
       this.radio_gen_false_e = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_gen_true_w = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_gen_del_q = new Telerik.WinControls.UI.RadRadioButton();
       this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
       this.label1 = new System.Windows.Forms.Label();
-      this.panel1 = new Telerik.WinControls.UI.RadPanel();
+      this.panel_lk = new Telerik.WinControls.UI.RadPanel();
+      this.radio_lk_sim = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_lk_4 = new Telerik.WinControls.UI.RadRadioButton();
       this.radio_lk_3 = new Telerik.WinControls.UI.RadRadioButton();
       this.chk_lk_6 = new Telerik.WinControls.UI.RadCheckBox();
@@ -117,8 +124,8 @@ namespace IDS.QuickAnnotator.Client
       this.radScrollablePanel2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel8)).BeginInit();
-      this.panel8.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_sex)).BeginInit();
+      this.panel_sex.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_mmmm)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_mmm)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.chk_sex_h)).BeginInit();
@@ -126,50 +133,58 @@ namespace IDS.QuickAnnotator.Client
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_m)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel7)).BeginInit();
-      this.panel7.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_kont)).BeginInit();
+      this.panel_kont.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_kont_i)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_false_p)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_true_ü)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_del_ää)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel10)).BeginInit();
-      this.panel10.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_gpron)).BeginInit();
+      this.panel_gpron.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chk_gpron)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gadio_gpron_false)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gadio_gpron_true)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_gpron_del)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_gfem)).BeginInit();
+      this.panel_gfem.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_gfem_i)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gfem_false_p)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gfem_true_ü)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gfem_del_üü)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel6)).BeginInit();
-      this.panel6.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_mask)).BeginInit();
+      this.panel_mask.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_mask_7)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_mask_false_9)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_mask_true_0)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_mask_del_ß)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel5)).BeginInit();
-      this.panel5.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_ref)).BeginInit();
+      this.panel_ref.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_ref_b)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_ref_false_c)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_ref_true_x)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_ref_del_y)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel3)).BeginInit();
-      this.panel3.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_abstr)).BeginInit();
+      this.panel_abstr.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_abstr_g)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_abstr_false_d)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_abstr_true_s)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_abstr_del_a)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel2)).BeginInit();
-      this.panel2.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_gen)).BeginInit();
+      this.panel_gen.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_gen_t)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_false_e)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_true_w)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_del_q)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel1)).BeginInit();
-      this.panel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_lk)).BeginInit();
+      this.panel_lk.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_lk_sim)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_lk_4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_lk_3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.chk_lk_6)).BeginInit();
@@ -231,12 +246,12 @@ namespace IDS.QuickAnnotator.Client
       this.cmb_text.DisplayName = "commandBarDropDownList1";
       this.cmb_text.DropDownAnimationEnabled = true;
       this.cmb_text.DropDownHeight = 208;
-      radListDataItem4.Text = "ListItem 1";
-      radListDataItem5.Text = "ListItem 2";
-      radListDataItem6.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem4);
-      this.cmb_text.Items.Add(radListDataItem5);
-      this.cmb_text.Items.Add(radListDataItem6);
+      radListDataItem1.Text = "ListItem 1";
+      radListDataItem2.Text = "ListItem 2";
+      radListDataItem3.Text = "ListItem 3";
+      this.cmb_text.Items.Add(radListDataItem1);
+      this.cmb_text.Items.Add(radListDataItem2);
+      this.cmb_text.Items.Add(radListDataItem3);
       this.cmb_text.MaxDropDownItems = 0;
       this.cmb_text.MinSize = new System.Drawing.Size(391, 94);
       this.cmb_text.Name = "cmb_text";
@@ -346,22 +361,24 @@ namespace IDS.QuickAnnotator.Client
       // 
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.btn_submit_doppelform);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.btn_submit);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel8);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_sex);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel7);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel7);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_kont);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel6);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel10);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_gpron);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel9);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_gfem);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel8);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel6);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_mask);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel5);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel5);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_ref);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel4);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel3);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_abstr);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel3);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel2);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_gen);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel2);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.label1);
-      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel1);
+      this.radScrollablePanel2.PanelContainer.Controls.Add(this.panel_lk);
       this.radScrollablePanel2.PanelContainer.Controls.Add(this.radLabel1);
       this.radScrollablePanel2.PanelContainer.Location = new System.Drawing.Point(0, 0);
       this.radScrollablePanel2.PanelContainer.Margin = new System.Windows.Forms.Padding(15);
@@ -373,7 +390,7 @@ namespace IDS.QuickAnnotator.Client
       // btn_submit_doppelform
       // 
       this.btn_submit_doppelform.Dock = System.Windows.Forms.DockStyle.Top;
-      this.btn_submit_doppelform.Location = new System.Drawing.Point(0, 506);
+      this.btn_submit_doppelform.Location = new System.Drawing.Point(0, 562);
       this.btn_submit_doppelform.Margin = new System.Windows.Forms.Padding(6);
       this.btn_submit_doppelform.Name = "btn_submit_doppelform";
       this.btn_submit_doppelform.Size = new System.Drawing.Size(412, 36);
@@ -387,7 +404,7 @@ namespace IDS.QuickAnnotator.Client
       // btn_submit
       // 
       this.btn_submit.Dock = System.Windows.Forms.DockStyle.Top;
-      this.btn_submit.Location = new System.Drawing.Point(0, 470);
+      this.btn_submit.Location = new System.Drawing.Point(0, 526);
       this.btn_submit.Margin = new System.Windows.Forms.Padding(15, 6, 6, 6);
       this.btn_submit.Name = "btn_submit";
       this.btn_submit.Size = new System.Drawing.Size(412, 36);
@@ -398,25 +415,25 @@ namespace IDS.QuickAnnotator.Client
       ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Text = "Annotieren (ENTER)";
       ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
-      // panel8
+      // panel_sex
       // 
-      this.panel8.Controls.Add(this.radio_sex_group_mmmm);
-      this.panel8.Controls.Add(this.radio_sex_none_mmm);
-      this.panel8.Controls.Add(this.chk_sex_h);
-      this.panel8.Controls.Add(this.radio_sex_female_mm);
-      this.panel8.Controls.Add(this.radio_sex_male_m);
-      this.panel8.Controls.Add(this.radio_sex_del_n);
-      this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel8.Location = new System.Drawing.Point(0, 435);
-      this.panel8.Margin = new System.Windows.Forms.Padding(24);
-      this.panel8.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel8.Name = "panel8";
+      this.panel_sex.Controls.Add(this.radio_sex_group_mmmm);
+      this.panel_sex.Controls.Add(this.radio_sex_none_mmm);
+      this.panel_sex.Controls.Add(this.chk_sex_h);
+      this.panel_sex.Controls.Add(this.radio_sex_female_mm);
+      this.panel_sex.Controls.Add(this.radio_sex_male_m);
+      this.panel_sex.Controls.Add(this.radio_sex_del_n);
+      this.panel_sex.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_sex.Location = new System.Drawing.Point(0, 491);
+      this.panel_sex.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_sex.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_sex.Name = "panel_sex";
       // 
       // 
       // 
-      this.panel8.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel8.Size = new System.Drawing.Size(412, 35);
-      this.panel8.TabIndex = 19;
+      this.panel_sex.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_sex.Size = new System.Drawing.Size(412, 35);
+      this.panel_sex.TabIndex = 19;
       // 
       // radio_sex_group_mmmm
       // 
@@ -465,7 +482,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_sex_h.Margin = new System.Windows.Forms.Padding(6);
       this.chk_sex_h.Name = "chk_sex_h";
       this.chk_sex_h.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_sex_h.Size = new System.Drawing.Size(35, 29);
+      this.chk_sex_h.Size = new System.Drawing.Size(35, 35);
       this.chk_sex_h.TabIndex = 3;
       this.chk_sex_h.Text = "H";
       this.toolTip1.SetToolTip(this.chk_sex_h, "Unsicherheit markieren");
@@ -527,30 +544,30 @@ namespace IDS.QuickAnnotator.Client
       // radLabel7
       // 
       this.radLabel7.Dock = System.Windows.Forms.DockStyle.Top;
-      this.radLabel7.Location = new System.Drawing.Point(0, 414);
+      this.radLabel7.Location = new System.Drawing.Point(0, 470);
       this.radLabel7.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel7.Name = "radLabel7";
-      this.radLabel7.Size = new System.Drawing.Size(313, 21);
+      this.radLabel7.Size = new System.Drawing.Size(412, 21);
       this.radLabel7.TabIndex = 18;
       this.radLabel7.Text = "Welches Geschlecht ist aus Kontext erkennbar?";
       // 
-      // panel7
+      // panel_kont
       // 
-      this.panel7.Controls.Add(this.chk_kont_i);
-      this.panel7.Controls.Add(this.radio_kont_false_p);
-      this.panel7.Controls.Add(this.radio_kont_true_ü);
-      this.panel7.Controls.Add(this.radio_kont_del_ää);
-      this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel7.Location = new System.Drawing.Point(0, 379);
-      this.panel7.Margin = new System.Windows.Forms.Padding(24);
-      this.panel7.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel7.Name = "panel7";
+      this.panel_kont.Controls.Add(this.chk_kont_i);
+      this.panel_kont.Controls.Add(this.radio_kont_false_p);
+      this.panel_kont.Controls.Add(this.radio_kont_true_ü);
+      this.panel_kont.Controls.Add(this.radio_kont_del_ää);
+      this.panel_kont.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_kont.Location = new System.Drawing.Point(0, 435);
+      this.panel_kont.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_kont.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_kont.Name = "panel_kont";
       // 
       // 
       // 
-      this.panel7.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel7.Size = new System.Drawing.Size(412, 35);
-      this.panel7.TabIndex = 17;
+      this.panel_kont.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_kont.Size = new System.Drawing.Size(412, 35);
+      this.panel_kont.TabIndex = 17;
       // 
       // chk_kont_i
       // 
@@ -559,7 +576,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_kont_i.Margin = new System.Windows.Forms.Padding(6);
       this.chk_kont_i.Name = "chk_kont_i";
       this.chk_kont_i.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_kont_i.Size = new System.Drawing.Size(34, 29);
+      this.chk_kont_i.Size = new System.Drawing.Size(34, 35);
       this.chk_kont_i.TabIndex = 3;
       this.chk_kont_i.Text = "K";
       this.toolTip1.SetToolTip(this.chk_kont_i, "Unsicherheit markieren");
@@ -621,39 +638,129 @@ namespace IDS.QuickAnnotator.Client
       // radLabel6
       // 
       this.radLabel6.Dock = System.Windows.Forms.DockStyle.Top;
-      this.radLabel6.Location = new System.Drawing.Point(0, 358);
+      this.radLabel6.Location = new System.Drawing.Point(0, 414);
       this.radLabel6.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel6.Name = "radLabel6";
-      this.radLabel6.Size = new System.Drawing.Size(236, 21);
+      this.radLabel6.Size = new System.Drawing.Size(412, 21);
       this.radLabel6.TabIndex = 16;
       this.radLabel6.Text = "Geschlecht aus Kontext erkennbar?";
       // 
-      // panel10
+      // panel_gpron
       // 
-      this.panel10.Controls.Add(this.chk_gfem_i);
-      this.panel10.Controls.Add(this.radio_gfem_false_p);
-      this.panel10.Controls.Add(this.radio_gfem_true_ü);
-      this.panel10.Controls.Add(this.radio_gfem_del_üü);
-      this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel10.Location = new System.Drawing.Point(0, 323);
-      this.panel10.Margin = new System.Windows.Forms.Padding(24);
-      this.panel10.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel10.Name = "panel10";
+      this.panel_gpron.Controls.Add(this.chk_gpron);
+      this.panel_gpron.Controls.Add(this.gadio_gpron_false);
+      this.panel_gpron.Controls.Add(this.gadio_gpron_true);
+      this.panel_gpron.Controls.Add(this.radio_gpron_del);
+      this.panel_gpron.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_gpron.Location = new System.Drawing.Point(0, 379);
+      this.panel_gpron.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_gpron.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_gpron.Name = "panel_gpron";
       // 
       // 
       // 
-      this.panel10.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel10.Size = new System.Drawing.Size(412, 35);
-      this.panel10.TabIndex = 25;
+      this.panel_gpron.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_gpron.Size = new System.Drawing.Size(412, 35);
+      this.panel_gpron.TabIndex = 27;
+      // 
+      // chk_gpron
+      // 
+      this.chk_gpron.Dock = System.Windows.Forms.DockStyle.Right;
+      this.chk_gpron.Location = new System.Drawing.Point(378, 0);
+      this.chk_gpron.Margin = new System.Windows.Forms.Padding(6);
+      this.chk_gpron.Name = "chk_gpron";
+      this.chk_gpron.Padding = new System.Windows.Forms.Padding(0, 10, 15, 0);
+      this.chk_gpron.Size = new System.Drawing.Size(34, 35);
+      this.chk_gpron.TabIndex = 3;
+      this.toolTip1.SetToolTip(this.chk_gpron, "Unsicherheit markieren");
+      // 
+      // gadio_gpron_false
+      // 
+      this.gadio_gpron_false.Dock = System.Windows.Forms.DockStyle.Left;
+      this.gadio_gpron_false.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.gadio_gpron_false.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.delete_button_error;
+      this.gadio_gpron_false.Location = new System.Drawing.Point(106, 0);
+      this.gadio_gpron_false.Margin = new System.Windows.Forms.Padding(6);
+      this.gadio_gpron_false.MaximumSize = new System.Drawing.Size(138, 0);
+      this.gadio_gpron_false.Name = "gadio_gpron_false";
+      this.gadio_gpron_false.Padding = new System.Windows.Forms.Padding(8, 2, 8, 0);
+      // 
+      // 
+      // 
+      this.gadio_gpron_false.RootElement.MaxSize = new System.Drawing.Size(138, 0);
+      this.gadio_gpron_false.Size = new System.Drawing.Size(61, 35);
+      this.gadio_gpron_false.TabIndex = 2;
+      this.gadio_gpron_false.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.gadio_gpron_false, "Ablehnen");
+      // 
+      // gadio_gpron_true
+      // 
+      this.gadio_gpron_true.Dock = System.Windows.Forms.DockStyle.Left;
+      this.gadio_gpron_true.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.gadio_gpron_true.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.ok_button;
+      this.gadio_gpron_true.Location = new System.Drawing.Point(45, 0);
+      this.gadio_gpron_true.Margin = new System.Windows.Forms.Padding(6);
+      this.gadio_gpron_true.MaximumSize = new System.Drawing.Size(138, 0);
+      this.gadio_gpron_true.Name = "gadio_gpron_true";
+      this.gadio_gpron_true.Padding = new System.Windows.Forms.Padding(8, 2, 8, 0);
+      // 
+      // 
+      // 
+      this.gadio_gpron_true.RootElement.MaxSize = new System.Drawing.Size(138, 0);
+      this.gadio_gpron_true.Size = new System.Drawing.Size(61, 35);
+      this.gadio_gpron_true.TabIndex = 1;
+      this.gadio_gpron_true.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.gadio_gpron_true, "Zustimmen");
+      // 
+      // radio_gpron_del
+      // 
+      this.radio_gpron_del.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_gpron_del.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_gpron_del.Image = ((System.Drawing.Image)(resources.GetObject("radio_gpron_del.Image")));
+      this.radio_gpron_del.Location = new System.Drawing.Point(0, 0);
+      this.radio_gpron_del.Margin = new System.Windows.Forms.Padding(6);
+      this.radio_gpron_del.Name = "radio_gpron_del";
+      this.radio_gpron_del.Size = new System.Drawing.Size(45, 35);
+      this.radio_gpron_del.TabIndex = 0;
+      this.radio_gpron_del.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_gpron_del, "Wert entfernen");
+      // 
+      // radLabel9
+      // 
+      this.radLabel9.Dock = System.Windows.Forms.DockStyle.Top;
+      this.radLabel9.Location = new System.Drawing.Point(0, 358);
+      this.radLabel9.Margin = new System.Windows.Forms.Padding(6);
+      this.radLabel9.Name = "radLabel9";
+      this.radLabel9.Size = new System.Drawing.Size(412, 21);
+      this.radLabel9.TabIndex = 26;
+      this.radLabel9.Text = "Generisches Pronomen";
+      // 
+      // panel_gfem
+      // 
+      this.panel_gfem.Controls.Add(this.chk_gfem_i);
+      this.panel_gfem.Controls.Add(this.radio_gfem_false_p);
+      this.panel_gfem.Controls.Add(this.radio_gfem_true_ü);
+      this.panel_gfem.Controls.Add(this.radio_gfem_del_üü);
+      this.panel_gfem.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_gfem.Location = new System.Drawing.Point(0, 323);
+      this.panel_gfem.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_gfem.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_gfem.Name = "panel_gfem";
+      // 
+      // 
+      // 
+      this.panel_gfem.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_gfem.Size = new System.Drawing.Size(412, 35);
+      this.panel_gfem.TabIndex = 25;
       // 
       // chk_gfem_i
       // 
       this.chk_gfem_i.Dock = System.Windows.Forms.DockStyle.Right;
-      this.chk_gfem_i.Location = new System.Drawing.Point(383, 0);
+      this.chk_gfem_i.Location = new System.Drawing.Point(378, 0);
       this.chk_gfem_i.Margin = new System.Windows.Forms.Padding(6);
       this.chk_gfem_i.Name = "chk_gfem_i";
-      this.chk_gfem_i.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_gfem_i.Size = new System.Drawing.Size(29, 29);
+      this.chk_gfem_i.Padding = new System.Windows.Forms.Padding(0, 10, 5, 0);
+      this.chk_gfem_i.Size = new System.Drawing.Size(34, 35);
       this.chk_gfem_i.TabIndex = 3;
       this.chk_gfem_i.Text = "I";
       this.toolTip1.SetToolTip(this.chk_gfem_i, "Unsicherheit markieren");
@@ -718,27 +825,27 @@ namespace IDS.QuickAnnotator.Client
       this.radLabel8.Location = new System.Drawing.Point(0, 302);
       this.radLabel8.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel8.Name = "radLabel8";
-      this.radLabel8.Size = new System.Drawing.Size(167, 21);
+      this.radLabel8.Size = new System.Drawing.Size(412, 21);
       this.radLabel8.TabIndex = 24;
       this.radLabel8.Text = "Generisches Femininum ";
       // 
-      // panel6
+      // panel_mask
       // 
-      this.panel6.Controls.Add(this.chk_mask_7);
-      this.panel6.Controls.Add(this.radio_mask_false_9);
-      this.panel6.Controls.Add(this.radio_mask_true_0);
-      this.panel6.Controls.Add(this.radio_mask_del_ß);
-      this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel6.Location = new System.Drawing.Point(0, 267);
-      this.panel6.Margin = new System.Windows.Forms.Padding(24);
-      this.panel6.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel6.Name = "panel6";
+      this.panel_mask.Controls.Add(this.chk_mask_7);
+      this.panel_mask.Controls.Add(this.radio_mask_false_9);
+      this.panel_mask.Controls.Add(this.radio_mask_true_0);
+      this.panel_mask.Controls.Add(this.radio_mask_del_ß);
+      this.panel_mask.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_mask.Location = new System.Drawing.Point(0, 267);
+      this.panel_mask.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_mask.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_mask.Name = "panel_mask";
       // 
       // 
       // 
-      this.panel6.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel6.Size = new System.Drawing.Size(412, 35);
-      this.panel6.TabIndex = 15;
+      this.panel_mask.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_mask.Size = new System.Drawing.Size(412, 35);
+      this.panel_mask.TabIndex = 15;
       // 
       // chk_mask_7
       // 
@@ -747,7 +854,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_mask_7.Margin = new System.Windows.Forms.Padding(6);
       this.chk_mask_7.Name = "chk_mask_7";
       this.chk_mask_7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_mask_7.Size = new System.Drawing.Size(33, 29);
+      this.chk_mask_7.Size = new System.Drawing.Size(33, 35);
       this.chk_mask_7.TabIndex = 3;
       this.chk_mask_7.Text = "7";
       this.toolTip1.SetToolTip(this.chk_mask_7, "Unsicherheit markieren");
@@ -812,27 +919,27 @@ namespace IDS.QuickAnnotator.Client
       this.radLabel5.Location = new System.Drawing.Point(0, 246);
       this.radLabel5.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel5.Name = "radLabel5";
-      this.radLabel5.Size = new System.Drawing.Size(170, 21);
+      this.radLabel5.Size = new System.Drawing.Size(412, 21);
       this.radLabel5.TabIndex = 14;
       this.radLabel5.Text = "Generisches Maskulinum";
       // 
-      // panel5
+      // panel_ref
       // 
-      this.panel5.Controls.Add(this.chk_ref_b);
-      this.panel5.Controls.Add(this.radio_ref_false_c);
-      this.panel5.Controls.Add(this.radio_ref_true_x);
-      this.panel5.Controls.Add(this.radio_ref_del_y);
-      this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel5.Location = new System.Drawing.Point(0, 211);
-      this.panel5.Margin = new System.Windows.Forms.Padding(24);
-      this.panel5.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel5.Name = "panel5";
+      this.panel_ref.Controls.Add(this.chk_ref_b);
+      this.panel_ref.Controls.Add(this.radio_ref_false_c);
+      this.panel_ref.Controls.Add(this.radio_ref_true_x);
+      this.panel_ref.Controls.Add(this.radio_ref_del_y);
+      this.panel_ref.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_ref.Location = new System.Drawing.Point(0, 211);
+      this.panel_ref.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_ref.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_ref.Name = "panel_ref";
       // 
       // 
       // 
-      this.panel5.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel5.Size = new System.Drawing.Size(412, 35);
-      this.panel5.TabIndex = 13;
+      this.panel_ref.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_ref.Size = new System.Drawing.Size(412, 35);
+      this.panel_ref.TabIndex = 13;
       // 
       // chk_ref_b
       // 
@@ -841,7 +948,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_ref_b.Margin = new System.Windows.Forms.Padding(6);
       this.chk_ref_b.Name = "chk_ref_b";
       this.chk_ref_b.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_ref_b.Size = new System.Drawing.Size(34, 29);
+      this.chk_ref_b.Size = new System.Drawing.Size(34, 35);
       this.chk_ref_b.TabIndex = 3;
       this.chk_ref_b.Text = "B";
       this.toolTip1.SetToolTip(this.chk_ref_b, "Unsicherheit markieren");
@@ -906,27 +1013,27 @@ namespace IDS.QuickAnnotator.Client
       this.radLabel4.Location = new System.Drawing.Point(0, 190);
       this.radLabel4.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel4.Name = "radLabel4";
-      this.radLabel4.Size = new System.Drawing.Size(304, 21);
+      this.radLabel4.Size = new System.Drawing.Size(412, 21);
       this.radLabel4.TabIndex = 12;
       this.radLabel4.Text = "Referenz/Bezug auf konkrete Person/Gruppe?";
       // 
-      // panel3
+      // panel_abstr
       // 
-      this.panel3.Controls.Add(this.chk_abstr_g);
-      this.panel3.Controls.Add(this.radio_abstr_false_d);
-      this.panel3.Controls.Add(this.radio_abstr_true_s);
-      this.panel3.Controls.Add(this.radio_abstr_del_a);
-      this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel3.Location = new System.Drawing.Point(0, 155);
-      this.panel3.Margin = new System.Windows.Forms.Padding(24);
-      this.panel3.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel3.Name = "panel3";
+      this.panel_abstr.Controls.Add(this.chk_abstr_g);
+      this.panel_abstr.Controls.Add(this.radio_abstr_false_d);
+      this.panel_abstr.Controls.Add(this.radio_abstr_true_s);
+      this.panel_abstr.Controls.Add(this.radio_abstr_del_a);
+      this.panel_abstr.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_abstr.Location = new System.Drawing.Point(0, 155);
+      this.panel_abstr.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_abstr.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_abstr.Name = "panel_abstr";
       // 
       // 
       // 
-      this.panel3.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel3.Size = new System.Drawing.Size(412, 35);
-      this.panel3.TabIndex = 11;
+      this.panel_abstr.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_abstr.Size = new System.Drawing.Size(412, 35);
+      this.panel_abstr.TabIndex = 11;
       // 
       // chk_abstr_g
       // 
@@ -935,7 +1042,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_abstr_g.Margin = new System.Windows.Forms.Padding(6);
       this.chk_abstr_g.Name = "chk_abstr_g";
       this.chk_abstr_g.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_abstr_g.Size = new System.Drawing.Size(35, 29);
+      this.chk_abstr_g.Size = new System.Drawing.Size(35, 35);
       this.chk_abstr_g.TabIndex = 3;
       this.chk_abstr_g.Text = "G";
       this.toolTip1.SetToolTip(this.chk_abstr_g, "Unsicherheit markieren");
@@ -1000,27 +1107,27 @@ namespace IDS.QuickAnnotator.Client
       this.radLabel3.Location = new System.Drawing.Point(0, 134);
       this.radLabel3.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel3.Name = "radLabel3";
-      this.radLabel3.Size = new System.Drawing.Size(331, 21);
+      this.radLabel3.Size = new System.Drawing.Size(412, 21);
       this.radLabel3.TabIndex = 10;
       this.radLabel3.Text = "Geschlechtsabstrahierende Personenbezeichnung";
       // 
-      // panel2
+      // panel_gen
       // 
-      this.panel2.Controls.Add(this.chk_gen_t);
-      this.panel2.Controls.Add(this.radio_gen_false_e);
-      this.panel2.Controls.Add(this.radio_gen_true_w);
-      this.panel2.Controls.Add(this.radio_gen_del_q);
-      this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel2.Location = new System.Drawing.Point(0, 99);
-      this.panel2.Margin = new System.Windows.Forms.Padding(24);
-      this.panel2.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel2.Name = "panel2";
+      this.panel_gen.Controls.Add(this.chk_gen_t);
+      this.panel_gen.Controls.Add(this.radio_gen_false_e);
+      this.panel_gen.Controls.Add(this.radio_gen_true_w);
+      this.panel_gen.Controls.Add(this.radio_gen_del_q);
+      this.panel_gen.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_gen.Location = new System.Drawing.Point(0, 99);
+      this.panel_gen.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_gen.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_gen.Name = "panel_gen";
       // 
       // 
       // 
-      this.panel2.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel2.Size = new System.Drawing.Size(412, 35);
-      this.panel2.TabIndex = 9;
+      this.panel_gen.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_gen.Size = new System.Drawing.Size(412, 35);
+      this.panel_gen.TabIndex = 9;
       // 
       // chk_gen_t
       // 
@@ -1029,7 +1136,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_gen_t.Margin = new System.Windows.Forms.Padding(6);
       this.chk_gen_t.Name = "chk_gen_t";
       this.chk_gen_t.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_gen_t.Size = new System.Drawing.Size(34, 29);
+      this.chk_gen_t.Size = new System.Drawing.Size(34, 35);
       this.chk_gen_t.TabIndex = 3;
       this.chk_gen_t.Text = "T";
       this.toolTip1.SetToolTip(this.chk_gen_t, "Unsicherheit markieren");
@@ -1094,7 +1201,7 @@ namespace IDS.QuickAnnotator.Client
       this.radLabel2.Location = new System.Drawing.Point(0, 78);
       this.radLabel2.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel2.Name = "radLabel2";
-      this.radLabel2.Size = new System.Drawing.Size(185, 21);
+      this.radLabel2.Size = new System.Drawing.Size(412, 21);
       this.radLabel2.TabIndex = 8;
       this.radLabel2.Text = "Notwendigkeit zu Gendern?";
       // 
@@ -1111,25 +1218,42 @@ namespace IDS.QuickAnnotator.Client
       this.label1.TabIndex = 6;
       this.label1.Text = "L1=Nominale PB / L2=Pronom+Co-Ref / L3=Kompositum / L4=abhängig";
       // 
-      // panel1
+      // panel_lk
       // 
-      this.panel1.Controls.Add(this.radio_lk_4);
-      this.panel1.Controls.Add(this.radio_lk_3);
-      this.panel1.Controls.Add(this.chk_lk_6);
-      this.panel1.Controls.Add(this.radio_lk_2);
-      this.panel1.Controls.Add(this.radio_lk_1);
-      this.panel1.Controls.Add(this.radio_lk_del_5);
-      this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panel1.Location = new System.Drawing.Point(0, 21);
-      this.panel1.Margin = new System.Windows.Forms.Padding(24);
-      this.panel1.MaximumSize = new System.Drawing.Size(0, 35);
-      this.panel1.Name = "panel1";
+      this.panel_lk.Controls.Add(this.radio_lk_sim);
+      this.panel_lk.Controls.Add(this.radio_lk_4);
+      this.panel_lk.Controls.Add(this.radio_lk_3);
+      this.panel_lk.Controls.Add(this.chk_lk_6);
+      this.panel_lk.Controls.Add(this.radio_lk_2);
+      this.panel_lk.Controls.Add(this.radio_lk_1);
+      this.panel_lk.Controls.Add(this.radio_lk_del_5);
+      this.panel_lk.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panel_lk.Location = new System.Drawing.Point(0, 21);
+      this.panel_lk.Margin = new System.Windows.Forms.Padding(24);
+      this.panel_lk.MaximumSize = new System.Drawing.Size(0, 35);
+      this.panel_lk.Name = "panel_lk";
       // 
       // 
       // 
-      this.panel1.RootElement.MaxSize = new System.Drawing.Size(0, 35);
-      this.panel1.Size = new System.Drawing.Size(412, 35);
-      this.panel1.TabIndex = 1;
+      this.panel_lk.RootElement.MaxSize = new System.Drawing.Size(0, 35);
+      this.panel_lk.Size = new System.Drawing.Size(412, 35);
+      this.panel_lk.TabIndex = 1;
+      // 
+      // radio_lk_sim
+      // 
+      this.radio_lk_sim.Dock = System.Windows.Forms.DockStyle.Left;
+      this.radio_lk_sim.Font = new System.Drawing.Font("Roboto Medium", 8.5F);
+      this.radio_lk_sim.Location = new System.Drawing.Point(248, 0);
+      this.radio_lk_sim.Margin = new System.Windows.Forms.Padding(6);
+      this.radio_lk_sim.Name = "radio_lk_sim";
+      this.radio_lk_sim.Padding = new System.Windows.Forms.Padding(8, 2, 8, 0);
+      this.radio_lk_sim.Size = new System.Drawing.Size(62, 35);
+      this.radio_lk_sim.TabIndex = 6;
+      this.radio_lk_sim.Text = "SIM";
+      this.radio_lk_sim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+      this.toolTip1.SetToolTip(this.radio_lk_sim, "L4\r\nAbhängiges Element (i.d.R. Attribute in der Nominalphrase: Artikel, Adjektive" +
+        ") ");
+      this.radio_lk_sim.CheckStateChanged += new System.EventHandler(this.radio_lk_sim_CheckStateChanged);
       // 
       // radio_lk_4
       // 
@@ -1145,6 +1269,7 @@ namespace IDS.QuickAnnotator.Client
       this.radio_lk_4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
       this.toolTip1.SetToolTip(this.radio_lk_4, "L4\r\nAbhängiges Element (i.d.R. Attribute in der Nominalphrase: Artikel, Adjektive" +
         ") ");
+      this.radio_lk_4.Visible = false;
       this.radio_lk_4.CheckStateChanged += new System.EventHandler(this.OptionHighlightOnlyGender);
       // 
       // radio_lk_3
@@ -1170,7 +1295,7 @@ namespace IDS.QuickAnnotator.Client
       this.chk_lk_6.Margin = new System.Windows.Forms.Padding(6);
       this.chk_lk_6.Name = "chk_lk_6";
       this.chk_lk_6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-      this.chk_lk_6.Size = new System.Drawing.Size(33, 29);
+      this.chk_lk_6.Size = new System.Drawing.Size(33, 35);
       this.chk_lk_6.TabIndex = 3;
       this.chk_lk_6.Text = "6";
       this.toolTip1.SetToolTip(this.chk_lk_6, "Unsicherheit markieren");
@@ -1229,7 +1354,7 @@ namespace IDS.QuickAnnotator.Client
       this.radLabel1.Location = new System.Drawing.Point(0, 0);
       this.radLabel1.Margin = new System.Windows.Forms.Padding(6);
       this.radLabel1.Name = "radLabel1";
-      this.radLabel1.Size = new System.Drawing.Size(140, 21);
+      this.radLabel1.Size = new System.Drawing.Size(412, 21);
       this.radLabel1.TabIndex = 0;
       this.radLabel1.Text = "Linguistische Klasse";
       // 
@@ -1241,10 +1366,6 @@ namespace IDS.QuickAnnotator.Client
       this.Controls.Add(this.commands);
       this.Margin = new System.Windows.Forms.Padding(4);
       this.Name = "DashboardForm";
-      // 
-      // 
-      // 
-      this.RootElement.ApplyShapeToControl = true;
       this.Text = "QuickAnnotator";
       ((System.ComponentModel.ISupportInitialize)(this.commands)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).EndInit();
@@ -1259,9 +1380,9 @@ namespace IDS.QuickAnnotator.Client
       this.radScrollablePanel2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit_doppelform)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel8)).EndInit();
-      this.panel8.ResumeLayout(false);
-      this.panel8.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_sex)).EndInit();
+      this.panel_sex.ResumeLayout(false);
+      this.panel_sex.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_group_mmmm)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_none_mmm)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.chk_sex_h)).EndInit();
@@ -1269,57 +1390,66 @@ namespace IDS.QuickAnnotator.Client
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_male_m)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_sex_del_n)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel7)).EndInit();
-      this.panel7.ResumeLayout(false);
-      this.panel7.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_kont)).EndInit();
+      this.panel_kont.ResumeLayout(false);
+      this.panel_kont.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_kont_i)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_false_p)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_true_ü)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_kont_del_ää)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel10)).EndInit();
-      this.panel10.ResumeLayout(false);
-      this.panel10.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_gpron)).EndInit();
+      this.panel_gpron.ResumeLayout(false);
+      this.panel_gpron.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chk_gpron)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gadio_gpron_false)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gadio_gpron_true)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_gpron_del)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_gfem)).EndInit();
+      this.panel_gfem.ResumeLayout(false);
+      this.panel_gfem.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_gfem_i)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gfem_false_p)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gfem_true_ü)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gfem_del_üü)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel6)).EndInit();
-      this.panel6.ResumeLayout(false);
-      this.panel6.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_mask)).EndInit();
+      this.panel_mask.ResumeLayout(false);
+      this.panel_mask.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_mask_7)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_mask_false_9)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_mask_true_0)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_mask_del_ß)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel5)).EndInit();
-      this.panel5.ResumeLayout(false);
-      this.panel5.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_ref)).EndInit();
+      this.panel_ref.ResumeLayout(false);
+      this.panel_ref.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_ref_b)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_ref_false_c)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_ref_true_x)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_ref_del_y)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel3)).EndInit();
-      this.panel3.ResumeLayout(false);
-      this.panel3.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_abstr)).EndInit();
+      this.panel_abstr.ResumeLayout(false);
+      this.panel_abstr.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_abstr_g)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_abstr_false_d)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_abstr_true_s)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_abstr_del_a)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel2)).EndInit();
-      this.panel2.ResumeLayout(false);
-      this.panel2.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_gen)).EndInit();
+      this.panel_gen.ResumeLayout(false);
+      this.panel_gen.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chk_gen_t)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_false_e)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_true_w)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_gen_del_q)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.panel1)).EndInit();
-      this.panel1.ResumeLayout(false);
-      this.panel1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.panel_lk)).EndInit();
+      this.panel_lk.ResumeLayout(false);
+      this.panel_lk.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.radio_lk_sim)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_lk_4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radio_lk_3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.chk_lk_6)).EndInit();
@@ -1350,7 +1480,7 @@ namespace IDS.QuickAnnotator.Client
     private System.Windows.Forms.ToolTip toolTip1;
     private Telerik.WinControls.UI.RadButton btn_submit;
     private Telerik.WinControls.UI.CommandBarButton btn_focus;
-    private Telerik.WinControls.UI.RadPanel panel1;
+    private Telerik.WinControls.UI.RadPanel panel_lk;
     private System.Windows.Forms.Label label1;
     private Telerik.WinControls.UI.RadRadioButton radio_lk_4;
     private Telerik.WinControls.UI.RadRadioButton radio_lk_3;
@@ -1359,37 +1489,37 @@ namespace IDS.QuickAnnotator.Client
     private Telerik.WinControls.UI.RadRadioButton radio_lk_1;
     private Telerik.WinControls.UI.RadRadioButton radio_lk_del_5;
     private Telerik.WinControls.UI.RadLabel radLabel2;
-    private Telerik.WinControls.UI.RadPanel panel2;
+    private Telerik.WinControls.UI.RadPanel panel_gen;
     private Telerik.WinControls.UI.RadCheckBox chk_gen_t;
     private Telerik.WinControls.UI.RadRadioButton radio_gen_false_e;
     private Telerik.WinControls.UI.RadRadioButton radio_gen_true_w;
     private Telerik.WinControls.UI.RadRadioButton radio_gen_del_q;
     private Telerik.WinControls.UI.RadLabel radLabel3;
-    private Telerik.WinControls.UI.RadPanel panel3;
+    private Telerik.WinControls.UI.RadPanel panel_abstr;
     private Telerik.WinControls.UI.RadCheckBox chk_abstr_g;
     private Telerik.WinControls.UI.RadRadioButton radio_abstr_false_d;
     private Telerik.WinControls.UI.RadRadioButton radio_abstr_true_s;
     private Telerik.WinControls.UI.RadRadioButton radio_abstr_del_a;
     private Telerik.WinControls.UI.RadLabel radLabel4;
-    private Telerik.WinControls.UI.RadPanel panel5;
+    private Telerik.WinControls.UI.RadPanel panel_ref;
     private Telerik.WinControls.UI.RadCheckBox chk_ref_b;
     private Telerik.WinControls.UI.RadRadioButton radio_ref_false_c;
     private Telerik.WinControls.UI.RadRadioButton radio_ref_true_x;
     private Telerik.WinControls.UI.RadRadioButton radio_ref_del_y;
     private Telerik.WinControls.UI.RadLabel radLabel5;
-    private Telerik.WinControls.UI.RadPanel panel6;
+    private Telerik.WinControls.UI.RadPanel panel_mask;
     private Telerik.WinControls.UI.RadCheckBox chk_mask_7;
     private Telerik.WinControls.UI.RadRadioButton radio_mask_false_9;
     private Telerik.WinControls.UI.RadRadioButton radio_mask_true_0;
     private Telerik.WinControls.UI.RadRadioButton radio_mask_del_ß;
     private Telerik.WinControls.UI.RadLabel radLabel6;
-    private Telerik.WinControls.UI.RadPanel panel7;
+    private Telerik.WinControls.UI.RadPanel panel_kont;
     private Telerik.WinControls.UI.RadCheckBox chk_kont_i;
     private Telerik.WinControls.UI.RadRadioButton radio_kont_false_p;
     private Telerik.WinControls.UI.RadRadioButton radio_kont_true_ü;
     private Telerik.WinControls.UI.RadRadioButton radio_kont_del_ää;
     private Telerik.WinControls.UI.RadLabel radLabel7;
-    private Telerik.WinControls.UI.RadPanel panel8;
+    private Telerik.WinControls.UI.RadPanel panel_sex;
     private Telerik.WinControls.UI.RadCheckBox chk_sex_h;
     private Telerik.WinControls.UI.RadRadioButton radio_sex_female_mm;
     private Telerik.WinControls.UI.RadRadioButton radio_sex_male_m;
@@ -1398,12 +1528,19 @@ namespace IDS.QuickAnnotator.Client
     private Telerik.WinControls.UI.RadRadioButton radio_sex_none_mmm;
     private Telerik.WinControls.UI.RadButton btn_submit_doppelform;
     private Telerik.WinControls.UI.RadLabel radLabel8;
-    private Telerik.WinControls.UI.RadPanel panel10;
+    private Telerik.WinControls.UI.RadPanel panel_gfem;
     private Telerik.WinControls.UI.RadCheckBox chk_gfem_i;
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_false_p;
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_true_ü;
     private Telerik.WinControls.UI.RadRadioButton radio_gfem_del_üü;
         private Telerik.WinControls.UI.RadScrollablePanel radScrollablePanel2;
         private Telerik.WinControls.UI.CommandBarButton commandBarButton1;
+        private RadRadioButton radio_lk_sim;
+        private RadPanel panel_gpron;
+        private RadCheckBox chk_gpron;
+        private RadRadioButton gadio_gpron_false;
+        private RadRadioButton gadio_gpron_true;
+        private RadRadioButton radio_gpron_del;
+        private RadLabel radLabel9;
     }
 }
