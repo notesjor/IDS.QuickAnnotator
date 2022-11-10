@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Text;
 using System.Threading;
@@ -36,92 +37,110 @@ namespace IDS.QuickAnnotator.API
 
       Console.Write("Service-Port: 4545...");
       var server = new Server("*", 4545, (arg) => arg.Response.Send(HttpStatusCode.NoContent));
-      server.AddEndpoint(HttpVerb.POST, "/getDocuments", GetDocuments);
-      server.AddEndpoint(HttpVerb.POST, "/getLayer", GetLayer);
-      server.AddEndpoint(HttpVerb.POST, "/getDocument", GetDocument);
-      server.AddEndpoint(HttpVerb.POST, "/getDocumentHistory", GetDocumentHistory);
-      server.AddEndpoint(HttpVerb.POST, "/setDocument", SetDocument);
-      server.AddEndpoint(HttpVerb.POST, "/setDocumentCompletion", SetDocumentCompletion);
-      server.AddEndpoint(HttpVerb.POST, "/signin", Signin);
-      server.AddEndpoint(HttpVerb.POST, "/getProfile", MyProfileInfo);
+      server.AddEndpoint(HttpMethod.Post, "/getDocuments", GetDocuments);
+      server.AddEndpoint(HttpMethod.Post, "/getLayer", GetLayer);
+      server.AddEndpoint(HttpMethod.Post, "/getDocument", GetDocument);
+      server.AddEndpoint(HttpMethod.Post, "/getDocumentHistory", GetDocumentHistory);
+      server.AddEndpoint(HttpMethod.Post, "/setDocument", SetDocument);
+      server.AddEndpoint(HttpMethod.Post, "/setDocumentCompletion", SetDocumentCompletion);
+      server.AddEndpoint(HttpMethod.Post, "/signin", Signin);
+      server.AddEndpoint(HttpMethod.Post, "/getProfile", MyProfileInfo);
       Console.WriteLine("ok!");
 
       while (true)
         Thread.Sleep(25000);
     }
 
-    private static Task SetDocumentCompletion(HttpContext arg)
+    private static void SetDocumentCompletion(HttpContext arg)
     {
       try
       {
         var req = arg.PostData<RequestDocumentGet>();
         if (!IsAuthUser(req))
-          return arg.Response.Send(HttpStatusCode.Unauthorized);
+        {
+          arg.Response.Send(HttpStatusCode.Unauthorized);
+          return;
+        }
 
         var user = GetUser(req.AuthToken);
         user.DoneDocumentIds.Add(req.DocumentId);
         SetUser(req.AuthToken, user);
 
-        return arg.Response.Send(HttpStatusCode.OK);
+        arg.Response.Send(HttpStatusCode.OK);
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task MyProfileInfo(HttpContext arg)
+    private static void MyProfileInfo(HttpContext arg)
     {
       try
       {
         var req = arg.PostData<AbstractAuthRequest>();
-        return !IsAuthUser(req) ? arg.Response.Send(HttpStatusCode.Unauthorized) : arg.Response.Send(GetUser(req.AuthToken));
+        if (!IsAuthUser(req))
+          arg.Response.Send(HttpStatusCode.Unauthorized);
+        else
+          arg.Response.Send(GetUser(req.AuthToken));
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task GetDocument(HttpContext arg)
+    private static void GetDocument(HttpContext arg)
     {
       try
       {
         var req = arg.PostData<RequestDocumentGet>();
         if (!IsAuthUser(req))
-          return arg.Response.Send(HttpStatusCode.Unauthorized);
+        {
+          arg.Response.Send(HttpStatusCode.Unauthorized);
+          return;
+        }
 
         var docs = Directory.GetFiles(_docs, req.DocumentId + ".json", SearchOption.AllDirectories);
         if (docs.Length < 1)
-          return arg.Response.Send(HttpStatusCode.NotFound);
+        {
+          arg.Response.Send(HttpStatusCode.NotFound);
+          return;
+        }
 
         var filePath = docs[0];
         var user = GetUser(req.AuthToken);
         user.LastDocumentId = req.DocumentId;
         SetUser(req.AuthToken, user);
 
-        return arg.Response.Send(File.ReadAllText(filePath, Encoding.UTF8));
+        arg.Response.Send(File.ReadAllText(filePath, Encoding.UTF8));
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task GetDocumentHistory(HttpContext arg)
+    private static void GetDocumentHistory(HttpContext arg)
     {
       try
       {
         var req = arg.PostData<RequestDocumentGet>();
         if (!IsAuthUser(req))
-          return arg.Response.Send(HttpStatusCode.Unauthorized);
+        {
+          arg.Response.Send(HttpStatusCode.Unauthorized);
+          return;
+        }
 
         var dir = Path.Combine(_history, req.DocumentId);
         if (!Directory.Exists(dir))
-          return arg.Response.Send(HttpStatusCode.NotFound);
+        {
+          arg.Response.Send(HttpStatusCode.NotFound);
+          return;
+        }
 
         var res = new List<DocumentChange>();
         foreach (var file in Directory.GetFiles(dir, "*.json"))
@@ -136,22 +155,25 @@ namespace IDS.QuickAnnotator.API
           }
         }
 
-        return arg.Response.Send(res.ToArray());
+        arg.Response.Send(res.ToArray());
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task SetDocument(HttpContext arg)
+    private static void SetDocument(HttpContext arg)
     {
       try
       {
         var req = arg.PostData<RequestDocumentSet>();
         if (!IsAuthUser(req))
-          return arg.Response.Send(HttpStatusCode.Unauthorized);
+        {
+          arg.Response.Send(HttpStatusCode.Unauthorized);
+          return;
+        }
 
         var dt = DateTime.Now;
         var dir = Path.Combine(_history, req.Change.DocumentId);
@@ -165,29 +187,29 @@ namespace IDS.QuickAnnotator.API
         change.UserName = GetUser(req.AuthToken).UserName;
         File.WriteAllText(path, JsonConvert.SerializeObject(change));
 
-        return arg.Response.Send(HttpStatusCode.OK);
+        arg.Response.Send(HttpStatusCode.OK);
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task GetLayer(HttpContext arg)
+    private static void GetLayer(HttpContext arg)
     {
       try
       {
-        return arg.Response.Send(_layers);
+        arg.Response.Send(_layers);
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task GetDocuments(HttpContext arg)
+    private static void GetDocuments(HttpContext arg)
     {
       try
       {
@@ -205,25 +227,25 @@ namespace IDS.QuickAnnotator.API
         }
         res.Sort();
 
-        return arg.Response.Send(res.ToArray());
+        arg.Response.Send(res.ToArray());
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 
-    private static Task Signin(HttpContext arg)
+    private static void Signin(HttpContext arg)
     {
       try
       {
-        return arg.Response.Send(IsAuthUser(arg.PostData<AbstractAuthRequest>()));
+        arg.Response.Send(IsAuthUser(arg.PostData<AbstractAuthRequest>()));
       }
       catch (Exception ex)
       {
         Log(ex);
-        return arg.Response.Send(HttpStatusCode.InternalServerError);
+        arg.Response.Send(HttpStatusCode.InternalServerError);
       }
     }
 

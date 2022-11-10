@@ -164,6 +164,9 @@ namespace IDS.QuickAnnotator.Client
 
     private void btn_submit_Click(object sender, EventArgs e)
     {
+      if(_editorIndexTo == -1)
+        return;
+
       _anno.Annotate(new DocumentChange
       {
         From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,

@@ -62,7 +62,7 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
         }
 
         var anno = tmp.Count == 0 ? "" : string.Join(" | ", tmp);
-        for (int i = change.From; i < change.To; i++)
+        for (int i = change.From; i > -1 && i < change.To; i++)
           values[i] = anno;
       }
 

@@ -11,13 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="TFRES.DotNet5">
-      <HintPath>W:\Kooperationsprojekte\TfresWebserver\TFRES.DotNet5\bin\Release\net5.0\TFRES.DotNet5.dll</HintPath>
-    </Reference>
+    <Folder Include="Model\Response\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\Response\" />
+    <ProjectReference Include="..\..\..\..\Projekte-Kooperation\TfresWebserver\TFRES.DotNet5\TFRES.DotNet5.csproj" />
   </ItemGroup>
 
   <ItemGroup>
