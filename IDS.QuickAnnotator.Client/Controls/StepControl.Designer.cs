@@ -1,4 +1,4 @@
-﻿namespace IDS.QuickAnnotator.Client
+﻿namespace IDS.QuickAnnotator.Client.Controls
 {
   partial class StepControl
   {

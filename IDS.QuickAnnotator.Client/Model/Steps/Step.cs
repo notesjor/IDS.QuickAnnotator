@@ -1,4 +1,5 @@
 ﻿using System.Web.UI;
+using IDS.QuickAnnotator.Client.Controls;
 
 namespace IDS.QuickAnnotator.Client.Model.Steps
 {

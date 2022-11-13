@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Media;
-using IDS.QuickAnnotator.API.Model.Request;
 
-namespace IDS.QuickAnnotator.Client
+namespace IDS.QuickAnnotator.Client.Controls
 {
   /// <summary>
   /// Interaktionslogik für Editor.xaml

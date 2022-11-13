@@ -1,4 +1,4 @@
-﻿namespace IDS.QuickAnnotator.Client
+﻿namespace IDS.QuickAnnotator.Client.Forms.Abstract
 {
     partial class AbstractForm
     {

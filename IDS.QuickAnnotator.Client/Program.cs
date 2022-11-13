@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IDS.QuickAnnotator.Client.Forms;
 using IDS.QuickAnnotator.Client.Model.Steps;
 
 namespace IDS.QuickAnnotator.Client

@@ -1,7 +1,8 @@
-﻿using IDS.QuickAnnotator.Client.Model;
-using System;
+﻿using System;
+using IDS.QuickAnnotator.Client.Forms.Abstract;
+using IDS.QuickAnnotator.Client.Model;
 
-namespace IDS.QuickAnnotator.Client
+namespace IDS.QuickAnnotator.Client.Forms
 {
   public partial class SigninForm : AbstractForm
   {

@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using IDS.QuickAnnotator.Client.Controls.Abstract;
 using IDS.QuickAnnotator.Client.Model.Steps;
 using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls.UI;
 
-namespace IDS.QuickAnnotator.Client
+namespace IDS.QuickAnnotator.Client.Controls
 {
   public partial class StepControl : AbstractControl
   {

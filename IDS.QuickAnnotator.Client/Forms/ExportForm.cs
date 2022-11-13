@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Windows.Forms;
-using System.Xml;
-using IDS.QuickAnnotator.API.Model.Request;
 using IDS.QuickAnnotator.Client.Export;
-using IDS.QuickAnnotator.Client.Model;
+using IDS.QuickAnnotator.Client.Forms.Abstract;
 using IDS.QuickAnnotator.Client.Model.Annotation;
-using Newtonsoft.Json;
 
-namespace IDS.QuickAnnotator.Client
+namespace IDS.QuickAnnotator.Client.Forms
 {
   public partial class ExportForm : AbstractForm
   {

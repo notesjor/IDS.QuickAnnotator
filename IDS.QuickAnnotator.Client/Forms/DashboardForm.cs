@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using IDS.QuickAnnotator.API.Model.Request;
+using IDS.QuickAnnotator.Client.Controls;
+using IDS.QuickAnnotator.Client.Forms.Abstract;
 using IDS.QuickAnnotator.Client.Model;
 using IDS.QuickAnnotator.Client.Model.Annotation;
 using IDS.QuickAnnotator.Client.Model.Steps;
@@ -12,7 +14,7 @@ using IDS.QuickAnnotator.Client.Properties;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
-namespace IDS.QuickAnnotator.Client
+namespace IDS.QuickAnnotator.Client.Forms
 {
   public partial class DashboardForm : AbstractForm
   {

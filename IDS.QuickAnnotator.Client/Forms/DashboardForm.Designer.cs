@@ -1,6 +1,4 @@
-﻿using Telerik.WinControls.UI;
-
-namespace IDS.QuickAnnotator.Client
+﻿namespace IDS.QuickAnnotator.Client.Forms
 {
     partial class DashboardForm
     {
