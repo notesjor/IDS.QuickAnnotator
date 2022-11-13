@@ -20,14 +20,14 @@ namespace IDS.QuickAnnotator.Client.Controls
 
     public string StepName
     {
-      get { return lbl_head.Text; }
-      set { lbl_head.Text = value; }
+      get => lbl_head.Text;
+      set => lbl_head.Text = value;
     }
 
     public string StepDescription
     {
-      get { return lbl_desc.Text; }
-      set { lbl_desc.Text = value; }
+      get => lbl_desc.Text;
+      set => lbl_desc.Text = value;
     }
 
     public string[] PossibleValues

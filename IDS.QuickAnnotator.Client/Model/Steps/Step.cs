@@ -1,4 +1,5 @@
-﻿using System.Web.UI;
+﻿using System.Drawing;
+using System.Web.UI;
 using IDS.QuickAnnotator.Client.Controls;
 
 namespace IDS.QuickAnnotator.Client.Model.Steps
@@ -16,6 +17,9 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       Control = new StepControl();
       Control.StepName = Name;
       Control.StepDescription = Description;
+      Control.Size = string.IsNullOrEmpty(Description) ? new Size(412, 53) : new Size(412, 78);
+      Control.MaximumSize = Control.MinimumSize = new Size(0, Control.Size.Height);
+
       Control.PossibleValues = PossibleValues;
     }
 

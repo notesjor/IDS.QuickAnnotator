@@ -32,7 +32,6 @@
       Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
       Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
       Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
       this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
@@ -40,7 +39,6 @@
       this.cmb_text = new Telerik.WinControls.UI.CommandBarDropDownList();
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
       this.btn_export = new Telerik.WinControls.UI.CommandBarButton();
-      this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
       this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
       this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
@@ -89,8 +87,7 @@
             this.commandBarLabel1,
             this.cmb_text,
             this.commandBarSeparator1,
-            this.btn_export,
-            this.commandBarButton1});
+            this.btn_export});
       this.commandBarStripElement1.Name = "commandBarStripElement1";
       // 
       // 
@@ -136,15 +133,6 @@
       this.btn_export.Name = "btn_export";
       this.btn_export.Text = "Exportieren";
       this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
-      // 
-      // commandBarButton1
-      // 
-      this.commandBarButton1.DisplayName = "commandBarButton1";
-      this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
-      this.commandBarButton1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.commandBarButton1.Name = "commandBarButton1";
-      this.commandBarButton1.Text = "Zoom-Fix";
-      this.commandBarButton1.Click += new System.EventHandler(this.commandBarButton1_Click);
       // 
       // elementHost1
       // 
@@ -233,10 +221,10 @@
       this.btn_submit_doppelform.Name = "btn_submit_doppelform";
       this.btn_submit_doppelform.Size = new System.Drawing.Size(412, 36);
       this.btn_submit_doppelform.TabIndex = 23;
-      this.btn_submit_doppelform.Text = "Doppelform (8)";
+      this.btn_submit_doppelform.Text = "Doppelform";
       this.toolTip1.SetToolTip(this.btn_submit_doppelform, "Annotation anwenden");
       this.btn_submit_doppelform.Click += new System.EventHandler(this.btn_submit_doppelform_Click);
-      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit_doppelform.GetChildAt(0))).Text = "Doppelform (8)";
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit_doppelform.GetChildAt(0))).Text = "Doppelform";
       ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit_doppelform.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
       // btn_submit
@@ -247,10 +235,10 @@
       this.btn_submit.Name = "btn_submit";
       this.btn_submit.Size = new System.Drawing.Size(412, 36);
       this.btn_submit.TabIndex = 7;
-      this.btn_submit.Text = "Annotieren (ENTER)";
+      this.btn_submit.Text = "Annotieren";
       this.toolTip1.SetToolTip(this.btn_submit, "Annotation anwenden");
       this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
-      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Text = "Annotieren (ENTER)";
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Text = "Annotieren";
       ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
       // DashboardForm
@@ -297,6 +285,5 @@
     private Telerik.WinControls.UI.RadButton btn_submit;
     private Telerik.WinControls.UI.RadButton btn_submit_doppelform;
         private Telerik.WinControls.UI.RadScrollablePanel panel_controls;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton1;
     }
 }

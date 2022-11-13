@@ -72,7 +72,6 @@ namespace IDS.QuickAnnotator.Client.Forms
       #region STEPS
       foreach(var step in StepModel.Steps.Reverse())
       {
-        step.Control.Size = new Size(412, 78);
         step.Control.Dock = DockStyle.Top;
         step.StateSet(false);
         panel_controls.Controls.Add(step.Control);
@@ -221,18 +220,6 @@ namespace IDS.QuickAnnotator.Client.Forms
       });
 
       _editor.Annotations = _anno.EditorAnnotations;
-    }
-
-    private void commandBarButton1_Click(object sender, EventArgs e)
-    {
-      // RESET
-      foreach (var control in panel_controls.PanelContainer.Controls)
-      {
-        if (!(control is Panel panel))
-          continue;
-
-        panel.MaximumSize = panel.MinimumSize = panel.Size = new Size(0, 45);
-      }
     }
   }
 }
