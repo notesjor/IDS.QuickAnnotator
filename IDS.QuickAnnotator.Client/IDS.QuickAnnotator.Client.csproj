@@ -31,7 +31,7 @@
     <SuiteName>Lexik</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -338,6 +338,7 @@
   <ItemGroup>
     <Content Include="Helper\Diff\Quellenvermerk.txt" />
     <Content Include="ids.ico" />
+    <None Include="Resources\computer-3-add.png" />
     <None Include="Resources\gender-female_grey.png" />
     <None Include="Resources\gender-male_grey.png" />
     <None Include="Resources\gender-non-binary_grey.png" />

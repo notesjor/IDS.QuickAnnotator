@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
       this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
@@ -39,6 +39,7 @@
       this.cmb_text = new Telerik.WinControls.UI.CommandBarDropDownList();
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
       this.btn_export = new Telerik.WinControls.UI.CommandBarButton();
+      this.btn_screenFix = new Telerik.WinControls.UI.CommandBarButton();
       this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
       this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
@@ -87,7 +88,8 @@
             this.commandBarLabel1,
             this.cmb_text,
             this.commandBarSeparator1,
-            this.btn_export});
+            this.btn_export,
+            this.btn_screenFix});
       this.commandBarStripElement1.Name = "commandBarStripElement1";
       // 
       // 
@@ -108,12 +110,12 @@
       this.cmb_text.DisplayName = "commandBarDropDownList1";
       this.cmb_text.DropDownAnimationEnabled = true;
       this.cmb_text.DropDownHeight = 208;
-      radListDataItem1.Text = "ListItem 1";
-      radListDataItem2.Text = "ListItem 2";
-      radListDataItem3.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem1);
-      this.cmb_text.Items.Add(radListDataItem2);
-      this.cmb_text.Items.Add(radListDataItem3);
+      radListDataItem4.Text = "ListItem 1";
+      radListDataItem5.Text = "ListItem 2";
+      radListDataItem6.Text = "ListItem 3";
+      this.cmb_text.Items.Add(radListDataItem4);
+      this.cmb_text.Items.Add(radListDataItem5);
+      this.cmb_text.Items.Add(radListDataItem6);
       this.cmb_text.MaxDropDownItems = 0;
       this.cmb_text.MinSize = new System.Drawing.Size(391, 94);
       this.cmb_text.Name = "cmb_text";
@@ -133,6 +135,16 @@
       this.btn_export.Name = "btn_export";
       this.btn_export.Text = "Exportieren";
       this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+      // 
+      // btn_screenFix
+      // 
+      this.btn_screenFix.DisplayName = "commandBarButton1";
+      this.btn_screenFix.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.computer_3_add;
+      this.btn_screenFix.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btn_screenFix.Name = "btn_screenFix";
+      this.btn_screenFix.StretchVertically = false;
+      this.btn_screenFix.Text = "Screen-Fix";
+      this.btn_screenFix.Click += new System.EventHandler(this.btn_screenFix_Click);
       // 
       // elementHost1
       // 
@@ -285,5 +297,6 @@
     private Telerik.WinControls.UI.RadButton btn_submit;
     private Telerik.WinControls.UI.RadButton btn_submit_doppelform;
         private Telerik.WinControls.UI.RadScrollablePanel panel_controls;
+        private Telerik.WinControls.UI.CommandBarButton btn_screenFix;
     }
 }

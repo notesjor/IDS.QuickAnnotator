@@ -70,7 +70,7 @@ namespace IDS.QuickAnnotator.Client.Forms
       #endregion
 
       #region STEPS
-      foreach(var step in StepModel.Steps.Reverse())
+      foreach (var step in StepModel.Steps.Reverse())
       {
         step.Control.Dock = DockStyle.Top;
         step.StateSet(false);
@@ -130,7 +130,7 @@ namespace IDS.QuickAnnotator.Client.Forms
 
       StepModel.HighlightSet(last.Annotation);
     }
-    
+
     private void btn_save_Click(object sender, EventArgs e)
     {
       if (QuickAnnotatorApi.SetDocumentCompletion(cmb_text.Items[cmb_text.SelectedIndex].Text))
@@ -165,7 +165,7 @@ namespace IDS.QuickAnnotator.Client.Forms
 
     private void btn_submit_Click(object sender, EventArgs e)
     {
-      if(_editorIndexTo == -1)
+      if (_editorIndexTo == -1)
         return;
 
       _anno.Annotate(new DocumentChange
@@ -198,7 +198,7 @@ namespace IDS.QuickAnnotator.Client.Forms
         _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
     }
-    
+
     private void btn_submit_doppelform_Click(object sender, EventArgs e)
     {
       var from = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom;
@@ -220,6 +220,20 @@ namespace IDS.QuickAnnotator.Client.Forms
       });
 
       _editor.Annotations = _anno.EditorAnnotations;
+    }
+
+    private void btn_screenFix_Click(object sender, EventArgs e)
+    {
+      foreach (Control c in panel_controls.PanelContainer.Controls)
+      {
+        if (!(c is StepControl step)) 
+          continue;
+        
+        var nsize = step.Size.Height + 5;
+        
+        step.MaximumSize = step.MinimumSize = new Size(0, nsize);
+        step.Size = new Size(step.Size.Width, nsize);
+      }
     }
   }
 }
