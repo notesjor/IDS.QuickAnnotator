@@ -73,7 +73,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       
       Steps = new[]
       {
-        step_lk, step_generisches_pronomen, step_notwendigkeit_gendern, step_generisches_mask, step_generisches_fem,
+        step_lk, step_generisches_pronomen, step_generisches_mask, step_generisches_fem, step_notwendigkeit_gendern, 
         step_gesab_substantiv, step_ref_persoGroup, step_bereits_moviert, step_genus_sexus, step_ges_kontext,
         step_geschlecht
       };

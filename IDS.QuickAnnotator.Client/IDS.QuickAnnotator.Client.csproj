@@ -31,7 +31,7 @@
     <SuiteName>Lexik</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -58,10 +58,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D968577AC8929A9F9E950D23574F1731176CD1BC</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A2A23C5080BB818AAAA54B8965CA5A49896E333E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>IDS.QuickAnnotator.Client_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>2022.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -71,6 +71,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>ids.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestTimestampUrl>http://timestamp.sectigo.com</ManifestTimestampUrl>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -262,6 +265,7 @@
     <EmbeddedResource Include="Controls\StepControl.resx">
       <DependentUpon>StepControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="2022.pfx" />
     <None Include="IDS.QuickAnnotator.Client_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
