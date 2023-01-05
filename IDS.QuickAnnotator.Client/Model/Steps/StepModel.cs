@@ -70,10 +70,10 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Name = "Welches Geschlecht ist aus Kontext erkennbar?",
         PossibleValues = new[] { "male", "female", "none", "group" }
       };
-      
+
       Steps = new[]
       {
-        step_lk, step_generisches_pronomen, step_generisches_mask, step_generisches_fem, step_notwendigkeit_gendern, 
+        step_lk, step_generisches_pronomen, step_generisches_mask, step_generisches_fem, step_notwendigkeit_gendern,
         step_gesab_substantiv, step_ref_persoGroup, step_bereits_moviert, step_genus_sexus, step_ges_kontext,
         step_geschlecht
       };
@@ -119,7 +119,9 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         new StepRule
           { Parent = new[] { step_ges_kontext }, ValidSimpleValue = "true", Children = new[] { step_geschlecht } },
         new StepRule
-          { Parent = new[] { step_geschlecht }, ValidSimpleValue = "true", Children = new[] { step_geschlecht } }
+          { Parent = new[] { step_geschlecht }, ValidSimpleValue = "true", Children = new[] { step_geschlecht } },
+        new StepRule
+          { Parent = new[] { step_genus_sexus }, ValidSimpleValue = "true", Children = new[] { step_ges_kontext, step_geschlecht } }
       };
       #endregion
     }
@@ -144,7 +146,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
             child.StateSet(true);
     }
 
-    public static Dictionary<string, object> GetAnnotation() 
+    public static Dictionary<string, object> GetAnnotation()
       => Steps.ToDictionary<Step, string, object>(step => step.Name, step => step.Value);
 
     public static bool IsDeleteState() => Steps.All(step => step.Value == "");
