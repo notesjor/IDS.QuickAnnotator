@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>C:\Users\Jan\Desktop\gender\15 C:\Users\Jan\Desktop\gender\15.tsv</StartArguments>
-    <StartWorkingDirectory>C:\Users\Jan\Desktop\gender\</StartWorkingDirectory>
+    <StartArguments>C:\Users\Jan\Desktop\data\16 C:\Users\Jan\Desktop\data\16.tsv</StartArguments>
+    <StartWorkingDirectory>C:\Users\Jan\Desktop\data\16\</StartWorkingDirectory>
   </PropertyGroup>
 </Project>
