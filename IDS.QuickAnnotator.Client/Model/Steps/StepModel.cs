@@ -20,6 +20,16 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         PossibleValues = new[] { "1", "2", "3", "SIM" },
         AlwayOn = true
       };
+      var step_numerus_plural = new Step
+      {
+        Name = "Plural? - Nein = Singular",
+        PossibleValues = new[] { "true", "false" }
+      };
+      var step_artikel_bestimmt = new Step
+      {
+        Name = "Bestimmter Artikel? - Nein = unbestimmter Artikel",
+        PossibleValues = new[] { "true", "false" }
+      };
       var step_generisches_pronomen = new Step
       {
         Name = "Generisches Pronomen?",
@@ -73,7 +83,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
 
       Steps = new[]
       {
-        step_lk, step_generisches_pronomen, step_generisches_mask, step_generisches_fem, step_notwendigkeit_gendern,
+        step_lk, step_numerus_plural, step_artikel_bestimmt, step_generisches_pronomen, step_generisches_mask, step_generisches_fem, step_notwendigkeit_gendern,
         step_gesab_substantiv, step_ref_persoGroup, step_bereits_moviert, step_genus_sexus, step_ges_kontext,
         step_geschlecht
       };
@@ -98,7 +108,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
           { Parent = new[] { step_lk }, ValidSimpleValue = "3", Children = new[] { step_notwendigkeit_gendern } },
         new StepRule
         {
-          Parent = new[] { step_lk }, ValidSimpleValue = "1", Children = new[] { step_generisches_mask, step_generisches_fem }
+          Parent = new[] { step_lk }, ValidSimpleValue = "1", Children = new[] { step_generisches_mask, step_generisches_fem, step_numerus_plural, step_artikel_bestimmt }
         },
         new StepRule
         {
