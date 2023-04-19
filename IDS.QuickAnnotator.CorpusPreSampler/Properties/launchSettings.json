@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IDS.QuickAnnotator.CorpusPreSampler": {
+      "commandName": "Project",
+      "commandLineArgs": "dpa19.cec6.drm"
+    }
+  }
+}
