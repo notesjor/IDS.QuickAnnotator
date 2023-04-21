@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFRES.DotNet5", "..\..\..\.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.CorpusPreSampler", "..\IDS.QuickAnnotator.CorpusPreSampler\IDS.QuickAnnotator.CorpusPreSampler.csproj", "{C4B5C120-3136-4308-A2E9-B1AAC8DFD0DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Client.Local", "..\IDS.QuickAnnotator.Client.Local\IDS.QuickAnnotator.Client.Local.csproj", "{F2B9C75D-7163-483E-A7D7-714AC3580A21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{C4B5C120-3136-4308-A2E9-B1AAC8DFD0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4B5C120-3136-4308-A2E9-B1AAC8DFD0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4B5C120-3136-4308-A2E9-B1AAC8DFD0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{C600FCAD-8FA5-4A7F-96F9-5A9F3FEBED5A} = {D53EA757-1F25-41C8-9B42-98A9FC9773BE}
 		{A01A7020-70BD-45DA-BAC0-A206E54C004A} = {3D806B52-954A-4329-BDBE-64983D839BE3}
 		{C4B5C120-3136-4308-A2E9-B1AAC8DFD0DA} = {27150B9A-2882-44D8-A366-BFAA0DB63EBD}
+		{F2B9C75D-7163-483E-A7D7-714AC3580A21} = {47204E0C-997C-49FB-8EA6-A976967E1C2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {634AD13F-6E6A-4CB5-8614-A6E4E0E1D7F8}

@@ -10,6 +10,7 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
   {
     private readonly UserModel _user;
     private string _documentId;
+    private bool[] _editorAnnotation;
 
     public AnnotationModelOnline(UserModel user)
     {
@@ -17,7 +18,7 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
     }
 
     public string[] EditorDocument { get; set; }
-    public bool[] EditorAnnotations { get; set; }
+    public bool[] EditorAnnotations { get => _editorAnnotation; }
 
     public string SelectDocument
     {
@@ -39,9 +40,8 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
         return;
 
       // RESET
-      var history = new bool[EditorDocument.Length];
-      history.Initialize();
-      EditorAnnotations = history;
+      _editorAnnotation = new bool[EditorDocument.Length];
+      _editorAnnotation.Initialize();
 
       // INIT
       var values = new string[EditorDocument.Length];
@@ -68,9 +68,7 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
       }
 
       for (var i = 0; i < values.Length; i++)
-        history[i] = !string.IsNullOrWhiteSpace(values[i]);
-
-      EditorAnnotations = history;
+        _editorAnnotation[i] = !string.IsNullOrWhiteSpace(values[i]);
     }
     
     public DocumentChange GetLastAnnotationState(int index)

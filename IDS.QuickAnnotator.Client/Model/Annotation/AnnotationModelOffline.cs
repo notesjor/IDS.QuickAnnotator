@@ -21,12 +21,36 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
     public string[] EditorDocument
     {
       get => JsonConvert.DeserializeObject<string[]>(File.ReadAllText(Directory.GetFiles(Path.Combine(_basePath, "docs"), $"{SelectDocument}.json", SearchOption.AllDirectories).First(), Encoding.UTF8));
-      set{}
+      set { }
     }
     public string SelectDocument { get; set; }
 
     public IEnumerable<string> AvailableDocumentIds => Directory.GetFiles(Path.Combine(_basePath, "docs"), "*.json", SearchOption.AllDirectories)
                                                                 .Select(Path.GetFileNameWithoutExtension);
+
+    public bool[] EditorAnnotations
+    {
+      get
+      {
+        var res = new bool[EditorDocument.Length];
+        res.Initialize();
+
+        foreach (var change in GetDocumentHistory(true))
+        {
+          var val = change.Annotation.Count == 0 ? false : true;
+          for(var i = change.From; i < change.To; i++)
+            res[i] = val;
+        }
+
+        return res;
+      }
+    }
+
+    public void Annotate(DocumentChange change)
+    {
+      var fn = (DateTime.Now).ToString("yyyy-MM-dd_hh-mm-ss") + ".json";
+      File.WriteAllText(Path.Combine(_basePath, "history", SelectDocument, fn), JsonConvert.SerializeObject(change), Encoding.UTF8);
+    }
 
     public DocumentChange[] GetDocumentHistory(bool onlyMyAnnotations)
     {
@@ -45,12 +69,17 @@ namespace IDS.QuickAnnotator.Client.Model.Annotation
           }
         }
       }
-      catch(Exception ex)
+      catch (Exception ex)
       {
         Console.WriteLine(ex.Message);
       }
 
       return res.ToArray();
+    }
+
+    public DocumentChange GetLastAnnotationState(int index)
+    {
+      return GetDocumentHistory(true).Where(x => x.From <= index && x.To > index).OrderByDescending(x => x.Timestamp).FirstOrDefault();
     }
   }
 }
