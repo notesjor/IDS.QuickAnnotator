@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.CorpusPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Client.Local", "..\IDS.QuickAnnotator.Client.Local\IDS.QuickAnnotator.Client.Local.csproj", "{F2B9C75D-7163-483E-A7D7-714AC3580A21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.QafSampler", "..\IDS.QuickAnnotator.QafSampler\IDS.QuickAnnotator.QafSampler.csproj", "{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2B9C75D-7163-483E-A7D7-714AC3580A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +118,7 @@ Global
 		{A01A7020-70BD-45DA-BAC0-A206E54C004A} = {3D806B52-954A-4329-BDBE-64983D839BE3}
 		{C4B5C120-3136-4308-A2E9-B1AAC8DFD0DA} = {27150B9A-2882-44D8-A366-BFAA0DB63EBD}
 		{F2B9C75D-7163-483E-A7D7-714AC3580A21} = {47204E0C-997C-49FB-8EA6-A976967E1C2D}
+		{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3} = {27150B9A-2882-44D8-A366-BFAA0DB63EBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {634AD13F-6E6A-4CB5-8614-A6E4E0E1D7F8}
