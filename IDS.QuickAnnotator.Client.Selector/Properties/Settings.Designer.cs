@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IDS.QuickAnnotator.Client.Local.Properties {
+namespace IDS.QuickAnnotator.Client.Selector.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
