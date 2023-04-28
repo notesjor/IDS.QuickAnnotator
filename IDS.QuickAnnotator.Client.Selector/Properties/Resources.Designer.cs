@@ -63,6 +63,16 @@ namespace IDS.QuickAnnotator.Client.Selector.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap command_undo {
+            get {
+                object obj = ResourceManager.GetObject("command-undo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_export {
             get {
                 object obj = ResourceManager.GetObject("database-export", resourceCulture);

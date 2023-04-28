@@ -16,7 +16,11 @@ namespace IDS.QuickAnnotator.Client.Selector
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form1());
+
+      var form = new MainForm();
+      Application.Run();
+
+      form.GetModel().Save();
     }
   }
 }
