@@ -28,16 +28,26 @@
     /// </summary>
     private void InitializeComponent()
     {
+      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
       this.radCommandBar1 = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
       this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
-      this.lbl_info = new Telerik.WinControls.UI.CommandBarLabel();
+      this.cmb_group = new Telerik.WinControls.UI.CommandBarDropDownList();
+      this.lbl_texts = new Telerik.WinControls.UI.CommandBarLabel();
+      this.cnt_texts = new Telerik.WinControls.UI.CommandBarTextBox();
+      this.info_texts = new Telerik.WinControls.UI.CommandBarLabel();
+      this.lbl_tokens = new Telerik.WinControls.UI.CommandBarLabel();
+      this.cnt_tokens = new Telerik.WinControls.UI.CommandBarTextBox();
+      this.info_tokens = new Telerik.WinControls.UI.CommandBarLabel();
       this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
       this.commandBarSeparator3 = new Telerik.WinControls.UI.CommandBarSeparator();
-      this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.commandBarSeparator4 = new Telerik.WinControls.UI.CommandBarSeparator();
+      this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.btn_load = new Telerik.WinControls.UI.CommandBarButton();
+      this.btn_loadCorpus = new Telerik.WinControls.UI.CommandBarButton();
       this.btn_abort = new Telerik.WinControls.UI.CommandBarButton();
       this.btn_ok = new Telerik.WinControls.UI.CommandBarButton();
       this.btn_undone = new Telerik.WinControls.UI.CommandBarButton();
@@ -67,8 +77,15 @@
       this.commandBarStripElement1.DisplayName = "commandBarStripElement1";
       this.commandBarStripElement1.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
             this.btn_load,
+            this.btn_loadCorpus,
             this.commandBarSeparator1,
-            this.lbl_info,
+            this.cmb_group,
+            this.lbl_texts,
+            this.cnt_texts,
+            this.info_texts,
+            this.lbl_tokens,
+            this.cnt_tokens,
+            this.info_tokens,
             this.commandBarSeparator2,
             this.btn_abort,
             this.commandBarSeparator3,
@@ -83,11 +100,68 @@
       this.commandBarSeparator1.Name = "commandBarSeparator1";
       this.commandBarSeparator1.VisibleInOverflowMenu = false;
       // 
-      // lbl_info
+      // cmb_group
       // 
-      this.lbl_info.DisplayName = "commandBarLabel1";
-      this.lbl_info.Name = "lbl_info";
-      this.lbl_info.Text = "commandBarLabel1";
+      this.cmb_group.DisplayName = "commandBarDropDownList1";
+      this.cmb_group.DropDownAnimationEnabled = true;
+      radListDataItem1.Text = "ListItem 1";
+      radListDataItem2.Text = "ListItem 2";
+      radListDataItem3.Text = "ListItem 3";
+      this.cmb_group.Items.Add(radListDataItem1);
+      this.cmb_group.Items.Add(radListDataItem2);
+      this.cmb_group.Items.Add(radListDataItem3);
+      this.cmb_group.MaxDropDownItems = 0;
+      this.cmb_group.MinSize = new System.Drawing.Size(200, 48);
+      this.cmb_group.Name = "cmb_group";
+      this.cmb_group.Text = "";
+      this.cmb_group.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+      this.cmb_group.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+      // 
+      // lbl_texts
+      // 
+      this.lbl_texts.DisplayName = "commandBarLabel1";
+      this.lbl_texts.Name = "lbl_texts";
+      this.lbl_texts.Text = "Texte:";
+      this.lbl_texts.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+      // 
+      // cnt_texts
+      // 
+      this.cnt_texts.DisplayName = "commandBarTextBox1";
+      this.cnt_texts.Name = "cnt_texts";
+      this.cnt_texts.Text = "0";
+      this.cnt_texts.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+      this.cnt_texts.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cnt_texts_KeyUp);
+      ((Telerik.WinControls.UI.RadTextBoxElement)(this.cnt_texts.GetChildAt(0))).Text = "0";
+      // 
+      // info_texts
+      // 
+      this.info_texts.DisplayName = "commandBarLabel1";
+      this.info_texts.Name = "info_texts";
+      this.info_texts.Text = "";
+      this.info_texts.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+      // 
+      // lbl_tokens
+      // 
+      this.lbl_tokens.DisplayName = "commandBarLabel1";
+      this.lbl_tokens.Name = "lbl_tokens";
+      this.lbl_tokens.Text = "Token:";
+      this.lbl_tokens.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+      // 
+      // cnt_tokens
+      // 
+      this.cnt_tokens.DisplayName = "commandBarTextBox2";
+      this.cnt_tokens.Name = "cnt_tokens";
+      this.cnt_tokens.Text = "0";
+      this.cnt_tokens.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+      this.cnt_tokens.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cnt_tokens_KeyUp);
+      ((Telerik.WinControls.UI.RadTextBoxElement)(this.cnt_tokens.GetChildAt(0))).Text = "0";
+      // 
+      // info_tokens
+      // 
+      this.info_tokens.DisplayName = "commandBarLabel2";
+      this.info_tokens.Name = "info_tokens";
+      this.info_tokens.Text = "";
+      this.info_tokens.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
       // 
       // commandBarSeparator2
       // 
@@ -101,6 +175,12 @@
       this.commandBarSeparator3.Name = "commandBarSeparator3";
       this.commandBarSeparator3.VisibleInOverflowMenu = false;
       // 
+      // commandBarSeparator4
+      // 
+      this.commandBarSeparator4.DisplayName = "commandBarSeparator4";
+      this.commandBarSeparator4.Name = "commandBarSeparator4";
+      this.commandBarSeparator4.VisibleInOverflowMenu = false;
+      // 
       // elementHost1
       // 
       this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -111,13 +191,6 @@
       this.elementHost1.Text = "elementHost1";
       this.elementHost1.Child = null;
       // 
-      // commandBarSeparator4
-      // 
-      this.commandBarSeparator4.DisplayName = "commandBarSeparator4";
-      this.commandBarSeparator4.Name = "commandBarSeparator4";
-      this.commandBarSeparator4.Text = "";
-      this.commandBarSeparator4.VisibleInOverflowMenu = false;
-      // 
       // btn_load
       // 
       this.btn_load.DisplayName = "commandBarButton1";
@@ -125,6 +198,14 @@
       this.btn_load.Name = "btn_load";
       this.btn_load.Text = "Projekt laden";
       this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+      // 
+      // btn_loadCorpus
+      // 
+      this.btn_loadCorpus.DisplayName = "commandBarButton1";
+      this.btn_loadCorpus.Image = global::IDS.QuickAnnotator.Client.Selector.Properties.Resources.folder_open;
+      this.btn_loadCorpus.Name = "btn_loadCorpus";
+      this.btn_loadCorpus.Text = "Korpus";
+      this.btn_loadCorpus.Click += new System.EventHandler(this.btn_loadCorpus_Click);
       // 
       // btn_abort
       // 
@@ -148,6 +229,7 @@
       this.btn_undone.Image = global::IDS.QuickAnnotator.Client.Selector.Properties.Resources.command_undo;
       this.btn_undone.Name = "btn_undone";
       this.btn_undone.Text = "Zurücknehmen";
+      this.btn_undone.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
       this.btn_undone.Click += new System.EventHandler(this.btn_undone_Click);
       // 
       // MainForm
@@ -158,7 +240,7 @@
       this.Controls.Add(this.elementHost1);
       this.Controls.Add(this.radCommandBar1);
       this.Name = "MainForm";
-      this.Text = "Form1";
+      this.Text = "QuickSelector";
       ((System.ComponentModel.ISupportInitialize)(this.radCommandBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);
@@ -173,7 +255,7 @@
     private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement1;
     private Telerik.WinControls.UI.CommandBarButton btn_load;
     private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
-    private Telerik.WinControls.UI.CommandBarLabel lbl_info;
+    private Telerik.WinControls.UI.CommandBarLabel lbl_texts;
     private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator2;
     private Telerik.WinControls.UI.CommandBarButton btn_abort;
     private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator3;
@@ -181,6 +263,13 @@
     private System.Windows.Forms.Integration.ElementHost elementHost1;
     private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator4;
     private Telerik.WinControls.UI.CommandBarButton btn_undone;
+    private Telerik.WinControls.UI.CommandBarTextBox cnt_texts;
+    private Telerik.WinControls.UI.CommandBarLabel lbl_tokens;
+    private Telerik.WinControls.UI.CommandBarTextBox cnt_tokens;
+    private Telerik.WinControls.UI.CommandBarDropDownList cmb_group;
+    private Telerik.WinControls.UI.CommandBarLabel info_texts;
+    private Telerik.WinControls.UI.CommandBarLabel info_tokens;
+    private Telerik.WinControls.UI.CommandBarButton btn_loadCorpus;
   }
 }
 

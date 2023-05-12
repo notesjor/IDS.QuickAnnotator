@@ -20,7 +20,7 @@ namespace IDS.QuickAnnotator.Client.Selector
       var form = new MainForm();
       Application.Run();
 
-      form.GetModel().Save();
+      //form.GetModel().Save();
     }
   }
 }

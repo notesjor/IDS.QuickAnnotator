@@ -1,7 +1,10 @@
-﻿using CorpusExplorer.Sdk.Ecosystem;
+﻿using CorpusExplorer.Sdk.Blocks;
+using CorpusExplorer.Sdk.Ecosystem;
 using CorpusExplorer.Sdk.Model;
 using CorpusExplorer.Sdk.Model.Adapter.Corpus;
+using CorpusExplorer.Sdk.Model.Cache;
 using CorpusExplorer.Sdk.Model.Extension;
+using CorpusExplorer.Sdk.Utils.DocumentProcessing.Cleanup;
 using CorpusExplorer.Sdk.Utils.Filter.Queries;
 using System.Text;
 
@@ -13,52 +16,103 @@ namespace IDS.QuickAnnotator.QafSampler
 
     static void Main(string[] args)
     {
-      CorpusExplorerEcosystem.InitializeMinimal();
+      var project = CorpusExplorerEcosystem.InitializeMinimal(new CacheStrategyDisableCaching());
 
       var qafFile = args[0];
       var QafData = GetQafData(qafFile);
 
       var basePath = Path.GetDirectoryName(qafFile);
+      var outputPath = Path.Combine(basePath, "output");
+      if (!Directory.Exists(outputPath))
+        Directory.CreateDirectory(outputPath);
 
-      var files = Directory.GetFiles(basePath, "*.cec6", SearchOption.TopDirectoryOnly);
-      Parallel.ForEach(files, new ParallelOptions { MaxDegreeOfParallelism = 10 }, file =>
+      var corpora = GetCorpusInfo(basePath);
+      foreach (var corpus in corpora)
       {
-        var corpus = CorpusAdapterWriteDirect.Create(file);
-        var select = corpus.ToSelection();
+        Console.WriteLine($"corpus: {corpus.Key}");
+        var loadLock = new object();
 
-        var docs = new List<Guid>();
-
-        foreach (var q in QafData)
+        Parallel.ForEach(corpus.Value, year =>
         {
-          foreach (var x in q.Key)
+          var file = Path.Combine(basePath, $"{corpus.Key}{year}.cec6");
+          Console.WriteLine($"load: {file}");
+          var cec6 = CorpusAdapterWriteDirect.Create(file);
+          lock (loadLock)
+            project.Add(cec6);
+          Console.WriteLine($"load: {file} - ok!");
+        });
+
+        var all = project.SelectAll;
+
+        foreach (var qaf in QafData)
+        {
+          var tmp = all.CreateTemporary(new[]
           {
-            try
+            new FilterQuerySingleLayerAnyMatch
             {
-              var tmp = select.CreateTemporary(new[] {
-                new FilterQuerySingleLayerAnyMatch {
-                  LayerDisplayname = "Wort",
-                  LayerQueries = new[] { x }
-                }
-              });
-
-              if (tmp == null || tmp.CountDocuments < 1)
-                continue;
-
-              docs.AddRange(GetSample(tmp, q.Value * 2));
+              LayerDisplayname = "Wort",
+              LayerQueries = qaf.Item1
             }
-            catch 
-            {
-              // ignore
-            }
+          });
+          if (tmp == null || tmp.CountDocuments < 1)
+            continue;
+
+          var docs = GetSample(tmp, qaf.Item4); // extra docs
+          tmp = Remove(tmp, docs);
+
+          var cntToken = qaf.Item2;
+          var cntDoc = qaf.Item3;
+
+          while (cntToken > 0 && cntDoc > 0)
+          {
+            var guid = GetSample(tmp, 1);
+            cntDoc--;
+
+            var dSel = tmp.CreateTemporary(guid);
+            var block = dSel.CreateBlock<Frequency1LayerBlock>();
+            block.LayerDisplayname = "Wort";
+            block.Calculate();
+            cntToken -= (int)qaf.Item1.Sum(x => block.Frequency.ContainsKey(x) ? block.Frequency[x] : 0);
+
+            docs.AddRange(guid);
+
+            tmp = Remove(tmp, guid);
           }
+
+          var output = all.CreateTemporary(docs);
+          var outputFile = Path.Combine(outputPath, $"{corpus.Key}-{qaf.Item1.First()}.cec6");
+          output.ToCorpus().Save(outputFile, false);
         }
 
-        var output = select.CreateTemporary(docs);
-        var outputFile = file.Replace(".cec6", ".qac.cec6");
-        output.ToCorpus().Save(outputFile, false);
+        project.Clear();
+      }
+    }
 
-        File.Move(outputFile, outputFile.Replace(".qac.cec6", ".qac"));
-      });
+    private static Selection Remove(Selection tmp, List<Guid> remove)
+    {
+      var res = new HashSet<Guid>(tmp.DocumentGuids);
+      foreach (var x in remove)
+        res.Remove(x);
+      return tmp.CreateTemporary(res);
+    }
+
+    private static Dictionary<string, List<string>> GetCorpusInfo(string basePath)
+    {
+      var files = Directory.GetFiles(basePath, "*.cec6", SearchOption.TopDirectoryOnly);
+
+      var res = new Dictionary<string, List<string>>();
+      foreach (var file in files)
+      {
+        var name = Path.GetFileNameWithoutExtension(file);
+        var year = name.Substring(name.Length - 2);
+        var sigle = name.Substring(0, name.Length - 2);
+
+        if (!res.ContainsKey(sigle))
+          res.Add(sigle, new List<string>());
+
+        res[sigle].Add(year);
+      }
+      return res;
     }
 
     private static List<Guid> GetSample(Selection tmp, int cnt)
@@ -79,25 +133,33 @@ namespace IDS.QuickAnnotator.QafSampler
       {
         var idx = _random.Next(0, tDocs.Count);
         res.Add(tDocs[idx]);
+        if(res.Count >= cnt)
+          break;
         tDocs.RemoveAt(idx);
       }
 
       return res;
     }
 
-    private static List<KeyValuePair<List<string>, int>> GetQafData(string qafFile)
+    private static List<Tuple<List<string>, int, int, int>> GetQafData(string qafFile)
     {
-      var res = new List<KeyValuePair<List<string>, int>>();
+      var res = new List<Tuple<List<string>, int, int, int>>();
 
       var lines = File.ReadAllLines(qafFile, Encoding.UTF8);
       foreach (var line in lines)
       {
         var split = line.Split('\t').ToList();
-        if (split.Count < 2)
+        if (split.Count < 4)
           continue;
-        var count = int.Parse(split.Last());
+
+        var extra = int.Parse(split.Last());
         split.RemoveAt(split.Count - 1);
-        res.Add(new KeyValuePair<List<string>, int>(split, count));
+        var documents = int.Parse(split.Last());
+        split.RemoveAt(split.Count - 1);
+        var tokens = int.Parse(split.Last());
+        split.RemoveAt(split.Count - 1);
+
+        res.Add(new Tuple<List<string>, int, int, int>(split, tokens, documents, extra));
       }
 
       return res;
