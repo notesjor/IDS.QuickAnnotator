@@ -32,6 +32,7 @@ namespace IDS.QuickAnnotator.Client.Selector
     private Selection _select;
     private List<Guid> _guids;
     private Guid _current;
+    private HashSet<string> _highlight;
 
     public MainForm()
     {
@@ -71,7 +72,7 @@ namespace IDS.QuickAnnotator.Client.Selector
         split.RemoveAt(split.Count - 1);
         split.RemoveAt(split.Count - 1);
 
-        highlight.AddRange(split);
+        highlight.AddRange(split.Select(x => x.Trim()));
       }
 
       _editor.Highlight = new HashSet<string>(highlight);
