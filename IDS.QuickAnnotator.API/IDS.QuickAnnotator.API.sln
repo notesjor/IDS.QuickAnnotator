@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.QafSampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Client.Selector", "..\IDS.QuickAnnotator.Client.Selector\IDS.QuickAnnotator.Client.Selector.csproj", "{66BE23DE-B7EF-4062-9C50-F74F7684EAE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.KorAP.Cec6Toolbox.ConvertEveryDocumentToJson", "..\..\IDS.KorAP.Cec6Toolbox\IDS.KorAP.Cec6Toolbox.ConvertEveryDocumentToJson\IDS.KorAP.Cec6Toolbox.ConvertEveryDocumentToJson.csproj", "{1C199635-BA2D-48ED-BC3D-0AD3FAA51450}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.KorAP.Cec6Toolbox.ConvertEveryDocumentToJson", "..\..\IDS.KorAP.Cec6Toolbox\IDS.KorAP.Cec6Toolbox.ConvertEveryDocumentToJson\IDS.KorAP.Cec6Toolbox.ConvertEveryDocumentToJson.csproj", "{1C199635-BA2D-48ED-BC3D-0AD3FAA51450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy", "..\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy.csproj", "{A829635A-BD54-4092-911F-6C54DBE96AE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{1C199635-BA2D-48ED-BC3D-0AD3FAA51450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C199635-BA2D-48ED-BC3D-0AD3FAA51450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C199635-BA2D-48ED-BC3D-0AD3FAA51450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A829635A-BD54-4092-911F-6C54DBE96AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A829635A-BD54-4092-911F-6C54DBE96AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A829635A-BD54-4092-911F-6C54DBE96AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A829635A-BD54-4092-911F-6C54DBE96AE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +132,7 @@ Global
 		{B9C5E2F2-2A8F-493B-8D0F-AE2496CF93E3} = {27150B9A-2882-44D8-A366-BFAA0DB63EBD}
 		{66BE23DE-B7EF-4062-9C50-F74F7684EAE2} = {47204E0C-997C-49FB-8EA6-A976967E1C2D}
 		{1C199635-BA2D-48ED-BC3D-0AD3FAA51450} = {27150B9A-2882-44D8-A366-BFAA0DB63EBD}
+		{A829635A-BD54-4092-911F-6C54DBE96AE7} = {C600FCAD-8FA5-4A7F-96F9-5A9F3FEBED5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {634AD13F-6E6A-4CB5-8614-A6E4E0E1D7F8}
