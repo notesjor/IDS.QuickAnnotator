@@ -4,6 +4,7 @@ using CorpusExplorer.Sdk.Model.Adapter.Corpus;
 using CorpusExplorer.Sdk.Model.Extension;
 using CorpusExplorer.Sdk.Utils.Filter;
 using CorpusExplorer.Sdk.Utils.Filter.Queries;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -102,16 +103,17 @@ namespace IDS.QuickAnnotator.Tool4.FindMatchSentences
               if (ssel.Value.Count == 0)
                 continue;
 
-              var first = ssel.Value.Min();
-              var last = ssel.Value.Max();
               var sigle = select.GetDocumentMetadata(dsel.Key, "Sigle", "");
-
               var sent = select.GetReadableDocumentSnippet(dsel.Key, "Wort", ssel.Key, ssel.Key).ReduceDocumentToStreamDocument().ToArray();
-              var prefix = sent.Take(first).ToArray();
-              var match = sent.Skip(first).Take(last - first + 1).ToArray();
-              var suffix = last + 1 >= sent.Length ? new string[0] : sent.Skip(last + 1).ToArray();
 
-              writer.WriteLine($"{dsel.Key}\t{sigle}\t{ssel.Key}\t{Stringfy(prefix)}\t{Stringfy(match)}\t{Stringfy(suffix)}");
+              foreach (var mark in ssel.Value)
+              {                
+                var prefix = sent.Take(mark).ToArray();
+                var match = sent.Skip(mark).Take(1).ToArray();
+                var suffix = sent.Skip(mark + 1).ToArray();
+
+                writer.WriteLine($"{dsel.Key}\t{sigle}\t{ssel.Key}\t{Stringfy(prefix)}\t{Stringfy(match)}\t{Stringfy(suffix)}");
+              }
             }
       }
 
