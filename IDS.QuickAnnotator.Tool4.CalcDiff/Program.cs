@@ -9,7 +9,7 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     static void Main(string[] args)
     {
       var model = new AnnotationModelOffline(args[0]);
-
+      
       var agreed = new ExporterCalculateMergedAgreedBothResults();
       agreed.Export(model, args[1].Replace(".tsv", "_calc_merged_agreed.tsv"));
 
