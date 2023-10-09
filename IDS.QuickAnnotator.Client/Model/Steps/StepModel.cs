@@ -38,11 +38,13 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         PossibleValues = new[] { "true", "false" }
       };
       */
+      /*
       var step_notwendigkeit_gendern = new Step
       {
         Name = "Notwendigkeit zu Gendern?",
         PossibleValues = new[] { "true", "false" }
       };
+      */
       var step_generisches_mask = new Step
       {
         Name = "Generisches Maskulinum",
@@ -53,13 +55,11 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Name = "Generisches Femininum",
         PossibleValues = new[] { "true", "false" }
       };
-      /*
       var step_gesab_substantiv = new Step
       {
         Name = "Geschlechtsabstrahierendes Substantiv",
         PossibleValues = new[] { "true", "false" }
       };
-      */
       var step_ref_persoGroup = new Step
       {
         Name = "Referenz/Bezug auf konkrete Person / Personengruppe?",
@@ -67,7 +67,12 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       };
       var step_bereits_moviert = new Step
       {
-        Name = "Bereits gegendert/moviert?",
+        Name = "Moviert?",
+        PossibleValues = new[] { "true", "false" }
+      };
+      var step_bereits_gendert = new Step
+      {
+        Name = "Gegendert?",
         PossibleValues = new[] { "true", "false" }
       };
       /*
@@ -96,10 +101,11 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         //step_generisches_pronomen, 
         step_generisches_mask, 
         step_generisches_fem, 
-        step_notwendigkeit_gendern,
-        //step_gesab_substantiv, 
+        //step_notwendigkeit_gendern,
+        step_gesab_substantiv, 
         step_ref_persoGroup, 
         step_bereits_moviert, 
+        step_bereits_gendert,
         //step_genus_sexus, 
         step_ges_kontext,
         step_geschlecht
@@ -127,21 +133,24 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
             step_artikel_bestimmt
            }
         },
+        /*
         new StepRule
         {
           Parent = new[] { step_generisches_mask, step_generisches_fem },
           ValidComplexRule = p => p.Any(x => x.ValuePure == "true"),
           Children = new[] { step_notwendigkeit_gendern }
         },
+        */
         new StepRule
         {
           Parent = new[] { step_generisches_mask, step_generisches_fem },
           ValidComplexRule = p => p.Any(x => x.ValuePure == "false"),
           Children = new[]
           { 
-            // step_gesab_substantiv, 
+            step_gesab_substantiv, 
             step_ref_persoGroup,
             step_bereits_moviert, 
+            step_bereits_gendert,
             //step_genus_sexus 
             }
         },
