@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>IDS.QuickAnnotator.Tool4.ConvertToJournal</RootNamespace>
     <AssemblyName>IDS.QuickAnnotator.Tool4.ConvertToJournal</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,11 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BitCutStudios.CorpusExplorer">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\BitCutStudios.CorpusExplorer.dll</HintPath>
+    </Reference>
     <Reference Include="CorpusExplorer.Core">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Xml\bin\Debug\CorpusExplorer.Core.dll</HintPath>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Core.dll</HintPath>
     </Reference>
     <Reference Include="CorpusExplorer.Sdk">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

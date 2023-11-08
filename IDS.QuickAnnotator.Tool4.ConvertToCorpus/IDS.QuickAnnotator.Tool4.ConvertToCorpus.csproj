@@ -20,13 +20,13 @@
 
   <ItemGroup>
     <Reference Include="BitCutStudios.CorpusExplorer">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\BitCutStudios.CorpusExplorer.dll</HintPath>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\BitCutStudios.CorpusExplorer.dll</HintPath>
     </Reference>
     <Reference Include="CorpusExplorer.Sdk">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.dll</HintPath>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="CorpusExplorer.Sdk.Extern.Json">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.Extern.Json.dll</HintPath>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.Extern.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
 
