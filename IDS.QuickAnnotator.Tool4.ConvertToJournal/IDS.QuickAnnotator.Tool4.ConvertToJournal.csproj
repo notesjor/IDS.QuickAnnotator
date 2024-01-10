@@ -34,14 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BitCutStudios.CorpusExplorer">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\BitCutStudios.CorpusExplorer.dll</HintPath>
+    <Reference Include="BitCutStudios.CorpusExplorer, Version=2.2015.7.23, Culture=neutral, PublicKeyToken=6c9866eeb69c45e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\BitCutStudios.CorpusExplorer.dll</HintPath>
     </Reference>
-    <Reference Include="CorpusExplorer.Core">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Core.dll</HintPath>
+    <Reference Include="CorpusExplorer.Sdk, Version=2.2019.8.15, Culture=neutral, PublicKeyToken=6c9866eeb69c45e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="CorpusExplorer.Sdk">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
+    <Reference Include="CorpusExplorer.Sdk.Diagnostic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6c9866eeb69c45e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.Diagnostic.dll</HintPath>
+    </Reference>
+    <Reference Include="CorpusExplorer.Sdk.Extern.Json">
+      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.Extern.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

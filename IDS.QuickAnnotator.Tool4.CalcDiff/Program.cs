@@ -43,6 +43,9 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
       var crossSnippets = new ExporterCalculateCrossSnippetsResults();
       crossSnippets.Export(model, args[1].Replace(".tsv", "_crossSnippets.tsv"));
 
+      var onlyBy = new ExporterCalculateSingleAnnotatedDocuments();
+      onlyBy.Export(model, args[1].Replace(".tsv", ""));
+
       Console.WriteLine("!END!");
       Console.ReadLine();
     }
