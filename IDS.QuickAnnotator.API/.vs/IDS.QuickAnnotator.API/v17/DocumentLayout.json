@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44F6DA7F-6DAC-445C-9431-1DC8AB732180}|..\\IDS.QuickAnnotator.Tool4.AnnotatedBy\\IDS.QuickAnnotator.Tool4.AnnotatedBy.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.annotatedby\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A829635A-BD54-4092-911F-6C54DBE96AE7}|..\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.onlyannotatedby\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.AnnotatedBy\\Program.cs",
-              "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.AnnotatedBy\\Program.cs",
-              "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.AnnotatedBy\\Program.cs",
-              "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.AnnotatedBy\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAB4AAAA",
+              "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
+              "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
+              "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
+              "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-14T16:39:17.443Z",
+              "WhenOpened": "2024-02-21T09:27:58.052Z",
               "EditorCaption": ""
             }
           ]

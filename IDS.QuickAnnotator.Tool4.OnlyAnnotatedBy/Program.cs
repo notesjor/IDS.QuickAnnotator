@@ -8,36 +8,24 @@ namespace IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy
   {
     static void Main(string[] args)
     {
-      var dir = args[0];
-
-      var result = new Dictionary<string, List<string>>();
+      var dir = Path.Combine(args[0], "history");
+      var res = new Dictionary<string, HashSet<string>>();
 
       var subDirs = Directory.GetDirectories(dir);
       foreach (var subDir in subDirs)
       {
-        var names = new HashSet<string>();
+        var name = Path.GetFileName(subDir);
+        res.Add(name, new HashSet<string>());
+
         var files = Directory.GetFiles(subDir, "*.json");
         foreach (var file in files)
-        {
-          names.Add(JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(file, Encoding.UTF8)).UserName);
-          if (names.Count > 1)
-            break;
-        }
-
-        if (names.Count > 1)
-          continue;
-
-        var name = names.First();
-        if (!result.ContainsKey(name))
-          result[name] = new List<string>();
-        result[name].Add(subDir.Replace(dir, ""));
+          res[name].Add(JsonConvert.DeserializeObject<DocumentChange>(File.ReadAllText(file, Encoding.UTF8))?.UserName);
       }
 
-      using (var fs = new FileStream("output.tsv", FileMode.Create, FileAccess.Write))
-      using (var sw = new StreamWriter(fs, Encoding.UTF8))
-        foreach (var user in result)
-          foreach (var entry in user.Value)
-            sw.WriteLine($"{user.Key}\t{entry}");
+      var stb = new StringBuilder();
+      foreach (var (key, value) in res)
+        stb.AppendLine($"{key}\t{string.Join(", ", value.OrderBy(x => x))}");
+      File.WriteAllText(Path.Combine(args[0], "annotatedBy.txt"), stb.ToString(), Encoding.UTF8);
     }
   }
 }
