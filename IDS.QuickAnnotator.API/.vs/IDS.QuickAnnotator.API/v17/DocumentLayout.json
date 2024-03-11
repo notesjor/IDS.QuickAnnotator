@@ -3,6 +3,12 @@
   "WorkspaceRootPath": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{104314D6-69BC-4C4D-B2DF-474A7AED0BFE}|..\\IDS.QuickAnnotator.Tool4.DominicSchmitz\\IDS.QuickAnnotator.Tool4.DominicSchmitz.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.dominicschmitz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7CFC71C-BF6B-4ACC-9168-0C37453E71CA}|..\\IDS.QuickAnnotator.Client\\IDS.QuickAnnotator.Client.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.client\\model\\steps\\stepmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A829635A-BD54-4092-911F-6C54DBE96AE7}|..\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.onlyannotatedby\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -13,20 +19,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StepModel.cs",
+              "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Client\\Model\\Steps\\StepModel.cs",
+              "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Client\\Model\\Steps\\StepModel.cs",
+              "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Client\\Model\\Steps\\StepModel.cs",
+              "RelativeToolTip": "..\\IDS.QuickAnnotator.Client\\Model\\Steps\\StepModel.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAFAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T12:35:01.356Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.DominicSchmitz\\Program.cs",
+              "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.DominicSchmitz\\Program.cs",
+              "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.DominicSchmitz\\Program.cs",
+              "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.DominicSchmitz\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAqwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T12:12:21.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
               "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
               "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
               "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T09:27:58.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T09:27:58.052Z"
             }
           ]
         }
