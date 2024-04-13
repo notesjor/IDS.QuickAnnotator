@@ -59,21 +59,22 @@ namespace IDS.QuickAnnotator.Tool4.DominicSchmitz
 
         foreach (var dsel in corpus.DocumentGuids)
         {
+          var outputFile = dsel.ToString("N") + ".txt";
           var doc = layer_wort.GetReadableDocumentByGuid(dsel)?.Select(x => x.ToArray()).ToArray();
           var positions = FindMatchingPositons(layer_lk, dsel);
 
           var match = false;
-          Print(writer, 0, Filter(positions, layer_gm, dsel, "true"), doc, dsel, ref match);
+          Print(writer, 0, Filter(positions, layer_gm, dsel, "true"), doc, outputFile, ref match);
 
           var subSelection = Filter(positions, layer_wg, dsel, "male");
           subSelection = FilterNot(subSelection, layer_gs, dsel, "true");
           subSelection = FilterNot(subSelection, layer_sg, dsel, "true");
-          Print(writer, 1, subSelection, doc, dsel, ref match);
+          Print(writer, 1, subSelection, doc, outputFile, ref match);
 
-          Print(writer, 2, Filter(positions, layer_bm, dsel, "true"), doc, dsel, ref match);
+          Print(writer, 2, Filter(positions, layer_bm, dsel, "true"), doc, outputFile, ref match);
 
-          if (!match)
-            File.WriteAllText("output/docs/" + dsel.ToString("N") + ".txt", string.Join("\r\n", doc.Select(x => string.Join(" ", x))));
+          if (match)
+            File.WriteAllText($"output/docs/{outputFile}", string.Join("\r\n", doc.Select(x => string.Join(" ", x))));
         }
       }
     }
@@ -100,23 +101,24 @@ namespace IDS.QuickAnnotator.Tool4.DominicSchmitz
 
         foreach (var dsel in corpus.DocumentGuids)
         {
+          var outputFile = dsel.ToString("N") + ".txt";
           var doc = layer_wort.GetReadableDocumentByGuid(dsel)?.Select(x => x.ToArray()).ToArray();
           var positions = FindMatchingPositons(layer_lk, dsel);
 
           var match = false;
-          Print(writer, 0, Filter(positions, layer_gm, dsel, "true"), doc, dsel, ref match);
+          Print(writer, 0, Filter(positions, layer_gm, dsel, "true"), doc, outputFile, ref match);
 
-          Print(writer, 1, Filter(positions, layer_wg, dsel, "male"), doc, dsel, ref match);
+          Print(writer, 1, Filter(positions, layer_wg, dsel, "male"), doc, outputFile, ref match);
 
-          Print(writer, 2, Filter(positions, layer_bm, dsel, "true"), doc, dsel, ref match);
+          Print(writer, 2, Filter(positions, layer_bm, dsel, "true"), doc, outputFile, ref match);
 
-          if (!match)
-            File.WriteAllText("output/docs/" + dsel.ToString("N") + ".txt", string.Join("\r\n", doc.Select(x => string.Join(" ", x))));
+          if (match)
+            File.WriteAllText($"output/docs/{outputFile}", string.Join("\r\n", doc.Select(x => string.Join(" ", x))));
         }
       }
     }
 
-    private static void Print(StreamWriter writer, int prependColumns, Dictionary<int, List<int>> positions, string[][] doc, Guid dsel, ref bool match)
+    private static void Print(StreamWriter writer, int prependColumns, Dictionary<int, List<int>> positions, string[][] doc, string outputFile, ref bool match)
     {
       if (positions.Count == 0)
         return;
@@ -126,7 +128,7 @@ namespace IDS.QuickAnnotator.Tool4.DominicSchmitz
         {
           var data = new List<string>();
 
-          data.Add(dsel.ToString("N") + ".txt");
+          data.Add(outputFile);
           data.Add(s.Key.ToString());
           data.Add(doc[s.Key][w]);
           for(var i = 0; i < prependColumns; i++)
