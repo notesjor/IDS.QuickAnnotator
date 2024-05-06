@@ -2,7 +2,7 @@
   "profiles": {
     "IDS.QuickAnnotator.Tool4.ConvertToCorpus": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\Jan\\Desktop\\data\\21_2\\"
+      "commandLineArgs": "C:\\Users\\Jan\\Desktop\\data\\21\\"
     }
   }
 }

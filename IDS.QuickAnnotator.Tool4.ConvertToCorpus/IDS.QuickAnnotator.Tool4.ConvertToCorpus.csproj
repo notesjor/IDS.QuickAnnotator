@@ -15,22 +15,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Projekte-Kooperation\TfresWebserver\TFRES.DotNet5\TFRES.DotNet5.csproj" />
+    <ProjectReference Include="..\..\..\CorpusExplorerV2\CorpusExplorer\BitCutStudios.CorpusExplorer\BitCutStudios.CorpusExplorer.csproj" />
+    <ProjectReference Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Diagnostic\CorpusExplorer.Sdk.Diagnostic.csproj" />
+    <ProjectReference Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Json\CorpusExplorer.Sdk.Extern.Json.csproj" />
+    <ProjectReference Include="..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\CorpusExplorer.Sdk.csproj" />
     <ProjectReference Include="..\IDS.QuickAnnotator.API\IDS.QuickAnnotator.API.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="BitCutStudios.CorpusExplorer">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\BitCutStudios.CorpusExplorer.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk.Diagnostic">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.Diagnostic.dll</HintPath>
-    </Reference>
-    <Reference Include="CorpusExplorer.Sdk.Extern.Json">
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Terminal.WinForm\bin\Release\CorpusExplorer.Sdk.Extern.Json.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
