@@ -1,12 +1,68 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D491EC8-11C5-4C02-B604-48B8458174E1}|..\\..\\..\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk.Diagnostic\\CorpusExplorer.Sdk.Diagnostic.csproj|c:\\projekte\\corpusexplorerv2\\corpusexplorer\\corpusexplorer.sdk.diagnostic\\inmemoryerrorconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A67C53B-B83D-4C47-91E8-AF234F487A83}|..\\IDS.QuickAnnotator.Tool4.ConvertToCorpus\\IDS.QuickAnnotator.Tool4.ConvertToCorpus.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.converttocorpus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC1B5A58-29DA-476D-89F8-E73A1DB11E52}|..\\..\\..\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk\\CorpusExplorer.Sdk.csproj|c:\\projekte\\corpusexplorerv2\\corpusexplorer\\corpusexplorer.sdk\\utils\\documentprocessing\\importer\\abstract\\abstractimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.ConvertToCorpus\\Program.cs",
+              "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.ConvertToCorpus\\Program.cs",
+              "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.ConvertToCorpus\\Program.cs",
+              "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.ConvertToCorpus\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAEwEoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:30:49.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InMemoryErrorConsole.cs",
+              "DocumentMoniker": "C:\\Projekte\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk.Diagnostic\\InMemoryErrorConsole.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk.Diagnostic\\InMemoryErrorConsole.cs",
+              "ToolTip": "C:\\Projekte\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk.Diagnostic\\InMemoryErrorConsole.cs",
+              "RelativeToolTip": "..\\..\\..\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk.Diagnostic\\InMemoryErrorConsole.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAEwCQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:30:49.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AbstractImporter.cs",
+              "DocumentMoniker": "C:\\Projekte\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk\\Utils\\DocumentProcessing\\Importer\\Abstract\\AbstractImporter.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk\\Utils\\DocumentProcessing\\Importer\\Abstract\\AbstractImporter.cs",
+              "ToolTip": "C:\\Projekte\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk\\Utils\\DocumentProcessing\\Importer\\Abstract\\AbstractImporter.cs",
+              "RelativeToolTip": "..\\..\\..\\CorpusExplorerV2\\CorpusExplorer\\CorpusExplorer.Sdk\\Utils\\DocumentProcessing\\Importer\\Abstract\\AbstractImporter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:30:49.152Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

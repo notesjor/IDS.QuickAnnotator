@@ -2,7 +2,7 @@
   "profiles": {
     "IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\Jan\\Desktop\\data\\21"
+      "commandLineArgs": "C:\\Users\\Jan\\Desktop\\data\\20"
     }
   }
 }
