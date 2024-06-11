@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Documents;
 using IDS.QuickAnnotator.API.Model.Request;
 
@@ -14,7 +15,14 @@ namespace IDS.QuickAnnotator.Client.Model
 
       var tmp = new List<string>();
       for (var i = From; i < To; i++)
-        tmp.Add(document[i]);
+        try
+        {
+          tmp.Add(document[i]);
+        }
+        catch (Exception ex)
+        {
+          Console.WriteLine(ex.Message);
+        }
       Snippet = string.Join(" ", tmp);
     }
 

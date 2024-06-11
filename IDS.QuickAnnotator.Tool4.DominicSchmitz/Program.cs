@@ -94,10 +94,16 @@ namespace IDS.QuickAnnotator.Tool4.DominicSchmitz
       // spezifische Feminina
       var layer_bm = GetLayers(corpus, "Bereits gegendert/moviert?");
 
+      // Plural?
+      var layer_pl = GetLayers(corpus, "Plural? - Nein = Singular");
+
+      // Bestimmter Artikel?
+      var layer_ba = GetLayers(corpus, "Bestimmter Artikel? - Nein = unbestimmter Artikel");
+
       using (var fs = new FileStream("output/data.tsv", FileMode.Create, FileAccess.Write))
       using (var writer = new StreamWriter(fs, Encoding.UTF8))
       {
-        writer.WriteLine("GUID\tSatzId\tWort\tGenerisches Maskulinum\tSpezifisches Maskulinum\tSpezifisches Femininum");
+        writer.WriteLine("GUID\tSatzId\tWort\tGenerisches Maskulinum\tSpezifisches Maskulinum\tSpezifisches Femininum\tPlural\tBestimmter Artikel");
 
         foreach (var dsel in corpus.DocumentGuids)
         {
@@ -111,6 +117,10 @@ namespace IDS.QuickAnnotator.Tool4.DominicSchmitz
           Print(writer, 1, Filter(positions, layer_wg, dsel, "male"), doc, outputFile, ref match);
 
           Print(writer, 2, Filter(positions, layer_bm, dsel, "true"), doc, outputFile, ref match);
+
+          Print(writer, 3, Filter(positions, layer_pl, dsel, "true"), doc, outputFile, ref match);
+
+          Print(writer, 4, Filter(positions, layer_ba, dsel, "true"), doc, outputFile, ref match);
 
           if (match)
             File.WriteAllText($"output/docs/{outputFile}", string.Join("\r\n", doc.Select(x => string.Join(" ", x))));
