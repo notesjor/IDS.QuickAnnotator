@@ -1,9 +1,12 @@
 ﻿using CorpusExplorer.Sdk.Ecosystem;
 using CorpusExplorer.Sdk.Helper;
+using CorpusExplorer.Sdk.Model;
 using CorpusExplorer.Sdk.Model.Adapter.Corpus;
+using CorpusExplorer.Sdk.Model.CorpusExplorer;
 using CorpusExplorer.Sdk.Model.Extension;
 using CorpusExplorer.Sdk.Utils.Filter;
 using CorpusExplorer.Sdk.Utils.Filter.Queries;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -35,89 +38,88 @@ namespace IDS.QuickAnnotator.Tool4.FindMatchSentences
       var value = Console.ReadLine();
 
       var queue = new Queue<string>(cleanLayerNames[keys[id]]);
-      var results = QuickQuery.AndSearchOnWordLevel(select, new[]
-      {
-        new FilterQuerySingleLayerAnyMatch{
-          LayerDisplayname = queue.Dequeue(),
-          LayerQueries = new[]{ value },
-        }
-      });
+      var results = GetResult(select, queue.Dequeue(), value);
 
       while (queue.Count > 0)
       {
-        var layer = queue.Dequeue();
-        var tmp = QuickQuery.AndSearchOnWordLevel(select, new[]
+        var tmp = GetResult(select, queue.Dequeue(), value);
+
+        foreach (var dsel in tmp)
         {
-          new FilterQuerySingleLayerAnyMatch
+          if (results.ContainsKey(dsel.Key))
           {
-            LayerDisplayname = layer,
-            LayerQueries = new[]{ value },
-          }
-        });
-
-        var csels = results.Keys.ToArray();
-        foreach (var csel in csels)
-        {
-          if (!tmp.ContainsKey(csel))
-          {
-            results.Remove(csel);
-            continue;
-          }
-
-          var dsels = results[csel].Keys.ToArray();
-          foreach (var dsel in dsels)
-          {
-            if (!tmp[csel].ContainsKey(dsel))
+            foreach (var s in dsel.Value)
             {
-              results[csel].Remove(dsel);
-              continue;
-            }
-
-            var ssels = results[csel][dsel].Keys.ToArray();
-            foreach (var ssel in ssels)
-            {
-              if (!tmp[csel][dsel].ContainsKey(ssel))
+              if (results[dsel.Key].ContainsKey(s.Key))
               {
-                results[csel][dsel].Remove(ssel);
-                continue;
+                foreach (var r in s.Value)
+                {
+                  if (results[dsel.Key][s.Key].ContainsKey(r.Key))
+                    results[dsel.Key][s.Key][r.Key] += r.Value;
+                  else
+                    results[dsel.Key][s.Key].Add(r.Key, r.Value);
+                }
               }
-
-              var wsels = results[csel][dsel][ssel];
-              foreach (var wsel in wsels)
-                if (!tmp[csel][dsel][ssel].Contains(wsel))
-                  results[csel][dsel][ssel].Remove(wsel);
+              else
+                results[dsel.Key].Add(s.Key, s.Value);
             }
           }
+          else
+            results.Add(dsel.Key, dsel.Value);
         }
       }
 
       using (var fs = new FileStream("output.tsv", FileMode.Create, FileAccess.Write))
       using (var writer = new StreamWriter(fs, Encoding.UTF8))
       {
-        writer.WriteLine("ID\tSigle\tSatzID\tPrefix\tMatch\tSuffix");
+        writer.WriteLine("ID\tSigle\tSatzID\tPrefix\tMatch\tSuffix\tAnnotiert?");
 
-        foreach (var csel in results)
-          foreach (var dsel in csel.Value)
-            foreach (var ssel in dsel.Value)
+        foreach (var dsel in results)
+          foreach (var s in dsel.Value)
+          {
+            var sigle = select.GetDocumentMetadata(dsel.Key, "Sigle", "");
+            var sent = select.GetReadableDocumentSnippet(dsel.Key, "Wort", s.Key, s.Key).ReduceDocumentToStreamDocument().ToArray();
+
+            foreach (var r in s.Value)
             {
-              if (ssel.Value.Count == 0)
-                continue;
+              var prefix = sent.Take(r.Key.From).ToArray();
+              var match = sent.Skip(r.Key.From).Take(r.Key.To - r.Key.From).ToArray();
+              var suffix = sent.Skip(r.Key.To).ToArray();
 
-              var sigle = select.GetDocumentMetadata(dsel.Key, "Sigle", "");
-              var sent = select.GetReadableDocumentSnippet(dsel.Key, "Wort", ssel.Key, ssel.Key).ReduceDocumentToStreamDocument().ToArray();
-
-              foreach (var mark in ssel.Value)
-              {                
-                var prefix = sent.Take(mark).ToArray();
-                var match = sent.Skip(mark).Take(1).ToArray();
-                var suffix = sent.Skip(mark + 1).ToArray();
-
-                writer.WriteLine($"{dsel.Key}\t{sigle}\t{ssel.Key}\t{Stringfy(prefix)}\t{Stringfy(match)}\t{Stringfy(suffix)}");
-              }
+              writer.WriteLine($"{dsel.Key}\t{sigle}\t{s.Key}\t{Stringfy(prefix)}\t{Stringfy(match)}\t{Stringfy(suffix)}\t{r.Value}");
             }
+          }
       }
 
       Console.WriteLine();
+    }
+
+    private static Dictionary<Guid, Dictionary<int, Dictionary<CeRange, int>>> GetResult(Selection select, string layerName, string value)
+    {
+      var tmp = QuickQuery.AndSearchOnWordLevel(select, new[]
+      {
+        new FilterQuerySingleLayerAnyMatch{
+          LayerDisplayname = layerName,
+          LayerQueries = new[]{ value },
+        }
+      });
+
+      var res = new Dictionary<Guid, Dictionary<int, Dictionary<CeRange, int>>>();
+      foreach (var csel in tmp)
+        foreach (var dsel in csel.Value)
+        {
+          var t1 = new Dictionary<int, Dictionary<CeRange, int>>();
+          foreach (var s in dsel.Value)
+          {
+            var t2 = new Dictionary<CeRange, int>();
+            foreach (var r in s.Value)
+              t2.Add(r, 1);
+            t1.Add(s.Key, t2);
+          }
+          res.Add(dsel.Key, t1);
+        }
+
+      return res;
     }
 
     private static object Stringfy(string[] data)

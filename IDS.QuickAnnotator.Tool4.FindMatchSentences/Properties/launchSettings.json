@@ -2,7 +2,7 @@
   "profiles": {
     "IDS.QuickAnnotator.Tool4.FindMatchSentences": {
       "commandName": "Project",
-      "commandLineArgs": "version_18.cec6"
+      "commandLineArgs": "I:\\Downloads\\version_19.cec6"
     }
   }
 }
