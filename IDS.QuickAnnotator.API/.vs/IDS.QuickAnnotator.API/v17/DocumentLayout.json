@@ -4,9 +4,6 @@
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{0E69640C-8DC2-4D0C-B5C3-C8311A88590C}|..\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\IDS.QuickAnnotator.Tool4.FindMatchSentences.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.findmatchsentences\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E69640C-8DC2-4D0C-B5C3-C8311A88590C}|..\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\IDS.QuickAnnotator.Tool4.FindMatchSentences.csproj|c:\\projekte\\ids\\ids.quickannotator\\ids.quickannotator.tool4.findmatchsentences\\ids.quickannotator.tool4.findmatchsentences.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,23 +13,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IDS.QuickAnnotator.Tool4.FindMatchSentences",
-              "DocumentMoniker": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\IDS.QuickAnnotator.Tool4.FindMatchSentences.csproj",
-              "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\IDS.QuickAnnotator.Tool4.FindMatchSentences.csproj",
-              "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\IDS.QuickAnnotator.Tool4.FindMatchSentences.csproj",
-              "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\IDS.QuickAnnotator.Tool4.FindMatchSentences.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-07-02T17:32:40.229Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -42,7 +27,7 @@
               "RelativeDocumentMoniker": "..\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\Program.cs",
               "ToolTip": "C:\\Projekte\\IDS\\IDS.QuickAnnotator\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\Program.cs",
               "RelativeToolTip": "..\\IDS.QuickAnnotator.Tool4.FindMatchSentences\\Program.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAASwE0AAAAnAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAADgvzMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T15:44:29.339Z",
               "EditorCaption": ""

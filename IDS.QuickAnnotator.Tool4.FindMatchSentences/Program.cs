@@ -78,7 +78,10 @@ namespace IDS.QuickAnnotator.Tool4.FindMatchSentences
           foreach (var s in dsel.Value)
           {
             var sigle = select.GetDocumentMetadata(dsel.Key, "Sigle", "");
+
+            var addPre = GetAdditionalSent(select, dsel.Key, s.Key - 1);
             var sent = select.GetReadableDocumentSnippet(dsel.Key, "Wort", s.Key, s.Key).ReduceDocumentToStreamDocument().ToArray();
+            var addPost = GetAdditionalSent(select, dsel.Key, s.Key + 1);
 
             foreach (var r in s.Value)
             {
@@ -86,12 +89,24 @@ namespace IDS.QuickAnnotator.Tool4.FindMatchSentences
               var match = sent.Skip(r.Key.From).Take(r.Key.To - r.Key.From).ToArray();
               var suffix = sent.Skip(r.Key.To).ToArray();
 
-              writer.WriteLine($"{dsel.Key}\t{sigle}\t{s.Key}\t{Stringfy(prefix)}\t{Stringfy(match)}\t{Stringfy(suffix)}\t{r.Value}");
+              writer.WriteLine($"{dsel.Key}\t{sigle}\t{s.Key}\t{addPre} {Stringfy(prefix)}\t{Stringfy(match)}\t{Stringfy(suffix)} {addPost}\t{r.Value}");
             }
           }
       }
 
       Console.WriteLine();
+    }
+
+    private static string GetAdditionalSent(Selection select, Guid dsel, int s)
+    {
+      try
+      {
+        return select.GetReadableDocumentSnippet(dsel, "Wort", s, s).ReduceDocumentToText();
+      }
+      catch
+      {
+        return "";
+      }
     }
 
     private static Dictionary<Guid, Dictionary<int, Dictionary<CeRange, int>>> GetResult(Selection select, string layerName, string value)
