@@ -11,7 +11,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static bool Signin()
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/signin", Method.Post) { Timeout = 5000 };
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/signin", Method.Post) { Timeout = new System.TimeSpan(0, 0, 5) };
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
       return EnsureResponse(request, 2).Content == "true";
@@ -32,7 +32,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static UserProfile GetProfile()
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getProfile", Method.Post){Timeout = 10000};
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getProfile", Method.Post){Timeout = new System.TimeSpan(0, 0, 10)};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
       return JsonConvert.DeserializeObject<UserProfile>(EnsureResponse(request).Content);
@@ -40,7 +40,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static string[] GetDocuments()
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocuments",Method.Post){Timeout = 30000};
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocuments",Method.Post){Timeout = new System.TimeSpan(0, 0, 30) };
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\"}}", ParameterType.RequestBody);
       return JsonConvert.DeserializeObject<string[]>(EnsureResponse(request).Content);
@@ -48,7 +48,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static string[] GetDocument(string documentId)
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocument", Method.Post){Timeout = 30000};
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocument", Method.Post){Timeout = new System.TimeSpan(0, 0, 30)};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
       return JsonConvert.DeserializeObject<string[]>(EnsureResponse(request).Content);
@@ -56,7 +56,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static DocumentChange[] GetDocumentHistory(string documentId)
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocumentHistory", Method.Post){Timeout = 30000};
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/getDocumentHistory", Method.Post){Timeout = new System.TimeSpan(0, 0, 30)};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
       return JsonConvert.DeserializeObject<DocumentChange[]>(EnsureResponse(request).Content);
@@ -64,7 +64,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static bool SetDocument(string documentId, DocumentChange change)
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/setDocument", Method.Post){Timeout = 10000};
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/setDocument", Method.Post){Timeout = new System.TimeSpan(0, 0, 10)};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\", \"Change\": {JsonConvert.SerializeObject(change)}}}", ParameterType.RequestBody);
       return EnsureResponse(request).StatusCode == HttpStatusCode.OK;
@@ -72,7 +72,7 @@ namespace IDS.QuickAnnotator.Client.Model
 
     public static bool SetDocumentCompletion(string documentId)
     {
-      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/setDocumentCompletion", Method.Post){Timeout = 10000};
+      var request = new RestRequest($"{GlobalConfiguration.BaseUrl}/setDocumentCompletion", Method.Post){Timeout = new System.TimeSpan(0, 0, 10)};
       request.AddHeader("Content-Type", "application/json");
       request.AddParameter("application/json", $"{{\"AuthToken\": \"{GlobalConfiguration.AuthToken}\", \"DocumentId\": \"{documentId}\"}}", ParameterType.RequestBody);
       return EnsureResponse(request).StatusCode == HttpStatusCode.OK;

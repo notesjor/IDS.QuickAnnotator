@@ -205,7 +205,32 @@ namespace IDS.QuickAnnotator.Client.Forms
       _editor.Annotations = _anno.EditorAnnotations;
     }
 
-    private void btn_submit_doppelform_Click(object sender, EventArgs e)
+    // NOTE -------------------------------------------- Start der Doppelformen ->
+    // Wird nicht mehr verwendet
+    //private void btn_submit_doppelform_Click(object sender, EventArgs e)
+    //{
+    //  var from = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom;
+    //  var to = _editorIndexTo + 1;
+    //  if (to - from < 2)
+    //  {
+    //    MessageBox.Show("Doppelformen müssen mehrere Token umfassen. Zuerst Rechtsklick auf erstes Token, dann Linksklick auf letztes Token.");
+    //    return;
+    //  }
+    //
+    //  _anno.Annotate(new DocumentChange
+    //  {
+    //    From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,
+    //    To = _editorIndexTo + 1,
+    //    Annotation = new Dictionary<string, object>
+    //    {
+    //      {"Doppelform", "true"}
+    //    }
+    //  });
+    //
+    //  _editor.Annotations = _anno.EditorAnnotations;
+    //}
+
+    private void btn_submit_doppelform_altern_Click(object sender, EventArgs e)
     {
       var from = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom;
       var to = _editorIndexTo + 1;
@@ -221,12 +246,36 @@ namespace IDS.QuickAnnotator.Client.Forms
         To = _editorIndexTo + 1,
         Annotation = new Dictionary<string, object>
         {
-          {"Doppelform", "true"}
+          {"Alternierende Doppelform", "true"}
         }
       });
 
       _editor.Annotations = _anno.EditorAnnotations;
     }
+
+    private void btn_submit_doppelform_regu_Click(object sender, EventArgs e)
+    {
+      var from = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom;
+      var to = _editorIndexTo + 1;
+      if (to - from < 2)
+      {
+        MessageBox.Show("Doppelformen müssen mehrere Token umfassen. Zuerst Rechtsklick auf erstes Token, dann Linksklick auf letztes Token.");
+        return;
+      }
+
+      _anno.Annotate(new DocumentChange
+      {
+        From = _editorIndexFrom == -1 ? _editorIndexTo : _editorIndexFrom,
+        To = _editorIndexTo + 1,
+        Annotation = new Dictionary<string, object>
+        {
+          {"Reguläre Doppelform", "true"}
+        }
+      });
+
+      _editor.Annotations = _anno.EditorAnnotations;
+    }
+    // NOTE <-------------------------------------------- Ende der Doppelformen
 
     private void btn_screenFix_Click(object sender, EventArgs e)
     {
