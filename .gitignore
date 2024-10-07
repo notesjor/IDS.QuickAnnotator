@@ -149,3 +149,4 @@ lib
 *.htm
 /IDS.QuickAnnotator.API/.vs/IDS.QuickAnnotator.API/FileContentIndex
 *.pfx
+.vs
