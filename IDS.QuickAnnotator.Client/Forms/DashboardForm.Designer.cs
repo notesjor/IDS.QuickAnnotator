@@ -237,6 +237,7 @@
       this.radButton2.TabIndex = 25;
       this.radButton2.Text = "Reguläre Doppelform";
       this.toolTip1.SetToolTip(this.radButton2, "Annotation anwenden");
+      this.radButton2.Click += new System.EventHandler(this.btn_submit_doppelform_regu_Click);
       ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).Text = "Reguläre Doppelform";
       ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
@@ -250,6 +251,7 @@
       this.radButton1.TabIndex = 24;
       this.radButton1.Text = "Alternierende Doppelform";
       this.toolTip1.SetToolTip(this.radButton1, "Annotation anwenden");
+      this.radButton1.Click += new System.EventHandler(this.btn_submit_doppelform_altern_Click);
       ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Text = "Alternierende Doppelform";
       ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
