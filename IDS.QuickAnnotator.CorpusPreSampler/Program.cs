@@ -42,9 +42,11 @@ namespace IDS.QuickAnnotator.CorpusPreSampler
 
         var toShort = new List<Guid>();
         var toLong = new List<Guid>();
+        var noMatch = new List<Guid>();
         var valid = new List<Guid>();
 
-        var layer = select.GetLayers("Wort").First();
+        var layer = corpus.GetLayers("Wort").First();
+        var token = new HashSet<int>(queries.Select(query => layer[query]).Where(idx => idx > -1));
         foreach (var dsel in select.DocumentGuids)
         {
           var doc = layer[dsel];
@@ -58,7 +60,21 @@ namespace IDS.QuickAnnotator.CorpusPreSampler
           {
             toLong.Add(dsel);
             continue;
-          }          
+          }
+
+          var match = false;
+          foreach (var s in doc)
+            foreach (var w in s)
+              if (token.Contains(w))
+              {
+                match = true;
+                break;
+              }
+          if (!match)
+          {
+            noMatch.Add(dsel);
+            continue;
+          }
 
           valid.Add(dsel);
         }
@@ -66,7 +82,8 @@ namespace IDS.QuickAnnotator.CorpusPreSampler
         select = select.CreateTemporary(valid);
 
         log.Add($"SHORT DOCS\t{toShort.Count}");
-        log.Add($"LONG DOCS\t{toLong.Count}");
+        log.Add($" LONG DOCS\t{toLong.Count}");
+        log.Add($"  NO MATCH\t{noMatch.Count}");
         log.Add($"VALID DOCS\t{select.CountDocuments}");
 
         lock (myLock)
