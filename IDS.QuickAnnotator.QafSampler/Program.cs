@@ -46,42 +46,49 @@ namespace IDS.QuickAnnotator.QafSampler
 
         foreach (var qaf in QafData)
         {
-          var tmp = all.CreateTemporary(new[]
+          try
           {
-            new FilterQuerySingleLayerAnyMatch
+            var tmp = all.CreateTemporary(new[]
             {
-              LayerDisplayname = "Wort",
-              LayerQueries = qaf.Item1
+              new FilterQuerySingleLayerAnyMatch
+              {
+                LayerDisplayname = "Wort",
+                LayerQueries = qaf.Item1
+              }
+            });
+            if (tmp == null || tmp.CountDocuments < 1)
+              continue;
+
+            var docs = GetSample(tmp, qaf.Item4); // extra docs
+            tmp = Remove(tmp, docs);
+
+            var cntToken = qaf.Item2;
+            var cntDoc = qaf.Item3;
+
+            while (cntToken > 0 && cntDoc > 0)
+            {
+              var guid = GetSample(tmp, 1);
+              cntDoc--;
+
+              var dSel = tmp.CreateTemporary(guid);
+              var block = dSel.CreateBlock<Frequency1LayerBlock>();
+              block.LayerDisplayname = "Wort";
+              block.Calculate();
+              cntToken -= (int)qaf.Item1.Sum(x => block.Frequency.ContainsKey(x) ? block.Frequency[x] : 0);
+
+              docs.AddRange(guid);
+
+              tmp = Remove(tmp, guid);
             }
-          });
-          if (tmp == null || tmp.CountDocuments < 1)
-            continue;
 
-          var docs = GetSample(tmp, qaf.Item4); // extra docs
-          tmp = Remove(tmp, docs);
-
-          var cntToken = qaf.Item2;
-          var cntDoc = qaf.Item3;
-
-          while (cntToken > 0 && cntDoc > 0)
-          {
-            var guid = GetSample(tmp, 1);
-            cntDoc--;
-
-            var dSel = tmp.CreateTemporary(guid);
-            var block = dSel.CreateBlock<Frequency1LayerBlock>();
-            block.LayerDisplayname = "Wort";
-            block.Calculate();
-            cntToken -= (int)qaf.Item1.Sum(x => block.Frequency.ContainsKey(x) ? block.Frequency[x] : 0);
-
-            docs.AddRange(guid);
-
-            tmp = Remove(tmp, guid);
+            var output = all.CreateTemporary(docs);
+            var outputFile = Path.Combine(outputPath, $"{corpus.Key}-{qaf.Item1.First()}.cec6");
+            output.ToCorpus().Save(outputFile, false);
           }
-
-          var output = all.CreateTemporary(docs);
-          var outputFile = Path.Combine(outputPath, $"{corpus.Key}-{qaf.Item1.First()}.cec6");
-          output.ToCorpus().Save(outputFile, false);
+          catch
+          {
+            // ignore
+          }
         }
 
         project.Clear();
@@ -133,7 +140,7 @@ namespace IDS.QuickAnnotator.QafSampler
       {
         var idx = _random.Next(0, tDocs.Count);
         res.Add(tDocs[idx]);
-        if(res.Count >= cnt)
+        if (res.Count >= cnt)
           break;
         tDocs.RemoveAt(idx);
       }

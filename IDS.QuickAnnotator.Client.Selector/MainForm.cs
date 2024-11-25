@@ -17,7 +17,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
+using CorpusExplorer.Sdk.Utils.Filter.Queries;
 using Telerik.WinControls.UI;
+using static Telerik.WinControls.UI.DateInput;
 
 namespace IDS.QuickAnnotator.Client.Selector
 {
@@ -29,10 +31,20 @@ namespace IDS.QuickAnnotator.Client.Selector
     private string _basePath;
     private string _pathOk;
     private string _pathReject;
-    private Selection _select;
+    private Selection _select = null;
     private List<Guid> _guids;
     private Guid _current;
     private HashSet<string> _highlight;
+
+    private Dictionary<string, EasyQafCount> _easyQaf = new Dictionary<string, EasyQafCount>();
+    private Dictionary<string, string[]> _easyQafState = new Dictionary<string, string[]>();
+    private string[] _tokens;
+
+    private class EasyQafCount
+    {
+      public int ToDoDocuments { get; set; }
+      public int ToDoTokens { get; set; }
+    }
 
     public MainForm()
     {
@@ -69,49 +81,50 @@ namespace IDS.QuickAnnotator.Client.Selector
           continue;
 
         split.RemoveAt(split.Count - 1);
+        var docCnt = int.Parse(split.Last());
         split.RemoveAt(split.Count - 1);
+        var tokenCnt = int.Parse(split.Last());
         split.RemoveAt(split.Count - 1);
 
+        _easyQaf.Add(split.First(), new EasyQafCount { ToDoDocuments = docCnt, ToDoTokens = tokenCnt });
+        _easyQafState.Add(split.First(), split.ToArray());
         highlight.AddRange(split.Select(x => x.Trim()));
       }
 
-      _editor.Highlight = new HashSet<string>(highlight);
-
-      /*
-      if(_model != null)
-        _model.Save();
-
-      MessageBox.Show("Das Sampling wird durchgeführt. Bis zum Abschluss der Berechnung wird das Fenster ausgeblendet. Bitte schließen Sie diesen Dialog mit OK und warten Sie weitere Schritte ab.", "Sampling startet", MessageBoxButtons.OK, MessageBoxIcon.Information);
-      Hide();
-
-      _model = new QafModel();
-      _model.Load();
+      _highlight = new HashSet<string>(highlight);
+      _editor.Highlight = _highlight;
 
       cmb_group.Items.Clear();
-      cmb_group.Items.AddRange(_model.Groups);
-
-      Show();
-      */
+      cmb_group.Items.AddRange(_easyQaf.Keys);
+      cmb_group.SelectedIndex = 0;
+      btn_loadCorpus.Enabled = true;
     }
 
     private void btn_abort_Click(object sender, EventArgs e)
     {
       MoveDocument("reject");
       NextDocument();
-      /*
-      _model.Reject();
-      EditorRefresh();
-      */
     }
 
     private void btn_ok_Click(object sender, EventArgs e)
     {
       MoveDocument("ok");
+
+      _easyQaf[cmb_group.SelectedItem.Text].ToDoDocuments--;
+      foreach (var key in _easyQafState.Keys)
+      {
+        var test = new HashSet<string>(_easyQafState[key]);
+        if (_tokens.Any(t => test.Contains(t)))
+          _easyQaf[key].ToDoTokens--;
+      }
+
       NextDocument();
-      /*
-      _model.Accept();
-      EditorRefresh();
-      */
+    }
+
+    private void RefreshCounter()
+    {
+      cnt_texts.Text = _easyQaf[cmb_group.SelectedItem.Text].ToDoDocuments.ToString();
+      cnt_tokens.Text = _easyQaf[cmb_group.SelectedItem.Text].ToDoTokens.ToString();
     }
 
     private void MoveDocument(string choice)
@@ -132,64 +145,14 @@ namespace IDS.QuickAnnotator.Client.Selector
       _current = _guids.First();
       _guids.RemoveAt(0);
 
-      _editor.Tokens = _select.GetReadableDocument(_current, "Wort").ReduceDocumentToStreamDocument().ToArray();
-    }
-
-    /*
-    private void EditorRefresh()
-    {
-
-
-      _editor.Highlight = _model.GetHighlight();
-      _editor.Tokens = _model.GetTokens();
-
-      cnt_texts.Text = _model.TodosTexts.ToString();
-      cnt_tokens.Text = _model.TodosTokens.ToString();
-
-      info_texts.Text = _model.DoneTexts.ToString();
-      info_tokens.Text = _model.DoneTokens.ToString();
-    }
-    */
-
-    /*
-    public QafModel GetModel()
-    {
-      return _model;
-    }
-    */
-
-    private void btn_undone_Click(object sender, EventArgs e)
-    {
-      /*
-      var ask = MessageBox.Show("Diese Aktion bricht das aktuelle Dokument ab und lädt das vorherige Dokument zur Bearbeitung.", "Abbrechen > Neu bewerten?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-      if (ask != DialogResult.Yes)
-        return;
-
-      _model.Undone();
-      EditorRefresh();
-      */
-    }
-
-    private void cnt_texts_KeyUp(object sender, KeyEventArgs e)
-    {
-      /*
-      if (e.KeyCode == Keys.Enter)
-        if (int.TryParse(cnt_texts.Text, out var cnt))
-          _model.TodosTexts = cnt;
-      */
-    }
-
-    private void cnt_tokens_KeyUp(object sender, KeyEventArgs e)
-    {
-      /*
-      if (e.KeyCode == Keys.Enter)
-        if (int.TryParse(cnt_texts.Text, out var cnt))
-          _model.TodosTokens = cnt;
-      */
+      _tokens = _select.GetReadableDocument(_current, "Wort").ReduceDocumentToStreamDocument().ToArray();
+      _editor.Tokens = _tokens;
+      RefreshCounter();
     }
 
     private void btn_loadCorpus_Click(object sender, EventArgs e)
     {
+      Hide();
       var ofd = new OpenFileDialog();
       ofd.Filter = "CEC6-Corpus (*.cec6)|*.cec6";
       if (ofd.ShowDialog() != DialogResult.OK)
@@ -208,8 +171,28 @@ namespace IDS.QuickAnnotator.Client.Selector
         Directory.CreateDirectory(_pathReject);
 
       _select = _corpus.ToSelection();
-      _guids = _select.DocumentGuids.ToList();
+      RenewGuidList();
+      Show();
+    }
+
+    private void RenewGuidList()
+    {
+      if (_select == null)
+        return;
+
+      var queries = _easyQafState[cmb_group.SelectedItem.Text];
+      var subSelect = _select.CreateTemporary(new FilterQuerySingleLayerAnyMatch
+      {
+        LayerDisplayname = "Wort",
+        LayerQueries = queries
+      });
+      _guids = subSelect.DocumentGuids.ToList();
       NextDocument();
+    }
+
+    private void cmb_group_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+    {
+      RenewGuidList();
     }
   }
 }
