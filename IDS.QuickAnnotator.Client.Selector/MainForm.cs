@@ -114,8 +114,9 @@ namespace IDS.QuickAnnotator.Client.Selector
       foreach (var key in _easyQafState.Keys)
       {
         var test = new HashSet<string>(_easyQafState[key]);
-        if (_tokens.Any(t => test.Contains(t)))
-          _easyQaf[key].ToDoTokens--;
+        _easyQaf[key].ToDoTokens -= _tokens.Count(t => test.Contains(t));
+        if (_easyQaf[key].ToDoTokens < 1)
+          _easyQaf[key].ToDoTokens = 0;
       }
 
       NextDocument();
