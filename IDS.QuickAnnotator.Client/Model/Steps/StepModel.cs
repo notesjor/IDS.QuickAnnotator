@@ -55,11 +55,12 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Name = "Generisches Femininum",
         PossibleValues = new[] { "true", "false" }
       };
+      /*
       var step_gesab_substantiv = new Step
       {
         Name = "Geschlechtsabstrahierendes Substantiv",
         PossibleValues = new[] { "true", "false" }
-      };
+      };*/
       var step_ref_persoGroup = new Step
       {
         Name = "Referenz/Bezug auf konkrete Person / Personengruppe?",
@@ -67,12 +68,12 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       };
       var step_bereits_moviert = new Step
       {
-        Name = "Moviert?",
+        Name = "Bereits moviert?",
         PossibleValues = new[] { "true", "false" }
       };
       var step_bereits_gendert = new Step
       {
-        Name = "Gegendert?",
+        Name = "Bereits gegendert?",
         PossibleValues = new[] { "true", "false" }
       };
       /*
@@ -102,7 +103,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         step_generisches_mask, 
         step_generisches_fem, 
         //step_notwendigkeit_gendern,
-        step_gesab_substantiv, 
+        //step_gesab_substantiv, 
         step_ref_persoGroup, 
         step_bereits_moviert, 
         step_bereits_gendert,
@@ -147,7 +148,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
           ValidComplexRule = p => p.Any(x => x.ValuePure == "false"),
           Children = new[]
           { 
-            step_gesab_substantiv, 
+            //step_gesab_substantiv, 
             step_ref_persoGroup,
             step_bereits_moviert, 
             step_bereits_gendert,
