@@ -26,11 +26,13 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Name = "Plural? - Nein = Singular",
         PossibleValues = new[] { "true", "false" }
       };
+      /*
       var step_artikel_bestimmt = new Step
       {
         Name = "Bestimmter Artikel? - Nein = unbestimmter Artikel",
         PossibleValues = new[] { "true", "false" }
       };
+      */
       /*
       var step_generisches_pronomen = new Step
       {
@@ -50,31 +52,43 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Name = "Generisches Maskulinum",
         PossibleValues = new[] { "true", "false" }
       };
+      var step_gesab_beruf = new Step
+      {
+        Name = "Beruf (=ja) / Rolle (=nein)",
+        PossibleValues = new[] { "true", "false" }
+      };
+      var step_gesab_semantik = new Step
+      {
+        Name = "Semantik: Definition",
+        PossibleValues = new[] { "1", "2", "andres" },
+      };
+      /*
       var step_generisches_fem = new Step
       {
         Name = "Generisches Femininum",
         PossibleValues = new[] { "true", "false" }
       };
-      var step_gesab_substantiv = new Step
+      */
+      /*var step_gesab_substantiv = new Step
       {
         Name = "Geschlechtsabstrahierendes Substantiv",
         PossibleValues = new[] { "true", "false" }
-      };
-      var step_ref_persoGroup = new Step
+      };*/
+      /*var step_ref_persoGroup = new Step
       {
         Name = "Referenz/Bezug auf konkrete Person / Personengruppe?",
         PossibleValues = new[] { "true", "false" }
-      };
+      };*/
       var step_bereits_moviert = new Step
       {
         Name = "Moviert?",
         PossibleValues = new[] { "true", "false" }
       };
-      var step_bereits_gendert = new Step
+      /*var step_bereits_gendert = new Step
       {
         Name = "Gegendert?",
         PossibleValues = new[] { "true", "false" }
-      };
+      };*/
       /*
       var step_genus_sexus = new Step
       {
@@ -82,6 +96,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         PossibleValues = new[] { "true", "false" }
       };
       */
+      /*
       var step_ges_kontext = new Step
       {
         Name = "Geschlecht aus Kontext erkennbar?",
@@ -92,23 +107,26 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Name = "Welches Geschlecht ist aus Kontext erkennbar?",
         PossibleValues = new[] { "male", "female", "none", "group" }
       };
+      */
 
       Steps = new[]
       {
         step_lk, 
         step_numerus_plural, 
-        step_artikel_bestimmt, 
+        //step_artikel_bestimmt, 
+        step_gesab_beruf,
+        step_gesab_semantik,
         //step_generisches_pronomen, 
         step_generisches_mask, 
-        step_generisches_fem, 
+        //step_generisches_fem, 
         //step_notwendigkeit_gendern,
-        step_gesab_substantiv, 
-        step_ref_persoGroup, 
+        //step_gesab_substantiv, 
+        //step_ref_persoGroup, 
         step_bereits_moviert, 
-        step_bereits_gendert,
+        //step_bereits_gendert,
         //step_genus_sexus, 
-        step_ges_kontext,
-        step_geschlecht
+        //step_ges_kontext,
+        //step_geschlecht
       };
       #endregion
 
@@ -128,9 +146,9 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
           Parent = new[] { step_lk }, ValidSimpleValue = "1", Children = new[]
           {
             step_generisches_mask,
-            step_generisches_fem,
+            step_gesab_beruf,
             step_numerus_plural,
-            step_artikel_bestimmt
+            step_gesab_semantik
            }
         },
         /*
@@ -143,17 +161,18 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         */
         new StepRule
         {
-          Parent = new[] { step_generisches_mask, step_generisches_fem },
+          Parent = new[] { step_generisches_mask },
           ValidComplexRule = p => p.Any(x => x.ValuePure == "false"),
           Children = new[]
           { 
-            step_gesab_substantiv, 
-            step_ref_persoGroup,
+            //step_gesab_substantiv, 
+            //step_ref_persoGroup,
             step_bereits_moviert, 
-            step_bereits_gendert,
+            //step_bereits_gendert,
             //step_genus_sexus 
             }
         },
+        /*
         new StepRule
           { Parent = new[] { step_ref_persoGroup }, ValidSimpleValue = "true", Children = new[] { step_ges_kontext } },
         new StepRule
@@ -162,6 +181,7 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
           { Parent = new[] { step_ges_kontext }, ValidSimpleValue = "true", Children = new[] { step_geschlecht } },
         new StepRule
           { Parent = new[] { step_geschlecht }, ValidSimpleValue = "true", Children = new[] { step_geschlecht } },
+        */
         // new StepRule { Parent = new[] { step_genus_sexus }, ValidSimpleValue = "true", Children = new[] { step_ges_kontext, step_geschlecht } }
       };
       #endregion

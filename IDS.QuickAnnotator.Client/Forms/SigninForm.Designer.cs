@@ -60,20 +60,19 @@
       // 
       this.chk_save.CheckState = System.Windows.Forms.CheckState.Checked;
       this.chk_save.Dock = System.Windows.Forms.DockStyle.Left;
-      this.chk_save.Location = new System.Drawing.Point(5, 66);
+      this.chk_save.Location = new System.Drawing.Point(5, 61);
       this.chk_save.Name = "chk_save";
       this.chk_save.Padding = new System.Windows.Forms.Padding(10, 12, 0, 0);
       this.chk_save.Size = new System.Drawing.Size(180, 31);
       this.chk_save.TabIndex = 2;
       this.chk_save.Text = "AuthToken speichern?";
-      this.chk_save.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
       // 
       // btn_signin
       // 
       this.btn_signin.Dock = System.Windows.Forms.DockStyle.Right;
-      this.btn_signin.Location = new System.Drawing.Point(374, 66);
+      this.btn_signin.Location = new System.Drawing.Point(374, 61);
       this.btn_signin.Name = "btn_signin";
-      this.btn_signin.Size = new System.Drawing.Size(137, 41);
+      this.btn_signin.Size = new System.Drawing.Size(137, 46);
       this.btn_signin.TabIndex = 1;
       this.btn_signin.Text = "Anmelden";
       this.btn_signin.Click += new System.EventHandler(this.btn_signin_Click);
@@ -84,7 +83,7 @@
       this.txt_authToken.Location = new System.Drawing.Point(5, 25);
       this.txt_authToken.Name = "txt_authToken";
       this.txt_authToken.NullText = "AuthToken hier eingeben...";
-      this.txt_authToken.Size = new System.Drawing.Size(506, 41);
+      this.txt_authToken.Size = new System.Drawing.Size(506, 36);
       this.txt_authToken.TabIndex = 0;
       // 
       // SigninForm
@@ -95,10 +94,6 @@
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
       this.Margin = new System.Windows.Forms.Padding(4);
       this.Name = "SigninForm";
-      // 
-      // 
-      // 
-      this.RootElement.ApplyShapeToControl = true;
       this.Text = "QuickAnnotator";
       ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
       this.radGroupBox1.ResumeLayout(false);
