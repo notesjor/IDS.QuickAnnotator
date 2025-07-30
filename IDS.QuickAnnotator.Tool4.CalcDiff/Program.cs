@@ -25,14 +25,14 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
       var calc = new ExporterCalculateResults();
       calc.Export(model, args[1].Replace(".tsv", "_calc.tsv"));
 
-      var html = new ExporterHtml();
-      html.Export(model, args[1].Replace(".tsv", "_html"));
+      //var html = new ExporterHtml();
+      //html.Export(model, args[1].Replace(".tsv", "_html"));
 
-      var xml = new ExporterXml();
-      xml.Export(model, args[1].Replace(".tsv", "_xml"));
+      //var xml = new ExporterXml();
+      //xml.Export(model, args[1].Replace(".tsv", "_xml"));
 
-      var xmlValid = new ExporterXmlValidation();
-      xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
+      //var xmlValid = new ExporterXmlValidation();
+      //xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
 
       var cross = new ExporterCalculateCrossResults();
       cross.Export(model, args[1].Replace(".tsv", "_calcCross.tsv"));

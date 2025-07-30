@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>C:\Users\Jan\Desktop\DATA\Alissa\history layer "Bestimmter Artikel%3f - Nein = unbestimmter Artikel" C:\Users\Jan\Desktop\DATA\Alissa\history</StartArguments>
+    <StartArguments>I:\data\23\history layer "Reguläre Doppelform" I:\data\23\history_clean</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <PublishUrlHistory />
