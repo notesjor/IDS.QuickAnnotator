@@ -264,7 +264,7 @@ namespace IDS.QuickAnnotator.Client.Forms
         To = _editorIndexTo + 1,
         Annotation = new Dictionary<string, object>
         {
-          {"Alternierende Doppelform", "true"}
+          {"Doppelform", "true"}
         }
       });
 

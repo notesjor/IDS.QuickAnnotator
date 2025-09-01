@@ -45,7 +45,6 @@
       this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
       this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
       this.panel_controls = new Telerik.WinControls.UI.RadScrollablePanel();
-      this.radButton2 = new Telerik.WinControls.UI.RadButton();
       this.radButton1 = new Telerik.WinControls.UI.RadButton();
       this.btn_submit = new Telerik.WinControls.UI.RadButton();
       this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -59,7 +58,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.panel_controls)).BeginInit();
       this.panel_controls.PanelContainer.SuspendLayout();
       this.panel_controls.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -165,10 +163,6 @@
       this.radSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.radSplitContainer1.Location = new System.Drawing.Point(0, 49);
       this.radSplitContainer1.Name = "radSplitContainer1";
-      // 
-      // 
-      // 
-      this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(0, 0);
       this.radSplitContainer1.Size = new System.Drawing.Size(1209, 698);
       this.radSplitContainer1.SplitterWidth = 16;
       this.radSplitContainer1.TabIndex = 1;
@@ -179,10 +173,6 @@
       this.splitPanel1.Controls.Add(this.elementHost1);
       this.splitPanel1.Location = new System.Drawing.Point(0, 0);
       this.splitPanel1.Name = "splitPanel1";
-      // 
-      // 
-      // 
-      this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(0, 0);
       this.splitPanel1.Size = new System.Drawing.Size(764, 698);
       this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.1404024F, 0F);
       this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(132, 0);
@@ -195,10 +185,6 @@
       this.splitPanel2.Controls.Add(this.panel_controls);
       this.splitPanel2.Location = new System.Drawing.Point(780, 0);
       this.splitPanel2.Name = "splitPanel2";
-      // 
-      // 
-      // 
-      this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(0, 0);
       this.splitPanel2.Size = new System.Drawing.Size(429, 698);
       this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.1404023F, 0F);
       this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-132, 0);
@@ -217,7 +203,6 @@
       // 
       // panel_controls.PanelContainer
       // 
-      this.panel_controls.PanelContainer.Controls.Add(this.radButton2);
       this.panel_controls.PanelContainer.Controls.Add(this.radButton1);
       this.panel_controls.PanelContainer.Controls.Add(this.btn_submit);
       this.panel_controls.PanelContainer.Location = new System.Drawing.Point(0, 0);
@@ -227,20 +212,6 @@
       this.panel_controls.TabIndex = 7;
       this.panel_controls.VerticalScrollBarState = Telerik.WinControls.UI.ScrollState.AlwaysShow;
       // 
-      // radButton2
-      // 
-      this.radButton2.Dock = System.Windows.Forms.DockStyle.Top;
-      this.radButton2.Location = new System.Drawing.Point(0, 72);
-      this.radButton2.Margin = new System.Windows.Forms.Padding(6);
-      this.radButton2.Name = "radButton2";
-      this.radButton2.Size = new System.Drawing.Size(412, 36);
-      this.radButton2.TabIndex = 25;
-      this.radButton2.Text = "Reguläre Doppelform";
-      this.toolTip1.SetToolTip(this.radButton2, "Annotation anwenden");
-      this.radButton2.Click += new System.EventHandler(this.btn_submit_doppelform_regu_Click);
-      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).Text = "Reguläre Doppelform";
-      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
-      // 
       // radButton1
       // 
       this.radButton1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -249,10 +220,10 @@
       this.radButton1.Name = "radButton1";
       this.radButton1.Size = new System.Drawing.Size(412, 36);
       this.radButton1.TabIndex = 24;
-      this.radButton1.Text = "Alternierende Doppelform";
+      this.radButton1.Text = "Doppelform";
       this.toolTip1.SetToolTip(this.radButton1, "Annotation anwenden");
       this.radButton1.Click += new System.EventHandler(this.btn_submit_doppelform_altern_Click);
-      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Text = "Alternierende Doppelform";
+      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Text = "Doppelform";
       ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
       // 
       // btn_submit
@@ -288,7 +259,6 @@
       this.panel_controls.PanelContainer.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.panel_controls)).EndInit();
       this.panel_controls.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -314,7 +284,6 @@
     private Telerik.WinControls.UI.RadButton btn_submit;
         private Telerik.WinControls.UI.RadScrollablePanel panel_controls;
         private Telerik.WinControls.UI.CommandBarButton btn_screenFix;
-    private Telerik.WinControls.UI.RadButton radButton2;
     private Telerik.WinControls.UI.RadButton radButton1;
   }
 }
