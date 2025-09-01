@@ -38,29 +38,10 @@ namespace IDS.QuickAnnotator.Client.Forms
       _editor.LeftClick += EditorOnLeftClick;
       _editor.RightClick += EditorOnRightClick;
       //_editor.Highlight = new HashSet<string> { };
-      _editor.Highlight = new HashSet<string> {"Kletterer",
-        "Kletterers",
-        "Kletterern",
-        "Kletterin",
-        "Kletterinnen",
-        "Bassist",
-        "Bassisten",
-        "Bassistin",
-        "Bassistinnen",
-        "Künstler",
-        "Künstlers",
-        "Künstlerin",
-        "Künstlerinnen",
-        "Surfer",
-        "Surfers",
-        "Surfern",
-        "Surferin",
-        "Surferinnen", };
-      /*
+      _editor.Highlight = new HashSet<string>
       {
         "Geschäftsführer", "Geschäftsführer", "Geschäftsführers", "Geschäftsführern", "Geschäftsführerin", "Geschäftsführerin", "Geschäftsführerinnen", "Künstler", "Künstler", "Künstlers", "Künstlern", "Künstlerin", "Künstlerin", "Künstlerinnen", "Lehrer", "Lehrer", "Lehrers", "Lehrern", "Lehrerin", "Lehrerin", "Lehrerinnen", "Leiter", "Leiter", "Leiters", "Leitern", "Leiterin", "Leiterin", "Leiterinnen", "Mitarbeiter", "Mitarbeiter", "Mitarbeiters", "Mitarbeitern", "Mitarbeiterin", "Mitarbeiterin", "Mitarbeiterinnen", "Spieler", "Spieler", "Spielers", "Spielern", "Spielerin", "Spielerin", "Spielerinnen", "Berliner", "Berliner", "Berliners", "Berlinern", "Berlinerin", "Berlinerin", "Berlinerinnen", "Hamburger", "Hamburger", "Hamburgers", "Hamburgern", "Hamburgerin", "Hamburgerin", "Hamburgerinnen", "Schweizer", "Schweizer", "Schweizers", "Schweizern", "Schweizerin", "Schweizerin", "Schweizerinnen", "Wiener", "Wiener", "Wieners", "Wienern", "Wienerin", "Wienerin", "Wienerinnen", "Bürger", "Bürger", "Bürgers", "Bürgern", "Bürgerin", "Bürgerin", "Bürgerinnen", "Freund", "Freund", "Freundes", "Freunds", "Freunde", "Freunden", "Freundin", "Freundin", "Freundinnen", "Gastgeber", "Gastgeber", "Gastgebers", "Gastgebern", "Gastgeberin", "Gastgeberin", "Gastgeberinnen", "Schüler", "Schüler", "Schülers", "Schülern", "Schülerin", "Schülerin", "Schülerinnen", "Teilnehmer", "Teilnehmer", "Teilnehmers", "Teilnehmern", "Teilnehmerin", "Teilnehmerin", "Teilnehmerinnen", "Bürgermeister", "Bürgermeister", "Bürgermeisters", "Bürgermeistern", "Bürgermeisterin", "Bürgermeisterin", "Bürgermeisterinnen", "Chef", "Chef", "Chefs", "Chefin", "Chefin", "Chefinnen", "Minister", "Minister", "Ministers", "Ministern", "Ministerin", "Ministerin", "Ministerinnen", "Pfarrer", "Pfarrer", "Pfarrers", "Pfarrern", "Pfarrerin", "Pfarrerin", "Pfarrerinnen", "Präsident", "Präsident", "Präsidenten", "Präsidentin", "Präsidentin", "Präsidentinnen", "Richter", "Richter", "Richters", "Richtern", "Richterin", "Richterin", "Richterinnen"
       };
-      */
 
       elementHost1.Child = _editor;
 
