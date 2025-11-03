@@ -1,0 +1,6 @@
+Haus	100	10	5
+Auto	Fahrzeug	Auto	Automobil	200	15	10
+Kind	Kinder	Spiel	150	20	5
+laufen	rennen	50	8	2
+Straße	120	12	3
+Baum	Blatt	Ast	80	6	1
