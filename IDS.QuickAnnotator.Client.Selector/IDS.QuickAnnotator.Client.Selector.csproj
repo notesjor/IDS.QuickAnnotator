@@ -80,9 +80,8 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CorpusExplorer.Sdk, Version=2.2019.8.15, Culture=neutral, PublicKeyToken=6c9866eeb69c45e9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
+    <Reference Include="CorpusExplorer.Sdk">
+      <HintPath>..\..\..\..\Users\Jan\AppData\Roaming\CorpusExplorer\App\CorpusExplorer.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="PostSharp, Version=2025.1.12.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
       <HintPath>..\IDS.QuickAnnotator.API\packages\PostSharp.Redist.2025.1.12\lib\net45\PostSharp.dll</HintPath>
@@ -101,32 +100,32 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Licensing.Runtime, Version=1.6.16.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\Telerik.Licensing.Runtime.dll</HintPath>
+    <Reference Include="Telerik.Licensing.Runtime, Version=1.6.31.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms 2025 Q4\Bin48\Telerik.Licensing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2025.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\Telerik.WinControls.dll</HintPath>
+    <Reference Include="Telerik.WinControls.GridView, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.GridView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.GridView, Version=2025.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\Telerik.WinControls.GridView.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.Themes.Material.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Material, Version=2025.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\Telerik.WinControls.Themes.Material.dll</HintPath>
+    <Reference Include="Telerik.WinControls.UI, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2025.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\Telerik.WinControls.UI.dll</HintPath>
+    <Reference Include="TelerikCommon, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikCommon, Version=2025.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\TelerikCommon.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="TelerikData, Version=2025.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.3.812.48\TelerikData.dll</HintPath>
+    <Reference Include="TelerikData, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\TelerikData.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
