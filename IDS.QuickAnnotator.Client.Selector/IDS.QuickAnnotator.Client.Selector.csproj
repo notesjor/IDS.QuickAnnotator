@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.props" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.props')" />
+  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -84,8 +84,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk\bin\Debug\CorpusExplorer.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="PostSharp, Version=2025.1.5.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\PostSharp.Redist.2025.1.5\lib\net45\PostSharp.dll</HintPath>
+    <Reference Include="PostSharp, Version=2025.1.12.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\packages\PostSharp.Redist.2025.1.12\lib\net45\PostSharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -227,8 +227,8 @@
     <PropertyGroup>
       <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.props'))" />
-    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.targets'))" />
+    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props'))" />
+    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets'))" />
   </Target>
-  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.targets" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.5\build\PostSharp.targets')" />
+  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets')" />
 </Project>
