@@ -16,82 +16,103 @@ namespace IDS.QuickAnnotator.QafSampler
 
     static void Main(string[] args)
     {
-      var project = CorpusExplorerEcosystem.InitializeMinimal(new CacheStrategyDisableCaching());
+      if (args.Length != 3)
+      {
+        Console.WriteLine("Usage: IDS.QuickAnntator.QafSampler <source> <qaf-file> <output>");
+        Console.WriteLine("if <source> is a single CEC6-File, use this file as source");
+        Console.WriteLine("if <source> is a directory, use all CEC6-File in it as one source");
+        return;
+      }
 
-      var qafFile = args[0];
+      var source = args[0];
+      var qafFile = args[1];
+      var output = args[2];
+
       var QafData = GetQafData(qafFile);
 
-      var basePath = Path.GetDirectoryName(qafFile);
-      var outputPath = Path.Combine(basePath, "output");
-      if (!Directory.Exists(outputPath))
-        Directory.CreateDirectory(outputPath);
+      if (!Directory.Exists(output))
+        Directory.CreateDirectory(output);
 
-      var corpora = GetCorpusInfo(basePath);
-      foreach (var corpus in corpora)
+      if (source.ToLower().EndsWith(".cec6"))
+        ModeSingleFile(source, QafData, output);
+      else
+        ModeFolder(source, QafData, output);
+    }
+
+    private static void ModeFolder(string source, List<Tuple<List<string>, int, int, int>> qafData, string output)
+    {
+      var files = Directory.GetFiles(source, "*.cec6", SearchOption.TopDirectoryOnly);
+      var project = CorpusExplorerEcosystem.InitializeMinimal(new CacheStrategyDisableCaching());
+      var loadLock = new object();
+      Parallel.ForEach(files, new ParallelOptions { MaxDegreeOfParallelism = 20 }, path =>
       {
-        Console.WriteLine($"corpus: {corpus.Key}");
-        var loadLock = new object();
+        Console.WriteLine($"load: {path}...");
+        var cec6 = CorpusAdapterWriteIndirect.Create(path);
+        lock (loadLock)
+          project.Add(cec6);
+        Console.WriteLine($"load: {path}...ok!");
+      });
+      Console.WriteLine("all files loaded!");
+      StartSamplingProcess(project.SelectAll, qafData, Path.Combine(output, new DirectoryInfo(source).Name));
+    }
 
-        Parallel.ForEach(corpus.Value, year =>
+    private static void ModeSingleFile(string path, List<Tuple<List<string>, int, int, int>> qafData, string output)
+    {
+      Console.Write($"load: {path}...");
+      var cec6 = CorpusAdapterWriteDirect.Create(path);
+      var project = CorpusExplorerEcosystem.InitializeMinimal(new CacheStrategyDisableCaching());
+      project.Add(cec6);
+      Console.WriteLine("ok!");
+
+      StartSamplingProcess(project.SelectAll, qafData, Path.Combine(output, Path.GetFileNameWithoutExtension(path)));
+    }
+
+    private static void StartSamplingProcess(Selection all, List<Tuple<List<string>, int, int, int>> qafData, string pathTemplate)
+    {
+      foreach (var qaf in qafData)
+      {
+        try
         {
-          var file = Path.Combine(basePath, $"{corpus.Key}{year}.cec6");
-          Console.WriteLine($"load: {file}");
-          var cec6 = CorpusAdapterWriteDirect.Create(file);
-          lock (loadLock)
-            project.Add(cec6);
-          Console.WriteLine($"load: {file} - ok!");
-        });
-
-        var all = project.SelectAll;
-
-        foreach (var qaf in QafData)
-        {
-          try
+          var tmp = all.CreateTemporary(new[]
           {
-            var tmp = all.CreateTemporary(new[]
+            new FilterQuerySingleLayerAnyMatch
             {
-              new FilterQuerySingleLayerAnyMatch
-              {
-                LayerDisplayname = "Wort",
-                LayerQueries = qaf.Item1
-              }
-            });
-            if (tmp == null || tmp.CountDocuments < 1)
-              continue;
-
-            var docs = GetSample(tmp, qaf.Item4); // extra docs
-            tmp = Remove(tmp, docs);
-
-            var cntToken = qaf.Item2;
-            var cntDoc = qaf.Item3;
-
-            while (cntToken > 0 && cntDoc > 0)
-            {
-              var guid = GetSample(tmp, 1);
-              cntDoc--;
-
-              var dSel = tmp.CreateTemporary(guid);
-              var block = dSel.CreateBlock<Frequency1LayerBlock>();
-              block.LayerDisplayname = "Wort";
-              block.Calculate();
-              cntToken -= (int)qaf.Item1.Sum(x => block.Frequency.ContainsKey(x) ? block.Frequency[x] : 0);
-
-              docs.AddRange(guid);
-
-              tmp = Remove(tmp, guid);
+              LayerDisplayname = "Wort",
+              LayerQueries = qaf.Item1
             }
+          });
+          if (tmp == null || tmp.CountDocuments < 1)
+            continue;
 
-            var output = all.CreateTemporary(docs);
-            var outputFile = Path.Combine(outputPath, $"{corpus.Key}-{qaf.Item1.First()}.cec6");
-            output.ToCorpus().Save(outputFile, false);
-          }
-          catch
+          var docs = GetSample(tmp, qaf.Item4); // extra docs
+          tmp = Remove(tmp, docs);
+
+          var cntToken = qaf.Item2;
+          var cntDoc = qaf.Item3;
+
+          while (cntToken > 0 && cntDoc > 0)
           {
-            // ignore
-          }
-        }
+            var guid = GetSample(tmp, 1);
+            cntDoc--;
 
-        project.Clear();
+            var dSel = tmp.CreateTemporary(guid);
+            var block = dSel.CreateBlock<Frequency1LayerBlock>();
+            block.LayerDisplayname = "Wort";
+            block.Calculate();
+            cntToken -= (int)qaf.Item1.Sum(x => block.Frequency.ContainsKey(x) ? block.Frequency[x] : 0);
+
+            docs.AddRange(guid);
+
+            tmp = Remove(tmp, guid);
+          }
+
+          var output = all.CreateTemporary(docs);
+          output.ToCorpus().Save($"{pathTemplate}-{qaf.Item1.First()}.cec6", false);
+        }
+        catch
+        {
+          // ignore
+        }
       }
     }
 
@@ -101,25 +122,6 @@ namespace IDS.QuickAnnotator.QafSampler
       foreach (var x in remove)
         res.Remove(x);
       return tmp.CreateTemporary(res);
-    }
-
-    private static Dictionary<string, List<string>> GetCorpusInfo(string basePath)
-    {
-      var files = Directory.GetFiles(basePath, "*.cec6", SearchOption.TopDirectoryOnly);
-
-      var res = new Dictionary<string, List<string>>();
-      foreach (var file in files)
-      {
-        var name = Path.GetFileNameWithoutExtension(file);
-        var year = name.Substring(name.Length - 2);
-        var sigle = name.Substring(0, name.Length - 2);
-
-        if (!res.ContainsKey(sigle))
-          res.Add(sigle, new List<string>());
-
-        res[sigle].Add(year);
-      }
-      return res;
     }
 
     private static List<Guid> GetSample(Selection tmp, int cnt)

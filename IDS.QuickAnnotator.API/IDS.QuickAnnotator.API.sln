@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS.QuickAnnotator.API", "IDS.QuickAnnotator.API.csproj", "{46E37D7A-0E14-4BEF-92E5-63CA6D401A08}"
 EndProject
@@ -62,6 +62,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorpusExplorer.Sdk.Extern.Json", "..\..\..\CorpusExplorerV2\CorpusExplorer\CorpusExplorer.Sdk.Extern.Json\CorpusExplorer.Sdk.Extern.Json.csproj", "{DD54A9B0-80A9-4DD6-83A6-65359086CE18}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.App", "..\IDS.QuickAnnotator.App\IDS.QuickAnnotator.App.csproj", "{97AFB764-0ADA-419A-8830-AC4D641EF917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS.QuickAnnotator.Tool4.MultiUserSplit", "..\IDS.QuickAnnotator.Tool4.MultiUserSplit\IDS.QuickAnnotator.Tool4.MultiUserSplit.csproj", "{38857177-BB2D-461F-A699-65C3DB4CD061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -202,6 +204,12 @@ Global
 		{97AFB764-0ADA-419A-8830-AC4D641EF917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97AFB764-0ADA-419A-8830-AC4D641EF917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97AFB764-0ADA-419A-8830-AC4D641EF917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38857177-BB2D-461F-A699-65C3DB4CD061}.Debug (Linux)|Any CPU.ActiveCfg = Debug|Any CPU
+		{38857177-BB2D-461F-A699-65C3DB4CD061}.Debug (Linux)|Any CPU.Build.0 = Debug|Any CPU
+		{38857177-BB2D-461F-A699-65C3DB4CD061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38857177-BB2D-461F-A699-65C3DB4CD061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38857177-BB2D-461F-A699-65C3DB4CD061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38857177-BB2D-461F-A699-65C3DB4CD061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -232,6 +240,7 @@ Global
 		{DC1B5A58-29DA-476D-89F8-E73A1DB11E52} = {B28D3168-4904-4765-A9B3-3BF67BC038DF}
 		{DD54A9B0-80A9-4DD6-83A6-65359086CE18} = {B28D3168-4904-4765-A9B3-3BF67BC038DF}
 		{97AFB764-0ADA-419A-8830-AC4D641EF917} = {47204E0C-997C-49FB-8EA6-A976967E1C2D}
+		{38857177-BB2D-461F-A699-65C3DB4CD061} = {27150B9A-2882-44D8-A366-BFAA0DB63EBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {634AD13F-6E6A-4CB5-8614-A6E4E0E1D7F8}
