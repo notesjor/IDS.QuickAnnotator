@@ -47,7 +47,7 @@ namespace IDS.QuickAnnotator.QafSampler
       Parallel.ForEach(files, new ParallelOptions { MaxDegreeOfParallelism = 20 }, path =>
       {
         Console.WriteLine($"load: {path}...");
-        var cec6 = CorpusAdapterWriteIndirect.Create(path);
+        var cec6 = CorpusAdapterWriteDirect.Create(path);
         lock (loadLock)
           project.Add(cec6);
         Console.WriteLine($"load: {path}...ok!");
