@@ -36,7 +36,7 @@ namespace IDS.QuickAnnotator.API
       _layers = File.ReadAllText(Path.Combine(_app, "layers.json"));
 
       Console.Write("Service-Port: 4545...");
-      var server = new Server("*", 45459, (arg) => arg.Response.Send(HttpStatusCode.NoContent));
+      var server = new Server("*", 4545, (arg) => arg.Response.Send(HttpStatusCode.NoContent));
       server.AddEndpoint(HttpMethod.Post, "/getDocuments", GetDocuments);
       server.AddEndpoint(HttpMethod.Post, "/getLayer", GetLayer);
       server.AddEndpoint(HttpMethod.Post, "/getDocument", GetDocument);
