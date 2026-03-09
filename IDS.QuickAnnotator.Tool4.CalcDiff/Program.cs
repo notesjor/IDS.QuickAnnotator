@@ -10,41 +10,41 @@ namespace IDS.QuickAnnotator.Tool4.CalcDiff
     {
       var model = new AnnotationModelOffline(args[0]);
       
-      var agreed = new ExporterCalculateMergedAgreedBothResults();
-      agreed.Export(model, args[1].Replace(".tsv", "_calc_merged_agreed.tsv"));
+      // var agreed = new ExporterCalculateMergedAgreedBothResults();
+      // agreed.Export(model, args[1].Replace(".tsv", "_calc_merged_agreed.tsv"));
 
       var diffS = new ExporterStrictDiff();
       diffS.Export(model, args[1].Replace(".tsv", "_strict.tsv"));
       
-      var htmlDiff = new ExporterHtmlDiff();
-      htmlDiff.Export(model, args[1].Replace(".tsv", "_htmlDiff"));
-
-      var diff = new ExporterDiff();
-      diff.Export(model, args[1]);      
-          
-      var calc = new ExporterCalculateResults();
-      calc.Export(model, args[1].Replace(".tsv", "_calc.tsv"));
-
-      //var html = new ExporterHtml();
-      //html.Export(model, args[1].Replace(".tsv", "_html"));
-
-      //var xml = new ExporterXml();
-      //xml.Export(model, args[1].Replace(".tsv", "_xml"));
-
-      //var xmlValid = new ExporterXmlValidation();
-      //xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
-
-      var cross = new ExporterCalculateCrossResults();
-      cross.Export(model, args[1].Replace(".tsv", "_calcCross.tsv"));
-
-      var snippets = new ExporterCalculateSnippetsResults();
-      snippets.Export(model, args[1].Replace(".tsv", "_snippets.tsv"));
-
-      var crossSnippets = new ExporterCalculateCrossSnippetsResults();
-      crossSnippets.Export(model, args[1].Replace(".tsv", "_crossSnippets.tsv"));
-
-      var onlyBy = new ExporterCalculateSingleAnnotatedDocuments();
-      onlyBy.Export(model, args[1].Replace(".tsv", ""));
+      // var htmlDiff = new ExporterHtmlDiff();
+      // htmlDiff.Export(model, args[1].Replace(".tsv", "_htmlDiff"));
+      //
+      // var diff = new ExporterDiff();
+      // diff.Export(model, args[1]);      
+      //     
+      // var calc = new ExporterCalculateResults();
+      // calc.Export(model, args[1].Replace(".tsv", "_calc.tsv"));
+      //
+      // //var html = new ExporterHtml();
+      // //html.Export(model, args[1].Replace(".tsv", "_html"));
+      //
+      // //var xml = new ExporterXml();
+      // //xml.Export(model, args[1].Replace(".tsv", "_xml"));
+      //
+      // //var xmlValid = new ExporterXmlValidation();
+      // //xmlValid.Export(model, args[1].Replace(".tsv", "_xmlValid"));
+      //
+      // var cross = new ExporterCalculateCrossResults();
+      // cross.Export(model, args[1].Replace(".tsv", "_calcCross.tsv"));
+      //
+      // var snippets = new ExporterCalculateSnippetsResults();
+      // snippets.Export(model, args[1].Replace(".tsv", "_snippets.tsv"));
+      //
+      // var crossSnippets = new ExporterCalculateCrossSnippetsResults();
+      // crossSnippets.Export(model, args[1].Replace(".tsv", "_crossSnippets.tsv"));
+      //
+      // var onlyBy = new ExporterCalculateSingleAnnotatedDocuments();
+      // onlyBy.Export(model, args[1].Replace(".tsv", ""));
 
       Console.WriteLine("!END!");
       Console.ReadLine();
