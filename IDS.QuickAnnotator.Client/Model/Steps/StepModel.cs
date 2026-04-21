@@ -21,23 +21,23 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         PossibleValues = new[] { "1", "SIM" },
         AlwayOn = true
       };
-      var step_numerus_plural = new Step
+      //var step_numerus_plural = new Step
+      //{
+      //  Name = "Plural?",
+      //  Description = "Ja = Plural / Nein = Singular",
+      //  PossibleValues = new[] { "true", "false" }
+      //};
+      var step_numerus = new Step
       {
-        Name = "Plural?",
-        Description = "Ja = Plural / Nein = Singular",
-        PossibleValues = new[] { "true", "false" }
+        Name = "Numerus",
+        Description = "S = Singular / P = Plural",
+        PossibleValues = new[] { "S", "P" }
       };
-      var step_in_definit = new Step
+      var step_genus = new Step
       {
-        Name = "Definit?",
-        Description = "Ja = Definit / Nein = Indefinit",
-        PossibleValues = new[] { "true", "false" }
-      };
-      var step_form_genus = new Step
-      {
-        Name = "Form/Genus",
-        Description = "Maskulinum / Femininum / Genderzeichen",
-        PossibleValues = new[] { "male", "female", "none" }
+        Name = "Genus",
+        Description = "Maskulinum / Femininum",
+        PossibleValues = new[] { "male", "female" }
       };
       var step_usage = new Step
       {
@@ -45,16 +45,11 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         Description = "Ja = geschlechtsspezifisch / Nein = geschlechtsübergreifend",
         PossibleValues = new[] { "true", "false" }
       };
-      var step_granulation = new Step
+      var step_beruf = new Step
       {
-        Name = "Grad der Identifizierbarkeit",
-        PossibleValues = new[] { "--", "-", "+", "++" }
+        Name = "Beruf/Rolle",
+        PossibleValues = new[] { "B", "R", "-" }
       };
-      //var step_beruf = new Step
-      //{
-      //  Name = "Beruf/Rolle",
-      //  PossibleValues = new[] { "B", "R", "-" }
-      //};
       //var step_semantik = new Step
       //{
       //  Name = "Semantik",
@@ -151,11 +146,10 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
       Steps = new[]
       {
         step_lk,
-        step_numerus_plural,
-        step_in_definit,
-        step_form_genus,
+        step_numerus,
+        step_genus,
+        step_beruf,
         step_usage,
-        step_granulation
         //step_artikel_bestimmt, 
         //step_gesab_beruf,
         //step_gesab_semantik,
@@ -191,17 +185,17 @@ namespace IDS.QuickAnnotator.Client.Model.Steps
         {
           Parent = new[] { step_lk }, ValidSimpleValue = "1", Children = new[]
           {
-            step_numerus_plural,
-            step_in_definit,
-            step_form_genus,
+            step_numerus,
+            step_genus,
+            step_beruf,
            }
         },
         new StepRule
         {
-          Parent = new[] { step_form_genus }, ValidComplexRule = p => p.Any(x => x.ValuePure != ""), Children = new[]
+          Parent = new[] { step_genus },
+          ValidComplexRule = p => p.Any(x => x.ValuePure != ""), Children = new[]
           {
-            step_usage,
-            step_granulation
+            step_usage
           }
         },
         /*
