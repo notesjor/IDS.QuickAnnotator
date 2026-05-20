@@ -1,0 +1,3322 @@
+﻿ART15_JUL.00038	Konstantina Karakechagia, Lea Wassmer
+ART15_NOV.00035	Alissa Hege, Konstantina Karakechagia
+ART15_OKT.00017	Konstantina Karakechagia, Lea Wassmer
+ART16_APR.00035	Alissa Hege, Konstantina Karakechagia
+ART16_AUG.00012	Konstantina Karakechagia, Lea Wassmer
+ART16_JUL.00031	Alissa Hege, Konstantina Karakechagia, Lara Baum
+ART16_JUL.00036	Konstantina Karakechagia, Lea Wassmer
+ART16_NOV.00009	Alissa Hege, Konstantina Karakechagia
+ART16_NOV.00014	Konstantina Karakechagia, Lea Wassmer
+ART17_FEB.00040	Alissa Hege, Konstantina Karakechagia
+ART17_JUN.00042	Konstantina Karakechagia, Lea Wassmer
+ART17_OKT.00023	Alissa Hege, Konstantina Karakechagia, Lara Baum
+ART17_OKT.00024	Konstantina Karakechagia, Lea Wassmer
+ART17_SEP.00003	Alissa Hege, Konstantina Karakechagia
+ART18_APR.00022	Konstantina Karakechagia, Lea Wassmer
+ART18_DEZ.00008	Alissa Hege, Konstantina Karakechagia
+ART18_JUN.00037	Konstantina Karakechagia, Lea Wassmer
+ART18_MAI.00037	Alissa Hege, Konstantina Karakechagia
+ART18_MAR.00023	Konstantina Karakechagia, Lea Wassmer
+ART18_OKT.00044	Alissa Hege, Konstantina Karakechagia
+ART18_SEP.00006	Konstantina Karakechagia, Lea Wassmer
+ART19_FEB.00025	Alissa Hege, Konstantina Karakechagia
+ART19_JUL.00002	Konstantina Karakechagia, Lea Wassmer
+ART19_MAR.00012	Alissa Hege, Konstantina Karakechagia
+ART19_SEP.00023	Konstantina Karakechagia, Lea Wassmer
+ART20_FEB.00024	Alissa Hege, Konstantina Karakechagia, Lara Baum
+ART20_JUN.00021	Konstantina Karakechagia, Lea Wassmer
+ART20_SEP.00024	Alissa Hege, Konstantina Karakechagia
+ART21_AUG.00027	Konstantina Karakechagia, Lea Wassmer
+ART21_FEB.00026	Alissa Hege, Konstantina Karakechagia
+ART21_JAN.00031	Konstantina Karakechagia, Lea Wassmer
+ART22_DEZ.00031	Alissa Hege, Konstantina Karakechagia
+ART22_JAN.00025	Konstantina Karakechagia, Lea Wassmer
+ART23_APR.00026	Alissa Hege, Konstantina Karakechagia
+ART23_FEB.00016	Konstantina Karakechagia, Lea Wassmer
+ART24_FEB.00017	Alissa Hege, Konstantina Karakechagia
+ART24_JAN.00031	Konstantina Karakechagia, Lea Wassmer
+ART24_JUN.00045	Alissa Hege, Konstantina Karakechagia
+ART24_OKT.00034	Konstantina Karakechagia, Lea Wassmer
+BEI18_AUG.00017	Alissa Hege, Konstantina Karakechagia
+BEI18_DEZ.00014	Konstantina Karakechagia, Lea Wassmer
+BEI18_FEB.00024	Alissa Hege, Konstantina Karakechagia
+BEI18_FEB.00025	Konstantina Karakechagia, Lea Wassmer
+BEI18_JUN.00008	Alissa Hege, Konstantina Karakechagia, Lara Baum
+BEI18_JUN.00035	Konstantina Karakechagia, Lea Wassmer
+BEI19_AUG.00008	Alissa Hege, Konstantina Karakechagia
+BEI19_AUG.00024	Konstantina Karakechagia, Lea Wassmer
+BEI19_MAI.00023	Alissa Hege, Konstantina Karakechagia
+BEI19_MAI.00024	Konstantina Karakechagia, Lea Wassmer
+BEI19_NOV.00030	Alissa Hege, Konstantina Karakechagia
+BEI19_SEP.00009	Konstantina Karakechagia, Lea Wassmer
+BEI20_APR.00013	Alissa Hege, Konstantina Karakechagia
+BEI20_JAN.00006	Konstantina Karakechagia, Lea Wassmer
+BEI20_JUN.00003	Alissa Hege, Konstantina Karakechagia, Lara Baum
+BEI20_MAR.00027	Konstantina Karakechagia, Lea Wassmer
+BEI21_DEZ.00011	Alissa Hege, Konstantina Karakechagia
+BEI21_FEB.00013	Konstantina Karakechagia, Lea Wassmer
+BEI21_FEB.00020	Alissa Hege, Konstantina Karakechagia
+BEI21_JUL.00014	Konstantina Karakechagia, Lea Wassmer
+BEI21_JUN.00008	Alissa Hege, Konstantina Karakechagia
+BEI21_JUN.00011	Konstantina Karakechagia, Lea Wassmer
+BEI21_OKT.00010	Alissa Hege, Konstantina Karakechagia
+BEI22_DEZ.00008	Konstantina Karakechagia, Lea Wassmer
+BEI22_JUN.00024	Alissa Hege, Konstantina Karakechagia
+BEI22_MAI.00016	Konstantina Karakechagia, Lea Wassmer
+BEI22_NOV.00024	Alissa Hege, Konstantina Karakechagia
+BEI22_OKT.00017	Konstantina Karakechagia, Lea Wassmer
+BEI23_APR.00016	Alissa Hege, Konstantina Karakechagia
+BEI23_FEB.00021	Konstantina Karakechagia, Lea Wassmer
+BEI23_JUL.00011	Alissa Hege, Konstantina Karakechagia
+BEI23_JUN.00012	Konstantina Karakechagia, Lea Wassmer
+BEI23_MAI.00012	Alissa Hege, Konstantina Karakechagia
+BEI23_MAR.00016	Konstantina Karakechagia, Lea Wassmer
+BEI23_NOV.00033	Alissa Hege, Konstantina Karakechagia
+BEI24_AUG.00005	Konstantina Karakechagia, Lea Wassmer
+BEI24_JAN.00007	Alissa Hege, Konstantina Karakechagia
+BEI24_JUL.00022	Konstantina Karakechagia, Lea Wassmer
+BEI24_MAR.00028	Alissa Hege, Konstantina Karakechagia
+BEI24_OKT.00019	Konstantina Karakechagia, Lea Wassmer
+BEI24_OKT.00041	Alissa Hege, Konstantina Karakechagia
+BEI24_SEP.00001	Konstantina Karakechagia, Lea Wassmer
+BEI24_SEP.00009	Alissa Hege, Konstantina Karakechagia
+BRG10_MAI.00117	Konstantina Karakechagia, Lea Wassmer
+BRG10_NOV.00020	Alissa Hege, Konstantina Karakechagia
+BRG10_NOV.00041	Konstantina Karakechagia, Lea Wassmer
+BRG11_JAN.00058	Alissa Hege, Konstantina Karakechagia
+BRG12_AUG.00116	Konstantina Karakechagia, Lea Wassmer
+BRG12_JUN.00042	Alissa Hege, Konstantina Karakechagia
+BRG13_NOV.00010	Konstantina Karakechagia, Lea Wassmer
+BRG14_APR.00019	Alissa Hege, Konstantina Karakechagia
+BRG14_AUG.00068	Konstantina Karakechagia, Lea Wassmer
+BRG14_SEP.00143	Alissa Hege, Konstantina Karakechagia
+BRG14_SEP.00154	Konstantina Karakechagia, Lea Wassmer
+BRG15_DEZ.00047	Alissa Hege, Konstantina Karakechagia, Lara Baum
+BRG15_MAI.00073	Konstantina Karakechagia, Lea Wassmer
+BRG15_NOV.00002	Alissa Hege, Konstantina Karakechagia
+BRG15_NOV.00084	Konstantina Karakechagia, Lea Wassmer
+BRG17_FEB.00061	Alissa Hege, Konstantina Karakechagia
+BRG17_MAI.00073	Konstantina Karakechagia, Lea Wassmer
+BRG17_MAR.00148	Alissa Hege, Konstantina Karakechagia
+BRG18_AUG.00085	Konstantina Karakechagia, Lea Wassmer
+BRG18_MAR.00009	Alissa Hege, Konstantina Karakechagia
+BRG18_OKT.00087	Konstantina Karakechagia, Lea Wassmer
+BRG20_AUG.00011	Alissa Hege, Konstantina Karakechagia
+BRG20_DEZ.00055	Konstantina Karakechagia, Lea Wassmer
+BRG20_JUL.00101	Alissa Hege, Konstantina Karakechagia
+BRG21_DEZ.00003	Konstantina Karakechagia, Lea Wassmer
+BRG21_OKT.00011	Alissa Hege, Konstantina Karakechagia
+BRG23_JAN.00052	Konstantina Karakechagia, Lea Wassmer
+BRG23_MAR.00075	Alissa Hege, Konstantina Karakechagia
+BRG23_OKT.00019	Konstantina Karakechagia, Lea Wassmer
+BRG24_MAI.00051	Alissa Hege, Konstantina Karakechagia
+BUP18_JUL.00026	Konstantina Karakechagia, Lea Wassmer
+BUP19_APR.00039	Alissa Hege, Konstantina Karakechagia
+BUP21_FEB.00023	Konstantina Karakechagia, Lea Wassmer
+BUP23_AUG.00020	Alissa Hege, Konstantina Karakechagia
+CAP18_APR.00012	Konstantina Karakechagia, Lea Wassmer
+CAP18_AUG.00040	Alissa Hege, Konstantina Karakechagia
+CAP18_DEZ.00009	Konstantina Karakechagia, Lea Wassmer
+CAP18_OKT.00021	Alissa Hege, Konstantina Karakechagia
+CAP19_DEZ.00017	Konstantina Karakechagia, Lea Wassmer
+CAP19_JUN.00015	Alissa Hege, Konstantina Karakechagia
+CAP19_JUN.00027	Konstantina Karakechagia, Lea Wassmer
+CAP19_SEP.00012	Alissa Hege, Konstantina Karakechagia
+CAP20_APR.00070	Konstantina Karakechagia, Lea Wassmer
+CAP20_AUG.00020	Alissa Hege, Konstantina Karakechagia
+CAP20_JUN.00014	Konstantina Karakechagia, Lea Wassmer
+CAP20_NOV.00051	Alissa Hege, Konstantina Karakechagia
+CAP21_FEB.00025	Konstantina Karakechagia, Lea Wassmer
+CAP21_JAN.00039	Alissa Hege, Konstantina Karakechagia
+CAP21_JUL.00005	Konstantina Karakechagia, Lea Wassmer
+CAP21_SEP.00039	Alissa Hege, Konstantina Karakechagia
+CAP22_AUG.00015	Konstantina Karakechagia, Lea Wassmer
+CAP22_JAN.00028	Alissa Hege, Konstantina Karakechagia
+CAP22_JUL.00032	Konstantina Karakechagia, Lea Wassmer
+CAP22_OKT.00064	Alissa Hege, Konstantina Karakechagia
+CAP23_JUL.00028	Konstantina Karakechagia, Lea Wassmer
+CAP23_NOV.00005	Alissa Hege, Konstantina Karakechagia
+CAP23_OKT.00014	Konstantina Karakechagia, Lea Wassmer
+CAP23_OKT.00016	Alissa Hege, Konstantina Karakechagia
+CAP23_OKT.00034	Konstantina Karakechagia, Lea Wassmer
+CAP24_MAI.00010	Alissa Hege, Konstantina Karakechagia
+CAP24_MAI.00024	Konstantina Karakechagia, Lea Wassmer
+CIC20_APR.00002	Alissa Hege, Konstantina Karakechagia
+CIC20_APR.00009	Konstantina Karakechagia, Lea Wassmer
+CIC20_NOV.00028	Alissa Hege, Konstantina Karakechagia, Lara Baum
+CIC21_DEZ.00027	Konstantina Karakechagia, Lea Wassmer
+COU15_JUL.00016	Alissa Hege, Konstantina Karakechagia
+COU15_JUN.00025	Konstantina Karakechagia, Lea Wassmer
+COU15_MAI.00033	Alissa Hege, Konstantina Karakechagia
+COU16_JUN.00038	Konstantina Karakechagia, Lea Wassmer
+COU17_MAI.00014	Alissa Hege, Konstantina Karakechagia
+COU17_OKT.00010	Konstantina Karakechagia, Lea Wassmer
+COU19_JUN.00031	Alissa Hege, Konstantina Karakechagia
+COU20_SEP.00034	Konstantina Karakechagia, Lea Wassmer
+COU21_SEP.00012	Alissa Hege, Konstantina Karakechagia
+COU22_JUN.00018	Konstantina Karakechagia, Lea Wassmer
+COU22_SEP.00015	Alissa Hege, Konstantina Karakechagia
+COU23_MAR.00011	Konstantina Karakechagia, Lea Wassmer
+COU24_MAR.00003	Alissa Hege, Konstantina Karakechagia
+COU24_NOV.00006	Konstantina Karakechagia, Lea Wassmer
+CT17_JUL.00059	Alissa Hege, Konstantina Karakechagia
+CT17_JUL.00160	Konstantina Karakechagia, Lea Wassmer
+CT17_JUN.00091	Alissa Hege, Konstantina Karakechagia, Lara Baum
+CT17_MAI.00159	Konstantina Karakechagia, Lea Wassmer
+CT17_MAR.00172	Alissa Hege, Konstantina Karakechagia
+CT17_MAR.00174	Konstantina Karakechagia, Lea Wassmer
+CT17_OKT.00179	Alissa Hege, Konstantina Karakechagia
+CT17_SEP.00202	Konstantina Karakechagia, Lea Wassmer
+CT18_DEZ.00022	Alissa Hege, Konstantina Karakechagia
+CT18_FEB.00043	Konstantina Karakechagia, Lea Wassmer
+CT18_JUL.00051	Alissa Hege, Konstantina Karakechagia
+CT18_JUN.00028	Konstantina Karakechagia, Lea Wassmer
+CT18_MAI.00170	Alissa Hege, Konstantina Karakechagia
+CT18_MAR.00053	Konstantina Karakechagia, Lea Wassmer
+CT18_OKT.00160	Alissa Hege, Konstantina Karakechagia, Lara Baum
+CT18_OKT.00167	Konstantina Karakechagia, Lea Wassmer
+CT19_FEB.00098	Alissa Hege, Konstantina Karakechagia
+CT19_JAN.00021	Konstantina Karakechagia, Lea Wassmer
+CT19_JUL.00157	Alissa Hege, Konstantina Karakechagia
+CT19_JUN.00089	Konstantina Karakechagia, Lea Wassmer
+CT19_MAR.00181	Alissa Hege, Konstantina Karakechagia
+CT19_OKT.00178	Konstantina Karakechagia, Lea Wassmer
+CT19_SEP.00016	Alissa Hege, Konstantina Karakechagia
+CT20_AUG.00061	Konstantina Karakechagia, Lea Wassmer
+CT20_JUN.00102	Alissa Hege, Konstantina Karakechagia
+CT20_JUN.00127	Konstantina Karakechagia, Lea Wassmer
+CT20_OKT.00065	Alissa Hege, Konstantina Karakechagia
+CT21_APR.00005	Konstantina Karakechagia, Lea Wassmer
+CT21_JUL.00121	Alissa Hege, Konstantina Karakechagia
+CT21_MAI.00079	Konstantina Karakechagia, Lea Wassmer
+CT21_OKT.00011	Alissa Hege, Konstantina Karakechagia
+CT21_SEP.00079	Konstantina Karakechagia, Lea Wassmer
+CT22_DEZ.00089	Alissa Hege, Konstantina Karakechagia
+CT22_DEZ.00118	Konstantina Karakechagia, Lea Wassmer
+CT22_JUN.00030	Alissa Hege, Konstantina Karakechagia
+CT22_JUN.00094	Konstantina Karakechagia, Lea Wassmer
+CT22_OKT.00074	Alissa Hege, Konstantina Karakechagia
+CT22_SEP.00003	Konstantina Karakechagia, Lea Wassmer
+CT23_DEZ.00116	Alissa Hege, Konstantina Karakechagia
+CT23_FEB.00047	Konstantina Karakechagia, Lea Wassmer
+CT23_MAI.00008	Alissa Hege, Konstantina Karakechagia
+CT23_MAI.00018	Konstantina Karakechagia, Lea Wassmer
+CT23_SEP.00059	Alissa Hege, Konstantina Karakechagia
+CT24_APR.00009	Konstantina Karakechagia, Lea Wassmer
+CT24_AUG.00002	Alissa Hege, Konstantina Karakechagia
+CT24_AUG.00062	Konstantina Karakechagia, Lea Wassmer
+CT24_FEB.00008	Alissa Hege, Konstantina Karakechagia
+CT24_FEB.00018	Konstantina Karakechagia, Lea Wassmer
+CT24_JUL.00066	Alissa Hege, Konstantina Karakechagia
+CT24_JUL.00068	Konstantina Karakechagia, Lea Wassmer
+CT24_NOV.00135	Alissa Hege, Konstantina Karakechagia
+CT24_OKT.00026	Konstantina Karakechagia, Lea Wassmer
+EDF15_AUG.00014	Alissa Hege, Konstantina Karakechagia
+EDF15_SEP.00169	Konstantina Karakechagia, Lea Wassmer
+EDF16_JUN.00174	Alissa Hege, Konstantina Karakechagia
+EDF17_APR.00183	Konstantina Karakechagia, Lea Wassmer
+EDF18_NOV.00087	Alissa Hege, Konstantina Karakechagia
+EDF18_SEP.00065	Konstantina Karakechagia, Lea Wassmer
+EDF19_AUG.00053	Alissa Hege, Konstantina Karakechagia
+EDF19_JUN.00033	Konstantina Karakechagia, Lea Wassmer
+EDF20_JUL.00151	Alissa Hege, Konstantina Karakechagia
+EDF21_FEB.00073	Konstantina Karakechagia, Lea Wassmer
+EDF22_MAR.00073	Alissa Hege, Konstantina Karakechagia
+EDF22_SEP.00132	Konstantina Karakechagia, Lea Wassmer
+EDF24_AUG.00122	Alissa Hege, Konstantina Karakechagia
+EDF24_JAN.00280	Konstantina Karakechagia, Lea Wassmer
+EUT15_JUL.00032	Alissa Hege, Konstantina Karakechagia
+EUT15_NOV.00003	Konstantina Karakechagia, Lea Wassmer
+EUT16_APR.00036	Alissa Hege, Konstantina Karakechagia
+EUT18_APR.00016	Konstantina Karakechagia, Lea Wassmer
+EUT19_OKT.00050	Alissa Hege, Konstantina Karakechagia, Lara Baum
+EUT20_NOV.00003	Konstantina Karakechagia, Lea Wassmer
+EUT20_SEP.00013	Alissa Hege, Konstantina Karakechagia
+EUT21_SEP.00003	Konstantina Karakechagia, Lea Wassmer
+EUT22_AUG.00004	Alissa Hege, Konstantina Karakechagia
+EUT22_FEB.00005	Konstantina Karakechagia, Lea Wassmer
+EUT23_JAN.00064	Alissa Hege, Konstantina Karakechagia
+EUT23_JUN.00065	Konstantina Karakechagia, Lea Wassmer
+FIS16_APR.00028	Alissa Hege, Konstantina Karakechagia
+FIS19_FEB.00098	Konstantina Karakechagia, Lea Wassmer
+FIS19_OKT.00162	Alissa Hege, Konstantina Karakechagia
+FIS20_APR.00191	Konstantina Karakechagia, Lea Wassmer
+FIS20_DEZ.00115	Alissa Hege, Konstantina Karakechagia
+FIS20_NOV.00097	Konstantina Karakechagia, Lea Wassmer
+FIS22_JAN.00155	Alissa Hege, Konstantina Karakechagia
+FIS22_MAI.00160	Konstantina Karakechagia, Lea Wassmer
+FIS23_MAI.00061	Alissa Hege, Konstantina Karakechagia
+FIS23_SEP.00007	Konstantina Karakechagia, Lea Wassmer
+FIS24_JAN.00188	Alissa Hege, Konstantina Karakechagia
+FOC05_AUG.00297	Konstantina Karakechagia, Lea Wassmer
+FOC05_JAN.00269	Alissa Hege, Konstantina Karakechagia
+FOC05_JUN.00163	Konstantina Karakechagia, Lea Wassmer
+FOC05_MAR.00041	Alissa Hege, Konstantina Karakechagia
+FOC05_MAR.00216	Konstantina Karakechagia, Lea Wassmer
+FOC05_OKT.00590	Alissa Hege, Konstantina Karakechagia
+FOC05_SEP.00410	Konstantina Karakechagia, Lea Wassmer
+FOC06_AUG.00310	Alissa Hege, Konstantina Karakechagia
+FOC06_AUG.00375	Konstantina Karakechagia, Lea Wassmer
+FOC06_DEZ.00576	Alissa Hege, Konstantina Karakechagia, Lara Baum
+FOC06_FEB.00055	Konstantina Karakechagia, Lea Wassmer
+FOC06_JUL.00362	Alissa Hege, Konstantina Karakechagia
+FOC06_MAI.00421	Konstantina Karakechagia, Lea Wassmer
+FOC06_MAR.00343	Alissa Hege, Konstantina Karakechagia
+FOC06_NOV.00177	Konstantina Karakechagia, Lea Wassmer
+FOC08_AUG.00084	Alissa Hege, Konstantina Karakechagia
+FOC08_DEZ.00260	Konstantina Karakechagia, Lea Wassmer
+FOC08_DEZ.00430	Alissa Hege, Konstantina Karakechagia
+FOC08_DEZ.00474	Konstantina Karakechagia, Lea Wassmer
+FOC08_JUN.00041	Alissa Hege, Konstantina Karakechagia
+FOC08_JUN.00412	Konstantina Karakechagia, Lea Wassmer
+FOC08_MAR.00121	Alissa Hege, Konstantina Karakechagia
+FOC08_OKT.00191	Konstantina Karakechagia, Lea Wassmer
+FOC08_SEP.00068	Alissa Hege, Konstantina Karakechagia
+FOC08_SEP.00168	Konstantina Karakechagia, Lea Wassmer
+FOC08_SEP.00529	Alissa Hege, Konstantina Karakechagia
+FOC09_MAI.00525	Konstantina Karakechagia, Lea Wassmer
+FOC09_MAR.00471	Alissa Hege, Konstantina Karakechagia
+FOC09_NOV.00202	Konstantina Karakechagia, Lea Wassmer
+FOC09_NOV.00475	Alissa Hege, Konstantina Karakechagia
+FOC10_APR.00327	Konstantina Karakechagia, Lea Wassmer
+FOC10_DEZ.00364	Alissa Hege, Konstantina Karakechagia
+FOC10_JUN.00050	Konstantina Karakechagia, Lea Wassmer
+FOC10_MAR.00079	Alissa Hege, Konstantina Karakechagia
+FOC10_MAR.00562	Konstantina Karakechagia, Lea Wassmer
+FOC10_OKT.00045	Alissa Hege, Konstantina Karakechagia
+FOC10_OKT.00493	Konstantina Karakechagia, Lea Wassmer
+FOC11_AUG.00233	Alissa Hege, Konstantina Karakechagia
+FOC11_AUG.00352	Konstantina Karakechagia, Lea Wassmer
+FOC11_FEB.00218	Alissa Hege, Konstantina Karakechagia
+FOC11_JUN.00041	Konstantina Karakechagia, Lea Wassmer
+FOC11_OKT.00113	Alissa Hege, Konstantina Karakechagia
+FOC11_OKT.00148	Konstantina Karakechagia, Lea Wassmer
+FOC11_SEP.00122	Alissa Hege, Konstantina Karakechagia
+FOC11_SEP.00258	Konstantina Karakechagia, Lea Wassmer
+FOC12_AUG.00232	Alissa Hege, Konstantina Karakechagia
+FOC12_AUG.00276	Konstantina Karakechagia, Lea Wassmer
+FOC12_MAI.00229	Alissa Hege, Konstantina Karakechagia
+FOC12_MAR.00081	Konstantina Karakechagia, Lea Wassmer
+FOC12_OKT.00468	Alissa Hege, Konstantina Karakechagia
+FOC12_SEP.00177	Konstantina Karakechagia, Lea Wassmer
+FOC13_APR.00399	Alissa Hege, Konstantina Karakechagia
+FOC13_DEZ.00223	Konstantina Karakechagia, Lea Wassmer
+FOC13_JUL.00066	Alissa Hege, Konstantina Karakechagia
+FOC13_JUN.00027	Konstantina Karakechagia, Lea Wassmer
+FOC13_NOV.00035	Alissa Hege, Konstantina Karakechagia
+FOC13_SEP.00306	Konstantina Karakechagia, Lea Wassmer
+FOC14_APR.00392	Alissa Hege, Konstantina Karakechagia
+FOC14_APR.00419	Konstantina Karakechagia, Lea Wassmer
+FOC14_DEZ.00232	Alissa Hege, Konstantina Karakechagia
+FOC14_DEZ.00255	Konstantina Karakechagia, Lea Wassmer
+FOC14_MAI.00328	Alissa Hege, Konstantina Karakechagia
+FOC14_MAI.00388	Konstantina Karakechagia, Lea Wassmer
+FOC14_SEP.00270	Alissa Hege, Konstantina Karakechagia
+FOC15_APR.00216	Konstantina Karakechagia, Lea Wassmer
+FOC15_JUN.00145	Alissa Hege, Konstantina Karakechagia
+FOC15_NOV.00347	Konstantina Karakechagia, Lea Wassmer
+FOC15_SEP.00185	Alissa Hege, Konstantina Karakechagia
+FOC16_AUG.00186	Konstantina Karakechagia, Lea Wassmer
+FOC16_MAR.00258	Alissa Hege
+FOC16_MAR.00292	Konstantina Karakechagia, Lea Wassmer
+FOC16_OKT.00082	Alissa Hege, Konstantina Karakechagia
+FOC16_SEP.00179	Konstantina Karakechagia, Lea Wassmer
+FOC17_DEZ.00058	Alissa Hege, Konstantina Karakechagia
+FOC17_JAN.00052	Konstantina Karakechagia, Lea Wassmer
+FOC18_JUN.00331	Alissa Hege, Konstantina Karakechagia
+FOC18_MAR.00292	Konstantina Karakechagia, Lea Wassmer
+FOC18_NOV.00320	Alissa Hege, Konstantina Karakechagia
+FOC18_OKT.00155	Konstantina Karakechagia, Lea Wassmer
+FOC18_SEP.00126	Alissa Hege, Konstantina Karakechagia
+FOC19_APR.00094	Konstantina Karakechagia, Lea Wassmer
+FOC19_OKT.00007	Alissa Hege, Konstantina Karakechagia
+FOC19_OKT.00142	Konstantina Karakechagia, Lea Wassmer
+FOC20_AUG.00027	Alissa Hege, Konstantina Karakechagia
+FOC20_AUG.00154	Konstantina Karakechagia, Lea Wassmer
+FOC20_JAN.00104	Alissa Hege, Konstantina Karakechagia
+FOC20_JUL.00176	Konstantina Karakechagia, Lea Wassmer
+FOC20_NOV.00118	Alissa Hege, Konstantina Karakechagia
+FOC20_OKT.00090	Konstantina Karakechagia, Lea Wassmer
+FOC21_APR.00165	Alissa Hege, Konstantina Karakechagia
+FOC21_APR.00277	Konstantina Karakechagia, Lea Wassmer
+FOC21_DEZ.00160	Alissa Hege, Konstantina Karakechagia
+FOC21_FEB.00139	Konstantina Karakechagia, Lea Wassmer
+FOC21_NOV.00022	Alissa Hege, Konstantina Karakechagia
+FOC21_NOV.00131	Konstantina Karakechagia, Lea Wassmer
+FOC22_APR.00035	Alissa Hege, Konstantina Karakechagia
+FOC22_APR.00098	Konstantina Karakechagia, Lea Wassmer
+FOC22_JAN.00088	Alissa Hege, Konstantina Karakechagia
+FOC22_JAN.00193	Konstantina Karakechagia, Lea Wassmer
+FOC22_MAR.00198	Alissa Hege, Konstantina Karakechagia
+FOC23_JAN.00153	Konstantina Karakechagia, Lea Wassmer
+FOC24_FEB.00207	Alissa Hege, Konstantina Karakechagia
+FOC24_JAN.00222	Konstantina Karakechagia, Lea Wassmer
+FOC24_JUN.00037	Alissa Hege, Konstantina Karakechagia
+FOC24_JUN.00118	Konstantina Karakechagia, Lea Wassmer
+FOM05_DEZ.00125	Alissa Hege, Konstantina Karakechagia
+FOM05_DEZ.00126	Konstantina Karakechagia, Lea Wassmer
+FOM05_JAN.00263	Konstantina Karakechagia
+FOM05_NOV.00193	Konstantina Karakechagia, Lea Wassmer
+FOM06_APR.00077	Alissa Hege, Konstantina Karakechagia
+FOM06_APR.00177	Konstantina Karakechagia, Lea Wassmer
+FOM06_JUL.00025	Alissa Hege, Konstantina Karakechagia
+FOM06_JUL.00070	Konstantina Karakechagia, Lea Wassmer
+FOM07_APR.00222	Alissa Hege, Konstantina Karakechagia
+FOM07_AUG.00045	Konstantina Karakechagia, Lea Wassmer
+FOM07_AUG.00198	Alissa Hege, Konstantina Karakechagia, Lara Baum
+FOM07_FEB.00213	Konstantina Karakechagia, Lea Wassmer
+FOM07_JAN.00307	Alissa Hege, Konstantina Karakechagia
+FOM07_JUL.00166	Konstantina Karakechagia, Lea Wassmer
+FOM07_MAI.00048	Alissa Hege, Konstantina Karakechagia
+FOM07_MAR.00021	Konstantina Karakechagia, Lea Wassmer
+FOM07_NOV.00109	Alissa Hege, Konstantina Karakechagia
+FOM07_OKT.00046	Konstantina Karakechagia, Lea Wassmer
+FOM07_OKT.00175	Alissa Hege, Konstantina Karakechagia
+FOM08_APR.00034	Konstantina Karakechagia, Lea Wassmer
+FOM08_APR.00192	Alissa Hege, Konstantina Karakechagia
+FOM08_FEB.00035	Konstantina Karakechagia, Lea Wassmer
+FOM08_JUL.00021	Alissa Hege, Konstantina Karakechagia
+FOM08_JUL.00197	Konstantina Karakechagia, Lea Wassmer
+FOM08_NOV.00167	Alissa Hege, Konstantina Karakechagia
+FOM08_SEP.00056	Konstantina Karakechagia, Lea Wassmer
+FOM10_AUG.00016	Alissa Hege, Konstantina Karakechagia
+FOM10_AUG.00052	Konstantina Karakechagia, Lea Wassmer
+FOM10_FEB.00067	Alissa Hege, Konstantina Karakechagia, Lara Baum
+FOM10_FEB.00070	Konstantina Karakechagia, Lea Wassmer
+FOM10_JUL.00163	Alissa Hege, Konstantina Karakechagia
+FOM10_JUN.00039	Konstantina Karakechagia, Lea Wassmer
+FOM10_NOV.00157	Alissa Hege, Konstantina Karakechagia
+FOM10_OKT.00032	Konstantina Karakechagia, Lea Wassmer
+FOM10_SEP.00022	Alissa Hege, Konstantina Karakechagia
+FOM10_SEP.00230	Konstantina Karakechagia, Lea Wassmer
+FOM11_DEZ.00017	Alissa Hege, Konstantina Karakechagia
+FOM11_DEZ.00030	Konstantina Karakechagia, Lea Wassmer
+FOM11_FEB.00134	Alissa Hege, Konstantina Karakechagia
+FOM11_JAN.00126	Konstantina Karakechagia, Lea Wassmer
+FOM11_JUN.00203	Alissa Hege, Konstantina Karakechagia
+FOM11_JUN.00254	Konstantina Karakechagia, Lea Wassmer
+FOM11_NOV.00025	Alissa Hege, Konstantina Karakechagia
+FOM11_OKT.00210	Konstantina Karakechagia, Lea Wassmer
+FOM12_AUG.00141	Alissa Hege, Konstantina Karakechagia
+FOM12_DEZ.00001	Konstantina Karakechagia, Lea Wassmer
+FOM12_DEZ.00211	Alissa Hege, Konstantina Karakechagia
+FOM12_JAN.00043	Konstantina Karakechagia, Lea Wassmer
+FOM12_SEP.00132	Alissa Hege, Konstantina Karakechagia
+FOM12_SEP.00238	Konstantina Karakechagia, Lea Wassmer
+FOM13_APR.00178	Alissa Hege, Konstantina Karakechagia
+FOM13_AUG.00095	Konstantina Karakechagia, Lea Wassmer
+FOM13_AUG.00215	Alissa Hege, Konstantina Karakechagia
+FOM13_FEB.00043	Konstantina Karakechagia, Lea Wassmer
+FOM13_JAN.00156	Alissa Hege, Konstantina Karakechagia
+FOM13_JAN.00171	Konstantina Karakechagia, Lea Wassmer
+FOM13_JUN.00042	Alissa Hege, Konstantina Karakechagia
+FOM13_MAI.00039	Konstantina Karakechagia, Lea Wassmer
+FOM13_NOV.00170	Alissa Hege, Konstantina Karakechagia
+FOM13_NOV.00271	Konstantina Karakechagia, Lea Wassmer
+FOM13_SEP.00057	Alissa Hege, Konstantina Karakechagia
+FOM14_APR.00331	Konstantina Karakechagia, Lea Wassmer
+FOM14_FEB.00012	Alissa Hege, Konstantina Karakechagia
+FOM14_JAN.00304	Konstantina Karakechagia, Lea Wassmer
+FOM14_NOV.00268	Alissa Hege, Konstantina Karakechagia
+FOM14_OKT.00091	Konstantina Karakechagia, Lea Wassmer
+FOM14_OKT.00302	Alissa Hege, Konstantina Karakechagia
+FOM14_SEP.00095	Konstantina Karakechagia, Lea Wassmer
+FOM15_APR.00311	Alissa Hege, Konstantina Karakechagia
+FOM15_DEZ.00025	Konstantina Karakechagia
+FOM15_FEB.00299	Alissa Hege, Konstantina Karakechagia
+FOM15_JAN.00190	Konstantina Karakechagia, Lea Wassmer
+FOM15_JUN.00114	Alissa Hege, Konstantina Karakechagia
+FOM15_MAI.00002	Konstantina Karakechagia, Lea Wassmer
+FOM15_NOV.00186	Alissa Hege, Konstantina Karakechagia
+FOM15_NOV.00251	Konstantina Karakechagia, Lea Wassmer
+FOM15_SEP.00294	Alissa Hege, Konstantina Karakechagia
+FOM16_APR.00210	Konstantina Karakechagia, Lea Wassmer
+FOM16_AUG.00232	Alissa Hege, Konstantina Karakechagia
+FOM16_JAN.00159	Konstantina Karakechagia, Lea Wassmer
+FOM16_JUN.00193	Alissa Hege, Konstantina Karakechagia
+FOM16_MAI.00075	Konstantina Karakechagia, Lea Wassmer
+FOM16_NOV.00010	Alissa Hege, Konstantina Karakechagia
+FOM16_NOV.00135	Konstantina Karakechagia
+FOM16_OKT.00070	Alissa Hege, Konstantina Karakechagia
+FOM17_APR.00075	Konstantina Karakechagia, Lea Wassmer
+FOM17_JUL.00039	Alissa Hege, Konstantina Karakechagia
+FOM17_JUN.00065	Konstantina Karakechagia, Lea Wassmer
+FOM17_MAR.00237	Alissa Hege, Konstantina Karakechagia
+FOM17_NOV.00128	Konstantina Karakechagia, Lea Wassmer
+FOM17_OKT.00164	Alissa Hege, Konstantina Karakechagia
+FOM18_APR.00012	Konstantina Karakechagia, Lea Wassmer
+FOM18_AUG.00087	Alissa Hege, Konstantina Karakechagia
+FOM18_AUG.00122	Konstantina Karakechagia, Lea Wassmer
+FOM18_JAN.00026	Alissa Hege, Konstantina Karakechagia
+FOM18_JAN.00058	Konstantina Karakechagia, Lea Wassmer
+FOM18_JUL.00103	Alissa Hege, Konstantina Karakechagia
+FOM18_SEP.00093	Konstantina Karakechagia, Lea Wassmer
+FOM19_AUG.00057	Alissa Hege, Konstantina Karakechagia
+FOM19_AUG.00137	Konstantina Karakechagia, Lea Wassmer
+FOM19_FEB.00125	Alissa Hege, Konstantina Karakechagia
+FOM19_JUL.00158	Lea Wassmer
+FOM19_MAI.00088	Alissa Hege
+FOM19_MAR.00047	Lea Wassmer
+FOM19_OKT.00063	Alissa Hege
+FOM19_SEP.00077	Lea Wassmer
+FOM20_JUN.00164	Alissa Hege
+FOM20_SEP.00110	Lea Wassmer
+FOM21_DEZ.00122	Alissa Hege
+FOM21_JUN.00151	Lea Wassmer
+FOM21_NOV.00144	Alissa Hege
+FOM22_FEB.00028	Lea Wassmer
+FOM22_JUL.00152	Alissa Hege
+FOM22_MAI.00022	Lea Wassmer
+FOM23_AUG.00142	Alissa Hege
+FOM23_AUG.00262	Lea Wassmer
+FOM23_MAI.00207	Alissa Hege
+FOM23_OKT.00252	Lea Wassmer
+FOM24_FEB.00237	Alissa Hege
+FOM24_JUL.00103	Lea Wassmer
+FOM24_OKT.00055	Alissa Hege
+FOM24_OKT.00336	Lea Wassmer
+FOM24_SEP.00106	Alissa Hege
+FRA22_FEB.00038	Konstantina Karakechagia, Lea Wassmer
+FRA24_JAN.00070	Alissa Hege, Konstantina Karakechagia
+FRA24_JUN.00095	Konstantina Karakechagia, Lea Wassmer
+GAL15_JUN.00126	Alissa Hege, Konstantina Karakechagia
+GAL15_MAI.00076	Konstantina Karakechagia, Lea Wassmer
+GAL17_DEZ.00209	Alissa Hege, Konstantina Karakechagia
+GAL17_MAR.00318	Konstantina Karakechagia, Lea Wassmer
+GAL18_FEB.00039	Alissa Hege, Konstantina Karakechagia
+GAL18_JAN.00024	Konstantina Karakechagia, Lea Wassmer
+GAL19_APR.00118	Alissa Hege, Konstantina Karakechagia
+GAL19_AUG.00055	Konstantina Karakechagia, Lea Wassmer
+GAL20_APR.00157	Alissa Hege, Konstantina Karakechagia
+GAL20_AUG.00064	Konstantina Karakechagia, Lea Wassmer
+GAL20_NOV.00086	Alissa Hege, Konstantina Karakechagia
+GAL23_APR.00095	Konstantina Karakechagia, Lea Wassmer
+GEO10_APR.00029	Alissa Hege, Konstantina Karakechagia
+GEO10_APR.00030	Konstantina Karakechagia, Lea Wassmer
+GEO10_JAN.00017	Alissa Hege, Konstantina Karakechagia
+GEO10_JUN.00031	Konstantina Karakechagia, Lea Wassmer
+GEO10_NOV.00035	Alissa Hege, Konstantina Karakechagia
+GEO10_SEP.00029	Konstantina Karakechagia, Lea Wassmer
+GEO11_APR.00053	Alissa Hege, Konstantina Karakechagia
+GEO11_AUG.00027	Konstantina Karakechagia, Lea Wassmer
+GEO11_JUL.00024	Alissa Hege, Konstantina Karakechagia
+GEO11_JUN.00033	Konstantina Karakechagia, Lea Wassmer
+GEO11_JUN.00078	Alissa Hege, Konstantina Karakechagia
+GEO11_JUN.00079	Konstantina Karakechagia, Lea Wassmer
+GEO11_MAR.00002	Alissa Hege, Konstantina Karakechagia, Lara Baum
+GEO11_SEP.00030	Konstantina Karakechagia, Lea Wassmer
+GEO12_DEZ.00035	Alissa Hege, Konstantina Karakechagia
+GEO12_JUL.00030	Lea Wassmer
+GEO12_JUN.00027	Alissa Hege
+GEO13_APR.00036	Lea Wassmer
+GEO13_AUG.00038	Alissa Hege
+GEO13_DEZ.00033	Lea Wassmer
+GEO13_JUN.00039	Alissa Hege
+GEO13_NOV.00025	Lea Wassmer
+GEO13_SEP.00004	Alissa Hege
+GEO14_MAR.00019	Lea Wassmer
+GEO14_OKT.00003	Alissa Hege
+GEO14_OKT.00005	Lea Wassmer
+GEO15_JAN.00041	Alissa Hege
+GEO15_JUN.00014	Lea Wassmer
+GEO15_MAI.00024	Alissa Hege
+GEO15_OKT.00022	Lea Wassmer
+GEO16_FEB.00038	Alissa Hege
+GEO16_JAN.00029	Lea Wassmer
+GEO16_NOV.00034	Alissa Hege
+GEO17_APR.00031	Lea Wassmer
+GEO17_AUG.00024	Alissa Hege
+GEO17_DEZ.00021	Lea Wassmer
+GEO17_FEB.00004	Alissa Hege
+GEO17_JAN.00050	Lea Wassmer
+GEO17_JUN.00013	Alissa Hege
+GEO17_JUN.00046	Lea Wassmer
+GEO18_AUG.00016	Alissa Hege
+GEO18_DEZ.00015	Lea Wassmer
+GEO18_SEP.00005	Alissa Hege
+GEO18_SEP.00012	Lea Wassmer
+GEO19_DEZ.00016	Alissa Hege
+GEO19_JUN.00001	Lea Wassmer
+GEO19_OKT.00010	Alissa Hege
+GEO20_APR.00035	Lea Wassmer
+GEO20_MAI.00026	Alissa Hege
+GEO20_MAR.00016	Lea Wassmer
+GEO21_AUG.00019	Alissa Hege
+GEO21_FEB.00010	Lea Wassmer
+GEO21_MAR.00011	Alissa Hege
+GEO22_AUG.00019	Lea Wassmer
+GEO22_DEZ.00044	Alissa Hege
+GEO22_NOV.00020	Lea Wassmer
+GEO23_JAN.00022	Alissa Hege
+GEO23_JAN.00037	Lea Wassmer
+GEO23_NOV.00008	Alissa Hege
+GEO23_SEP.00005	Lea Wassmer
+GEO24_OKT.00010	Alissa Hege
+GEO24_OKT.00012	Lea Wassmer
+GEO24_SEP.00031	Alissa Hege
+GOB15_OKT.00026	Konstantina Karakechagia, Lea Wassmer
+GOB17_JUN.00017	Alissa Hege, Konstantina Karakechagia
+GOB17_SEP.00201	Konstantina Karakechagia, Lea Wassmer
+GOB18_AUG.00109	Alissa Hege, Konstantina Karakechagia
+GOB19_JUL.00134	Konstantina Karakechagia, Lea Wassmer
+GOB20_MAR.00143	Alissa Hege, Konstantina Karakechagia
+GOB22_JAN.00083	Konstantina Karakechagia, Lea Wassmer
+GOB22_JUL.00123	Alissa Hege, Konstantina Karakechagia
+GOB22_JUL.00136	Konstantina Karakechagia, Lea Wassmer
+GOB22_OKT.00097	Alissa Hege, Konstantina Karakechagia
+GOB22_SEP.00160	Konstantina Karakechagia, Lea Wassmer
+GOB23_DEZ.00198	Alissa Hege, Konstantina Karakechagia
+GOB23_SEP.00204	Konstantina Karakechagia, Lea Wassmer
+HAB05_JUL.00456	Alissa Hege, Konstantina Karakechagia
+HAB05_MAI.03173	Konstantina Karakechagia, Lea Wassmer
+HAB06_JUN.02910	Alissa Hege, Konstantina Karakechagia
+HAB06_MAI.03216	Konstantina Karakechagia, Lea Wassmer
+HAB07_DEZ.02002	Alissa Hege, Konstantina Karakechagia
+HAB07_JUN.00139	Konstantina Karakechagia, Lea Wassmer
+HAB07_MAR.03206	Alissa Hege, Konstantina Karakechagia
+HAB07_OKT.01937	Konstantina Karakechagia, Lea Wassmer
+HAB08_JAN.00605	Alissa Hege, Konstantina Karakechagia
+HAB08_JAN.02077	Konstantina Karakechagia, Lea Wassmer
+HAB10_APR.00908	Alissa Hege, Konstantina Karakechagia
+HAB10_FEB.00594	Konstantina Karakechagia, Lea Wassmer
+HAB12_MAI.00177	Alissa Hege, Konstantina Karakechagia
+HAB12_OKT.00107	Konstantina Karakechagia, Lea Wassmer
+HAB12_SEP.01047	Alissa Hege, Konstantina Karakechagia
+HAB14_FEB.00836	Konstantina Karakechagia, Lea Wassmer
+HAB14_JUL.01373	Alissa Hege, Konstantina Karakechagia
+HAB14_OKT.00099	Konstantina Karakechagia, Lea Wassmer
+HAB15_JUN.00136	Alissa Hege, Konstantina Karakechagia
+HAB15_MAR.01347	Konstantina Karakechagia, Lea Wassmer
+HAB15_OKT.01644	Alissa Hege, Konstantina Karakechagia
+HAB16_JAN.01239	Konstantina Karakechagia, Lea Wassmer
+HAB18_JUN.00956	Alissa Hege, Konstantina Karakechagia
+HAB18_MAI.00540	Konstantina Karakechagia, Lea Wassmer
+HAB18_NOV.01046	Alissa Hege, Konstantina Karakechagia, Lara Baum
+HAB19_FEB.00850	Konstantina Karakechagia, Lea Wassmer
+HAB20_JAN.00114	Alissa Hege, Konstantina Karakechagia
+HAB21_APR.00671	Konstantina Karakechagia, Lea Wassmer
+HAB22_DEZ.01050	Alissa Hege, Konstantina Karakechagia
+HAB24_AUG.00233	Konstantina Karakechagia, Lea Wassmer
+HAU20_JUL.00005	Alissa Hege, Konstantina Karakechagia
+HAU21_SEP.00024	Konstantina Karakechagia, Lea Wassmer
+HRZ08_FEB.00101	Alissa Hege, Konstantina Karakechagia
+HRZ08_NOV.00075	Konstantina Karakechagia, Lea Wassmer
+HRZ09_OKT.00006	Alissa Hege, Konstantina Karakechagia
+HRZ10_APR.00028	Konstantina Karakechagia, Lea Wassmer
+HRZ10_JAN.00015	Alissa Hege, Konstantina Karakechagia
+HRZ10_MAR.00083	Konstantina Karakechagia, Lea Wassmer
+HRZ12_APR.00040	Alissa Hege, Konstantina Karakechagia
+HRZ12_AUG.00105	Konstantina Karakechagia, Lea Wassmer
+HRZ12_JAN.00068	Alissa Hege, Konstantina Karakechagia
+HRZ12_MAI.00045	Konstantina Karakechagia, Lea Wassmer
+HRZ13_APR.00015	Alissa Hege, Konstantina Karakechagia
+HRZ13_JUL.00041	Konstantina Karakechagia, Lea Wassmer
+HRZ16_APR.00134	Konstantina Karakechagia
+HRZ16_NOV.00065	Konstantina Karakechagia, Lea Wassmer
+HRZ18_JUL.00263	Konstantina Karakechagia
+HRZ18_MAI.00162	Konstantina Karakechagia, Lea Wassmer
+HRZ19_AUG.00074	Konstantina Karakechagia
+HRZ19_JUL.00056	Konstantina Karakechagia, Lea Wassmer
+HRZ20_OKT.00006	Konstantina Karakechagia
+HRZ21_JUL.00183	Konstantina Karakechagia, Lea Wassmer
+HRZ23_MAR.00026	Konstantina Karakechagia
+HRZ23_SEP.00111	Konstantina Karakechagia, Lea Wassmer
+HRZ24_FEB.00052	Konstantina Karakechagia
+LAH21_AUG.00016	Konstantina Karakechagia, Lea Wassmer
+LAH22_JAN.00034	Konstantina Karakechagia
+MM20_AUG.00019	Konstantina Karakechagia, Lea Wassmer
+MM20_JUN.00019	Konstantina Karakechagia
+MM20_MAI.00036	Konstantina Karakechagia, Lea Wassmer
+MM20_OKT.00021	Konstantina Karakechagia
+MM20_OKT.00037	Konstantina Karakechagia, Lea Wassmer
+MM21_JAN.00038	Konstantina Karakechagia
+MM21_MAI.00032	Konstantina Karakechagia, Lea Wassmer
+MM22_APR.00029	Konstantina Karakechagia
+MM22_JAN.00018	Konstantina Karakechagia, Lea Wassmer
+MM22_OKT.00014	Konstantina Karakechagia
+MM23_JAN.00030	Konstantina Karakechagia, Lea Wassmer
+MM23_MAI.00014	Konstantina Karakechagia
+MM23_MAI.00047	Konstantina Karakechagia, Lea Wassmer
+MM23_OKT.00027	Konstantina Karakechagia
+MM23_OKT.00029	Konstantina Karakechagia, Lea Wassmer
+MM23_SEP.00037	Konstantina Karakechagia
+MM24_APR.00025	Konstantina Karakechagia, Lea Wassmer
+MM24_DEZ.00036	Konstantina Karakechagia
+MM24_JUL.00017	Konstantina Karakechagia, Lea Wassmer
+PH05_NOV.00009	Konstantina Karakechagia
+PH05_NOV.00017	Konstantina Karakechagia, Lea Wassmer
+PH06_FEB.00027	Konstantina Karakechagia
+PH06_JAN.00027	Konstantina Karakechagia, Lea Wassmer
+PH06_JUL.00028	Konstantina Karakechagia
+PH06_JUN.00046	Konstantina Karakechagia, Lea Wassmer
+PH06_MAI.00026	Konstantina Karakechagia
+PH06_MAR.00034	Konstantina Karakechagia, Lea Wassmer
+PH06_SEP.00022	Konstantina Karakechagia
+PH06_SEP.00033	Konstantina Karakechagia, Lea Wassmer
+PH07_AUG.00029	Konstantina Karakechagia
+PH07_FEB.00040	Konstantina Karakechagia, Lea Wassmer
+PH07_MAI.00024	Konstantina Karakechagia
+PH07_MAI.00028	Konstantina Karakechagia, Lea Wassmer
+PH07_MAR.00053	Konstantina Karakechagia
+PH07_OKT.00032	Konstantina Karakechagia, Lea Wassmer
+PH08_DEZ.00025	Konstantina Karakechagia
+PH08_DEZ.00030	Konstantina Karakechagia, Lea Wassmer
+PH08_JUL.00027	Konstantina Karakechagia
+PH08_JUN.00031	Konstantina Karakechagia, Lea Wassmer
+PH08_MAR.00023	Konstantina Karakechagia
+PH08_MAR.00039	Konstantina Karakechagia, Lea Wassmer
+PH09_JAN.00041	Konstantina Karakechagia
+PH10_APR.00023	Konstantina Karakechagia, Lea Wassmer
+PH10_DEZ.00046	Konstantina Karakechagia
+PH10_FEB.00016	Konstantina Karakechagia, Lea Wassmer
+PH10_FEB.00055	Konstantina Karakechagia
+PH10_JUL.00031	Konstantina Karakechagia, Lea Wassmer
+PH10_JUN.00044	Konstantina Karakechagia
+PH10_JUN.00059	Konstantina Karakechagia, Lea Wassmer
+PH10_MAI.00048	Konstantina Karakechagia
+PH10_MAR.00028	Konstantina Karakechagia, Lea Wassmer
+PH10_MAR.00039	Konstantina Karakechagia
+PH10_NOV.00009	Konstantina Karakechagia, Lea Wassmer
+PH11_AUG.00015	Konstantina Karakechagia
+PH11_AUG.00021	Konstantina Karakechagia, Lea Wassmer
+PH11_JAN.00051	Konstantina Karakechagia
+PH11_JUL.00040	Konstantina Karakechagia, Lea Wassmer
+PH11_MAI.00007	Konstantina Karakechagia
+PH11_MAI.00034	Konstantina Karakechagia, Lea Wassmer
+PH11_NOV.00039	Konstantina Karakechagia
+PH11_SEP.00024	Konstantina Karakechagia, Lea Wassmer
+PMM15_OKT.00024	Konstantina Karakechagia
+PMM17_FEB.00029	Konstantina Karakechagia, Lea Wassmer
+PMM18_NOV.00014	Konstantina Karakechagia
+PMM19_DEZ.00024	Konstantina Karakechagia, Lea Wassmer
+PMM21_JAN.00013	Konstantina Karakechagia
+PMM23_JUN.00026	Konstantina Karakechagia, Lea Wassmer
+PMM23_OKT.00013	Konstantina Karakechagia
+R05_DEZ.03044	Konstantina Karakechagia, Lea Wassmer
+R05_FEB.00629	Konstantina Karakechagia
+R05_JAN.00743	Konstantina Karakechagia, Lea Wassmer
+R05_JUL.10744	
+R05_JUN.04812	Lea Wassmer
+R05_JUN.07163	
+R05_JUN.07989	Lea Wassmer
+R05_JUN.09721	
+R05_MAR.04869	Lea Wassmer
+R05_NOV.03493	
+R05_NOV.06804	Lea Wassmer
+R05_OKT.00225	
+R05_OKT.08881	Lea Wassmer
+R05_SEP.00561	
+R05_SEP.02303	Lea Wassmer
+R05_SEP.08539	
+R06_APR.02894	Lea Wassmer
+R06_AUG.08420	
+R06_DEZ.03917	Lea Wassmer
+R06_DEZ.06886	
+R06_JAN.08326	Lea Wassmer
+R06_JAN.09154	
+R06_JUL.07993	Lea Wassmer
+R06_JUN.03660	
+R06_MAI.01988	Lea Wassmer
+R06_MAR.00895	
+R06_MAR.02342	Lea Wassmer
+R06_NOV.08590	
+R06_SEP.05588	Lea Wassmer
+R07_APR.02689	
+R07_APR.02887	Lea Wassmer
+R07_DEZ.02839	
+R07_DEZ.03425	Lea Wassmer
+R07_FEB.02941	
+R07_FEB.03250	Lea Wassmer
+R07_JAN.02529	
+R07_JAN.06230	Lea Wassmer
+R07_JAN.08491	
+R07_JUL.00488	Lea Wassmer
+R07_JUN.03140	
+R07_MAR.01418	Lea Wassmer
+R07_SEP.00233	
+R07_SEP.02700	Lea Wassmer
+R08_DEZ.03274	
+R08_JAN.01573	Lea Wassmer
+R08_JAN.03646	
+R08_JAN.04282	Lea Wassmer
+R08_MAI.01880	
+R08_MAR.03426	Lea Wassmer
+R08_OKT.04424	
+R08_SEP.03987	Lea Wassmer
+R09_APR.04347	
+R09_DEZ.03866	Lea Wassmer
+R09_JAN.05070	
+R09_MAI.01597	Lea Wassmer
+R09_NOV.07317	
+R09_OKT.03624	Lea Wassmer
+R09_SEP.03278	
+R10_AUG.01350	Lea Wassmer
+R10_DEZ.06254	
+R10_FEB.01994	Lea Wassmer
+R10_JAN.02395	
+R10_JUN.00336	Lea Wassmer
+R10_MAR.01273	
+R10_MAR.01331	Lea Wassmer
+R10_SEP.02485	
+R11_AUG.01663	Lea Wassmer
+R11_FEB.06147	
+R11_JAN.04144	Lea Wassmer
+R11_JUL.05818	
+R11_MAR.00684	Lea Wassmer
+R11_NOV.01805	
+R11_NOV.03218	Lea Wassmer
+R11_SEP.06539	
+R12_DEZ.04700	Lea Wassmer
+R12_JUL.05630	
+R12_MAI.01263	Lea Wassmer
+R12_MAR.01461	
+R12_MAR.04943	Lea Wassmer
+R12_MAR.06683	
+R12_NOV.01567	Lea Wassmer
+R12_NOV.02945	
+R12_OKT.02283	Lea Wassmer
+R12_OKT.06434	
+R12_SEP.01444	Lea Wassmer
+R13_APR.03648	
+R13_APR.04146	Lea Wassmer
+R13_AUG.02562	
+R13_AUG.03023	Lea Wassmer
+R13_FEB.06593	
+R13_JAN.01818	Lea Wassmer
+R13_MAR.03720	
+R13_NOV.00690	Lea Wassmer
+R13_OKT.07508	
+R13_OKT.08321	Lea Wassmer
+R13_SEP.05259	
+R14_APR.07236	Lea Wassmer
+R14_DEZ.00899	
+R14_FEB.03625	Lea Wassmer
+R14_JUN.04742	
+R14_JUN.06010	Lea Wassmer
+R14_MAR.00384	
+R14_SEP.02472	Lea Wassmer
+R15_DEZ.03456	
+R15_DEZ.03776	Lea Wassmer
+R15_JUL.02530	
+R15_JUL.05131	Lea Wassmer
+R15_JUN.05107	
+R15_MAI.03409	Lea Wassmer
+R15_MAR.03435	
+R15_NOV.01910	Lea Wassmer
+R16_FEB.00798	
+R16_JUL.01991	Lea Wassmer
+R16_MAI.00918	
+R16_MAR.05080	Lea Wassmer
+R21_FEB.02544	
+R21_JUN.02288	Lea Wassmer
+R22_FEB.01064	
+R22_JAN.02712	
+R22_JUN.01732	
+R22_JUN.01835	Lea Wassmer
+R22_OKT.00196	
+R22_SEP.00835	Lea Wassmer
+R23_DEZ.01394	
+R23_DEZ.01968	Lea Wassmer
+R23_JUN.01276	
+R23_SEP.04206	Lea Wassmer
+R24_DEZ.00320	
+R24_FEB.01124	Lea Wassmer
+R24_JUN.00776	
+R24_NOV.00303	Lea Wassmer
+S05_APR.00091	
+S05_AUG.00188	Lea Wassmer
+S05_FEB.00304	
+S05_FEB.00305	Lea Wassmer
+S05_JAN.00272	
+S05_JUL.00111	Lea Wassmer
+S05_MAI.00524	
+S05_NOV.00082	Lea Wassmer
+S05_NOV.00409	
+S05_NOV.00412	Lea Wassmer
+S05_SEP.00288	
+S06_APR.00571	Lea Wassmer
+S06_AUG.00304	
+S06_DEZ.00538	Lea Wassmer
+S06_JUL.00157	
+S06_JUL.00295	Lea Wassmer
+S06_JUN.00078	
+S06_MAI.00050	Lea Wassmer
+S06_MAI.00283	
+S06_MAI.00393	Lea Wassmer
+S06_OKT.00530	
+S06_OKT.00545	Lea Wassmer
+S06_SEP.00261	
+S07_APR.00022	
+S07_AUG.00285	
+S07_DEZ.00048	
+S07_DEZ.00357	
+S07_DEZ.00560	
+S07_JAN.00125	
+S07_JUL.00072	
+S07_JUL.00560	
+S07_JUN.00266	
+S07_MAR.00099	
+S07_NOV.00464	
+S08_APR.00441	
+S08_AUG.00238	
+S08_DEZ.00068	
+S08_DEZ.00185	
+S08_DEZ.00509	
+S08_FEB.00023	
+S08_JUL.00069	
+S08_JUL.00151	
+S08_JUN.00578	
+S08_MAI.00417	
+S08_MAR.00112	
+S08_MAR.00175	
+S08_SEP.00397	
+S09_APR.00101	
+S09_FEB.00412	
+S09_JAN.00420	
+S09_JUL.00169	
+S09_JUL.00415	
+S09_NOV.00286	
+S09_NOV.00314	
+S09_OKT.00370	
+S10_APR.00026	
+S10_APR.00390	
+S10_AUG.00285	
+S10_DEZ.00326	
+S10_DEZ.00349	
+S10_JAN.00390	
+S10_JUL.00160	
+S10_JUN.00070	
+S10_JUN.00197	
+S10_MAR.00037	
+S10_MAR.00074	
+S10_OKT.00390	
+S10_SEP.00262	
+S11_APR.00276	
+S11_APR.00390	
+S11_AUG.00206	
+S11_AUG.00449	
+S11_DEZ.00030	
+S11_DEZ.00362	
+S11_FEB.00284	
+S11_JAN.00159	
+S11_JAN.00185	
+S11_JAN.00237	
+S11_MAI.00032	
+S11_MAR.00315	
+S11_SEP.00033	
+S11_SEP.00139	
+S12_APR.00387	
+S12_AUG.00198	
+S12_FEB.00261	
+S12_FEB.00374	
+S12_JAN.00361	
+S12_JAN.00389	
+S12_JUL.00481	
+S12_JUN.00033	
+S12_OKT.00371	
+S12_OKT.00408	
+S12_SEP.00035	
+S12_SEP.00392	
+S13_APR.00382	
+S13_AUG.00035	
+S13_DEZ.00134	
+S13_DEZ.00155	
+S13_JUL.00244	
+S13_JUL.00465	
+S13_JUN.00431	
+S13_MAI.00239	
+S13_MAR.00389	
+S13_MAR.00445	
+S13_NOV.00032	
+S13_NOV.00391	
+S13_SEP.00313	
+S14_APR.00136	
+S14_DEZ.00028	
+S14_FEB.00137	
+S14_JUN.00313	
+S14_MAI.00141	
+S14_OKT.00087	
+S14_OKT.00182	
+S14_SEP.00004	
+S14_SEP.00045	
+S15_APR.00025	
+S15_AUG.00219	
+S15_JUL.00256	
+S15_MAI.00031	
+S15_MAR.00240	
+S15_MAR.00277	
+S15_OKT.00242	
+S15_OKT.00282	
+S16_APR.00090	
+S16_APR.00246	
+S16_APR.00451	
+S16_AUG.00072	
+S16_AUG.00219	
+S16_AUG.00315	
+S16_DEZ.00436	
+S16_FEB.00103	
+S16_JAN.00364	
+S16_JUL.00052	
+S16_JUL.00359	
+S16_MAI.00270	
+S16_OKT.00150	
+S16_SEP.00307	
+S17_AUG.00215	
+S17_DEZ.00067	
+S17_JAN.00031	
+S17_JAN.00041	
+S17_JAN.00364	
+S17_JUN.00255	
+S17_MAR.00038	
+S17_MAR.00240	
+S17_NOV.00292	
+S17_OKT.00087	
+S17_SEP.00248	
+S18_APR.00113	
+S18_APR.00419	
+S18_AUG.00041	
+S18_JAN.00191	
+S18_JAN.00337	
+S18_JUN.00027	
+S18_JUN.00121	
+S18_MAR.00289	
+S18_MAR.00320	
+S18_NOV.00124	
+S18_NOV.00167	
+S18_SEP.00026	
+S18_SEP.00440	
+S19_AUG.00160	
+S19_AUG.00284	
+S19_JAN.00151	
+S19_JAN.00204	
+S19_JAN.00345	
+S19_JUN.00030	
+S19_JUN.00433	
+S19_MAR.00224	
+S19_MAR.00292	
+S19_MAR.00508	
+S20_APR.00059	
+S20_APR.00221	
+S20_JUL.00251	
+S20_JUN.00119	
+S20_SEP.00053	
+S20_SEP.00228	
+S20_SEP.00252	
+S20_SEP.00272	
+S21_APR.00140	
+S21_APR.00368	
+S21_APR.00480	
+S21_AUG.00059	
+S21_DEZ.00579	
+S21_JUN.00159	
+S21_JUN.00256	
+S21_MAR.00048	
+S21_MAR.00151	
+S21_MAR.00273	
+S21_NOV.00108	
+S21_NOV.00225	
+S21_OKT.00047	
+S21_OKT.00072	
+S21_SEP.00225	
+S21_SEP.00278	
+S21_SEP.00444	
+S22_APR.00069	
+S22_AUG.00365	
+S22_AUG.00489	
+S22_FEB.00053	
+S22_FEB.00324	
+S22_JAN.00366	
+S22_JUL.00039	
+S22_JUN.00261	
+S22_MAI.00441	
+S22_MAR.00103	
+S22_MAR.00361	
+S22_OKT.00289	
+S22_SEP.00150	
+S23_DEZ.00239	
+S23_DEZ.00278	
+S23_JAN.00044	
+S23_JUL.00137	
+S23_MAR.00007	
+S23_NOV.00383	
+S24_AUG.00082	
+S24_AUG.00253	
+S24_JAN.00050	
+S24_JUL.00309	
+S24_MAR.00399	
+S24_OKT.00230	
+S24_OKT.00413	
+SCW15_SEP.00040	
+SCW16_DEZ.00040	
+SCW16_MAR.00023	
+SCW18_JUL.00003	
+SCW18_JUL.00021	
+SCW20_JUN.00014	
+SCW22_APR.00008	
+SCW22_AUG.00029	
+SCW22_MAI.00016	
+SCW23_DEZ.00012	
+SCW24_OKT.00004	
+STE05_APR.00042	
+STE05_FEB.00160	
+STE05_JUL.00044	
+STE05_JUL.00086	
+STE05_MAI.00018	
+STE05_MAI.00077	
+STE05_NOV.00109	
+STE05_NOV.00202	
+STE06_DEZ.00084	
+STE06_FEB.00160	
+STE06_JUL.00068	
+STE06_JUL.00109	
+STE06_MAI.00027	
+STE06_MAI.00169	
+STE06_MAR.00072	
+STE06_NOV.00041	
+STE06_OKT.00157	
+STE07_APR.00143	
+STE07_JAN.00158	
+STE07_MAI.00067	
+STE07_NOV.00015	
+STE07_NOV.00080	
+STE07_OKT.00029	
+STE07_OKT.00192	
+STE08_APR.00221	
+STE08_AUG.00088	
+STE08_JUL.00075	
+STE08_MAR.00018	
+STE08_MAR.00177	
+STE08_OKT.00059	
+STE09_AUG.00074	
+STE09_MAI.00147	
+STE09_SEP.00050	
+STE09_SEP.00102	
+STE10_DEZ.00195	
+STE10_FEB.00015	
+STE10_FEB.00145	
+STE10_JAN.00034	
+STE10_JUN.00020	
+STE10_JUN.00148	
+STE10_NOV.00130	
+STE10_OKT.00154	
+STE11_DEZ.00120	
+STE11_DEZ.00189	
+STE11_JUL.00153	
+STE11_JUN.00159	
+STE12_APR.00060	
+STE12_FEB.00144	
+STE12_JUL.00066	
+STE12_MAR.00093	
+STE13_APR.00089	
+STE13_APR.00181	
+STE13_APR.00251	
+STE13_AUG.00001	
+STE13_JAN.00103	
+STE13_JAN.00183	
+STE13_JUL.00012	
+STE13_JUN.00018	
+STE13_SEP.00214	
+STE14_APR.00025	
+STE14_JUN.00059	
+STE14_JUN.00112	
+STE14_MAI.00032	
+STE15_DEZ.00196	
+STE15_MAI.00082	
+STE15_MAI.00236	
+STE15_MAR.00214	
+STE15_NOV.00113	
+STE16_AUG.00212	
+STE16_DEZ.00249	
+STE16_NOV.00118	
+STE16_NOV.00189	
+STE17_AUG.00099	
+STE17_JUL.00093	
+STE17_NOV.00138	
+STE17_OKT.00080	
+STE17_SEP.00057	
+STE18_AUG.00177	
+STE18_OKT.00010	
+STE19_APR.00015	
+STE19_JUN.00113	
+STE19_JUN.00129	
+STE19_MAI.00185	
+STE19_NOV.00156	
+STE20_APR.00157	
+STE20_DEZ.00162	
+STE20_JUN.00049	
+STE20_JUN.00091	
+STE20_MAR.00106	
+STE20_NOV.00162	
+STE21_APR.00081	
+STE21_FEB.00059	
+STE21_JAN.00096	
+STE21_JUN.00076	
+STE21_NOV.00014	
+STE21_NOV.00040	
+STE22_FEB.00076	
+STE22_JUN.00123	
+STE23_AUG.00115	
+STE23_AUG.00165	
+STE23_JUN.00231	
+STE23_MAI.00068	
+STE23_SEP.00018	
+STE24_AUG.00030	
+STE24_AUG.00191	
+STE24_MAI.00200	
+T05_DEZ.01199	
+T05_DEZ.02067	
+T05_JUL.04232	
+T05_MAR.00642	
+T05_SEP.04603	
+T06_FEB.02306	
+T06_JUN.00346	
+T06_JUN.01812	
+T06_MAR.00029	
+T06_OKT.01604	
+T07_APR.01805	
+T07_AUG.03459	
+T07_FEB.02332	
+T07_FEB.02999	
+T07_MAI.01481	
+T07_MAI.04880	
+T08_APR.02497	
+T08_AUG.04884	
+T08_DEZ.02614	
+T08_FEB.03189	
+T08_NOV.04124	
+T08_OKT.02963	
+T09_AUG.00882	
+T09_AUG.01348	
+T09_JUL.01505	
+T09_JUN.02209	
+T09_MAR.02063	
+T09_NOV.01344	
+T09_SEP.01546	
+T10_AUG.01594	
+T10_DEZ.01133	
+T10_DEZ.03535	
+T10_JUL.02999	
+T10_JUN.00424	
+T10_MAR.03747	
+T10_OKT.02124	
+T11_APR.06853	
+T11_APR.08049	
+T11_JUL.03159	
+T11_JUN.03045	
+T11_NOV.00744	
+T11_NOV.01188	
+T12_APR.02009	
+T12_DEZ.03547	
+T12_JUL.04260	
+T12_MAR.01144	
+T12_SEP.01492	
+T13_APR.06409	
+T13_DEZ.01742	
+T13_DEZ.02015	
+T13_MAR.00355	
+T13_MAR.02210	
+T14_APR.00219	
+T14_JUN.01482	
+T14_MAR.02670	
+T14_SEP.02835	
+T15_AUG.01871	
+T15_FEB.01021	
+T15_JUL.02913	
+T15_MAI.00352	
+T16_NOV.00728	
+T17_DEZ.00770	
+T17_OKT.02313	
+T18_FEB.00480	
+T18_JUL.00317	
+T18_JUN.02132	
+T19_APR.02045	
+T19_APR.02217	
+T19_FEB.01674	
+T19_JUL.00890	
+T19_NOV.00083	
+T19_NOV.01500	
+T19_SEP.00576	
+T20_JAN.00095	
+T20_JUL.00281	
+T20_MAI.01330	
+T21_JUN.01123	
+T21_NOV.01102	
+T22_AUG.00459	
+T22_DEZ.01604	
+T22_NOV.01604	
+T23_AUG.00305	
+T23_MAR.00249	
+T23_NOV.00692	
+T24_FEB.00775	
+T24_MAR.01791	
+TVD16_FEB.00024	
+TVD16_OKT.00005	
+TVD17_DEZ.00032	
+TVD18_MAI.00044	
+TVD19_MAI.00027	
+TVD19_NOV.00027	
+TVD21_JUL.00057	
+TVD22_SEP.00041	
+U05_DEZ.02822	
+U05_JUL.04672	
+U05_MAR.02769	
+U05_NOV.04125	
+U05_OKT.03771	
+U06_JAN.03907	
+U06_JUN.02259	
+U06_MAI.01199	
+U06_NOV.03840	
+U07_APR.01696	
+U07_AUG.04602	
+U07_DEZ.03678	
+U07_FEB.02215	
+U07_FEB.02546	
+U07_JUL.00408	
+U07_MAI.01223	
+U07_MAR.05247	
+U08_AUG.02090	
+U08_DEZ.03135	
+U08_FEB.04418	
+U08_JAN.04745	
+U08_JAN.04928	
+U08_JUN.00634	
+U08_MAI.04088	
+U08_NOV.01189	
+U08_NOV.03375	
+U08_OKT.04471	
+U08_SEP.01796	
+U08_SEP.04919	
+U09_APR.03795	
+U09_JAN.03236	
+U09_JUL.01887	
+U09_OKT.04259	
+U09_SEP.04485	
+U10_JAN.02452	
+U10_MAI.03472	
+U10_MAR.02730	
+U10_NOV.04665	
+U10_SEP.02327	
+U10_SEP.02817	
+U11_AUG.01060	
+U11_DEZ.03117	
+U11_JAN.02912	
+U11_JUL.03182	
+U11_JUL.03475	
+U11_MAI.04214	
+U11_SEP.00752	
+U12_APR.00603	
+U12_DEZ.00708	
+U12_DEZ.02254	
+U12_JAN.03300	
+U12_JUL.01375	
+U12_JUN.04291	
+U12_MAI.04400	
+U12_NOV.01689	
+U12_OKT.00907	
+U13_APR.00844	
+U13_AUG.00957	
+U13_AUG.03617	
+U13_DEZ.00224	
+U13_DEZ.00747	
+U13_FEB.00081	
+U13_JUL.01368	
+U13_NOV.03811	
+U14_FEB.02378	
+U14_FEB.02408	
+U14_JAN.01079	
+U14_JUL.03959	
+U14_JUN.02327	
+U14_MAI.01124	
+U14_SEP.02941	
+U15_APR.00984	
+U15_APR.03809	
+U15_FEB.03692	
+U15_JUN.03087	
+U15_MAI.03064	
+U15_MAR.04365	
+U15_NOV.01912	
+U16_DEZ.00169	
+U16_MAI.00487	
+U16_MAR.02574	
+U16_MAR.03632	
+U16_SEP.01644	
+U17_FEB.00687	
+U17_JAN.01172	
+U17_JAN.03267	
+U17_SEP.04422	
+U18_AUG.01656	
+U18_FEB.01160	
+U18_JAN.02944	
+U18_JUN.00125	
+U18_JUN.01136	
+U18_OKT.01635	
+U19_APR.00610	
+U19_APR.03626	
+U19_AUG.02081	
+U19_JUN.00621	
+U19_MAR.02923	
+U19_OKT.00706	
+U19_OKT.01494	
+U20_APR.01292	
+U20_AUG.00352	
+U20_FEB.03344	
+U20_JAN.00425	
+U20_JUL.02840	
+U20_JUN.00657	
+U20_MAR.03423	
+U20_SEP.02580	
+U21_AUG.01661	
+U21_DEZ.00341	
+U21_FEB.01645	
+U21_JAN.02507	
+U21_JUN.02491	
+U21_MAI.02267	
+U21_MAR.03163	
+U21_MAR.03304	
+U21_SEP.02506	
+U21_SEP.04829	
+U22_FEB.01066	
+U22_FEB.01454	
+U22_JUL.02120	
+U22_MAI.00006	
+U22_MAR.02719	
+U22_NOV.01375	
+U22_OKT.02147	
+U22_SEP.00717	
+U23_FEB.01697	
+U23_JAN.00899	
+U24_APR.00481	
+U24_APR.01400	
+U24_DEZ.00895	
+U24_FEB.01983	
+U24_JUN.00321	
+U24_JUN.01945	
+U24_OKT.00983	
+W05_APR.02004	
+W05_DEZ.00571	
+W05_JAN.01951	
+W05_JUL.02878	
+W05_MAI.03084	
+W06_APR.03354	
+W06_AUG.03954	
+W06_DEZ.04581	
+W06_FEB.05836	
+W06_JAN.04773	
+W06_JAN.05176	
+W06_MAI.02286	
+W06_MAR.00539	
+W06_OKT.01849	
+W07_AUG.03418	
+W07_FEB.03451	
+W07_JAN.01702	
+W07_MAR.05936	
+W07_OKT.00685	
+W08_DEZ.03247	
+W08_FEB.01111	
+W08_JUN.05500	
+W08_MAI.02052	
+W08_MAR.03157	
+W08_MAR.04473	
+W09_APR.01382	
+W09_APR.03937	
+W09_JAN.00956	
+W09_JUN.01755	
+W10_AUG.02078	
+W10_DEZ.01496	
+W10_JAN.03158	
+W10_JUN.00039	
+W10_MAI.01541	
+W10_MAR.02919	
+W11_JAN.02319	
+W11_MAR.02277	
+W12_APR.02114	
+W12_AUG.01024	
+W12_FEB.02073	
+W12_JUN.00178	
+W12_JUN.03533	
+W12_SEP.00694	
+W13_APR.03078	
+W13_DEZ.01130	
+W13_JAN.03064	
+W13_JUL.02193	
+W13_OKT.01367	
+W13_SEP.02392	
+W14_DEZ.01976	
+W14_FEB.02678	
+W14_JUL.01702	
+W14_JUN.02203	
+W14_MAI.02450	
+W14_MAI.02968	
+W14_NOV.01198	
+W14_SEP.00451	
+W15_FEB.02468	
+W15_MAI.01709	
+W16_AUG.00779	
+W16_FEB.01843	
+W16_JAN.02351	
+W16_JUN.00624	
+W16_MAR.02065	
+W16_NOV.02120	
+W16_SEP.02312	
+W17_AUG.01072	
+W17_JUN.01903	
+W18_APR.00544	
+W18_FEB.00288	
+W18_FEB.00965	
+W19_JUL.00484	
+W19_MAR.01111	
+W20_FEB.00065	
+W20_JAN.00167	
+W20_JUL.00038	
+W20_MAI.00490	
+W20_MAR.00796	
+W20_MAR.00823	
+W21_FEB.01089	
+W21_OKT.00468	
+W22_JAN.00365	
+W22_OKT.00517	
+W23_APR.00028	
+W23_JUL.00575	
+W24_APR.00829	
+W24_JUL.00437	
+WAS06_JUN.00253	
+WAS06_MAR.00932	
+WAS07_FEB.01234	
+WAS07_MAR.00498	
+WAS08_JUL.00932	
+WAS08_JUN.00736	
+WAS10_JAN.00973	
+WAS11_AUG.00103	
+WAS11_FEB.00991	
+WAS11_JAN.00768	
+WAS11_NOV.00459	
+WAS12_APR.00415	
+WAS12_APR.01257	
+WAS12_SEP.00837	
+WAS13_JAN.00750	
+WAS13_MAI.00583	
+WAS13_SEP.00341	
+WAS14_DEZ.00168	
+WAS14_MAR.00191	
+WAS14_MAR.01038	
+WAS15_JUN.00040	
+WAS16_AUG.00165	
+WAS16_NOV.00202	
+WAS17_DEZ.00442	
+WAS18_NOV.00718	
+WAS19_FEB.00040	
+WAS19_NOV.00944	
+WAS20_JAN.00321	
+WAS21_JAN.00199	
+WAS21_JAN.00645	
+WAS22_JAN.00296	
+WAS22_JUN.00857	
+WAS24_APR.00088	
+WAS24_JAN.00594	
+Z05_JUL.00497	
+Z05_MAI.00021	
+Z06_AUG.00444	
+Z06_AUG.00763	
+Z06_JUN.00774	
+Z06_MAI.00175	
+Z07_APR.00327	
+Z07_APR.00483	
+Z07_FEB.00954	
+Z07_OKT.00787	
+Z08_DEZ.00508	
+Z08_JAN.00545	
+Z09_JUL.00405	
+Z09_NOV.00204	
+Z10_MAI.01870	
+Z11_APR.00030	
+Z11_FEB.00126	
+Z11_MAR.00480	
+Z11_OKT.00364	
+Z11_SEP.00511	
+Z12_NOV.00071	
+Z13_APR.00230	
+Z15_DEZ.00304	
+Z16_NOV.00330	
+Z18_DEZ.00053	
+Z18_JUN.00516	
+Z18_SEP.00226	
+Z19_APR.00063	
+Z19_AUG.00591	
+Z19_OKT.00077	
+Z20_OKT.00167	
+Z21_JUL.00444	
+Z21_OKT.00367	
+Z22_DEZ.00287	
+Z24_APR.00044	
+Z24_JUL.00280	
+Z24_SEP.00280	
+ZCA09_AUG.00030	
+ZCA09_SEP.00033	
+ZCA10_FEB.00004	
+ZCA10_MAR.00005	
+ZCA10_NOV.00014	
+ZCA11_MAR.00021	
+ZCA11_NOV.00036	
+ZCA12_MAR.00031	
+ZCA12_OKT.00005	
+ZCA13_APR.00032	
+ZCA13_AUG.00035	
+ZCA13_FEB.00038	
+ZCA13_NOV.00017	
+ZCA13_OKT.00052	
+ZCA14_AUG.00023	
+ZCA14_FEB.00033	
+ZCA14_FEB.00035	
+ZCA14_JUN.00036	
+ZCA14_MAR.00037	
+ZCA15_AUG.00018	
+ZCA15_FEB.00025	
+ZCA15_MAR.00015	
+ZCA15_OKT.00005	
+ZCA16_APR.00012	
+ZCA16_APR.00019	
+ZCA16_FEB.00004	
+ZCA16_JUN.00017	
+ZCA16_JUN.00024	
+ZCA16_OKT.00030	
+ZCA17_APR.00018	
+ZCA17_APR.00025	
+ZCA17_DEZ.00026	
+ZCA17_FEB.00029	
+ZCA17_JUN.00046	
+ZCA17_MAR.00019	
+ZCA18_AUG.00026	
+ZCA18_DEZ.00033	
+ZCA18_FEB.00032	
+ZCA18_FEB.00036	
+ZCA18_MAR.00039	
+ZCA18_OKT.00015	
+ZCA19_DEZ.00038	
+ZCA19_FEB.00024	
+ZCA19_OKT.00023	
+ZCA19_OKT.00031	
+ZCA21_APR.00008	
+ZCA21_APR.00024	
+ZCA21_NOV.00005	
+ZCA22_FEB.00003	
+ZCA22_JUN.00001	
+ZCA23_FEB.00021	
+ZCA24_DEZ.00020	
+ZCA24_FEB.00013	
+ZCA24_SEP.00013	
+ZWI09_APR.00045	
+ZWI09_MAI.00022	
+ZWI09_NOV.00011	
+ZWI09_NOV.00086	
+ZWI10_JUN.00025	
+ZWI11_APR.00029	
+ZWI11_AUG.00014	
+ZWI11_MAI.00023	
+ZWI11_MAI.00026	
+ZWI13_MAR.00032	
+ZWI13_MAR.00036	
+ZWI13_OKT.00027	
+ZWI13_SEP.00009	
+ZWI14_APR.00017	
+ZWI14_FEB.00017	
+ZWI14_FEB.00021	
+ZWI14_SEP.00014	
+ZWI15_JUN.00032	
+ZWI17_APR.00020	
+ZWI17_OKT.00008	
+ZWI17_OKT.00009	
+ZWI18_APR.00021	
+ZWI18_AUG.00007	
+ZWI19_APR.00017	
+ZWI19_FEB.00010	
+ZWI19_JUN.00001	
+ZWI19_JUN.00028	
+ZWI20_APR.00029	
+ZWI20_AUG.00006	
+ZWI20_DEZ.00007	
+ZWI20_DEZ.00013	
+ZWI20_JUN.00010	
+ZWI20_OKT.00009	
+ZWI21_JUN.00009	
+ZWI22_FEB.00009	
+ZWI23_APR.00017	
+ZWI23_AUG.00012	
+ZWI23_FEB.00020	
+ZWI23_OKT.00021	
+ZWI24_APR.00019	
+ZWI24_FEB.00012	
+ZWI24_JUN.00026	
+AAZ05_APR.11477	Konstantina Karakechagia, Lea Wassmer
+AAZ08_FEB.05978	Konstantina Karakechagia
+AAZ09_JUN.08096	Konstantina Karakechagia, Lea Wassmer
+AAZ11_FEB.03123	Konstantina Karakechagia
+AAZ11_JUL.05869	Konstantina Karakechagia, Lea Wassmer
+AAZ11_MAI.06361	Konstantina Karakechagia
+AAZ12_MAR.06672	Konstantina Karakechagia, Lea Wassmer
+AAZ15_JAN.00815	Konstantina Karakechagia
+AAZ15_NOV.05660	Konstantina Karakechagia, Lea Wassmer
+AAZ17_FEB.04187	Konstantina Karakechagia
+AAZ18_JAN.02577	Konstantina Karakechagia, Lea Wassmer
+AAZ18_MAI.03109	Konstantina Karakechagia
+AAZ18_MAR.06687	Konstantina Karakechagia, Lea Wassmer
+ABM21_SEP.02438	Konstantina Karakechagia
+AZM06_JAN.01741	Konstantina Karakechagia, Lea Wassmer
+AZM07_DEZ.00473	Alissa Hege, Konstantina Karakechagia
+AZM07_NOV.00790	Konstantina Karakechagia, Lea Wassmer
+AZM13_MAR.00636	Alissa Hege, Konstantina Karakechagia, Lara Baum
+AZM15_OKT.02190	Konstantina Karakechagia, Lea Wassmer
+AZM20_JUL.00045	Alissa Hege, Konstantina Karakechagia
+AZM21_JAN.01250	Konstantina Karakechagia, Lea Wassmer
+AZM23_JAN.01415	Alissa Hege, Konstantina Karakechagia
+AZM24_AUG.00954	Konstantina Karakechagia, Lea Wassmer
+BDZ06_MAI.11684	Alissa Hege, Konstantina Karakechagia
+BDZ07_DEZ.07968	Konstantina Karakechagia, Lea Wassmer
+BDZ08_APR.12801	Alissa Hege, Konstantina Karakechagia
+BDZ08_DEZ.00735	Konstantina Karakechagia, Lea Wassmer
+BDZ09_FEB.09314	Alissa Hege, Konstantina Karakechagia
+BDZ09_JUL.05513	Konstantina Karakechagia, Lea Wassmer
+BDZ09_OKT.11340	Alissa Hege, Konstantina Karakechagia
+BDZ09_SEP.11783	Konstantina Karakechagia, Lea Wassmer
+BDZ13_JUN.07165	Alissa Hege, Konstantina Karakechagia, Lara Baum
+BDZ16_OKT.01432	Konstantina Karakechagia, Lea Wassmer
+BDZ18_MAR.02466	Alissa Hege, Konstantina Karakechagia
+BDZ18_OKT.01166	Konstantina Karakechagia, Lea Wassmer
+BDZ23_AUG.00890	Alissa Hege, Konstantina Karakechagia
+BMO15_FEB.00096	Konstantina Karakechagia, Lea Wassmer
+BRU14_JAN.02534	Alissa Hege, Konstantina Karakechagia
+BRU16_SEP.00179	Konstantina Karakechagia, Lea Wassmer
+BZE18_JUN.01265	Alissa Hege, Konstantina Karakechagia, Lara Baum
+BZE18_NOV.01515	Konstantina Karakechagia, Lea Wassmer
+BZG17_APR.00299	Alissa Hege, Konstantina Karakechagia
+BZG19_DEZ.01043	Konstantina Karakechagia, Lea Wassmer
+BZG20_SEP.00573	Alissa Hege, Konstantina Karakechagia
+BZG24_SEP.00097	Konstantina Karakechagia, Lea Wassmer
+DAZ17_SEP.02869	Alissa Hege, Konstantina Karakechagia
+DAZ23_OKT.00242	Konstantina Karakechagia, Lea Wassmer
+DAZ24_NOV.01503	Alissa Hege, Konstantina Karakechagia
+DEC07_JUL.03413	Konstantina Karakechagia, Lea Wassmer
+DEC13_FEB.00694	Alissa Hege, Konstantina Karakechagia
+DEC14_AUG.03112	Konstantina Karakechagia, Lea Wassmer
+DEC15_NOV.06012	Alissa Hege, Konstantina Karakechagia
+DEC17_JUL.00002	Konstantina Karakechagia, Lea Wassmer
+DEC19_OKT.02774	Alissa Hege, Konstantina Karakechagia
+DEC19_OKT.07409	Konstantina Karakechagia, Lea Wassmer
+DEC21_DEZ.04176	Alissa Hege, Konstantina Karakechagia
+DEC21_JUL.00283	Konstantina Karakechagia, Lea Wassmer
+DEC22_DEZ.04463	Alissa Hege, Konstantina Karakechagia
+DEC22_JAN.00632	Konstantina Karakechagia, Lea Wassmer
+DEC23_SEP.01728	Alissa Hege, Konstantina Karakechagia
+DGL19_APR.01149	Konstantina Karakechagia, Lea Wassmer
+DKI11_AUG.01141	Alissa Hege, Konstantina Karakechagia
+DKI15_DEZ.01717	Konstantina Karakechagia, Lea Wassmer
+DKI16_SEP.00270	Alissa Hege, Konstantina Karakechagia
+DKI20_JAN.00572	Konstantina Karakechagia, Lea Wassmer
+DNN16_DEZ.02945	Alissa Hege, Konstantina Karakechagia
+DNN18_MAR.04268	Konstantina Karakechagia, Lea Wassmer
+DOL06_FEB.00301	Alissa Hege, Konstantina Karakechagia
+DOL19_SEP.01023	Konstantina Karakechagia, Lea Wassmer
+DOL20_JUN.02561	Alissa Hege, Konstantina Karakechagia
+DPR13_JUN.03126	Konstantina Karakechagia, Lea Wassmer
+DPR15_NOV.00570	Alissa Hege, Konstantina Karakechagia
+DPR19_APR.02475	Konstantina Karakechagia, Lea Wassmer
+DPR24_JUN.00357	Alissa Hege, Konstantina Karakechagia
+FOM13_NOV.00194	Konstantina Karakechagia, Lea Wassmer
+FPC12_AUG.06074	Alissa Hege, Konstantina Karakechagia
+FPC14_FEB.09098	Konstantina Karakechagia, Lea Wassmer
+FPC14_MAR.01804	Alissa Hege, Konstantina Karakechagia
+FPC15_APR.02161	Konstantina Karakechagia, Lea Wassmer
+FPC15_JUL.04632	Alissa Hege, Konstantina Karakechagia
+FPC15_OKT.08039	Konstantina Karakechagia, Lea Wassmer
+FPC17_NOV.01056	Alissa Hege, Konstantina Karakechagia
+FPC18_JAN.06352	Konstantina Karakechagia, Lea Wassmer
+FPC18_JUN.03245	Alissa Hege, Konstantina Karakechagia
+FPC19_NOV.06729	Konstantina Karakechagia, Lea Wassmer
+FPC20_MAI.06080	Alissa Hege, Konstantina Karakechagia
+FPC21_JAN.07475	Konstantina Karakechagia, Lea Wassmer
+FRT08_APR.24591	Alissa Hege, Konstantina Karakechagia
+FRT08_SEP.12314	Konstantina Karakechagia, Lea Wassmer
+FRT12_NOV.11794	Alissa Hege, Konstantina Karakechagia
+FRT16_AUG.04445	Konstantina Karakechagia, Lea Wassmer
+FRT17_SEP.01701	Alissa Hege, Konstantina Karakechagia
+FRT19_APR.08371	Konstantina Karakechagia, Lea Wassmer
+FRT19_MAR.08646	Alissa Hege, Konstantina Karakechagia
+FRT19_NOV.06915	Konstantina Karakechagia, Lea Wassmer
+FRT24_JAN.01042	Alissa Hege, Konstantina Karakechagia
+GAZ05_JUL.00117	Konstantina Karakechagia, Lea Wassmer
+GAZ06_OKT.03832	Alissa Hege, Konstantina Karakechagia
+GAZ06_SEP.02779	Konstantina Karakechagia, Lea Wassmer
+GAZ07_FEB.03872	Alissa Hege, Konstantina Karakechagia
+GAZ07_SEP.02105	Konstantina Karakechagia, Lea Wassmer
+GAZ09_JAN.03924	Alissa Hege, Konstantina Karakechagia
+GAZ13_APR.06448	Konstantina Karakechagia, Lea Wassmer
+GAZ15_OKT.11558	Alissa Hege, Konstantina Karakechagia
+GAZ15_SEP.01412	Konstantina Karakechagia, Lea Wassmer
+GAZ17_MAR.04410	Alissa Hege, Konstantina Karakechagia
+GAZ18_JAN.00143	Konstantina Karakechagia, Lea Wassmer
+GAZ24_FEB.03373	Alissa Hege, Konstantina Karakechagia
+GAZ24_MAR.03818	Konstantina Karakechagia, Lea Wassmer
+GIZ10_JAN.00121	Alissa Hege, Konstantina Karakechagia
+GIZ12_OKT.01450	Konstantina Karakechagia, Lea Wassmer
+GIZ14_OKT.00603	Alissa Hege, Konstantina Karakechagia
+GIZ17_AUG.02516	Konstantina Karakechagia, Lea Wassmer
+GIZ17_JUN.00055	Alissa Hege, Konstantina Karakechagia
+GIZ19_OKT.01444	Konstantina Karakechagia, Lea Wassmer
+HAA06_JAN.06297	Alissa Hege, Konstantina Karakechagia
+HAA06_MAR.00628	Konstantina Karakechagia, Lea Wassmer
+HAA09_MAR.03016	Alissa Hege, Konstantina Karakechagia
+HAA09_NOV.01409	Konstantina Karakechagia, Lea Wassmer
+HAA10_NOV.00330	Alissa Hege, Konstantina Karakechagia
+HAA10_OKT.00602	Konstantina Karakechagia, Lea Wassmer
+HAA12_NOV.00411	Alissa Hege, Konstantina Karakechagia
+HAA13_JAN.02093	Konstantina Karakechagia, Lea Wassmer
+HAA14_DEZ.00182	Alissa Hege, Konstantina Karakechagia
+HAA17_APR.01363	Konstantina Karakechagia, Lea Wassmer
+HAA19_JAN.03790	Alissa Hege, Konstantina Karakechagia
+HAA21_NOV.01187	Konstantina Karakechagia, Lea Wassmer
+HAA24_MAR.03142	Alissa Hege, Konstantina Karakechagia
+HKR15_JAN.00893	Konstantina Karakechagia, Lea Wassmer
+HKR19_JUL.00979	Alissa Hege, Konstantina Karakechagia
+HKR21_MAR.01451	Konstantina Karakechagia, Lea Wassmer
+HMP11_OKT.02123	Alissa Hege, Konstantina Karakechagia
+HMP12_AUG.02933	Konstantina Karakechagia, Lea Wassmer
+HMP18_MAR.01845	Alissa Hege, Konstantina Karakechagia
+HST09_DEZ.06428	Konstantina Karakechagia, Lea Wassmer
+HST10_DEZ.06009	Konstantina Karakechagia
+HST12_JUN.04108	Konstantina Karakechagia, Lea Wassmer
+HST13_NOV.06533	Konstantina Karakechagia
+HST14_MAR.00089	Konstantina Karakechagia, Lea Wassmer
+HST20_APR.04451	Konstantina Karakechagia
+HST24_AUG.02710	Konstantina Karakechagia, Lea Wassmer
+KAZ10_APR.01679	Konstantina Karakechagia
+KAZ16_DEZ.02147	Konstantina Karakechagia, Lea Wassmer
+KN21_APR.02253	Konstantina Karakechagia
+KN22_OKT.01911	Konstantina Karakechagia, Lea Wassmer
+KRU05_AUG.10096	Konstantina Karakechagia
+KRU05_JUN.01239	Konstantina Karakechagia, Lea Wassmer
+KRU08_JUL.09470	Konstantina Karakechagia
+KRU08_OKT.07894	Konstantina Karakechagia, Lea Wassmer
+KRU13_APR.08354	Konstantina Karakechagia
+KRU13_MAI.05727	Konstantina Karakechagia, Lea Wassmer
+KRU14_APR.02750	Konstantina Karakechagia
+KRU14_JUL.01986	Konstantina Karakechagia, Lea Wassmer
+KRU14_SEP.04686	Konstantina Karakechagia
+KRU16_JAN.07278	Konstantina Karakechagia, Lea Wassmer
+KRU18_FEB.00529	Konstantina Karakechagia
+KRU18_SEP.04004	Konstantina Karakechagia, Lea Wassmer
+KRU22_NOV.06940	Konstantina Karakechagia
+KSA05_OKT.03500	Konstantina Karakechagia, Lea Wassmer
+KSA07_FEB.01119	Konstantina Karakechagia
+KSA07_JAN.02606	Konstantina Karakechagia, Lea Wassmer
+KSA11_JUN.05668	Konstantina Karakechagia
+KSA12_MAR.07819	Konstantina Karakechagia, Lea Wassmer
+KSA14_OKT.06085	Konstantina Karakechagia
+KSA17_JAN.06294	Konstantina Karakechagia, Lea Wassmer
+KSA19_MAR.02734	Konstantina Karakechagia
+KSA20_JUL.02201	Konstantina Karakechagia, Lea Wassmer
+KSA22_FEB.03394	Konstantina Karakechagia
+KSA22_FEB.04732	Konstantina Karakechagia, Lea Wassmer
+KXP08_SEP.03840	Konstantina Karakechagia
+KXP09_FEB.02303	Konstantina Karakechagia, Lea Wassmer
+KXP12_JUL.03103	Konstantina Karakechagia
+KXP14_JAN.03613	Konstantina Karakechagia, Lea Wassmer
+KXP15_FEB.00685	Konstantina Karakechagia
+KXP16_MAR.00143	Konstantina Karakechagia, Lea Wassmer
+L05_SEP.00707	Konstantina Karakechagia
+L06_OKT.01640	Konstantina Karakechagia, Lea Wassmer
+L08_MAR.00430	Konstantina Karakechagia
+L09_MAR.03229	Konstantina Karakechagia, Lea Wassmer
+L10_AUG.04892	Konstantina Karakechagia
+L11_JUL.04661	Konstantina Karakechagia, Lea Wassmer
+L13_JUN.00131	Konstantina Karakechagia
+L15_SEP.00749	Konstantina Karakechagia, Lea Wassmer
+L22_NOV.02502	Konstantina Karakechagia
+L24_MAI.01385	Konstantina Karakechagia, Lea Wassmer
+LAN10_AUG.00791	Konstantina Karakechagia
+LAN12_OKT.00797	Konstantina Karakechagia, Lea Wassmer
+LHZ18_JAN.01490	Konstantina Karakechagia
+LHZ23_JUN.00574	Konstantina Karakechagia, Lea Wassmer
+LN19_JAN.02215	Konstantina Karakechagia
+LN19_JUL.00023	Konstantina Karakechagia, Lea Wassmer
+LN19_OKT.06180	Konstantina Karakechagia
+LN20_MAR.03557	Konstantina Karakechagia, Lea Wassmer
+LN21_MAR.01674	Konstantina Karakechagia
+LN21_NOV.03748	Konstantina Karakechagia, Lea Wassmer
+LN24_JAN.03296	Konstantina Karakechagia
+LRU06_OKT.05034	Konstantina Karakechagia, Lea Wassmer
+LRU08_JUN.07195	Konstantina Karakechagia
+LRU11_FEB.05308	Konstantina Karakechagia, Lea Wassmer
+LRU11_OKT.03934	Konstantina Karakechagia
+LRU12_NOV.02095	Konstantina Karakechagia, Lea Wassmer
+LRU15_SEP.01647	Konstantina Karakechagia
+LRU17_NOV.00164	Konstantina Karakechagia, Lea Wassmer
+LRU22_NOV.04049	Konstantina Karakechagia
+LRU23_NOV.04834	Konstantina Karakechagia, Lea Wassmer
+LVZ05_JUN.10804	Konstantina Karakechagia
+LVZ05_SEP.05717	Konstantina Karakechagia, Lea Wassmer
+LVZ06_FEB.11026	Konstantina Karakechagia
+LVZ06_NOV.05494	Konstantina Karakechagia, Lea Wassmer
+LVZ06_OKT.00020	Konstantina Karakechagia
+LVZ06_SEP.04658	Konstantina Karakechagia, Lea Wassmer
+LVZ07_NOV.09255	Konstantina Karakechagia
+LVZ08_JAN.01109	Konstantina Karakechagia, Lea Wassmer
+LVZ08_MAI.17502	Konstantina Karakechagia
+LVZ09_NOV.00552	Konstantina Karakechagia, Lea Wassmer
+LVZ11_APR.12636	Konstantina Karakechagia
+LVZ11_OKT.17514	Konstantina Karakechagia, Lea Wassmer
+LVZ12_JAN.12862	Konstantina Karakechagia
+LVZ12_JAN.19775	Konstantina Karakechagia, Lea Wassmer
+LVZ14_AUG.06108	Konstantina Karakechagia
+LVZ14_NOV.06496	Konstantina Karakechagia, Lea Wassmer
+LVZ19_JAN.02874	Konstantina Karakechagia
+LVZ20_MAR.00904	Konstantina Karakechagia, Lea Wassmer
+LVZ22_JUL.03111	Konstantina Karakechagia
+LVZ23_JUN.00142	Konstantina Karakechagia, Lea Wassmer
+M06_MAR.18034	Konstantina Karakechagia
+M07_MAI.03986	Konstantina Karakechagia, Lea Wassmer
+M12_JUL.02581	Konstantina Karakechagia
+M14_FEB.00123	Konstantina Karakechagia, Lea Wassmer
+M16_APR.08482	Konstantina Karakechagia
+M16_MAI.00089	Konstantina Karakechagia, Lea Wassmer
+M17_SEP.02780	Konstantina Karakechagia
+M18_JUL.01383	Konstantina Karakechagia, Lea Wassmer
+MAG07_APR.00755	Konstantina Karakechagia
+MAG07_APR.05885	Konstantina Karakechagia, Lea Wassmer
+MAG07_AUG.02072	Konstantina Karakechagia
+MAG08_JAN.08390	Konstantina Karakechagia, Lea Wassmer
+MAG09_DEZ.00213	Konstantina Karakechagia
+MAG09_MAR.00994	Konstantina Karakechagia, Lea Wassmer
+MAG10_DEZ.02920	Konstantina Karakechagia
+MAG10_FEB.00794	Konstantina Karakechagia, Lea Wassmer
+MAG11_OKT.08702	Konstantina Karakechagia
+MAG11_SEP.04537	Konstantina Karakechagia, Lea Wassmer
+MAG12_NOV.08820	Konstantina Karakechagia
+MAG13_APR.14897	Konstantina Karakechagia, Lea Wassmer
+MAG13_NOV.08486	Konstantina Karakechagia
+MAG15_NOV.02336	Konstantina Karakechagia, Lea Wassmer
+MAG16_OKT.02114	Konstantina Karakechagia
+MAG17_MAR.11765	Konstantina Karakechagia, Lea Wassmer
+MAG21_DEZ.07627	Konstantina Karakechagia
+MAG21_DEZ.08863	Konstantina Karakechagia, Lea Wassmer
+MAG23_OKT.03578	Konstantina Karakechagia
+MIB14_DEZ.08279	Konstantina Karakechagia, Lea Wassmer
+MIB17_AUG.01801	Konstantina Karakechagia
+MIB18_JAN.02841	Konstantina Karakechagia, Lea Wassmer
+MIB20_MAI.04351	Konstantina Karakechagia
+MIB20_NOV.04169	Konstantina Karakechagia, Lea Wassmer
+MIB23_JUL.06241	Konstantina Karakechagia
+MIB23_JUN.03497	Konstantina Karakechagia, Lea Wassmer
+MSP07_JAN.02527	Konstantina Karakechagia
+MSP07_MAI.00941	Konstantina Karakechagia, Lea Wassmer
+MSP17_JUL.01966	Konstantina Karakechagia
+MSP21_SEP.01920	Konstantina Karakechagia, Lea Wassmer
+MZE05_NOV.07523	Konstantina Karakechagia
+MZE06_AUG.00493	Konstantina Karakechagia, Lea Wassmer
+MZE08_DEZ.08381	Konstantina Karakechagia
+MZE08_NOV.03746	Konstantina Karakechagia, Lea Wassmer
+MZE11_AUG.10708	Konstantina Karakechagia
+MZE11_MAR.00794	Konstantina Karakechagia, Lea Wassmer
+MZE13_AUG.05610	Konstantina Karakechagia
+MZE13_NOV.08389	Konstantina Karakechagia, Lea Wassmer
+MZE17_APR.09638	Konstantina Karakechagia
+MZE17_JUL.07263	Konstantina Karakechagia, Lea Wassmer
+MZE19_APR.10118	Konstantina Karakechagia
+MZE19_MAR.03775	Konstantina Karakechagia, Lea Wassmer
+MZE20_JAN.05194	Konstantina Karakechagia
+MZE21_APR.02164	Konstantina Karakechagia, Lea Wassmer
+MZE22_NOV.10070	Konstantina Karakechagia
+MZE23_APR.03636	Konstantina Karakechagia, Lea Wassmer
+MZE23_FEB.02461	Konstantina Karakechagia
+MZE23_MAI.06088	Konstantina Karakechagia, Lea Wassmer
+NNP15_OKT.04770	Konstantina Karakechagia
+NNP17_AUG.01833	Konstantina Karakechagia, Lea Wassmer
+NOW18_NOV.08557	Konstantina Karakechagia
+NOW19_FEB.12206	Konstantina Karakechagia, Lea Wassmer
+NOW21_DEZ.01952	Konstantina Karakechagia
+NOW21_JAN.04764	Konstantina Karakechagia, Lea Wassmer
+NPR17_SEP.02981	Konstantina Karakechagia
+NPR19_DEZ.02644	Konstantina Karakechagia, Lea Wassmer
+NUN09_JUL.05187	Konstantina Karakechagia
+NUN10_MAI.01147	Konstantina Karakechagia, Lea Wassmer
+NUN14_SEP.02989	Konstantina Karakechagia
+NUN15_MAR.01242	Konstantina Karakechagia, Lea Wassmer
+NUN21_JUL.01144	Konstantina Karakechagia
+NWE05_FEB.04340	Konstantina Karakechagia, Lea Wassmer
+NWE06_MAR.12830	Konstantina Karakechagia
+NWE06_SEP.03979	Konstantina Karakechagia, Lea Wassmer
+NWE08_FEB.19814	Konstantina Karakechagia
+NWE08_JAN.06149	Konstantina Karakechagia, Lea Wassmer
+NWE09_OKT.16631	Konstantina Karakechagia
+NWE11_JAN.03004	Konstantina Karakechagia, Lea Wassmer
+NWE11_SEP.11860	Konstantina Karakechagia
+NWE13_OKT.30697	Konstantina Karakechagia, Lea Wassmer
+NWE15_JUL.06259	Konstantina Karakechagia
+NWE16_MAI.11872	Konstantina Karakechagia, Lea Wassmer
+NWE16_SEP.21229	Konstantina Karakechagia
+NWE17_SEP.06486	Konstantina Karakechagia, Lea Wassmer
+NWE18_FEB.07815	Konstantina Karakechagia
+NWE19_JAN.10572	Konstantina Karakechagia, Lea Wassmer
+NWE20_OKT.07527	Konstantina Karakechagia
+NWE21_DEZ.06138	Konstantina Karakechagia, Lea Wassmer
+NWE22_DEZ.05486	Konstantina Karakechagia
+NWE23_AUG.10932	Konstantina Karakechagia, Lea Wassmer
+NWE24_DEZ.02017	Konstantina Karakechagia
+NWZ07_OKT.00673	Konstantina Karakechagia, Lea Wassmer
+NWZ10_FEB.01850	Konstantina Karakechagia
+NWZ10_JAN.00190	Konstantina Karakechagia, Lea Wassmer
+NWZ10_OKT.02578	Konstantina Karakechagia
+NWZ10_OKT.03231	Konstantina Karakechagia, Lea Wassmer
+NWZ14_AUG.02436	Konstantina Karakechagia
+NWZ17_JUL.00548	Konstantina Karakechagia, Lea Wassmer
+NWZ20_SEP.01160	Konstantina Karakechagia
+NWZ21_OKT.02627	Konstantina Karakechagia, Lea Wassmer
+NWZ24_FEB.02824	Konstantina Karakechagia
+OAZ15_AUG.00810	Konstantina Karakechagia, Lea Wassmer
+OAZ19_JAN.00585	Konstantina Karakechagia
+OAZ19_MAI.01221	Konstantina Karakechagia, Lea Wassmer
+OHZ09_SEP.00370	Konstantina Karakechagia
+OHZ20_JUL.01571	Konstantina Karakechagia, Lea Wassmer
+OHZ23_MAI.00601	Konstantina Karakechagia
+OSZ16_AUG.05919	Konstantina Karakechagia, Lea Wassmer
+OSZ20_OKT.02015	Konstantina Karakechagia
+OSZ21_DEZ.05509	Konstantina Karakechagia, Lea Wassmer
+OSZ21_NOV.04000	Konstantina Karakechagia
+OSZ22_NOV.01796	Konstantina Karakechagia, Lea Wassmer
+OTZ07_OKT.03263	Konstantina Karakechagia
+OTZ10_MAR.06604	Konstantina Karakechagia, Lea Wassmer
+OTZ11_JUN.06066	Konstantina Karakechagia
+OTZ12_JAN.08882	Konstantina Karakechagia, Lea Wassmer
+OTZ17_APR.04900	Konstantina Karakechagia
+OTZ20_NOV.05369	Konstantina Karakechagia, Lea Wassmer
+OTZ23_MAR.02029	Konstantina Karakechagia
+OTZ24_JUL.05329	Konstantina Karakechagia, Lea Wassmer
+OVZ19_DEZ.00224	Konstantina Karakechagia
+OVZ21_SEP.01437	Konstantina Karakechagia, Lea Wassmer
+PAZ19_SEP.00898	Konstantina Karakechagia
+PNN07_MAI.00873	Konstantina Karakechagia, Lea Wassmer
+PNN11_NOV.01410	Konstantina Karakechagia
+PNN17_APR.00024	Konstantina Karakechagia, Lea Wassmer
+PNN19_MAR.00172	Konstantina Karakechagia
+PNN20_MAR.02150	Konstantina Karakechagia, Lea Wassmer
+PNP05_JUN.01065	Konstantina Karakechagia
+PNP06_FEB.10365	Konstantina Karakechagia, Lea Wassmer
+PNP07_DEZ.12142	Konstantina Karakechagia
+PNP07_JUL.08036	Konstantina Karakechagia, Lea Wassmer
+PNP08_MAR.10204	Konstantina Karakechagia
+PNP09_FEB.01447	Konstantina Karakechagia, Lea Wassmer
+PNP09_OKT.08261	Konstantina Karakechagia
+PNP09_SEP.13878	Konstantina Karakechagia, Lea Wassmer
+PNP12_AUG.12237	Konstantina Karakechagia
+PNP14_APR.11942	Konstantina Karakechagia, Lea Wassmer
+PNP20_JUL.06706	Konstantina Karakechagia
+PNP21_MAI.05170	Konstantina Karakechagia, Lea Wassmer
+PNP22_JUL.01124	Konstantina Karakechagia
+PNP22_NOV.05027	Konstantina Karakechagia, Lea Wassmer
+RHP07_AUG.01283	
+RHP10_APR.00568	Lea Wassmer
+RHP11_SEP.00612	
+RHP13_JUL.12319	Lea Wassmer
+RHP14_MAR.04412	
+RHP15_MAR.11777	Lea Wassmer
+RHP16_FEB.01720	
+RHP16_FEB.08558	Lea Wassmer
+RHP16_NOV.04876	
+RHP17_AUG.06848	Lea Wassmer
+RHP17_MAR.01047	
+RHP17_NOV.09256	Lea Wassmer
+RHP20_JUN.00037	
+RHP21_APR.09300	Lea Wassmer
+RHP21_FEB.01372	
+RHP21_JUL.01219	Lea Wassmer
+RHP21_MAI.03131	
+RHP21_MAI.06219	Lea Wassmer
+RHP22_MAR.09708	
+RHP23_APR.06826	Lea Wassmer
+RHP24_MAI.00698	
+RHP24_MAI.02589	Lea Wassmer
+RHP24_MAI.06054	
+RHP24_NOV.05061	Lea Wassmer
+RHZ05_JUN.07474	
+RHZ05_JUN.08182	Lea Wassmer
+RHZ05_OKT.10936	
+RHZ05_SEP.34272	Lea Wassmer
+RHZ07_JUL.22600	
+RHZ07_OKT.00547	Lea Wassmer
+RHZ08_JAN.23734	
+RHZ09_AUG.00133	Lea Wassmer
+RHZ09_AUG.24064	
+RHZ09_MAI.10299	Lea Wassmer
+RHZ14_JUN.00779	
+RHZ16_MAR.06366	Lea Wassmer
+RHZ17_MAI.07055	
+RHZ17_MAR.09672	Lea Wassmer
+RHZ19_MAI.28281	
+RHZ20_APR.03699	Lea Wassmer
+RHZ20_JUN.08871	
+RHZ20_MAR.24412	Lea Wassmer
+RHZ21_JAN.21579	
+RHZ21_JUN.01750	Lea Wassmer
+RHZ23_JUN.00393	
+RHZ23_JUN.05118	Lea Wassmer
+RHZ23_MAR.23877	
+RLN19_DEZ.01862	Lea Wassmer
+RN19_JUL.06877	
+RN20_NOV.06799	Lea Wassmer
+RN22_AUG.00751	
+SAZ11_JUL.01585	
+SAZ12_OKT.01310	
+SAZ17_JUN.00475	
+SAZ21_AUG.00163	
+SAZ22_SEP.01913	
+SBZ06_JUL.08284	
+SBZ07_NOV.12702	
+SBZ09_DEZ.05829	
+SBZ09_DEZ.07447	
+SBZ11_JAN.08693	
+SBZ11_JAN.10240	
+SBZ12_SEP.07579	
+SBZ14_APR.06206	
+SBZ15_MAI.10302	
+SBZ16_DEZ.07678	
+SBZ19_FEB.06546	
+SBZ21_JUL.01701	
+SCZ12_MAR.18511	
+SCZ12_NOV.07271	
+SCZ14_NOV.03291	
+SCZ15_NOV.00153	
+SCZ16_SEP.10850	
+SCZ17_MAR.16397	
+SCZ18_DEZ.12803	
+SCZ22_NOV.10417	
+SCZ23_APR.05432	
+SCZ23_NOV.08458	
+SCZ23_OKT.09724	
+SCZ24_APR.10202	
+SKU06_FEB.10332	
+SKU06_JUN.05156	
+SKU06_SEP.19559	
+SKU07_OKT.17103	
+SKU10_DEZ.10937	
+SKU10_JUL.07811	
+SKU11_JUN.08487	
+SKU11_MAI.13100	
+SKU12_APR.05714	
+SKU13_NOV.10646	
+SKU14_SEP.09807	
+SKU15_AUG.01951	
+SKU15_MAI.04057	
+SKU15_NOV.11324	
+SKU16_DEZ.04286	
+SKU17_FEB.09116	
+SKU18_NOV.07885	
+SKU20_APR.05908	
+SKU21_DEZ.07999	
+SKU21_JUL.08850	
+SKU22_FEB.00987	
+SKU22_FEB.02296	
+SOL09_SEP.00674	
+SOL10_MAR.00049	
+SOL11_OKT.00006	
+SOL12_NOV.00962	
+SOL12_OKT.00705	
+SOL14_NOV.00956	
+SOL16_SEP.00594	
+SOL20_APR.00923	
+STB15_AUG.07267	
+STB16_AUG.00046	
+STB16_MAR.17046	
+STB16_NOV.13850	
+STB18_MAI.09849	
+STB18_OKT.07004	
+STB20_MAI.10302	
+STB20_MAR.04118	
+STB22_NOV.11715	
+STB23_DEZ.11924	
+STB24_OKT.08975	
+SVZ07_AUG.04892	
+SVZ08_DEZ.13879	
+SVZ09_APR.13542	
+SVZ12_JAN.11730	
+SVZ13_JUL.07302	
+SVZ16_DEZ.00210	
+SVZ17_OKT.00423	
+SWP13_JUN.02430	
+SWP18_AUG.01469	
+SWP19_MAR.01068	
+SWP22_AUG.01310	
+THA05_DEZ.12940	
+THA05_MAR.09364	
+THA06_NOV.09587	
+THA07_AUG.02124	
+THA07_OKT.09714	
+THA08_AUG.10363	
+THA08_SEP.03844	
+THA09_MAI.09162	
+THA10_JAN.12791	
+THA10_JUL.13986	
+THA17_APR.01464	
+THA17_MAI.07478	
+THA24_AUG.00439	
+THA24_JUL.02983	
+TLZ06_AUG.09039	
+TLZ07_FEB.04063	
+TLZ08_DEZ.06523	
+TLZ09_JUL.03594	
+TLZ18_MAI.04762	
+TLZ18_NOV.00805	
+TLZ20_AUG.07201	
+TLZ20_JUL.04892	
+TLZ21_MAI.05952	
+TLZ21_NOV.02916	
+TLZ24_OKT.01684	
+TOZ13_JUN.00019	
+TSP06_DEZ.00482	
+TSP06_FEB.00596	
+TSP07_FEB.00413	
+TSP08_JAN.00660	
+TSP09_JUL.03395	
+TSP09_MAR.01986	
+TSP12_OKT.00483	
+TSP14_MAR.02845	
+TSP16_MAR.00647	
+TSP17_SEP.01892	
+TSP19_JUN.00324	
+TSP20_JAN.01193	
+TVF05_NOV.01161	
+TVF07_JUL.08556	
+TVF10_NOV.07788	
+TVF11_OKT.05525	
+TVF13_OKT.12042	
+TVF14_FEB.07175	
+TVF17_JUN.00056	
+TVF17_OKT.04092	
+TVF23_NOV.00091	
+WEZ09_FEB.02841	
+WEZ13_NOV.03868	
+WEZ14_JUL.11358	
+WEZ15_MAI.00379	
+WEZ16_SEP.08090	
+WEZ21_DEZ.07104	
+WEZ21_JUL.07427	
+WEZ22_NOV.03059	
+WFB10_NOV.07158	
+WFB11_FEB.16939	
+WFB12_NOV.18595	
+WFB14_DEZ.20668	
+WFB14_JAN.06656	
+WKU06_DEZ.00145	
+WKU08_JAN.00158	
+WKU15_MAR.00158	
+WKU16_AUG.01341	
+WKU18_OKT.03175	
+WKU22_DEZ.02942	
+WOR16_NOV.00291	
+WOR17_NOV.00481	
+WOR21_JUL.00032	
+WOR22_DEZ.00766	
+ART15_MAI.00002	Alissa Hege, Lea Wassmer
+ART15_OKT.00018	Alissa Hege, Lea Wassmer
+ART16_AUG.00029	Alissa Hege, Lea Wassmer
+ART16_MAI.00012	Alissa Hege, Lea Wassmer
+ART16_NOV.00034	Alissa Hege, Lea Wassmer
+ART17_MAR.00034	Alissa Hege, Lea Wassmer
+ART17_OKT.00044	Alissa Hege, Lea Wassmer
+ART18_AUG.00009	Alissa Hege, Lea Wassmer
+ART18_MAI.00002	Alissa Hege, Lea Wassmer
+ART18_NOV.00033	Alissa Hege, Lea Wassmer
+ART19_APR.00022	Alissa Hege, Lea Wassmer
+ART19_JUL.00030	Alissa Hege, Lea Wassmer
+ART20_DEZ.00010	Alissa Hege, Lea Wassmer
+ART20_MAI.00008	Alissa Hege, Lea Wassmer
+ART21_DEZ.00010	Alissa Hege, Lea Wassmer
+ART22_AUG.00029	Alissa Hege, Lea Wassmer
+ART22_MAR.00032	Alissa Hege, Lea Wassmer
+ART24_AUG.00024	Alissa Hege, Lea Wassmer
+ART24_JUN.00044	Alissa Hege, Lea Wassmer
+BEI17_MAR.00003	Alissa Hege, Lea Wassmer
+BEI18_DEZ.00016	Alissa Hege, Lara Baum, Lea Wassmer
+BEI18_JUL.00007	Alissa Hege, Lea Wassmer
+BEI18_MAR.00008	Alissa Hege, Lea Wassmer
+BEI19_FEB.00001	Alissa Hege, Lea Wassmer
+BEI19_NOV.00005	Alissa Hege, Lea Wassmer
+BEI19_SEP.00017	Alissa Hege, Lea Wassmer
+BEI20_JAN.00026	Alissa Hege, Lea Wassmer
+BEI21_APR.00026	Alissa Hege, Lea Wassmer
+BEI21_FEB.00018	Alissa Hege, Lea Wassmer
+BEI21_JUL.00021	Alissa Hege, Lea Wassmer
+BEI21_MAI.00025	Alissa Hege, Lea Wassmer
+BEI22_DEZ.00014	Alissa Hege, Lea Wassmer
+BEI22_NOV.00017	Alissa Hege, Lea Wassmer
+BEI22_OKT.00021	Alissa Hege, Lea Wassmer
+BEI23_JUL.00004	Alissa Hege, Lea Wassmer
+BEI23_JUN.00016	Alissa Hege, Lea Wassmer
+BEI23_MAR.00018	Alissa Hege, Lea Wassmer
+BEI24_FEB.00009	Alissa Hege, Lea Wassmer
+BEI24_JUN.00007	Alissa Hege, Lea Wassmer
+BEI24_OKT.00037	Alissa Hege, Lea Wassmer
+BEI24_SEP.00003	Alissa Hege, Lea Wassmer
+BRG10_MAR.00139	Alissa Hege
+BRG10_NOV.00120	Alissa Hege, Lea Wassmer
+BRG12_JUL.00043	Alissa Hege, Lea Wassmer
+BRG13_SEP.00085	Alissa Hege, Lea Wassmer
+BRG14_MAI.00020	Alissa Hege, Lea Wassmer
+BRG15_AUG.00099	Alissa Hege, Lara Baum, Lea Wassmer
+BRG15_MAR.00035	Alissa Hege, Lea Wassmer
+BRG16_MAI.00095	Alissa Hege, Lea Wassmer
+BRG17_MAI.00081	Alissa Hege, Lea Wassmer
+BRG18_FEB.00073	Alissa Hege, Lea Wassmer
+BRG19_JUN.00117	Alissa Hege, Lea Wassmer
+BRG20_JUL.00079	Alissa Hege, Lea Wassmer
+BRG21_NOV.00063	Alissa Hege, Lea Wassmer
+BRG23_MAI.00009	Alissa Hege, Lea Wassmer
+BRG23_SEP.00042	Alissa Hege, Lea Wassmer
+BUP18_OKT.00032	Alissa Hege, Lea Wassmer
+BUP22_DEZ.00036	Alissa Hege, Lea Wassmer
+CAP18_AUG.00032	Alissa Hege, Lea Wassmer
+CAP18_MAR.00017	Alissa Hege, Lea Wassmer
+CAP19_FEB.00012	Alissa Hege, Lea Wassmer
+CAP19_NOV.00027	Alissa Hege, Lea Wassmer
+CAP20_AUG.00010	Alissa Hege, Lea Wassmer
+CAP20_JUN.00036	Alissa Hege, Lea Wassmer
+CAP21_FEB.00027	Alissa Hege, Lea Wassmer
+CAP21_OKT.00040	Alissa Hege, Lea Wassmer
+CAP22_AUG.00037	Alissa Hege, Lea Wassmer
+CAP22_MAI.00030	Alissa Hege, Lea Wassmer
+CAP23_JUN.00029	Alissa Hege, Lea Wassmer
+CAP23_OKT.00015	Alissa Hege, Lea Wassmer
+CAP24_JUL.00010	Alissa Hege, Lea Wassmer
+CAP24_NOV.00009	Alissa Hege, Lea Wassmer
+CIC20_MAI.00036	Alissa Hege, Lea Wassmer
+CIC22_FEB.00008	Alissa Hege, Lea Wassmer
+COU15_MAI.00028	Alissa Hege, Lea Wassmer
+COU16_SEP.00003	Alissa Hege, Lea Wassmer
+COU18_JUN.00013	Alissa Hege, Lea Wassmer
+COU21_OKT.00008	Alissa Hege, Lea Wassmer
+COU22_MAR.00012	Alissa Hege, Lea Wassmer
+COU23_MAR.00033	Alissa Hege, Lea Wassmer
+CT17_APR.00015	Alissa Hege, Lea Wassmer
+CT17_JUN.00064	Alissa Hege, Lea Wassmer
+CT17_MAR.00036	Alissa Hege, Lea Wassmer
+CT17_NOV.00140	Alissa Hege, Lea Wassmer
+CT17_SEP.00310	Alissa Hege, Lea Wassmer
+CT18_JAN.00178	Alissa Hege, Lea Wassmer
+CT18_JUN.00033	Alissa Hege, Lea Wassmer
+CT18_NOV.00160	Alissa Hege, Lea Wassmer
+CT19_FEB.00062	Alissa Hege, Lea Wassmer
+CT19_JAN.00120	Alissa Hege, Lea Wassmer
+CT19_MAI.00055	Alissa Hege, Lea Wassmer
+CT19_SEP.00003	Alissa Hege, Lea Wassmer
+CT20_DEZ.00028	Alissa Hege, Lea Wassmer
+CT20_NOV.00010	Alissa Hege, Lea Wassmer
+CT21_JAN.00130	Alissa Hege, Lea Wassmer
+CT21_MAR.00100	Alissa Hege, Lea Wassmer
+CT22_DEZ.00031	Alissa Hege, Lea Wassmer
+CT22_JUL.00013	Alissa Hege, Lea Wassmer
+CT22_NOV.00078	Alissa Hege, Lea Wassmer
+CT23_AUG.00002	Alissa Hege, Lea Wassmer
+CT23_JUN.00082	Alissa Hege, Lara Baum, Lea Wassmer
+CT23_MAI.00021	Alissa Hege, Lea Wassmer
+CT24_APR.00085	Alissa Hege, Lara Baum, Lea Wassmer
+CT24_AUG.00096	Alissa Hege, Lea Wassmer
+CT24_JAN.00080	Alissa Hege, Lea Wassmer
+CT24_MAI.00082	Alissa Hege, Lea Wassmer
+CT24_SEP.00013	Alissa Hege, Lara Baum, Lea Wassmer
+EDF16_APR.00044	Alissa Hege, Lea Wassmer
+EDF18_FEB.00031	Alissa Hege, Lea Wassmer
+EDF19_APR.00066	
+EDF19_NOV.00218	Alissa Hege, Lea Wassmer
+EDF21_JUN.00198	Alissa Hege, Lea Wassmer
+EDF24_AUG.00047	Alissa Hege, Lea Wassmer
+EDF24_JUL.00080	Alissa Hege, Lea Wassmer
+EUT15_NOV.00051	Alissa Hege, Lea Wassmer
+EUT19_AUG.00025	Alissa Hege, Lea Wassmer
+EUT20_OKT.00009	Alissa Hege, Lea Wassmer
+EUT21_SEP.00007	Alissa Hege, Lea Wassmer
+EUT22_SEP.00074	Alissa Hege, Lea Wassmer
+FIS15_OKT.00028	Alissa Hege, Lea Wassmer
+FIS19_JAN.00141	Alissa Hege, Lea Wassmer
+FIS20_AUG.00169	Alissa Hege, Lea Wassmer
+FIS21_NOV.00022	Alissa Hege, Lea Wassmer
+FIS23_JUL.00044	Alissa Hege, Lea Wassmer
+FIS24_JAN.00070	Alissa Hege, Lea Wassmer
+FOC05_DEZ.00324	Alissa Hege, Lea Wassmer
+FOC05_MAI.00061	Alissa Hege, Lea Wassmer
+FOC05_NOV.00233	Alissa Hege, Lea Wassmer
+FOC06_APR.00205	Alissa Hege, Lea Wassmer
+FOC06_DEZ.00304	Alissa Hege, Lea Wassmer
+FOC06_FEB.00146	Alissa Hege, Lara Baum, Lea Wassmer
+FOC06_MAR.00041	Alissa Hege, Lea Wassmer
+FOC06_OKT.00310	Alissa Hege, Lea Wassmer
+FOC08_DEZ.00385	Alissa Hege, Lara Baum, Lea Wassmer
+FOC08_JAN.00258	Alissa Hege, Lea Wassmer
+FOC08_MAI.00329	Alissa Hege, Lea Wassmer
+FOC08_OKT.00210	Alissa Hege, Lea Wassmer
+FOC08_SEP.00500	Alissa Hege, Lea Wassmer
+FOC09_MAR.00453	Alissa Hege, Lea Wassmer
+FOC09_NOV.00308	Alissa Hege, Lea Wassmer
+FOC10_APR.00353	Alissa Hege, Lea Wassmer
+FOC10_MAI.00154	Alissa Hege, Lea Wassmer
+FOC10_NOV.00343	Alissa Hege, Lara Baum, Lea Wassmer
+FOC11_AUG.00196	Alissa Hege, Lea Wassmer
+FOC11_AUG.00432	Alissa Hege, Lea Wassmer
+FOC11_MAR.00350	Alissa Hege, Lea Wassmer
+FOC11_OKT.00428	Alissa Hege, Lea Wassmer
+FOC12_APR.00060	Alissa Hege, Lea Wassmer
+FOC12_JAN.00214	Alissa Hege, Lea Wassmer
+FOC12_OKT.00441	Alissa Hege, Lara Baum, Lea Wassmer
+FOC12_SEP.00357	Alissa Hege, Lea Wassmer
+FOC13_FEB.00068	Alissa Hege, Lea Wassmer
+FOC13_MAI.00032	Alissa Hege, Lea Wassmer
+FOC14_APR.00319	Alissa Hege, Lea Wassmer
+FOC14_DEZ.00154	Alissa Hege, Lea Wassmer
+FOC14_JUN.00507	Alissa Hege, Lea Wassmer
+FOC14_OKT.00015	Alissa Hege, Lara Baum, Lea Wassmer
+FOC15_AUG.00401	Alissa Hege, Lea Wassmer
+FOC15_SEP.00138	Alissa Hege, Lea Wassmer
+FOC16_FEB.00384	Alissa Hege, Lea Wassmer
+FOC16_OKT.00056	Alissa Hege, Lea Wassmer
+FOC17_APR.00129	Alissa Hege, Lea Wassmer
+FOC17_JUN.00166	Alissa Hege, Lara Baum, Lea Wassmer
+FOC18_MAR.00362	Alissa Hege, Lea Wassmer
+FOC18_SEP.00070	Alissa Hege, Lea Wassmer
+FOC19_NOV.00182	Alissa Hege, Lea Wassmer
+FOC20_APR.00021	Alissa Hege, Lea Wassmer
+FOC20_FEB.00285	Alissa Hege, Lea Wassmer
+FOC20_MAR.00235	Alissa Hege, Lea Wassmer
+FOC20_SEP.00035	Alissa Hege, Lea Wassmer
+FOC21_AUG.00133	Alissa Hege, Lea Wassmer
+FOC21_JAN.00066	Alissa Hege, Lea Wassmer
+FOC21_SEP.00186	Alissa Hege, Lea Wassmer
+FOC22_DEZ.00077	Alissa Hege, Lara Baum, Lea Wassmer
+FOC22_MAR.00111	Alissa Hege, Lea Wassmer
+FOC24_AUG.00006	Alissa Hege, Lea Wassmer
+FOC24_JUN.00025	Alissa Hege, Lea Wassmer
+FOC24_MAI.00190	Alissa Hege, Lea Wassmer
+FOM05_FEB.00061	Alissa Hege, Lara Baum, Lea Wassmer
+FOM05_OKT.00128	Alissa Hege, Lea Wassmer
+FOM06_JUL.00018	Alissa Hege, Lea Wassmer
+FOM06_OKT.00040	Alissa Hege, Lea Wassmer
+FOM07_AUG.00090	Alissa Hege, Lea Wassmer
+FOM07_JAN.00049	Alissa Hege, Lea Wassmer
+FOM07_JUN.00162	Alissa Hege, Lea Wassmer
+FOM07_MAR.00215	Alissa Hege, Lea Wassmer
+FOM07_OKT.00173	Alissa Hege, Lea Wassmer
+FOM08_APR.00191	Alissa Hege, Lea Wassmer
+FOM08_JAN.00065	Alissa Hege, Lea Wassmer
+FOM08_MAR.00177	Alissa Hege, Lea Wassmer
+FOM08_SEP.00063	Alissa Hege, Lea Wassmer
+FOM10_DEZ.00168	Alissa Hege, Lea Wassmer
+FOM10_JAN.00032	Alissa Hege, Lea Wassmer
+FOM10_JUN.00136	Alissa Hege, Lea Wassmer
+FOM10_OKT.00171	Alissa Hege, Lea Wassmer
+FOM11_APR.00094	Alissa Hege, Lea Wassmer
+FOM11_FEB.00066	Alissa Hege, Lea Wassmer
+FOM11_JUN.00166	Alissa Hege, Lara Baum, Lea Wassmer
+FOM11_MAR.00167	Alissa Hege, Lea Wassmer
+FOM12_APR.00128	Alissa Hege, Lea Wassmer
+FOM12_DEZ.00205	Alissa Hege, Lea Wassmer
+FOM12_OKT.00189	Alissa Hege, Lea Wassmer
+FOM13_APR.00028	Alissa Hege, Lea Wassmer
+FOM13_AUG.00113	Alissa Hege, Lea Wassmer
+FOM13_FEB.00266	Alissa Hege, Lea Wassmer
+FOM13_JAN.00359	Alissa Hege, Lea Wassmer
+FOM13_NOV.00128	Alissa Hege, Lea Wassmer
+FOM13_OKT.00141	Alissa Hege, Lea Wassmer
+FOM14_AUG.00262	Alissa Hege, Lea Wassmer
+FOM14_JAN.00305	Alissa Hege, Lea Wassmer
+FOM14_OKT.00252	Alissa Hege, Lea Wassmer
+FOM15_APR.00281	Alissa Hege, Lea Wassmer
+FOM15_FEB.00218	Alissa Hege, Lea Wassmer
+FOM15_JUL.00264	Alissa Hege, Lea Wassmer
+FOM15_MAI.00178	Alissa Hege, Lea Wassmer
+FOM15_SEP.00079	Alissa Hege, Lea Wassmer
+FOM16_AUG.00150	Alissa Hege, Lea Wassmer
+FOM16_JUN.00188	Alissa Hege, Lea Wassmer
+FOM16_MAI.00308	Alissa Hege, Lea Wassmer
+FOM16_NOV.00264	Alissa Hege, Lara Baum, Lea Wassmer
+FOM17_FEB.00064	Alissa Hege, Lea Wassmer
+FOM17_MAI.00002	Alissa Hege, Lea Wassmer
+FOM17_OKT.00125	Alissa Hege, Lea Wassmer
+FOM18_AUG.00015	Alissa Hege, Lea Wassmer
+FOM18_AUG.00143	Alissa Hege, Lea Wassmer
+FOM18_JAN.00078	Alissa Hege, Lara Baum, Lea Wassmer
+FOM19_AUG.00025	Alissa Hege, Lea Wassmer
+FOM19_DEZ.00112	Alissa Hege, Lea Wassmer
+FOM19_JUL.00159	Alissa Hege, Lea Wassmer
+FOM19_NOV.00025	
+FOM20_JUL.00038	Alissa Hege, Lea Wassmer
+FOM21_DEZ.00006	Alissa Hege, Lea Wassmer
+FOM21_MAR.00065	Alissa Hege, Lea Wassmer
+FOM22_JUL.00062	Alissa Hege, Lea Wassmer
+FOM22_NOV.00116	Alissa Hege, Lea Wassmer
+FOM23_JAN.00009	Alissa Hege, Lea Wassmer
+FOM24_APR.00165	Alissa Hege, Lea Wassmer
+FOM24_NOV.00035	Alissa Hege, Lea Wassmer
+FOM24_SEP.00061	Alissa Hege, Lea Wassmer
+FRA23_OKT.00067	Alissa Hege, Lea Wassmer
+FRA24_NOV.00069	Alissa Hege, Lea Wassmer
+GAL16_MAR.00039	Alissa Hege, Lea Wassmer
+GAL17_SEP.00030	Alissa Hege, Lea Wassmer
+GAL18_SEP.00201	Alissa Hege, Lea Wassmer
+GAL19_JUN.00087	Alissa Hege, Lea Wassmer
+GAL20_AUG.00250	Alissa Hege, Lea Wassmer
+GAL23_JAN.00110	Alissa Hege, Lea Wassmer
+GEO10_FEB.00018	Alissa Hege, Lara Baum, Lea Wassmer
+GEO10_JUN.00037	Alissa Hege, Lea Wassmer
+GEO10_SEP.00030	Alissa Hege, Lea Wassmer
+GEO11_AUG.00032	Alissa Hege, Lea Wassmer
+GEO11_JUN.00065	Alissa Hege, Lea Wassmer
+GEO11_MAI.00019	Alissa Hege, Lea Wassmer
+GEO12_AUG.00028	Alissa Hege, Lea Wassmer
+GEO12_JUL.00037	Alissa Hege, Lea Wassmer
+GEO13_AUG.00032	Alissa Hege, Lea Wassmer
+GEO13_FEB.00036	Alissa Hege, Lea Wassmer
+GEO13_OKT.00030	Alissa Hege, Lea Wassmer
+GEO14_MAR.00048	Alissa Hege, Lea Wassmer
+GEO15_AUG.00044	Alissa Hege, Lea Wassmer
+GEO15_JUN.00015	Alissa Hege, Lea Wassmer
+GEO15_SEP.00028	Alissa Hege, Lea Wassmer
+GEO16_MAI.00001	Alissa Hege, Lea Wassmer
+GEO17_AUG.00002	Alissa Hege, Lea Wassmer
+GEO17_FEB.00002	Alissa Hege, Lea Wassmer
+GEO17_JUL.00003	Alissa Hege, Lea Wassmer
+GEO17_MAR.00027	Alissa Hege, Lea Wassmer
+GEO18_MAR.00037	Alissa Hege, Lea Wassmer
+GEO19_AUG.00024	Alissa Hege, Lea Wassmer
+GEO19_JUN.00020	Alissa Hege, Lea Wassmer
+GEO20_JUL.00007	Alissa Hege, Lea Wassmer
+GEO20_OKT.00007	Alissa Hege, Lea Wassmer
+GEO21_JAN.00008	Alissa Hege, Lea Wassmer
+GEO22_DEZ.00023	Alissa Hege, Lea Wassmer
+GEO23_AUG.00013	Alissa Hege, Lea Wassmer
+GEO23_NOV.00005	Alissa Hege, Lea Wassmer
+GEO24_NOV.00013	Alissa Hege, Lea Wassmer
+GEO24_SEP.00019	Alissa Hege, Lea Wassmer
+GOB15_SEP.00152	Alissa Hege, Lea Wassmer
+GOB18_AUG.00097	Alissa Hege, Lea Wassmer
+GOB19_SEP.00095	Alissa Hege, Lea Wassmer
+GOB22_JAN.00127	Alissa Hege, Lea Wassmer
+GOB22_JUL.00150	Alissa Hege, Lea Wassmer
+GOB23_DEZ.00137	Alissa Hege, Lea Wassmer
+GOB24_AUG.00261	Alissa Hege, Lea Wassmer
+HAB05_OKT.00100	Alissa Hege, Lea Wassmer
+HAB06_SEP.00820	Alissa Hege, Lea Wassmer
+HAB07_MAI.02354	Alissa Hege, Lea Wassmer
+HAB07_SEP.03087	Alissa Hege, Lea Wassmer
+HAB08_JUL.00213	Alissa Hege, Lea Wassmer
+HAB12_AUG.01725	Alissa Hege, Lea Wassmer
+HAB12_SEP.00420	Alissa Hege, Lea Wassmer
+HAB14_FEB.01888	Alissa Hege, Lea Wassmer
+HAB14_OKT.00195	Alissa Hege, Lea Wassmer
+HAB15_NOV.00738	Alissa Hege, Lea Wassmer
+HAB17_NOV.01003	Alissa Hege, Lea Wassmer
+HAB18_MAR.00010	Alissa Hege, Lara Baum, Lea Wassmer
+HAB19_JUL.00384	Alissa Hege, Lea Wassmer
+HAB21_JUN.00307	Alissa Hege, Lea Wassmer
+HAU18_JUL.00034	Alissa Hege, Lea Wassmer
+HAU22_SEP.00024	Alissa Hege, Lea Wassmer
+HRZ09_JUL.00024	Alissa Hege, Lea Wassmer
+HRZ10_DEZ.00097	Alissa Hege, Lea Wassmer
+HRZ11_NOV.00034	Alissa Hege, Lea Wassmer
+HRZ12_DEZ.00023	Alissa Hege, Lea Wassmer
+HRZ12_OKT.00086	Alissa Hege, Lea Wassmer
+HRZ15_OKT.00019	Lea Wassmer
+HRZ18_JUL.00196	Lea Wassmer
+HRZ18_OKT.00029	Lea Wassmer
+HRZ20_AUG.00023	Lea Wassmer
+HRZ21_MAI.00054	Lea Wassmer
+HRZ24_APR.00049	Lea Wassmer
+LAH22_AUG.00029	Lea Wassmer
+MM20_AUG.00029	Lea Wassmer
+MM20_MAR.00024	Lea Wassmer
+MM20_OKT.00048	Lea Wassmer
+MM21_OKT.00045	Lea Wassmer
+MM22_MAR.00024	Lea Wassmer
+MM23_JUN.00042	Lea Wassmer
+MM23_MAR.00027	Lea Wassmer
+MM23_SEP.00012	Lea Wassmer
+MM24_AUG.00021	Lea Wassmer
+MM24_MAR.00031	Lea Wassmer
+PH06_APR.00052	Lea Wassmer
+PH06_JAN.00043	Lea Wassmer
+PH06_JUN.00055	Lea Wassmer
+PH06_SEP.00020	Lea Wassmer
+PH06_SEP.00046	Lea Wassmer
+PH07_JUL.00043	Lea Wassmer
+PH07_MAI.00042	Lea Wassmer
+PH08_AUG.00052	Lea Wassmer
+PH08_JAN.00013	Lea Wassmer
+PH08_JUN.00036	Lea Wassmer
+PH08_NOV.00043	Lea Wassmer
+PH10_AUG.00047	Lea Wassmer
+PH10_FEB.00031	Lea Wassmer
+PH10_JUN.00033	Lea Wassmer
+PH10_MAI.00040	Lea Wassmer
+PH10_MAR.00038	Lea Wassmer
+PH10_SEP.00046	Lea Wassmer
+PH11_DEZ.00033	Lea Wassmer
+PH11_JUN.00027	Lea Wassmer
+PH11_MAR.00044	Lea Wassmer
+PH11_SEP.00041	Lea Wassmer
+PMM17_OKT.00001	Lea Wassmer
+PMM20_NOV.00005	Lea Wassmer
+PMM23_MAR.00021	Lea Wassmer
+R05_DEZ.08727	
+R05_JAN.00931	Lea Wassmer
+R05_JUN.05477	Lea Wassmer
+R05_JUN.08222	Lea Wassmer
+R05_MAR.09686	Lea Wassmer
+R05_NOV.08374	Lea Wassmer
+R05_OKT.11225	Lea Wassmer
+R05_SEP.04614	Lea Wassmer
+R06_APR.09726	Lea Wassmer
+R06_DEZ.06545	Lea Wassmer
+R06_JAN.08944	Lea Wassmer
+R06_JUN.00041	Lea Wassmer
+R06_MAR.00363	Lea Wassmer
+R06_MAR.08624	Lea Wassmer
+R07_APR.00524	Lea Wassmer
+R07_AUG.02444	Lea Wassmer
+R07_FEB.01700	Lea Wassmer
+R07_JAN.00230	Lea Wassmer
+R07_JAN.07862	Lea Wassmer
+R07_JUL.03279	Lea Wassmer
+R07_NOV.06160	Lea Wassmer
+R08_AUG.03057	Lea Wassmer
+R08_JAN.02650	Lea Wassmer
+R08_MAI.01682	Lea Wassmer
+R08_OKT.00106	Lea Wassmer
+R08_SEP.05422	Lea Wassmer
+R09_DEZ.06894	Lea Wassmer
+R09_MAR.01760	Lea Wassmer
+R09_SEP.01726	Lea Wassmer
+R10_AUG.05041	Lea Wassmer
+R10_JAN.01355	Lea Wassmer
+R10_MAR.00406	Lea Wassmer
+R10_MAR.02826	Lea Wassmer
+R11_DEZ.03553	Lea Wassmer
+R11_JUL.00092	Lea Wassmer
+R11_MAR.04549	Lea Wassmer
+R11_SEP.04790	Lea Wassmer
+R12_FEB.03704	Lea Wassmer
+R12_MAI.04661	Lea Wassmer
+R12_MAR.05858	Lea Wassmer
+R12_NOV.01971	Lea Wassmer
+R12_OKT.05209	Lea Wassmer
+R13_APR.00831	Lea Wassmer
+R13_AUG.01930	Lea Wassmer
+R13_AUG.07618	Lea Wassmer
+R13_JUL.01447	Lea Wassmer
+R13_NOV.05012	Lea Wassmer
+R13_SEP.00863	Lea Wassmer
+R14_AUG.03504	Lea Wassmer
+R14_JUN.01671	Lea Wassmer
+R14_MAI.07249	Lea Wassmer
+R15_APR.03711	Lea Wassmer
+R15_JAN.02510	Lea Wassmer
+R15_JUN.01147	Lea Wassmer
+R15_MAR.02548	Lea Wassmer
+R15_SEP.02504	Lea Wassmer
+R16_JUN.05101	Lea Wassmer
+R21_DEZ.03157	Lea Wassmer
+R21_SEP.02263	Lea Wassmer
+R22_JUL.02197	Lea Wassmer
+R22_MAR.00743	Lea Wassmer
+R23_DEZ.00874	Lea Wassmer
+R23_JAN.00757	Lea Wassmer
+R24_AUG.01371	Lea Wassmer
+R24_JAN.01424	Lea Wassmer
+R24_NOV.02465	Lea Wassmer
+S05_DEZ.00157	Lea Wassmer
+S05_JAN.00069	Lea Wassmer
+S05_MAI.00049	Lea Wassmer
+S05_NOV.00405	Lea Wassmer
+S05_OKT.00392	Lea Wassmer
+S06_AUG.00250	Lea Wassmer
+S06_JAN.00081	Lea Wassmer
+S06_JUL.00313	Lea Wassmer
+S06_MAI.00063	Lea Wassmer
+S06_MAR.00458	Lea Wassmer
+S06_SEP.00016	
+S07_APR.00528	
+S07_DEZ.00155	
+S07_JAN.00023	
+S07_JUL.00172	
+S07_MAI.00061	
+S07_SEP.00302	
+S08_AUG.00281	
+S08_DEZ.00384	
+S08_FEB.00174	
+S08_JUL.00463	
+S08_MAR.00053	
+S08_NOV.00262	
+S09_AUG.00363	
+S09_JUL.00136	
+S09_MAI.00168	
+S09_NOV.00376	
+S10_APR.00281	
+S10_DEZ.00071	
+S10_FEB.00164	
+S10_JUL.00172	
+S10_MAI.00325	
+S10_NOV.00018	
+S11_APR.00204	
+S11_AUG.00074	
+S11_AUG.00480	
+S11_FEB.00165	
+S11_JAN.00180	
+S11_JAN.00320	
+S11_NOV.00146	
+S11_SEP.00373	
+S12_DEZ.00392	
+S12_JAN.00189	
+S12_JUL.00065	
+S12_MAR.00249	
+S12_SEP.00021	
+S13_APR.00185	
+S13_AUG.00332	
+S13_FEB.00259	
+S13_JUN.00430	
+S13_MAI.00402	
+S13_MAR.00464	
+S13_OKT.00114	
+S14_APR.00191	
+S14_JUL.00216	
+S14_NOV.00093	
+S14_OKT.00262	
+S14_SEP.00065	
+S15_FEB.00303	
+S15_MAI.00157	
+S15_NOV.00323	
+S16_APR.00012	
+S16_APR.00367	
+S16_AUG.00133	
+S16_DEZ.00092	
+S16_JAN.00149	
+S16_JUL.00315	
+S16_NOV.00048	
+S17_APR.00081	
+S17_DEZ.00068	
+S17_JAN.00073	
+S17_MAI.00152	
+S17_NOV.00044	
+S17_SEP.00235	
+S18_APR.00294	
+S18_JAN.00155	
+S18_JAN.00342	
+S18_MAI.00108	
+S18_MAR.00380	
+S18_OKT.00423	
+S19_APR.00010	
+S19_AUG.00434	
+S19_JAN.00315	
+S19_JUN.00059	
+S19_MAR.00225	
+S19_OKT.00018	
+S20_DEZ.00332	
+S20_MAR.00335	
+S20_SEP.00241	
+S21_APR.00027	
+S21_APR.00475	
+S21_DEZ.00181	
+S21_JUN.00225	
+S21_MAR.00080	
+S21_MAR.00414	
+S21_NOV.00269	
+S21_OKT.00289	
+S21_SEP.00423	
+S22_APR.00566	
+S22_AUG.00498	
+S22_JAN.00058	
+S22_JUN.00187	
+S22_MAR.00046	
+S22_MAR.00418	
+S23_AUG.00392	
+S23_FEB.00025	
+S23_JUN.00273	
+S23_SEP.00461	
+S24_FEB.00400	
+S24_MAI.00309	
+S24_OKT.00364	
+SCW16_DEZ.00027	
+SCW17_APR.00007	
+SCW19_FEB.00011	
+SCW22_APR.00016	
+SCW23_AUG.00032	
+STE05_APR.00035	
+STE05_JUL.00002	
+STE05_JUN.00033	
+STE05_MAR.00214	
+STE06_AUG.00203	
+STE06_JAN.00089	
+STE06_JUL.00155	
+STE06_MAR.00018	
+STE06_OKT.00027	
+STE07_AUG.00065	
+STE07_MAI.00121	
+STE07_NOV.00179	
+STE07_SEP.00024	
+STE08_DEZ.00024	
+STE08_MAR.00079	
+STE09_APR.00197	
+STE09_NOV.00073	
+STE10_AUG.00033	
+STE10_FEB.00020	
+STE10_JUL.00060	
+STE10_MAI.00077	
+STE10_SEP.00177	
+STE11_JUL.00071	
+STE12_APR.00054	
+STE12_JAN.00129	
+STE12_MAR.00195	
+STE13_APR.00227	
+STE13_DEZ.00070	
+STE13_JAN.00199	
+STE13_NOV.00219	
+STE14_FEB.00093	
+STE14_MAI.00024	
+STE15_JUL.00151	
+STE15_MAR.00151	
+STE16_AUG.00079	
+STE16_MAR.00242	
+STE16_SEP.00210	
+STE17_JUL.00185	
+STE17_SEP.00015	
+STE18_NOV.00007	
+STE19_JUN.00045	
+STE19_MAI.00012	
+STE19_SEP.00172	
+STE20_FEB.00043	
+STE20_MAI.00066	
+STE20_SEP.00161	
+STE21_JAN.00069	
+STE21_MAI.00144	
+STE22_AUG.00074	
+STE23_APR.00087	
+STE23_JUL.00097	
+STE23_MAR.00023	
+STE24_AUG.00182	
+STE24_MAR.00066	
+T05_JAN.05136	
+T05_NOV.00449	
+T06_JAN.00060	
+T06_MAI.03597	
+T06_SEP.04151	
+T07_DEZ.03254	
+T07_JUL.04498	
+T07_NOV.01261	
+T08_DEZ.02162	
+T08_JAN.01175	
+T09_APR.04031	
+T09_AUG.02505	
+T09_MAR.01567	
+T09_OKT.02803	
+T10_AUG.01938	
+T10_JUL.00656	
+T10_MAR.01222	
+T10_SEP.00742	
+T11_JUL.00023	
+T11_MAI.01377	
+T11_OKT.00607	
+T12_FEB.03326	
+T12_MAR.03972	
+T13_DEZ.00328	
+T13_MAI.01084	
+T13_OKT.00990	
+T14_MAR.00499	
+T15_APR.00051	
+T15_JAN.01585	
+T16_MAR.00176	
+T17_JUN.00617	
+T18_JAN.01378	
+T18_MAR.01159	
+T19_DEZ.00382	
+T19_NOV.00041	
+T19_OKT.00598	
+T20_JAN.02110	
+T21_FEB.00979	
+T22_APR.01100	
+T22_JUL.00205	
+T23_FEB.01457	
+T23_SEP.00394	
+T24_SEP.01730	
+TVD17_APR.00029	
+TVD18_OKT.00033	
+TVD19_OKT.00007	
+U05_AUG.01612	
+U05_JUN.00750	
+U05_OKT.02237	
+U06_JUL.00331	
+U06_NOV.01694	
+U07_AUG.04498	
+U07_FEB.01426	
+U07_FEB.02735	
+U07_MAR.00867	
+U08_AUG.04022	
+U08_JAN.03082	
+U08_JUL.04096	
+U08_MAR.01087	
+U08_NOV.04013	
+U08_SEP.02336	
+U09_FEB.04248	
+U09_JUN.01465	
+U10_JAN.00056	
+U10_MAI.04273	
+U10_OKT.00629	
+U11_APR.02632	
+U11_DEZ.03149	
+U11_JUL.03408	
+U11_NOV.00876	
+U12_APR.01395	
+U12_FEB.00141	
+U12_JUN.02602	
+U12_MAR.03411	
+U12_OKT.04158	
+U13_AUG.01549	
+U13_DEZ.00719	
+U13_FEB.01316	
+U14_APR.01309	
+U14_JAN.00808	
+U14_JUL.04056	
+U14_MAR.03840	
+U15_APR.02949	
+U15_JUL.04315	
+U15_MAI.03903	
+U15_OKT.04514	
+U16_MAR.00080	
+U16_OKT.00281	
+U17_JAN.00945	
+U17_JUL.01069	
+U18_AUG.03368	
+U18_JUL.01775	
+U18_NOV.03473	
+U19_APR.02190	
+U19_FEB.02930	
+U19_MAR.04355	
+U19_OKT.03758	
+U20_AUG.01650	
+U20_JAN.03330	
+U20_MAR.02867	
+U21_APR.01692	
+U21_FEB.00334	
+U21_JUL.01972	
+U21_MAR.00736	
+U21_NOV.01842	
+U22_AUG.00810	
+U22_JAN.01894	
+U22_MAI.01199	
+U22_OKT.00673	
+U23_FEB.00476	
+U23_JUN.02442	
+U24_AUG.00679	
+U24_JUL.02586	
+U24_OKT.00076	
+W05_APR.02927	
+W05_JAN.05811	
+W05_MAI.06269	
+W06_DEZ.00751	
+W06_JAN.03739	
+W06_JUL.03310	
+W06_NOV.04667	
+W07_AUG.04134	
+W07_MAR.03807	
+W08_APR.03289	
+W08_FEB.01185	
+W08_MAR.01250	
+W08_OKT.05125	
+W09_AUG.03310	
+W09_NOV.01013	
+W10_JAN.00676	
+W10_JUN.03053	
+W11_AUG.00204	
+W11_NOV.00475	
+W12_FEB.00504	
+W12_JUN.03211	
+W13_APR.02799	
+W13_JAN.01905	
+W13_NOV.00757	
+W14_AUG.00541	
+W14_JUL.00857	
+W14_MAI.02277	
+W14_MAR.01898	
+W15_APR.00500	
+W15_OKT.01816	
+W16_JAN.01793	
+W16_JUN.00880	
+W16_OKT.01697	
+W17_FEB.01867	
+W18_DEZ.01415	
+W19_DEZ.00743	
+W19_SEP.00373	
+W20_JAN.01055	
+W20_MAI.01215	
+W20_OKT.00513	
+W21_SEP.00284	
+W22_OKT.00694	
+W23_JUL.00759	
+WAS05_SEP.00293	
+WAS07_APR.00562	
+WAS08_APR.00355	
+WAS08_MAI.00944	
+WAS11_FEB.00004	
+WAS11_JUL.00679	
+WAS12_APR.00979	
+WAS13_FEB.00466	
+WAS13_OKT.00438	
+WAS14_JUN.01189	
+WAS15_APR.00283	
+WAS16_JAN.00689	
+WAS18_JAN.00650	
+WAS19_JUN.00158	
+WAS20_OKT.00170	
+WAS22_JAN.00201	
+WAS23_APR.00232	
+Z05_AUG.00127	
+Z05_OKT.00409	
+Z06_FEB.00460	
+Z06_MAR.00034	
+Z07_DEZ.00531	
+Z08_APR.00060	
+Z08_JUN.00722	
+Z09_OKT.00111	
+Z11_APR.00117	
+Z11_OKT.00113	
+Z12_DEZ.00083	
+Z13_MAR.00363	
+Z17_JUN.00510	
+Z18_NOV.00611	
+Z19_AUG.00124	
+Z20_NOV.00080	
+Z21_MAR.00378	
+Z23_APR.00417	
+Z24_SEP.00065	
+ZCA09_DEZ.00025	
+ZCA10_FEB.00037	
+ZCA11_FEB.00023	
+ZCA12_APR.00022	
+ZCA13_APR.00031	
+ZCA13_AUG.00041	
+ZCA13_OKT.00025	
+ZCA14_FEB.00024	
+ZCA14_JUN.00023	
+ZCA15_APR.00012	
+ZCA15_FEB.00045	
+ZCA15_OKT.00043	
+ZCA16_DEZ.00044	
+ZCA16_JUN.00018	
+ZCA17_APR.00016	
+ZCA17_APR.00033	
+ZCA17_JUN.00044	
+ZCA17_OKT.00008	
+ZCA18_DEZ.00034	
+ZCA18_FEB.00043	
+ZCA19_AUG.00020	
+ZCA19_OKT.00014	
+ZCA20_OKT.00011	
+ZCA21_JUN.00018	
+ZCA22_FEB.00019	
+ZCA23_NOV.00005	
+ZCA24_FEB.00021	
+ZWI09_JUN.00006	
+ZWI09_NOV.00066	
+ZWI10_OKT.00042	
+ZWI11_FEB.00039	
+ZWI11_SEP.00026	
+ZWI13_OKT.00013	
+ZWI14_APR.00016	
+ZWI14_FEB.00020	
+ZWI15_FEB.00024	
+ZWI17_AUG.00020	
+ZWI18_APR.00018	
+ZWI18_JUN.00008	
+ZWI19_FEB.00023	
+ZWI19_OKT.00009	
+ZWI20_AUG.00025	
+ZWI20_FEB.00012	
+ZWI21_FEB.00019	
+ZWI22_FEB.00011	
+ZWI23_FEB.00019	
+ZWI23_OKT.00023	
+ZWI24_JUN.00018	
+AAZ06_FEB.11149	Lea Wassmer
+AAZ10_MAR.01139	Lea Wassmer
+AAZ11_MAI.01995	Lea Wassmer
+AAZ12_SEP.04597	Lea Wassmer
+AAZ16_NOV.02751	Lea Wassmer
+AAZ18_JUN.01465	Lea Wassmer
+AAZ21_MAR.04307	Lea Wassmer
+AZM06_JUN.00844	Alissa Hege, Lea Wassmer
+AZM13_FEB.01926	Alissa Hege, Lea Wassmer
+AZM16_DEZ.00503	Alissa Hege, Lea Wassmer
+AZM22_FEB.01017	Alissa Hege, Lea Wassmer
+BDZ06_FEB.04284	Alissa Hege, Lara Baum, Lea Wassmer
+BDZ07_OKT.08809	Alissa Hege, Lea Wassmer
+BDZ09_AUG.09104	Alissa Hege, Lea Wassmer
+BDZ09_MAI.01503	Alissa Hege, Lea Wassmer
+BDZ13_JAN.03737	Alissa Hege, Lea Wassmer
+BDZ17_JUN.00411	Alissa Hege, Lea Wassmer
+BDZ19_JUL.01538	Alissa Hege, Lea Wassmer
+BMO22_MAI.01849	Alissa Hege, Lea Wassmer
+BZE17_JAN.01520	Alissa Hege, Lea Wassmer
+BZE24_OKT.01387	Alissa Hege, Lea Wassmer
+BZG20_FEB.01411	Alissa Hege, Lea Wassmer
+DAZ16_SEP.03542	Alissa Hege, Lara Baum, Lea Wassmer
+DAZ24_DEZ.01651	Alissa Hege, Lea Wassmer
+DEC07_JUN.01337	Alissa Hege, Lea Wassmer
+DEC14_AUG.04226	Alissa Hege, Lea Wassmer
+DEC17_MAR.07679	Alissa Hege, Lea Wassmer
+DEC20_OKT.02116	Alissa Hege, Lea Wassmer
+DEC21_NOV.03795	Alissa Hege, Lea Wassmer
+DEC23_DEZ.04375	Alissa Hege, Lea Wassmer
+DGL20_DEZ.03772	Alissa Hege, Lea Wassmer
+DKI16_MAR.00028	Alissa Hege, Lea Wassmer
+DNN14_JUN.02347	Alissa Hege, Lea Wassmer
+DNN20_DEZ.01188	Alissa Hege, Lea Wassmer
+DOL20_FEB.04094	Alissa Hege, Lea Wassmer
+DPR14_FEB.01573	Alissa Hege, Lea Wassmer
+DPR20_DEZ.01417	Alissa Hege, Lea Wassmer
+FPC11_DEZ.12224	Alissa Hege, Lea Wassmer
+FPC14_JUL.09274	Alissa Hege, Lea Wassmer
+FPC15_FEB.11478	Alissa Hege, Lea Wassmer
+FPC16_MAR.04555	Alissa Hege, Lea Wassmer
+FPC18_JAN.07837	Alissa Hege, Lara Baum, Lea Wassmer
+FPC19_SEP.11181	Alissa Hege, Lea Wassmer
+FRT07_DEZ.04913	Alissa Hege, Lara Baum, Lea Wassmer
+FRT11_JAN.14286	Alissa Hege, Lea Wassmer
+FRT16_DEZ.06626	Alissa Hege, Lea Wassmer
+FRT19_JUL.00136	Alissa Hege, Lea Wassmer
+FRT23_MAR.01960	Alissa Hege, Lea Wassmer
+GAZ06_JUN.03476	Alissa Hege, Lea Wassmer
+GAZ07_DEZ.01363	Alissa Hege, Lea Wassmer
+GAZ09_DEZ.04462	Alissa Hege, Lea Wassmer
+GAZ15_MAI.10117	Alissa Hege, Lea Wassmer
+GAZ16_JUL.00256	Alissa Hege, Lea Wassmer
+GAZ18_MAR.03716	Alissa Hege, Lea Wassmer
+GIZ08_AUG.01360	Alissa Hege, Lea Wassmer
+GIZ12_SEP.02498	Alissa Hege, Lea Wassmer
+GIZ17_JUL.00953	Alissa Hege, Lea Wassmer
+GIZ21_JUL.00288	Alissa Hege, Lea Wassmer
+HAA08_NOV.07011	Alissa Hege, Lea Wassmer
+HAA10_MAI.02139	Alissa Hege, Lea Wassmer
+HAA12_MAR.00459	Alissa Hege, Lea Wassmer
+HAA13_SEP.03003	Alissa Hege, Lea Wassmer
+HAA18_APR.01523	Alissa Hege, Lea Wassmer
+HAA22_APR.02842	Alissa Hege, Lea Wassmer
+HKR17_MAR.03746	Alissa Hege, Lea Wassmer
+HMP09_FEB.01463	Alissa Hege, Lea Wassmer
+HMP18_FEB.00832	Alissa Hege, Lea Wassmer
+HST09_OKT.04021	Lea Wassmer
+HST13_MAR.01157	Lea Wassmer
+HST18_AUG.02085	Lea Wassmer
+KAZ08_FEB.01148	Lea Wassmer
+KAZ17_SEP.00801	Lea Wassmer
+KN22_OKT.02707	Lea Wassmer
+KRU07_MAI.02154	Lea Wassmer
+KRU12_SEP.01151	Lea Wassmer
+KRU13_OKT.08653	Lea Wassmer
+KRU14_MAI.01700	Lea Wassmer
+KRU16_MAR.03875	Lea Wassmer
+KRU19_JUL.02116	Lea Wassmer
+KSA07_DEZ.01532	Lea Wassmer
+KSA10_OKT.00047	Lea Wassmer
+KSA13_MAI.06624	Lea Wassmer
+KSA19_APR.01039	Lea Wassmer
+KSA20_JUN.02260	Lea Wassmer
+KXP07_JUL.03599	Lea Wassmer
+KXP11_MAI.02042	Lea Wassmer
+KXP15_APR.02679	Lea Wassmer
+KXP23_AUG.02330	Lea Wassmer
+L08_AUG.00277	Lea Wassmer
+L09_SEP.04290	Lea Wassmer
+L12_OKT.03548	Lea Wassmer
+L16_APR.02630	Lea Wassmer
+LAN08_JAN.01294	Lea Wassmer
+LAN20_JAN.01225	Lea Wassmer
+LIT15_OKT.00974	Lea Wassmer
+LN19_MAR.07979	Lea Wassmer
+LN21_JAN.00966	Lea Wassmer
+LN23_NOV.02142	Lea Wassmer
+LRU07_JUL.09912	Lea Wassmer
+LRU11_JAN.02588	Lea Wassmer
+LRU15_JUL.01261	Lea Wassmer
+LRU21_JAN.03477	Lea Wassmer
+LVZ05_DEZ.05700	Lea Wassmer
+LVZ05_SEP.13797	Lea Wassmer
+LVZ06_NOV.08231	Lea Wassmer
+LVZ07_JAN.08146	Lea Wassmer
+LVZ08_JUN.18075	Lea Wassmer
+LVZ10_JUN.09446	Lea Wassmer
+LVZ11_SEP.06892	Lea Wassmer
+LVZ12_MAR.18288	Lea Wassmer
+LVZ18_NOV.05521	Lea Wassmer
+LVZ22_FEB.02558	Lea Wassmer
+LVZ24_MAR.03270	Lea Wassmer
+M07_OKT.05643	Lea Wassmer
+M15_MAR.07226	Lea Wassmer
+M16_OKT.07892	Lea Wassmer
+M19_FEB.00026	Lea Wassmer
+MAG07_APR.13655	Lea Wassmer
+MAG08_MAI.07065	Lea Wassmer
+MAG10_AUG.15013	Lea Wassmer
+MAG11_NOV.07463	Lea Wassmer
+MAG12_MAR.18652	Lea Wassmer
+MAG13_JAN.12503	Lea Wassmer
+MAG16_NOV.10712	Lea Wassmer
+MAG20_JUN.03302	Lea Wassmer
+MAG21_JAN.05864	Lea Wassmer
+MIB16_APR.01792	Lea Wassmer
+MIB18_MAR.09642	Lea Wassmer
+MIB22_OKT.00333	Lea Wassmer
+MIB23_MAI.08625	Lea Wassmer
+MSP14_JUL.00684	Lea Wassmer
+MSP22_AUG.02153	Lea Wassmer
+MZE06_AUG.06752	Lea Wassmer
+MZE10_JUN.01727	Lea Wassmer
+MZE12_FEB.12999	Lea Wassmer
+MZE15_JUL.00547	Lea Wassmer
+MZE17_MAR.06765	Lea Wassmer
+MZE20_AUG.00059	Lea Wassmer
+MZE22_JUL.03782	Lea Wassmer
+MZE23_FEB.01274	Lea Wassmer
+NGZ16_SEP.00234	Lea Wassmer
+NOW17_FEB.09263	Lea Wassmer
+NOW20_NOV.03433	Lea Wassmer
+NOW21_SEP.04705	Lea Wassmer
+NUN08_SEP.00770	Lea Wassmer
+NUN14_DEZ.00444	Lea Wassmer
+NUN19_MAI.01116	Lea Wassmer
+NWE06_FEB.07692	Lea Wassmer
+NWE08_DEZ.13871	Lea Wassmer
+NWE08_MAR.12722	Lea Wassmer
+NWE11_NOV.01064	Lea Wassmer
+NWE15_FEB.14918	Lea Wassmer
+NWE16_OKT.20244	Lea Wassmer
+NWE18_DEZ.01186	Lea Wassmer
+NWE20_DEZ.11433	Lea Wassmer
+NWE21_JUL.02987	Lea Wassmer
+NWE23_NOV.04091	Lea Wassmer
+NWZ08_DEZ.01323	Lea Wassmer
+NWZ10_NOV.01150	Lea Wassmer
+NWZ14_APR.01708	Lea Wassmer
+NWZ18_OKT.00678	Lea Wassmer
+NWZ22_DEZ.02559	Lea Wassmer
+OAZ16_JUN.01078	Lea Wassmer
+OHZ08_AUG.00754	Lea Wassmer
+OHZ23_DEZ.01090	Lea Wassmer
+OSZ19_AUG.02268	Lea Wassmer
+OSZ21_FEB.00122	Lea Wassmer
+OTZ06_JAN.01615	Lea Wassmer
+OTZ11_JUN.03950	Lea Wassmer
+OTZ17_APR.00197	Lea Wassmer
+OTZ22_DEZ.05740	Lea Wassmer
+OVZ17_JAN.02536	Lea Wassmer
+OVZ23_AUG.00993	Lea Wassmer
+PNN11_APR.01031	Lea Wassmer
+PNN19_APR.02100	Lea Wassmer
+PNN21_APR.01454	Lea Wassmer
+PNP06_MAR.06609	Lea Wassmer
+PNP07_MAR.07047	Lea Wassmer
+PNP09_JUN.08311	Lea Wassmer
+PNP11_AUG.10638	Lea Wassmer
+PNP18_MAR.00265	Lea Wassmer
+PNP21_MAR.06914	Lea Wassmer
+PNP24_SEP.05551	Lea Wassmer
+RHP11_NOV.03334	Lea Wassmer
+RHP14_JAN.00236	Lea Wassmer
+RHP16_APR.06586	Lea Wassmer
+RHP16_JUN.09941	Lea Wassmer
+RHP17_MAI.14666	Lea Wassmer
+RHP20_DEZ.10186	Lea Wassmer
+RHP21_DEZ.04774	Lea Wassmer
+RHP21_JUN.10949	Lea Wassmer
+RHP22_JUL.01197	Lea Wassmer
+RHP23_NOV.02759	Lea Wassmer
+RHP24_MAI.05010	Lea Wassmer
+RHP24_SEP.05640	Lea Wassmer
+RHZ05_JUN.35038	Lea Wassmer
+RHZ07_FEB.06504	Lea Wassmer
+RHZ07_SEP.24528	Lea Wassmer
+RHZ09_AUG.16380	Lea Wassmer
+RHZ14_DEZ.19453	Lea Wassmer
+RHZ16_SEP.15995	Lea Wassmer
+RHZ17_MAR.13603	Lea Wassmer
+RHZ20_JUL.20125	Lea Wassmer
+RHZ20_NOV.03084	Lea Wassmer
+RHZ21_JUN.07118	Lea Wassmer
+RHZ23_MAR.12105	Lea Wassmer
+RN19_APR.03916	Lea Wassmer
+RN21_FEB.05202	Lea Wassmer
+SAZ12_MAR.00845	
+SAZ19_DEZ.01071	
+SBL20_MAR.00064	
+SBZ08_SEP.09394	
+SBZ11_FEB.04318	
+SBZ11_MAR.06164	
+SBZ14_JAN.02964	
+SBZ18_JUN.08242	
+SCZ11_NOV.20991	
+SCZ12_NOV.12288	
+SCZ16_MAR.11098	
+SCZ18_APR.02761	
+SCZ22_OKT.06935	
+SCZ23_NOV.09176	
+SCZ24_AUG.00691	
+SKU06_MAI.27648	
+SKU08_MAR.13099	
+SKU11_FEB.04243	
+SKU11_SEP.03507	
+SKU14_JUN.10259	
+SKU15_JUL.10544	
+SKU15_SEP.05736	
+SKU18_MAI.07617	
+SKU20_MAR.07016	
+SKU22_AUG.03266	
+SOL06_NOV.00933	
+SOL11_MAR.00367	
+SOL12_NOV.01491	
+SOL15_JUL.02397	
+SOL24_FEB.00911	
+STB16_DEZ.19587	
+STB17_MAR.15720	
+STB20_AUG.01098	
+STB20_OKT.01437	
+STB23_MAR.11167	
+SVZ07_JUL.01955	
+SVZ10_SEP.02042	
+SVZ14_JAN.07347	
+SVZ19_MAR.04525	
+SWP19_MAI.02361	
+THA05_AUG.11338	
+THA05_OKT.10060	
+THA07_NOV.08252	
+THA08_JUL.01370	
+THA09_NOV.06714	
+THA11_JUN.02558	
+THA22_JUL.05378	
+TLZ05_JUN.00415	
+TLZ07_MAR.06418	
+TLZ17_JUL.03834	
+TLZ18_SEP.05421	
+TLZ20_MAR.05234	
+TLZ24_MAI.05957	
+TOZ13_JUN.00295	
+TSP06_SEP.03709	
+TSP08_SEP.00155	
+TSP12_FEB.02896	
+TSP14_OKT.00861	
+TSP19_DEZ.02241	
+TSP21_APR.01899	
+TVF08_OKT.03453	
+TVF11_SEP.10541	
+TVF16_OKT.04328	
+TVF19_DEZ.03607	
+WEZ13_JAN.15126	
+WEZ14_MAR.01901	
+WEZ20_NOV.04943	
+WEZ22_MAR.01259	
+WFB10_OKT.02676	
+WFB13_JUL.17227	
+WFB14_NOV.05465	
+WKU13_AUG.02743	
+WKU17_MAR.02102	
+WKU23_JUN.00343	
+WOR20_SEP.01315	

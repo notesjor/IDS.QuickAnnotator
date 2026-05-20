@@ -8,14 +8,20 @@ namespace IDS.QuickAnnotator.Tool4.OnlyAnnotatedBy
   {
     static void Main(string[] args)
     {
-      var dir = Path.Combine(args[0], "history");
       var res = new Dictionary<string, HashSet<string>>();
 
-      var subDirs = Directory.GetDirectories(dir);
+      var docs = Directory.GetFiles(Path.Combine(args[0], "docs"), "*.json", SearchOption.AllDirectories);
+      foreach (var files in docs)
+      {
+        var name = Path.GetFileNameWithoutExtension(files);
+        if (!res.ContainsKey(name))
+          res.Add(name, new HashSet<string>());
+      }
+
+      var subDirs = Directory.GetDirectories(Path.Combine(args[0], "history"));
       foreach (var subDir in subDirs)
       {
         var name = Path.GetFileName(subDir);
-        res.Add(name, new HashSet<string>());
 
         var files = Directory.GetFiles(subDir, "*.json");
         foreach (var file in files)
