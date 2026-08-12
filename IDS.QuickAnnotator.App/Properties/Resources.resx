@@ -230,4 +230,16 @@
   <data name="computer-3-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\computer-3-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="folder-open-doc@60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder-open-doc@60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save@60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save@60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="symbol-arrow-left@60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\symbol-arrow-left@60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="symbol-arrow-right@60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\symbol-arrow-right@60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -160,13 +160,7 @@ namespace IDS.QuickAnnotator.Client.Forms
 
       _editor.Tokens = _anno.EditorDocument;
       _editor.Annotations = _anno.EditorAnnotations;
-    }
-
-    private void btn_export_Click(object sender, EventArgs e)
-    {
-      var form = new ExportForm(cmb_text.Items[cmb_text.SelectedIndex].Text, _anno);
-      form.ShowDialog();
-    }
+    }   
 
     private void btn_submit_Click(object sender, EventArgs e)
     {

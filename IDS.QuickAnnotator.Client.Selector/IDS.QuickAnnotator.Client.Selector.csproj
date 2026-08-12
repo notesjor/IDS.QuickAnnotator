@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props')" />
+  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.props" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -83,8 +83,8 @@
     <Reference Include="CorpusExplorer.Sdk">
       <HintPath>..\..\..\..\Users\Jan\AppData\Roaming\CorpusExplorer\App\CorpusExplorer.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="PostSharp, Version=2025.1.12.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\PostSharp.Redist.2025.1.12\lib\net45\PostSharp.dll</HintPath>
+    <Reference Include="PostSharp, Version=2026.0.15.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\packages\PostSharp.Redist.2026.0.15\lib\net452\PostSharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -104,28 +104,28 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms 2025 Q4\Bin48\Telerik.Licensing.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.dll</HintPath>
+    <Reference Include="Telerik.WinControls, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.GridView, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.GridView.dll</HintPath>
+    <Reference Include="Telerik.WinControls.GridView, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.GridView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Material, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.Themes.Material.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.Themes.Material.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\Telerik.WinControls.UI.dll</HintPath>
+    <Reference Include="Telerik.WinControls.UI, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikCommon, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\TelerikCommon.dll</HintPath>
+    <Reference Include="TelerikCommon, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikData, Version=2025.4.1111.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2025.4.1111.48\TelerikData.dll</HintPath>
+    <Reference Include="TelerikData, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\TelerikData.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
@@ -224,10 +224,10 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlende(n) Datei(en) herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.props'))" />
-    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets'))" />
+    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.props'))" />
+    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.targets'))" />
   </Target>
-  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2025.1.12\build\PostSharp.targets')" />
+  <Import Project="..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.targets" Condition="Exists('..\IDS.QuickAnnotator.API\packages\PostSharp.2026.0.15\build\PostSharp.targets')" />
 </Project>

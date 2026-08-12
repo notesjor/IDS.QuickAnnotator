@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-      Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
       this.commands = new Telerik.WinControls.UI.RadCommandBar();
       this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
       this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
-      this.commandBarLabel1 = new Telerik.WinControls.UI.CommandBarLabel();
-      this.cmb_text = new Telerik.WinControls.UI.CommandBarDropDownList();
+      this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
       this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
-      this.btn_export = new Telerik.WinControls.UI.CommandBarButton();
+      this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
+      this.commandBarLabel1 = new Telerik.WinControls.UI.CommandBarLabel();
+      this.commandBarButton3 = new Telerik.WinControls.UI.CommandBarButton();
+      this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
+      this.commandBarButton4 = new Telerik.WinControls.UI.CommandBarButton();
+      this.commandBarSeparator3 = new Telerik.WinControls.UI.CommandBarSeparator();
       this.btn_screenFix = new Telerik.WinControls.UI.CommandBarButton();
       this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
       this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
@@ -67,16 +68,16 @@
       // 
       this.commands.Dock = System.Windows.Forms.DockStyle.Top;
       this.commands.Location = new System.Drawing.Point(0, 0);
-      this.commands.Margin = new System.Windows.Forms.Padding(6);
+      this.commands.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
       this.commands.Name = "commands";
       this.commands.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
             this.commandBarRowElement1});
-      this.commands.Size = new System.Drawing.Size(1209, 49);
+      this.commands.Size = new System.Drawing.Size(1209, 76);
       this.commands.TabIndex = 0;
       // 
       // commandBarRowElement1
       // 
-      this.commandBarRowElement1.MinSize = new System.Drawing.Size(49, 49);
+      this.commandBarRowElement1.MinSize = new System.Drawing.Size(76, 76);
       this.commandBarRowElement1.Name = "commandBarRowElement1";
       this.commandBarRowElement1.Strips.AddRange(new Telerik.WinControls.UI.CommandBarStripElement[] {
             this.commandBarStripElement1});
@@ -85,41 +86,31 @@
       // 
       this.commandBarStripElement1.DisplayName = "commandBarStripElement1";
       this.commandBarStripElement1.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
-            this.commandBarLabel1,
-            this.cmb_text,
+            this.commandBarButton1,
             this.commandBarSeparator1,
-            this.btn_export,
+            this.commandBarButton2,
+            this.commandBarLabel1,
+            this.commandBarButton3,
+            this.commandBarSeparator2,
+            this.commandBarButton4,
+            this.commandBarSeparator3,
             this.btn_screenFix});
       this.commandBarStripElement1.Name = "commandBarStripElement1";
       // 
       // 
       // 
       this.commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-      this.commandBarStripElement1.OverflowMenuMaxSize = new System.Drawing.Size(528, 0);
-      this.commandBarStripElement1.OverflowMenuMinSize = new System.Drawing.Size(98, 49);
+      this.commandBarStripElement1.OverflowMenuMaxSize = new System.Drawing.Size(825, 0);
+      this.commandBarStripElement1.OverflowMenuMinSize = new System.Drawing.Size(152, 76);
       ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
       // 
-      // commandBarLabel1
+      // commandBarButton1
       // 
-      this.commandBarLabel1.DisplayName = "commandBarLabel1";
-      this.commandBarLabel1.Name = "commandBarLabel1";
-      this.commandBarLabel1.Text = "Dokument:";
-      // 
-      // cmb_text
-      // 
-      this.cmb_text.DisplayName = "commandBarDropDownList1";
-      this.cmb_text.DropDownAnimationEnabled = true;
-      this.cmb_text.DropDownHeight = 208;
-      radListDataItem1.Text = "ListItem 1";
-      radListDataItem2.Text = "ListItem 2";
-      radListDataItem3.Text = "ListItem 3";
-      this.cmb_text.Items.Add(radListDataItem1);
-      this.cmb_text.Items.Add(radListDataItem2);
-      this.cmb_text.Items.Add(radListDataItem3);
-      this.cmb_text.MinSize = new System.Drawing.Size(391, 94);
-      this.cmb_text.Name = "cmb_text";
-      this.cmb_text.Text = "text";
-      this.cmb_text.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Cmb_textOnSelectedIndexChanged);
+      this.commandBarButton1.DisplayName = "commandBarButton1";
+      this.commandBarButton1.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.folder_open_doc_60px;
+      this.commandBarButton1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.commandBarButton1.Name = "commandBarButton1";
+      this.commandBarButton1.Text = "Annotationsrunde laden";
       // 
       // commandBarSeparator1
       // 
@@ -127,13 +118,47 @@
       this.commandBarSeparator1.Name = "commandBarSeparator1";
       this.commandBarSeparator1.VisibleInOverflowMenu = false;
       // 
-      // btn_export
+      // commandBarButton2
       // 
-      this.btn_export.DisplayName = "commandBarButton2";
-      this.btn_export.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.database_export;
-      this.btn_export.Name = "btn_export";
-      this.btn_export.Text = "Exportieren";
-      this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+      this.commandBarButton2.DisplayName = "commandBarButton2";
+      this.commandBarButton2.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.symbol_arrow_left_60px;
+      this.commandBarButton2.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.commandBarButton2.Name = "commandBarButton2";
+      this.commandBarButton2.Text = "commandBarButton2";
+      // 
+      // commandBarLabel1
+      // 
+      this.commandBarLabel1.DisplayName = "commandBarLabel1";
+      this.commandBarLabel1.Name = "commandBarLabel1";
+      this.commandBarLabel1.Text = "< Bitte zunächst Annotationsrunde laden";
+      // 
+      // commandBarButton3
+      // 
+      this.commandBarButton3.DisplayName = "commandBarButton3";
+      this.commandBarButton3.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.symbol_arrow_right_60px;
+      this.commandBarButton3.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.commandBarButton3.Name = "commandBarButton3";
+      this.commandBarButton3.Text = "commandBarButton3";
+      // 
+      // commandBarSeparator2
+      // 
+      this.commandBarSeparator2.DisplayName = "commandBarSeparator2";
+      this.commandBarSeparator2.Name = "commandBarSeparator2";
+      this.commandBarSeparator2.VisibleInOverflowMenu = false;
+      // 
+      // commandBarButton4
+      // 
+      this.commandBarButton4.DisplayName = "commandBarButton4";
+      this.commandBarButton4.Image = global::IDS.QuickAnnotator.Client.Properties.Resources.save_60px;
+      this.commandBarButton4.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.commandBarButton4.Name = "commandBarButton4";
+      this.commandBarButton4.Text = "commandBarButton4";
+      // 
+      // commandBarSeparator3
+      // 
+      this.commandBarSeparator3.DisplayName = "commandBarSeparator3";
+      this.commandBarSeparator3.Name = "commandBarSeparator3";
+      this.commandBarSeparator3.VisibleInOverflowMenu = false;
       // 
       // btn_screenFix
       // 
@@ -151,7 +176,7 @@
       this.elementHost1.Location = new System.Drawing.Point(0, 0);
       this.elementHost1.Margin = new System.Windows.Forms.Padding(0);
       this.elementHost1.Name = "elementHost1";
-      this.elementHost1.Size = new System.Drawing.Size(764, 698);
+      this.elementHost1.Size = new System.Drawing.Size(758, 671);
       this.elementHost1.TabIndex = 0;
       this.elementHost1.Text = "elementHost1";
       this.elementHost1.Child = null;
@@ -161,10 +186,10 @@
       this.radSplitContainer1.Controls.Add(this.splitPanel1);
       this.radSplitContainer1.Controls.Add(this.splitPanel2);
       this.radSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.radSplitContainer1.Location = new System.Drawing.Point(0, 49);
+      this.radSplitContainer1.Location = new System.Drawing.Point(0, 76);
       this.radSplitContainer1.Name = "radSplitContainer1";
-      this.radSplitContainer1.Size = new System.Drawing.Size(1209, 698);
-      this.radSplitContainer1.SplitterWidth = 16;
+      this.radSplitContainer1.Size = new System.Drawing.Size(1209, 671);
+      this.radSplitContainer1.SplitterWidth = 25;
       this.radSplitContainer1.TabIndex = 1;
       this.radSplitContainer1.TabStop = false;
       // 
@@ -173,7 +198,7 @@
       this.splitPanel1.Controls.Add(this.elementHost1);
       this.splitPanel1.Location = new System.Drawing.Point(0, 0);
       this.splitPanel1.Name = "splitPanel1";
-      this.splitPanel1.Size = new System.Drawing.Size(764, 698);
+      this.splitPanel1.Size = new System.Drawing.Size(758, 671);
       this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.1404024F, 0F);
       this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(132, 0);
       this.splitPanel1.TabIndex = 0;
@@ -183,9 +208,9 @@
       // splitPanel2
       // 
       this.splitPanel2.Controls.Add(this.panel_controls);
-      this.splitPanel2.Location = new System.Drawing.Point(780, 0);
+      this.splitPanel2.Location = new System.Drawing.Point(783, 0);
       this.splitPanel2.Name = "splitPanel2";
-      this.splitPanel2.Size = new System.Drawing.Size(429, 698);
+      this.splitPanel2.Size = new System.Drawing.Size(426, 671);
       this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.1404023F, 0F);
       this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-132, 0);
       this.splitPanel2.TabIndex = 1;
@@ -197,7 +222,7 @@
       this.panel_controls.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panel_controls.HorizontalScrollBarState = Telerik.WinControls.UI.ScrollState.AlwaysHide;
       this.panel_controls.Location = new System.Drawing.Point(0, 0);
-      this.panel_controls.Margin = new System.Windows.Forms.Padding(6);
+      this.panel_controls.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
       this.panel_controls.Name = "panel_controls";
       this.panel_controls.Padding = new System.Windows.Forms.Padding(0);
       // 
@@ -206,39 +231,37 @@
       this.panel_controls.PanelContainer.Controls.Add(this.radButton1);
       this.panel_controls.PanelContainer.Controls.Add(this.btn_submit);
       this.panel_controls.PanelContainer.Location = new System.Drawing.Point(0, 0);
-      this.panel_controls.PanelContainer.Margin = new System.Windows.Forms.Padding(15);
-      this.panel_controls.PanelContainer.Size = new System.Drawing.Size(412, 698);
-      this.panel_controls.Size = new System.Drawing.Size(429, 698);
+      this.panel_controls.PanelContainer.Margin = new System.Windows.Forms.Padding(60, 60, 60, 60);
+      this.panel_controls.PanelContainer.Size = new System.Drawing.Size(405, 671);
+      this.panel_controls.Size = new System.Drawing.Size(426, 671);
       this.panel_controls.TabIndex = 7;
       this.panel_controls.VerticalScrollBarState = Telerik.WinControls.UI.ScrollState.AlwaysShow;
       // 
       // radButton1
       // 
       this.radButton1.Dock = System.Windows.Forms.DockStyle.Top;
-      this.radButton1.Location = new System.Drawing.Point(0, 36);
-      this.radButton1.Margin = new System.Windows.Forms.Padding(6);
+      this.radButton1.Location = new System.Drawing.Point(0, 56);
+      this.radButton1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
       this.radButton1.Name = "radButton1";
-      this.radButton1.Size = new System.Drawing.Size(412, 36);
+      this.radButton1.Size = new System.Drawing.Size(405, 56);
       this.radButton1.TabIndex = 24;
       this.radButton1.Text = "Doppelform";
       this.toolTip1.SetToolTip(this.radButton1, "Annotation anwenden");
       this.radButton1.Click += new System.EventHandler(this.btn_submit_doppelform_altern_Click);
-      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Text = "Doppelform";
-      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
+      ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(8);
       // 
       // btn_submit
       // 
       this.btn_submit.Dock = System.Windows.Forms.DockStyle.Top;
       this.btn_submit.Location = new System.Drawing.Point(0, 0);
-      this.btn_submit.Margin = new System.Windows.Forms.Padding(15, 6, 6, 6);
+      this.btn_submit.Margin = new System.Windows.Forms.Padding(24, 10, 10, 10);
       this.btn_submit.Name = "btn_submit";
-      this.btn_submit.Size = new System.Drawing.Size(412, 36);
+      this.btn_submit.Size = new System.Drawing.Size(405, 56);
       this.btn_submit.TabIndex = 7;
       this.btn_submit.Text = "Annotieren";
       this.toolTip1.SetToolTip(this.btn_submit, "Annotation anwenden");
       this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
-      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Text = "Annotieren";
-      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(5);
+      ((Telerik.WinControls.UI.RadButtonElement)(this.btn_submit.GetChildAt(0))).Margin = new System.Windows.Forms.Padding(8);
       // 
       // DashboardForm
       // 
@@ -272,10 +295,7 @@
     private Telerik.WinControls.UI.RadCommandBar commands;
     private Telerik.WinControls.UI.CommandBarRowElement commandBarRowElement1;
     private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement1;
-    private Telerik.WinControls.UI.CommandBarLabel commandBarLabel1;
-    private Telerik.WinControls.UI.CommandBarDropDownList cmb_text;
     private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
-    private Telerik.WinControls.UI.CommandBarButton btn_export;
     private System.Windows.Forms.Integration.ElementHost elementHost1;
     private Telerik.WinControls.UI.RadSplitContainer radSplitContainer1;
     private Telerik.WinControls.UI.SplitPanel splitPanel1;
@@ -285,5 +305,12 @@
         private Telerik.WinControls.UI.RadScrollablePanel panel_controls;
         private Telerik.WinControls.UI.CommandBarButton btn_screenFix;
     private Telerik.WinControls.UI.RadButton radButton1;
+    private Telerik.WinControls.UI.CommandBarButton commandBarButton1;
+    private Telerik.WinControls.UI.CommandBarButton commandBarButton2;
+    private Telerik.WinControls.UI.CommandBarLabel commandBarLabel1;
+    private Telerik.WinControls.UI.CommandBarButton commandBarButton3;
+    private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator2;
+    private Telerik.WinControls.UI.CommandBarButton commandBarButton4;
+    private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator3;
   }
 }

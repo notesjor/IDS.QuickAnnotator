@@ -25,18 +25,9 @@ namespace IDS.QuickAnnotator.Client
         SetProcessDpiAwareness(_Process_DPI_Awareness.Process_Per_Monitor_DPI_Aware
         );
 
-        var auth = new AuthModel();
-        if (auth.Signin())
-        {
-          StepModel.Init();
-          var form = new DashboardForm();
-          form.ShowDialog();
-        }
-        else
-        {
-          var signin = new SigninForm(GlobalConfiguration.AuthToken);
-          signin.ShowDialog();
-        }
+        // TODO: StepModel.Init();
+        var form = new DashboardForm();
+        form.ShowDialog();
       }
       catch (Exception ex)
       {
