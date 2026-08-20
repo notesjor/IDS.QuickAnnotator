@@ -79,11 +79,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MediaFoundation, Version=3.1.0.32450, Culture=neutral, PublicKeyToken=36fa660e1d6ebf8d, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\MediaFoundation.dll</HintPath>
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\MediaFoundation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\Microsoft.Bcl.AsyncInterfaces.10.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\packages\Microsoft.Bcl.AsyncInterfaces.10.0.11\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\IDS.QuickAnnotator.API\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -98,8 +98,8 @@
       <HintPath>..\IDS.QuickAnnotator.API\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.Pipelines, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\System.IO.Pipelines.10.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\packages\System.IO.Pipelines.10.0.11\lib\net462\System.IO.Pipelines.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\IDS.QuickAnnotator.API\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
@@ -111,18 +111,16 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\IDS.QuickAnnotator.API\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\System.Text.Encodings.Web.10.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\packages\System.Text.Encodings.Web.10.0.11\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\System.Text.Json.10.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\packages\System.Text.Json.10.0.11\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\IDS.QuickAnnotator.API\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\packages\System.ValueTuple.4.6.1\lib\net462\System.ValueTuple.dll</HintPath>
-    </Reference>
+    <Reference Include="System.ValueTuple" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -134,128 +132,140 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Documents.AI.Core, Version=2026.2.624.20, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Documents.AI.Core.dll</HintPath>
+    <Reference Include="Telerik.Documents.AI.AgentTools.Spreadsheet, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Documents.AI.AgentTools.Spreadsheet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Documents.AI.RAG, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Documents.AI.RAG.dll</HintPath>
+    <Reference Include="Telerik.Documents.AI.Core, Version=2026.3.810.20, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Documents.AI.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Documents.AI.RAG, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Documents.AI.RAG.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Documents.AI.Tools.Core, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Documents.AI.Tools.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Documents.AI.Tools.Spreadsheet.Core, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Documents.AI.Tools.Spreadsheet.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.Licensing.Runtime, Version=1.6.31.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms 2025 Q4\Bin48\Telerik.Licensing.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.dll</HintPath>
+    <Reference Include="Telerik.WinControls, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.ChartView, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.ChartView.dll</HintPath>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.ChartView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.GridView, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.GridView.dll</HintPath>
+    <Reference Include="Telerik.WinControls.GridView, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.GridView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.PdfViewer, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.PdfViewer.dll</HintPath>
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.PdfViewer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.PivotGrid, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.PivotGrid.dll</HintPath>
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.PivotGrid.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadChart, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadChart.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadChart, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadChart.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadDiagram, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadDiagram.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadDiagram, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadDiagram.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadDock, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadDock.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadDock.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadMap, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadMap.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadMap, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadMap.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadSpreadsheet, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadSpreadsheet.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadSpreadsheet, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadSpreadsheet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadWebCam, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RadWebCam.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadWebCam, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RadWebCam.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.RichTextEditor.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Scheduler, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.Scheduler.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.Scheduler.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Material, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.Themes.Material.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.Themes.Material.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.UI.dll</HintPath>
+    <Reference Include="Telerik.WinControls.UI, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.UI.Design, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.WinControls.UI.Design.dll</HintPath>
+    <Reference Include="Telerik.WinControls.UI.Design, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.WinControls.UI.Design.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.AIConnector, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.AIConnector.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.AIConnector, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.AIConnector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.Core.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.Fixed.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls, Version=2026.2.624.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.MediaFoundation, Version=2026.1.518.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\Telerik.Windows.MediaFoundation.dll</HintPath>
+    <Reference Include="Telerik.Windows.MediaFoundation, Version=2026.3.810.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\Telerik.Windows.MediaFoundation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikCommon, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\TelerikCommon.dll</HintPath>
+    <Reference Include="TelerikCommon, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikData, Version=2026.2.702.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.2.702.48\TelerikData.dll</HintPath>
+    <Reference Include="TelerikData, Version=2026.3.812.48, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\IDS.QuickAnnotator.API\lib\RCWF\2026.3.812.48\TelerikData.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="UIAutomationProvider" />
@@ -426,4 +436,11 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\IDS.QuickAnnotator.API\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\IDS.QuickAnnotator.API\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlende(n) Datei(en) herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\IDS.QuickAnnotator.API\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\IDS.QuickAnnotator.API\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
 </Project>
